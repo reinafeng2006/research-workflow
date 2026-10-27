@@ -1,7 +1,7 @@
-# Design draft v0.1: a workflow specification, not executable agent software.
-# All defaults are proposals for calibration with the user.
-version: "0.1"
-status: draft_for_calibration
+# Workflow specification, not executable agent software.
+# Step 1 policy is calibrated; numeric defaults and later stages remain proposals.
+version: "0.2"
+status: step_1_calibrated_later_stages_pending
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
 principles:
@@ -18,7 +18,7 @@ roles:
       - Translate the user's goal into stage contracts and dependencies.
       - Assign bounded tasks and maintain the shared decision record.
       - Track budgets, progress, unresolved issues, and artifact versions.
-      - Advance stages only with a recorded verification pass.
+      - Separate decision-readiness verification from human selection and bounded execution authorization.
       - Diagnose overruns and route local repair or upstream review.
     beliefs:
       - Clear objectives and explicit ownership prevent wasted work.
@@ -118,8 +118,9 @@ stage_contract:
     - upstream_dependencies
   freeze_before_execution: true
   contract_changes: Version explicitly; obtain user approval for material scope or quality changes.
-  gate_rule: All mandatory criteria pass, with no unresolved critical or major defects.
-  unverifiable_mandatory_criterion: Blocks acceptance; escalate explicitly.
+  gate_rule: All mandatory decision-readiness criteria pass; disclose scientific uncertainty separately from defects in the assessment.
+  step_1_policy: docs/step-1.md
+  unverifiable_mandatory_criterion: Blocks a verification pass; the human may proceed with a recorded exception without relabeling evidence as verified.
   review_record: Include artifact version, criterion, evidence, verdict, severity, and repair condition.
 
 work_cycle:
@@ -161,16 +162,39 @@ upstream_review:
   propagation: Mark dependent outputs stale and revalidate affected claims before further acceptance.
 
 stages:
-  - id: framing
-    objective: Define a precise, feasible research question and success criteria.
-  - id: evidence
-    objective: Establish a traceable evidence base, including contradictions and gaps.
-  - id: method
-    objective: Specify and validate a method capable of answering the question.
-  - id: execution
-    objective: Execute the accepted method and produce reproducible results.
-  - id: synthesis
-    objective: Form appropriately qualified conclusions and challenge their support.
+  - id: step_1
+    objective: Reach a human-approved specific research question with explicit goals and evidence limits.
+    status: calibrated
+    specification: docs/step-1.md
+  - id: step_2
+    objective: Design detailed methodology for the approved question.
+    status: pending_calibration
+  - id: later_stages
+    objective: Execution, validation, and synthesis; structure to be calibrated.
+    status: pending_calibration
+
+step_1:
+  entry_phases:
+    B_broad_idea: goal_clarification
+    C_candidate_questions: candidate_refinement_with_goal_prerequisite_check
+    A_calibrated_question: feasibility_contract_with_prerequisite_check
+  goals: Multiple specific goals; rank only when a concrete decision requires it.
+  suggested_outcomes: Human acceptance required before adding to goals.
+  brainstorming: Human-approved range of distinct close and unconventional options; no fixed quota.
+  selection: Human shortlists one or several directions before feasibility investigation.
+  feasibility: Assess individually first; propose combinations without expanding scope automatically.
+  budget: Propose justified time, tokens, scope, expected resolution, and review effort; obtain approval before work.
+  usage: Separate estimates, measured actuals, and unavailable telemetry.
+  extensions: Explain unresolved work and alternatives; obtain approval before extending.
+  evidence:
+    research_and_data_availability: Direct inspected sources required.
+    abstracts: Labeled orientation only.
+    decision_critical_research_claims: Full-text verification required; unavailable evidence remains unverified and goes to human decision.
+    criticality: Changing or removing the claim could alter the recommendation; explain why; accept human additions.
+    methodological_inference: Label assumptions, uncertainties, and future checks.
+  dissent: Present evidence, assumptions, and recommendation impact; human decides on proceeding or further investigation.
+  recommendation: Recommend a path alongside alternatives and tradeoffs; no silent goal ranking.
+  completion: Human approves a specific question; detailed methodology comes next.
 
 shared_records:
   - Stage contracts and their versions.
@@ -180,7 +204,9 @@ shared_records:
   - Decisions, revisions, resource usage, and rollback reasons.
 
 human_control:
-  proposed_default: Approve initial contracts and material changes; allow ordinary verified stage transitions.
+  authorization_rule: Next-stage execution requires explicit scope, time/token budget, and expected outcomes in an approval; combined approval is allowed, otherwise ask separately.
+  calibration_dialogue: Ask one question at a time.
+  direction_approval: Never implies unlimited execution authority.
   user_decisions:
     - Research goals, priorities, and acceptable tradeoffs.
     - Material scope changes and changes to mandatory quality criteria.

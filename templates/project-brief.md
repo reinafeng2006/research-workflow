@@ -2,28 +2,40 @@
 
 Status: draft
 Starter repository and commit:
-Project name:
-Research domain and question:
-Desired deliverables:
-Deadline:
-Available sources, data, tools, and expertise:
-Scope and exclusions:
+Project name and domain:
+Entry type: A calibrated question / B broad idea / C candidate questions
+Entry phase:
+Existing inputs and versions:
+Missing prerequisites and minimum return phase:
+Desired deliverables and deadline:
+Sources, data, tools, expertise, and constraints:
 
-## Calibration questions
+## Goals
 
-1. What concrete question and output should this project address?
-2. Which quality criteria matter most, and what would make the result unacceptable?
-3. Should the user approve every stage, selected checkpoints, or only exceptions after initial contracts are agreed?
-4. Should the challenger review every stage or only framing, methods, conclusions, and stalled work?
-5. What are expected and hard time/token limits per stage and for the whole project? What telemetry is available?
-6. Is there a preauthorized reserve? If so, how large and under what conditions may it be used?
-7. What data-access, privacy, citation, or reproducibility constraints apply?
+Do not force ranking. Ask one clarification question at a time, using existing answers first.
 
-## Agreed settings
+| Goal ID | Desired outcome | Beneficiary / context | Evidence of success | Boundaries | Human status: accepted / proposed / rejected / deferred |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
 
-Human checkpoints:
-Challenger activation:
-Stage budgets and review reserve:
-Overall budget:
-Uncertainty and unresolved questions:
-Acceptance of initial contracts:
+Decision that requires prioritization, if any:
+Human resolution of that tradeoff:
+Suggested additional outcomes and why they matter:
+
+## Options
+
+Approved brainstorming range, rationale, and budget reference:
+Distinct close and unconventional options:
+Human shortlist (one or multiple):
+Candidate specific questions:
+Proposed combinations, added value, complexity, and tradeoffs:
+Feasibility investigation contract and approval:
+
+## Completion
+
+Selected specific question:
+Evidence and verification report references:
+Unresolved critical claims and disagreements:
+Human decision and accepted limitations:
+Next-stage scope, budget, and expected outcomes if included in approval:
+Otherwise: next-stage execution not authorized.

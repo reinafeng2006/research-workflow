@@ -2,7 +2,7 @@
 
 A reusable starter for research and study projects driven by multiple agents, fixed stage objectives, independent verification, and budget-aware upstream review.
 
-**Status: v0.1 design draft.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
+**Status: v0.2 — Step 1 calibrated; Step 2 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
 
 ## Start a new project
 
@@ -10,7 +10,7 @@ Create a new repository from this template using GitHub's **Use this template** 
 
 Paste this prompt:
 
-> Use this repository's AGENTS.md and research-workflow.yaml to initialize my research project. My topic is [topic], my desired output is [output], and my deadline is [deadline]. Ask me the calibration questions in templates/project-brief.md, record the answers, and draft the first stage contract. Use separate producer and verifier agents when supported. Do not begin substantive research until the initial contract is agreed.
+> Use this repository's AGENTS.md and research-workflow.yaml to initialize my research project. My topic is [topic], my desired output is [output], and my deadline is [deadline]. Ask me the unanswered calibration questions in templates/project-brief.md one at a time, record the answers, and draft the first stage contract. Use separate producer and verifier agents when supported. Do not begin substantive research until the initial contract is agreed.
 
 To adopt the workflow in an existing project, copy research-workflow.yaml and templates/ into it, and merge the relevant instructions from AGENTS.md with its existing instructions. Do not overwrite project instructions. Alternatively, provide an assistant with this repository URL and explicitly ask it to read the files; a URL alone does not load or execute the workflow.
 
@@ -28,9 +28,11 @@ Detailed responsibilities, beliefs, reactions, and limits are in [research-workf
 
 ## Stage cycle
 
-Framing → evidence → method → execution → synthesis.
+Step 1: define and select a specific research question → Step 2: detailed methodology → later execution, validation, and synthesis stages to be calibrated.
 
-Within each stage: produce → self-check → independent verification → diagnose → revise → verify again. Advance only when all mandatory criteria pass and no critical or major defects remain. A rigorous negative or inconclusive result may pass.
+See the [Step 1 workflow and diagram](docs/step-1.md) and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
+
+Within each stage: produce → self-check → independent verification → diagnose → revise → verify again. Separate decision-readiness checks from scientific verification and human approval. Unresolved evidence or disagreement may be presented honestly for human decision; approval never converts it into verified evidence. A rigorous negative or inconclusive result may pass.
 
 At a resource checkpoint or stagnation trigger, diagnose local execution problems, upstream defects, or underestimated workload. Reopen the smallest affected upstream stage when warranted, preserve prior versions, and revalidate dependent outputs. Never silently lower the quality gate.
 
@@ -51,4 +53,4 @@ For each project, create `project/brief.md`, `project/stages/`, `project/reviews
 
 ## Calibration still open
 
-Research domain, human approval checkpoints, challenger frequency, concrete budgets, and any preauthorized reserve remain to be agreed. Draft defaults do not imply prior user approval.
+Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 responsibilities and gates, later stages, and review cadence outside Step 1 remain open.
