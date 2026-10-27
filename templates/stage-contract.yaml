@@ -1,0 +1,36 @@
+status: draft
+id: null
+version: 1
+objective: null
+scope_and_exclusions: []
+input_artifact_versions: []
+assumptions: []
+upstream_dependencies: []
+deliverables: []
+acceptance_criteria_and_check_methods:
+  - id: C1
+    requirement: null
+    mandatory: true
+    check_method: null
+    threshold: null
+    required_evidence: null
+resource_budget:
+  expected_runtime_minutes: null
+  hard_runtime_minutes: null
+  expected_tokens: null
+  hard_tokens: null
+  review_reserve: null
+  telemetry_or_estimation_method: null
+  max_revision_cycles: 3
+  consecutive_cycles_without_progress: 2
+  budget_review_fraction: 0.80
+assigned_roles:
+  coordinator: null
+  producer: null
+  verifier: null
+  challenger: null
+  methods_specialist: null
+freeze_record:
+  agreed_by: null
+  date: null
+  contract_revision: null
