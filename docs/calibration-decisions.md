@@ -32,4 +32,33 @@ Suggested reusable practices: decision-driven depth, claim provenance, reasoning
 
 ## Still open
 
-Step 2's detailed objectives, agent duties, methodological options, review depth, and gates; subsequent stage structure; project-specific budgets; numerical revision and checkpoint defaults. Publishing this policy does not authorize a new investigation.
+Step 3 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
+
+## Step 2 — approved calibration
+
+The human approved the complete [Step 2 workflow](step-2.md) and its publication. This approves reusable policy, not a project run.
+
+| ID | Agreed decision |
+| --- | --- |
+| S2-01 | Compare several approaches with a recommendation, assumptions, feasibility, and tradeoffs; human shortlists one or more before detailed design. |
+| S2-02 | Explain what each approach can/cannot establish and the assumptions needed for each conclusion. |
+| S2-03 | Propose small pilot checks when useful; specify uncertainty resolved, scope, budget, and limits; obtain approval before running. |
+| S2-04 | Predefine positive, negative, and inconclusive meanings and recommendation consequences; human decides next steps. |
+| S2-05 | Test shortlisted approaches independently and only on a small scale first; combinations require value/complexity/tradeoff explanation and approval before expansion. |
+| S2-06 | Compare test results and recommend; human selects and approves detailed-design scope and budget before it starts. |
+| S2-07 | Deliver an execution-ready protocol with data, procedures, assumption checks, evaluation and stopping rules; human approves before implementation. |
+| S2-08 | Material unresolved choices block execution-ready status. Minor choices need explicit boundaries and human-approved classification. |
+| S2-09 | If pilots undermine answerability, pause and propose targeted Step 1 return with evidence, failed assumptions, revisions, and tradeoffs; human approves changes. |
+| S2-10 | Approve shared criteria and method-specific checks before tests; explain fit and comparability limits. |
+| S2-11 | Preserve original criteria/results; explain amendments and interpretation effects; approve before application or additional testing; disclose post-result changes. |
+| S2-12 | Separate verifier checks completeness/reproducibility; challenger checks support for conclusions; present unresolved concerns and dissent for human decision. |
+| S2-13 | Approve project-specific pilot-reuse and independent-validation safeguards before finalizing them. |
+| S2-14 | Approve fallback, pause, and upstream-review triggers and consequences. Log preapproved fallback use for next checkpoint; notify unexpected consequences immediately and pause before exceeding scope/budget. |
+| S2-15 | Agents propose justified major milestones plus budget/progress checkpoints; human approves before starting. |
+| S2-16 | Diagnose and repair stagnation within authority while informing human; agents propose repair rounds, time/token limits and observable progress criteria for approval; any stop condition pauses work for analysis/options. |
+| S2-17 | Present decision summary first, then full traceable executable protocol. Include recommendation, assumptions, risk, unresolved choices and approval items. |
+| S2-18 | Require document review, independent desktop walkthrough, and a separately proposed and approved minimal technical trial. |
+| S2-19 | Recheck modified parts and dependencies; core-method/conclusion-boundary changes trigger whole review; new trials or budget expansion need approval. |
+| S2-20 | If all candidates fail, diagnose methods/data/test insufficiency/answerability and offer options; human decides, no automatic standard reduction. |
+| S2-21 | Minor issues may accompany submission only with impact, allowed bounds, owner and resolution time for approval; core-result or uncertain-impact risks are not automatically minor. |
+| S2-22 | Continue calibration with one multiple-choice question at a time. |

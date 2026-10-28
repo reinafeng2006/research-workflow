@@ -1,11 +1,11 @@
 # Research workflow operating instructions
 
-Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. Step 2 and later remain pending calibration. Follow the user's explicit preferences and applicable higher-priority instructions.
+Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. For Step 2, read docs/step-2.md. Step 3 and later remain pending calibration. Follow the user's explicit preferences and applicable higher-priority instructions.
 
 ## Initialize
 
 1. Read any existing project brief, contracts, decisions, and reviews before asking questions.
-2. Ask only unanswered calibration questions from templates/project-brief.md, one at a time. Route A, B, and C to different entry phases and revisit earlier phases only for missing prerequisites or requested revisions. Record answers and unresolved assumptions.
+2. Ask only unanswered calibration questions from templates/project-brief.md, one multiple-choice question at a time, allowing custom answers. Route A, B, and C to different entry phases and revisit earlier phases only for missing prerequisites or requested revisions. Record answers and unresolved assumptions.
 3. Draft a stage contract using templates/stage-contract.yaml. Replace every placeholder and define measurable acceptance checks and resource budgets before freezing it with the user.
 4. Record the starter revision, contract version, input versions, and dependency graph.
 
@@ -36,3 +36,11 @@ Do not silently rank goals or adopt suggested outcomes. Let the human shortlist 
 Require directly inspected sources for research and data-availability claims. Abstract findings are orientation-only. Full-text verification is required for decision-critical research claims; missing access remains unresolved even when the human proceeds. Label methodological inference and its assumptions. Use templates/decision-brief.md for the final recommendation.
 
 A next-stage approval must explicitly cover scope, budget, and expected outcomes. If those are absent, obtain separate approval before execution. The initial numeric defaults are proposals, not calibrated limits.
+
+## Step 2 controls
+
+Follow docs/step-2.md. Compare methods before the human shortlists; only run explicitly approved bounded tests, not full designs. Predefine shared and method-specific criteria and positive/negative/inconclusive interpretations. Preserve original criteria/results when proposing amendments. Obtain selection and design-budget approval before detailed design.
+
+Final protocol review requires independent verification, challenge, a walkthrough by an agent uninvolved in design, and an approved minimal technical trial. Unresolved material choices block execution-ready status. Minor issues need documented impact, bounds, owner, deadline, and human approval. Recheck changes and affected dependencies; core-method or conclusion-boundary changes require full review. New trials or expanded budgets need prior approval.
+
+Use approved milestones and resource/progress checkpoints. Diagnose stagnation and repair within authority while informing the human; stop at any approved repair-round, time, token, or progress limit. Log preapproved fallbacks for the next checkpoint, notify unexpected consequences immediately, and pause before exceeding authority. Present dissent without forcing consensus or lowering standards. Ask approval before targeted question/scope changes in Step 1. Deliver a decision summary plus the full protocol; protocol approval alone does not authorize implementation.

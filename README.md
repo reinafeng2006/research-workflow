@@ -2,7 +2,7 @@
 
 A reusable starter for research and study projects driven by multiple agents, fixed stage objectives, independent verification, and budget-aware upstream review.
 
-**Status: v0.2 — Step 1 calibrated; Step 2 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
+**Status: v0.3 — Steps 1 and 2 calibrated; Step 3 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
 
 ## Start a new project
 
@@ -10,9 +10,9 @@ Create a new repository from this template using GitHub's **Use this template** 
 
 Paste this prompt:
 
-> Use this repository's AGENTS.md and research-workflow.yaml to initialize my research project. My topic is [topic], my desired output is [output], and my deadline is [deadline]. Ask me the unanswered calibration questions in templates/project-brief.md one at a time, record the answers, and draft the first stage contract. Use separate producer and verifier agents when supported. Do not begin substantive research until the initial contract is agreed.
+> Use this repository's AGENTS.md and research-workflow.yaml to initialize my research project. My topic is [topic], my desired output is [output], and my deadline is [deadline]. Ask me the unanswered calibration questions in templates/project-brief.md as multiple-choice questions one at a time, record the answers, and draft the first stage contract. Use separate producer and verifier agents when supported. Do not begin substantive research until the initial contract is agreed.
 
-To adopt the workflow in an existing project, copy research-workflow.yaml and templates/ into it, and merge the relevant instructions from AGENTS.md with its existing instructions. Do not overwrite project instructions. Alternatively, provide an assistant with this repository URL and explicitly ask it to read the files; a URL alone does not load or execute the workflow.
+To adopt the workflow in an existing project, copy research-workflow.yaml, docs/, and templates/ into it, and merge the relevant instructions from AGENTS.md with its existing instructions. Do not overwrite project instructions. Alternatively, provide an assistant with this repository URL and explicitly ask it to read the files; a URL alone does not load or execute the workflow.
 
 ## Roles
 
@@ -30,7 +30,7 @@ Detailed responsibilities, beliefs, reactions, and limits are in [research-workf
 
 Step 1: define and select a specific research question → Step 2: detailed methodology → later execution, validation, and synthesis stages to be calibrated.
 
-See the [Step 1 workflow and diagram](docs/step-1.md) and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
+See the [Step 1 workflow and diagram](docs/step-1.md) , [Step 2 workflow and gates](docs/step-2.md), and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
 
 Within each stage: produce → self-check → independent verification → diagnose → revise → verify again. Separate decision-readiness checks from scientific verification and human approval. Unresolved evidence or disagreement may be presented honestly for human decision; approval never converts it into verified evidence. A rigorous negative or inconclusive result may pass.
 
@@ -53,4 +53,12 @@ For each project, create `project/brief.md`, `project/stages/`, `project/reviews
 
 ## Calibration still open
 
-Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 responsibilities and gates, later stages, and review cadence outside Step 1 remain open.
+Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 comparison, limited tests, independent review, protocol gates, checkpoints, fallback and repair rules are calibrated. Step 3 and later remain open.
+
+## Step 2 templates
+
+- [Method comparison](templates/method-comparison.md)
+- [Bounded pilot or technical trial](templates/pilot-check.md)
+- [Decision summary and execution-ready protocol](templates/research-protocol.md)
+
+A material unresolved design choice blocks execution-ready status. Transparent uncertainty in a Step 1 decision brief does not waive this Step 2 requirement.

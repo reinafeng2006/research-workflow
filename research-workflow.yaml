@@ -1,7 +1,7 @@
 # Workflow specification, not executable agent software.
-# Step 1 policy is calibrated; numeric defaults and later stages remain proposals.
-version: "0.2"
-status: step_1_calibrated_later_stages_pending
+# Steps 1 and 2 are calibrated; numeric defaults and Step 3 onward remain proposals.
+version: "0.3"
+status: steps_1_2_calibrated_step_3_pending
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
 principles:
@@ -120,6 +120,8 @@ stage_contract:
   contract_changes: Version explicitly; obtain user approval for material scope or quality changes.
   gate_rule: All mandatory decision-readiness criteria pass; disclose scientific uncertainty separately from defects in the assessment.
   step_1_policy: docs/step-1.md
+  step_2_policy: docs/step-2.md
+  execution_readiness: Material unresolved design choices block execution-ready status even when disclosed.
   unverifiable_mandatory_criterion: Blocks a verification pass; the human may proceed with a recorded exception without relabeling evidence as verified.
   review_record: Include artifact version, criterion, evidence, verdict, severity, and repair condition.
 
@@ -156,7 +158,7 @@ upstream_review:
     - Bounded recovery proposal with expected cost and affected artifacts.
   actions:
     local_issue: Revise the current approach within the remaining authorized budget.
-    upstream_defect: Reopen the smallest affected upstream stage and preserve its prior version.
+    upstream_defect: Propose the smallest affected upstream repair; obtain human approval before changing question or scope; preserve prior versions.
     underestimated_workload: Request a bounded extension supported by observed progress.
     infeasible_or_unresolved: Stop with explicit unresolved findings and options for the user.
   propagation: Mark dependent outputs stale and revalidate affected claims before further acceptance.
@@ -167,9 +169,10 @@ stages:
     status: calibrated
     specification: docs/step-1.md
   - id: step_2
-    objective: Design detailed methodology for the approved question.
-    status: pending_calibration
-  - id: later_stages
+    objective: Produce a human-approved execution-ready protocol through method comparison and bounded testing.
+    status: calibrated
+    specification: docs/step-2.md
+  - id: step_3_and_later
     objective: Execution, validation, and synthesis; structure to be calibrated.
     status: pending_calibration
 
@@ -205,10 +208,36 @@ shared_records:
 
 human_control:
   authorization_rule: Next-stage execution requires explicit scope, time/token budget, and expected outcomes in an approval; combined approval is allowed, otherwise ask separately.
-  calibration_dialogue: Ask one question at a time.
+  calibration_dialogue: Ask one multiple-choice question at a time; allow custom or combined answers.
   direction_approval: Never implies unlimited execution authority.
   user_decisions:
     - Research goals, priorities, and acceptable tradeoffs.
     - Material scope changes and changes to mandatory quality criteria.
     - Budget extensions and acceptance of explicitly unresolved limitations.
   unresolved_acceptance: Record as a user-authorized exception, never as a verification pass.
+
+step_2:
+  specification: docs/step-2.md
+  comparison: Explain what each method can and cannot establish, assumptions, feasibility, and tradeoffs; recommend and let the human shortlist.
+  pilots: Propose bounded independent tests before full designs; obtain scope and budget approval before running.
+  criteria: Approve shared and approach-specific checks and comparability limits before testing.
+  outcomes: Predefine positive, negative, and inconclusive meanings and recommendation effects; disclose limits.
+  combinations: Proposals only until approved; distinguish expected from demonstrated value.
+  detailed_design: Requires human selection and approval of scope, budget, and expected outcomes.
+  amendments: Preserve original criteria and results; explain interpretation changes; approve before application or new tests; label post-result revisions.
+  validation: Human-approved project-specific boundaries on pilot reuse and independent final evidence.
+  failure: Diagnose method, data, test adequacy, and answerability; offer options without lowering standards.
+  upstream_return: Pause and propose targeted Step 1 review with evidence, failed assumptions, revisions, and tradeoffs; human approves changes.
+  checkpoints: Human-approved milestones plus budget and progress triggers with rationale.
+  stagnation: Diagnose and repair within authority while informing user; pause at any approved round, time, token, or progress stop condition.
+  fallbacks: Human approves triggers, bounds, and consequences; log use and report next checkpoint; notify unexpected consequences immediately and pause before exceeding authority.
+  final_review:
+    - Independent completeness and reproducibility verification.
+    - Challenger review of support for intended conclusions.
+    - Desktop walkthrough by an agent not involved in design.
+    - Explicitly approved minimal technical trial; not scientific validation.
+  recheck: Changed parts and affected dependencies; whole review if core method or conclusion boundary changes; new trials need approval.
+  material_issues: Block execution-ready status.
+  minor_issues: Human-approved impact, allowed bounds, owner, and resolution time; never classify uncertain or core-result risks as minor by default.
+  deliverable: Decision summary plus traceable executable protocol, unresolved concerns, dissent, and explicit approval items.
+  implementation: Separate authorization unless protocol approval explicitly includes implementation scope, budget, and expected outcomes.
