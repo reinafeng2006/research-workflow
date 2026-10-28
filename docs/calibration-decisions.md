@@ -32,7 +32,7 @@ Suggested reusable practices: decision-driven depth, claim provenance, reasoning
 
 ## Still open
 
-Step 4 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
+Step 5 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
 
 ## Step 2 — approved calibration
 
@@ -88,4 +88,24 @@ The human approved publication of [Step 3](step-3.md), both diagrams, and the bo
 | S3-17 | Deliver decision summary plus full validation records, traceability, reuse, usage, pass/fail status, risks and formal-execution proposal. |
 | S3-18 | Disclose actual telemetry and interrupt granularity; propose smaller batches or supported runtime limits for blind spots; do not claim unavailable realtime protection. |
 
-Current calibration checkpoint: Steps 1–3 accepted as reusable specifications; Step 4 is next. No research execution has been authorized by these documentation updates. Runtime/token thresholds remain project-specific, not universal numeric defaults.
+Historical checkpoint after Step 3: Steps 1–3 accepted; superseded by the Step 4 checkpoint below. No research execution has been authorized by these documentation updates. Runtime/token thresholds remain project-specific, not universal numeric defaults.
+
+## Step 4 — approved calibration
+
+User approved [Step 4](step-4.md), its diagram and gates for publication. This is reusable policy, not authorization for a specific formal run.
+
+| ID | Agreed decision |
+| --- | --- |
+| S4-01 | Execute the approved protocol plus prespecified analyses; report results, uncertainty and deviations; new exploration/method changes need reasons, impact, scope/budget and prior approval, separate from original analysis. |
+| S4-02 | Reuse Step 3 batching, monitoring and pause/recovery rules, but approve formal-scale batches, budgets and stop thresholds. Normal batches continue; no interim-result-driven standard changes. |
+| S4-03 | Propose project-specific visible metrics, viewing times, use boundaries and actions for approval. Monitor operational quality/resources continuously; do not seal every result by default. |
+| S4-04 | Low-impact accidental exposure continues under preapproved rules with log/checkpoint report. Possible method-selection/validation impact requires minimal remedy options for human decision; no automatic invalidation or reruns. |
+| S4-05 | Negative/nonsignificant/inconclusive results are reported and original protocol completed subject to stop rules. Only preapproved bounded data/implementation diagnostics; no tuning for favorable results. |
+| S4-06 | Preserve original results, mark errors and affected dependencies. Repair/rerun within explicit approved bounds, otherwise propose minimal plan. Broad impact may justify human-approved broad reruns; unaffected results remain. |
+| S4-07 | Independent verifier fully checks key results; other results sampled under agent-proposed human-approved plan. Reuse valid evidence. Anomalies requiring expansion need impact, scope, rationale, budget and prior approval. |
+| S4-08 | Approve protocol-derived critical-results list before execution. Additions require significance-to-conclusion explanation and supplementary scope/budget approval. Importance never follows outcome desirability. |
+| S4-09 | Challenger checks support for current wording, uncertainty and competing explanations using authorized evidence only. New analyses require approval; comprehensive synthesis belongs to next stage. |
+| S4-10 | Material unresolved correctness or interpretation concerns block affected results being marked verified. Other limits are recorded; human chooses further work or qualified continuation; no unresolved-to-pass conversion. |
+| S4-11 | Deliver decision summary plus full traceable results, deviations, verification status, execution/resource records, unresolved concerns and next-stage scope/budget/outcomes proposal. Human decides progression. |
+
+Current checkpoint: Steps 1–4 calibrated and published; Step 5 pending. No research runs authorized by this documentation update. Continue one multiple-choice question at a time. Numeric resource limits remain project-specific.

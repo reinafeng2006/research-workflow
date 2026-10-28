@@ -1,7 +1,7 @@
 # Workflow specification, not executable agent software.
-# Steps 1 through 3 are calibrated; numeric defaults and Step 4 onward remain proposals.
-version: "0.4"
-status: steps_1_2_3_calibrated_step_4_pending
+# Steps 1 through 4 are calibrated; numeric defaults and Step 5 onward remain proposals.
+version: "0.5"
+status: steps_1_2_3_4_calibrated_step_5_pending
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
 principles:
@@ -122,6 +122,7 @@ stage_contract:
   step_1_policy: docs/step-1.md
   step_2_policy: docs/step-2.md
   step_3_policy: docs/step-3.md
+  step_4_policy: docs/step-4.md
   execution_readiness: Material unresolved design choices block protocol-ready-for-implementation status even when disclosed.
   unverifiable_mandatory_criterion: Blocks a verification pass; the human may proceed with a recorded exception without relabeling evidence as verified.
   review_record: Include artifact version, criterion, evidence, verdict, severity, and repair condition.
@@ -177,7 +178,11 @@ stages:
     objective: Implement the approved protocol and validate small-scale end-to-end operation using valid existing evidence.
     status: calibrated
     specification: docs/step-3.md
-  - id: step_4_and_later
+  - id: step_4
+    objective: Execute the approved protocol and prespecified analyses, verify results and interpretation boundaries.
+    status: calibrated
+    specification: docs/step-4.md
+  - id: step_5_and_later
     objective: Execution, validation, and synthesis; structure to be calibrated.
     status: pending_calibration
 
@@ -271,3 +276,22 @@ step_3:
   resume: Validate integrity/applicability; rerun only missing, corrupt or invalid portions.
   output: Decision summary plus full validation records, reuse ledger, traceability, usage, risks and formal-execution plan.
   next_stage: Human approves formal-execution scope, scale, budget, checkpoints, stop rules and unresolved issues after results.
+
+step_4:
+  specification: docs/step-4.md
+  scope: Formal execution and prespecified analyses; comprehensive synthesis belongs to the next stage.
+  execution: Follow approved protocol; report results, uncertainty and deviations; never adjust standards to improve outcomes.
+  resources: Inherit Step 3 controls with newly proposed formal-scale batches, budgets and thresholds approved by human; reuse valid evidence.
+  interim_access: Project-specific approved metrics, times, use boundaries and actions; operational monitoring allowed, no blanket sealing or hidden outcome peeking.
+  accidental_exposure: Low-impact preapproved cases continue with log/checkpoint report; possible method-selection or validation impact requires explanation and minimal remedies for human decision; no automatic invalidation or rerun.
+  adverse_results: Report negative, nonsignificant and inconclusive findings; finish protocol unless approved stop rules apply; only preapproved bounded diagnostics.
+  new_work: Explain reasons, impact, scope and budget; human approves exploration or method changes before execution; keep separate from original analysis.
+  errors: Preserve originals, mark affected dependencies, repair/rerun only within explicit authorization; otherwise propose minimal plan; broad reruns need human approval; keep unaffected results.
+  tiered_review: Independent verifier fully checks approved critical results; samples others under human-approved plan; reuse valid evidence, no automatic recomputation.
+  criticality: Approve protocol-based list before execution; importance is independent of favorable outcomes; additions need rationale, scope, budget and approval before supplementary checks.
+  review_expansion: Explain anomaly impact, scope, rationale and budget; obtain human approval first.
+  challenger: Check support for current statements, uncertainty and competing explanations using only authorized evidence; additional analyses require approval.
+  unresolved: Concerns affecting key correctness or main-statement validity block verified status for affected results; record other limitations and human decision on further checks or qualified progression.
+  statuses: Separate execution completion, per-result verification and authorization to continue.
+  output: Decision summary plus traceable full results, deviations, verification, uncertainty, execution/resource logs, unresolved issues and next-stage scope/budget/outcomes proposal.
+  next_stage: Human decides; proceeding never turns unresolved evidence into a pass.
