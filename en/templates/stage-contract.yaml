@@ -11,6 +11,11 @@ acceptance_criteria_and_check_methods:
   - id: C1
     requirement: null
     mandatory: true
+    applicability: undetermined
+    applicability_condition: null
+    applicability_basis_and_approval: null
+    verification_verdict: pending
+    check_ids: []
     check_method: null
     threshold: null
     required_evidence: null
@@ -53,4 +58,12 @@ human_authorization:
   approved_scope: []
   approved_budget: null
   expected_outcomes: []
+  # Summary only; matching authorization record required.
   next_stage_explicitly_included: false
+
+shared_control_records:
+  authorization_ids: []
+  check_registry_reference: null
+  role_assignments_reference: null
+  task_launch_records: []
+  recipient_requirements_reference: null

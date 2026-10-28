@@ -1,0 +1,33 @@
+# Fill project-specific values; null is not approval. See docs/shared-controls.md.
+task_id: null
+status: proposed
+deduplication_key: null
+objective_and_expected_output: null
+input_versions: []
+authorization_ids: []
+reused_check_ids: []
+inflight_duplicate_task_ids: []
+stop_conditions_triggered: []
+role_assignment_reference: null
+budget_admission:
+  - budget_id: null
+    layer: null
+    resource_and_unit: null
+    approved_limit: null
+    cumulative_spent: null
+    remaining_inflight_reservations: null
+    proposed_reservation: null
+    shutdown_save_report_reserve: null
+    projected_total: null
+    measurement_or_approved_estimation_basis: null
+    single_call_cap_and_interruption_limits: null
+    elapsed_deadline_check: null
+    admitted: false
+reservation:
+  serialized_by: null
+  reservation_id: null
+  recorded_before_dispatch: false
+settlement:
+  actual_or_estimated_usage: null
+  released_unused_reservation: null
+  cumulative_usage_reference: null

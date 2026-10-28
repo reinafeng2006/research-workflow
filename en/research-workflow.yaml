@@ -1,6 +1,6 @@
 # Workflow specification, not executable agent software.
 # Steps 1 through 6 are calibrated; numeric defaults remain proposals and project limits/authority require approval.
-version: "0.7"
+version: "0.8"
 status: steps_1_2_3_4_5_6_calibrated
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
@@ -118,7 +118,7 @@ stage_contract:
     - upstream_dependencies
   freeze_before_execution: true
   contract_changes: Version explicitly; obtain user approval for material scope or quality changes.
-  gate_rule: All mandatory decision-readiness criteria pass; disclose scientific uncertainty separately from defects in the assessment.
+  gate_rule: All applicable mandatory decision-readiness criteria pass; undetermined applicability blocks readiness. Justified not_applicable requires approved scope; uncertainty and exceptions are not verified passes.
   step_1_policy: docs/step-1.md
   step_2_policy: docs/step-2.md
   step_3_policy: docs/step-3.md
@@ -131,7 +131,7 @@ stage_contract:
 
 work_cycle:
   sequence:
-    - Validate inputs and freeze the stage contract.
+    - Validate inputs and reuse a matching approved contract; freeze only uncovered changes with the human.
     - Produce a deliverable and run producer self-checks.
     - Independently verify; invoke challenger or specialist when triggered.
     - Coordinator prioritizes defects and assigns bounded repairs.
@@ -344,3 +344,11 @@ step_6:
   maintenance_issues: Record nonmaterial maintenance within preapproval; potential conclusion/evidence-validity/authorship/disclosure impact pauses work for impact, minimal remedy and budget decision; preserve originals, no automatic reruns, retraction or republication.
   states: Record prepared, authorized, submitted/published, recipient confirmed, project closed and maintenance actually started separately; never infer one from another.
   handoff: 'Summary and full handoff: completion/acceptance, open issues, exact versions, requirement-output map, archive index, authority, actual receipts, review, usage and resumption; human confirms closure or follow-up.'
+
+shared_controls:
+  specification: docs/shared-controls.md
+  authorization_template: templates/authorization-record.yaml
+  checks_template: templates/check-registry.yaml
+  launch_template: templates/task-launch.yaml
+  roles_template: templates/role-assignments.yaml
+  walkthrough: docs/control-walkthrough.md

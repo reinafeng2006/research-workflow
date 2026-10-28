@@ -1,6 +1,6 @@
 # 工作流规范，不是可执行的智能体软件。
 # Steps 1–6 已校准；数值默认值仍为提案，具体项目限额和授权须批准。
-version: "0.7"
+version: "0.8"
 status: steps_1_2_3_4_5_6_calibrated
 purpose: 通过阶段门槛与有限修订，形成严谨、可追溯的研究。
 
@@ -118,7 +118,7 @@ stage_contract:
     - upstream_dependencies
   freeze_before_execution: true
   contract_changes: 明确版本化；重大范围或质量变化须由用户批准。
-  gate_rule: 所有强制决策就绪标准通过；科学不确定性与评估材料缺陷分开披露。
+  gate_rule: 所有适用的强制就绪标准通过；适用性未定阻止就绪。不适用须有获批范围依据；科学不确定性和例外不计为核验通过。
   step_1_policy: docs/step-1.md
   step_2_policy: docs/step-2.md
   step_3_policy: docs/step-3.md
@@ -131,7 +131,7 @@ stage_contract:
 
 work_cycle:
   sequence:
-    - 核查输入并与用户冻结阶段契约。
+    - 核查输入并引用有效的已批准阶段契约；未覆盖的变更才请用户冻结。
     - 完成产物并由产出者自查。
     - 独立核验；触发条件满足时启用质疑者或专家。
     - 协调者排序缺陷并分配有限修复任务。
@@ -344,3 +344,11 @@ step_6:
   maintenance_issues: 非实质维护按预批准规则记录完成；可能影响结论、证据有效性、署名或披露时暂停，提交影响、最小方案与预算供决定；保留原版本，不自动重跑、撤回或重新发布。
   states: 分别记录已准备、已授权、已提交或发布、接收确认、项目收尾与维护实际启动；状态不能互相推断。
   handoff: 摘要加完整交接包：完成及验收状态、未决问题、准确版本、要求成果表、归档索引、授权、实际结果凭据、审查、用量与续接说明，由用户确认收尾或后续安排。
+
+shared_controls:
+  specification: docs/shared-controls.md
+  authorization_template: templates/authorization-record.yaml
+  checks_template: templates/check-registry.yaml
+  launch_template: templates/task-launch.yaml
+  roles_template: templates/role-assignments.yaml
+  walkthrough: docs/control-walkthrough.md

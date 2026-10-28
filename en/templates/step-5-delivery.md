@@ -63,3 +63,13 @@ Evidence verification and finalization status, separately:
 External-publication authorization record (explicitly unauthorized if absent):
 
 Finalization does not automatically authorize external publication, new analyses or duplicate checks. Follow-up work requires explicit authorization.
+
+## Shared record references
+
+Authorization IDs and covered versions/actions:
+Check IDs (new / reused / invalidated), applicability and basis:
+Role assignments and independence:
+Task launch reservations and cumulative usage:
+Unresolved items and human decisions (not verified passes):
+
+Recipient requirements: ID, source, known/unknown status, required deliverable, design impact, owner and resolution point. Capture known constraints in Step 1, map design implications in Step 2, check deliverables in Step 5 and reconcile only deltas in Step 6. Material unknowns remain open; no speculative full investigation.

@@ -14,6 +14,7 @@ Reuse outputs and records whose versions, inputs, assumptions, dependencies and 
 
 ```mermaid
 flowchart TD
+    DELIVERY["Known recipient requirements: Step 1 capture;<br/>Step 2 design mapping; Step 5 deliverable check;<br/>Step 6 reconcile deltas; preserve material unknowns"]
     IN["Approved Step 5 version, project type and recipient requirements<br/>Valid outputs, records and open issues"]
     REQ["Identify required items, formats, submission method and deadline<br/>Necessary archive and acceptance requirements<br/>Reuse known information; clarify gaps only"]
     PLAN["Propose delivery/archive plan and completion criterion<br/>Scope, outcomes, reasons and tradeoffs<br/>Total/subbudgets, independent review, progress and stops"]
@@ -50,7 +51,9 @@ flowchart TD
     NEW["Start only after separate scope, budget and outcome approval<br/>And applicable publication/maintenance rules"]
     IN --> REQ
     REQ --> PLAN
-    PLAN --> AP
+    PLAN --> COVERED{"Matching existing authority?"}
+    COVERED -->|Yes: cite ID| MAP
+    COVERED -->|No: approve delta| AP
     AP -->|Revise| PLAN
     AP -->|Approve| MAP
     MAP --> GAP
@@ -202,3 +205,9 @@ Periodic maintenance counts usage cumulatively and stops at expiry. Renewal requ
 Present completion, acceptance status, open issues and decision items first. Attach exact versions, requirement-output mapping, archive index, authorization records, actual submission/publication and recipient receipts where applicable, reviews, usage and resumption instructions. Record states separately; the human confirms completed portions, accepted limitations and closure or subsequent arrangements. Use the [Step 6 plan](../templates/step-6-plan.yaml) and [handoff package](../templates/step-6-handoff.md).
 
 Publishing this policy creates no scheduled maintenance and authorizes no project submission or publication. The reusable six-stage core is calibrated; project budgets, thresholds and authorizations remain project-specific.
+
+## Shared controls (v0.8)
+
+Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.
+
+Applicability clarification: when approved closure is materials_ready and no submission is planned, submission authority is not_applicable to current closure, with the reason recorded. This does not authorize later submission. Maintenance gates apply only to selected maintenance. Required delivery and archive failures cannot be waived by marking them not_applicable.

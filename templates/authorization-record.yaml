@@ -1,0 +1,23 @@
+# 按项目填写；null 不构成批准。参见 docs/shared-controls.md。
+id: null
+status: proposed
+human_decision_reference: null
+approved_by: null
+approved_at: null
+exact_plan_version: null
+stages_and_actions: []
+approved_scope: []
+exclusions: []
+expected_outcomes: []
+budget_references: []
+preconditions: []
+repair_and_retry_bounds: []
+permitted_nonmaterial_changes: []
+version_mapping_and_basis: []
+external_submission_exact_version: null
+replaces_authorization_ids: []
+revocation_record: null
+recipient_or_channel: null
+validity_period_or_expiry: null
+recipient_or_channel: null
+validity_period_or_expiry: null

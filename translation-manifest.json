@@ -1,36 +1,42 @@
 {
   "schema_version": 1,
-  "policy_version": "0.7",
+  "policy_version": "0.8",
   "authoritative_language": "zh-CN",
   "reference_language": "en",
-  "source_commit": "d980b66c7d0d657ddc2b284f3adf2854482111a5",
+  "source_commit": "d694dcbfa24c0c7f0e472efa9afa095e6f16dbef",
   "synchronized_on": "2026-10-27",
   "status": "synchronized",
-  "note": "Hashes detect drift, not semantic equivalence. Update both languages after reviewing rule consistency.",
+  "note": "Hashes detect drift, not semantic equivalence. Both language policies reviewed together.",
   "files": [
     {
       "zh": "README.md",
       "en": "en/README.md",
-      "zh_sha256": "846048603f2780496776fa0b4275f86d3dcb6a3f7308e8b9d7ff75ee81d52440",
-      "en_sha256": "933cd25fd9de1b466f5b0c6b93350d8bbd0a4a2c9c48cb4c29b252768aa68365"
+      "zh_sha256": "d668c84458daff41b206ad65bcf3411a8cdf08301397240366812bfdf5518ea7",
+      "en_sha256": "dc8ec30e6ecdf6e117a8b487ca86019007ddc17a489ef544a50bba03d8bea65b"
     },
     {
       "zh": "AGENTS.md",
       "en": "en/AGENTS.md",
-      "zh_sha256": "3935a4d8b8e604f90cf516b971386cc5c09596e088a9592449c623bf40688a68",
-      "en_sha256": "8e115df0b5927963319206b101c31df349f28a8fe2238d78540f887d230c08ff"
+      "zh_sha256": "a39cb747fc584ed00918d55aaea7bebad4fdf50c1698dc36693f5b81a73cf5be",
+      "en_sha256": "116416384576faca5354be142ca1e00b8ef7dc16dc29081740554eccbb2c381f"
     },
     {
       "zh": "research-workflow.yaml",
       "en": "en/research-workflow.yaml",
-      "zh_sha256": "61caf0bc74f83503a784fb163901dd19722bc4cbefe1a70e9aadf8cd6527f8d4",
-      "en_sha256": "917c14e30b5aa548fa22e1313c00e0fc3a27c0cd6014f9df112c21cd21d76eca"
+      "zh_sha256": "d1ca332cc417186b882c4bcef5e5d242b2d5945c0314d42fecb1b8373771e4ce",
+      "en_sha256": "a2d4eb9c59627b13d0341572ffb1321d9f6acd22875c5170fbc685d21d01d450"
     },
     {
       "zh": "docs/calibration-decisions.md",
       "en": "en/docs/calibration-decisions.md",
-      "zh_sha256": "a0bdedf4f5a23b41ae062081bbfd9252510a7824567576f296bbb10b8890d7ea",
-      "en_sha256": "fb83ab6dfd0f7bd29248bbcc73cf2939f37d4c32b4b613a0db02932faffb63c2"
+      "zh_sha256": "af8eb56e8b178e69117d4d055d6bd34f652139cdee01ce8a6d408590b35fd89b",
+      "en_sha256": "5bcd586c87924f3a8ebc4afce919326329840e09e6d8aa56e8afbaac5f192b8d"
+    },
+    {
+      "zh": "docs/control-walkthrough.md",
+      "en": "en/docs/control-walkthrough.md",
+      "zh_sha256": "0971fd87adbd3a3cd7d474c3b70d473bd3dce6d6a4f16a3b69faca97c8779282",
+      "en_sha256": "6d48e2b182a73e01c66a41f9c73ff78c618bd6a86d6a2bb74245474771608824"
     },
     {
       "zh": "docs/language-policy.md",
@@ -39,148 +45,178 @@
       "en_sha256": "64f6b83e6239ce679d1f857f36341a02576966545a1bcf8c54ef4bb3d0a0278d"
     },
     {
+      "zh": "docs/shared-controls.md",
+      "en": "en/docs/shared-controls.md",
+      "zh_sha256": "50a2b27a749b67c8a5f7b9a9a2df3fc05496cabd7e867ecb3dba25ec97d12618",
+      "en_sha256": "7d00b3b3818342cc8546020e168d76f3fc6c210d6d0e67a5e3b1ab55e4aef0c7"
+    },
+    {
       "zh": "docs/step-1.md",
       "en": "en/docs/step-1.md",
-      "zh_sha256": "3bd1c476e33f571a07e105668d863a0e1d56b7c10a30d1c0fb3c45b7ae73ed77",
-      "en_sha256": "ba956e5c4410713691d06e8f30303a5a3fe911388232c93bf46037d18bddbacd"
+      "zh_sha256": "3383ab88bf8c982f6f9213270463d35ad9360f7a9f259c18b989d8f65316b6d1",
+      "en_sha256": "4b8f94eb1761da3eb2f216250a6a581135d1abe23bbd31d86bb558bc8da75c88"
     },
     {
       "zh": "docs/step-2.md",
       "en": "en/docs/step-2.md",
-      "zh_sha256": "3368dfba57a7b5b741ed5b93d5c4d3610e702e1f6dcf383aa135de9891e8e44c",
-      "en_sha256": "5fda6ab619a8fd4fc0221a92d9fbe7f3334be6daf437b965b46be6758f2a0dd0"
+      "zh_sha256": "873866959046da2822f3243d7be9dc22c6608f66189e6ed1d8909a0a9017097a",
+      "en_sha256": "250676947d27a8fe18bc594adf387ac20ea94761271b375720daa2af9bdeb43b"
     },
     {
       "zh": "docs/step-3.md",
       "en": "en/docs/step-3.md",
-      "zh_sha256": "075b50c2283d9e85a372ec835d91e5596c550c29c1b04247d53be0a0eb1f5b91",
-      "en_sha256": "b12795b1bf2a5f93d79a5b433a0c972720ede7eed7d3d0a917ee329e3e7d79d7"
+      "zh_sha256": "bca68f5dd105139d11682bcb3fd4aae263c27e5b3458f6bf4bb4c9a7d3b10638",
+      "en_sha256": "886cd7da29b28e44eefb9dc5ea5692af9fdf8045fdfec67a51ec8f17f304fb7e"
     },
     {
       "zh": "docs/step-4.md",
       "en": "en/docs/step-4.md",
-      "zh_sha256": "b6a5f1a3ace3ff61cb132a51b5681cb43ff8897f5e41c3250574e277a27c5a8c",
-      "en_sha256": "a0edc5e58f7eae34c4e6708019becc758b12bda48d17a6eb5a5bbb214ba952a0"
+      "zh_sha256": "215e38718fdeda426d618799a6c4f53df4cbe7efcc0f5f1ad42d3d2df6d55960",
+      "en_sha256": "9606b426238f4d8cfc75430db5cd5e65ec7b16371d497e1fb47c2f3bb44f9122"
     },
     {
       "zh": "docs/step-5.md",
       "en": "en/docs/step-5.md",
-      "zh_sha256": "5884f2efdd78253acb682e47d78153089710d0fedd57d6d0feee687921879919",
-      "en_sha256": "f385ac5018faad55fd585b9ca623e51b80b6fb528d16d7c2684ab14432d0925b"
+      "zh_sha256": "ca2c475d36df2c373dfba3f5d44b5c902a9ca93a830857a7306dec9eed2e00ec",
+      "en_sha256": "6842baf3eeb3b9c25f871892534737eaf2787f341f9208d12ab6be0fad4ff51c"
     },
     {
       "zh": "docs/step-6.md",
       "en": "en/docs/step-6.md",
-      "zh_sha256": "d4681fecf45832146731c3af5881df7f8d3766500ebb65f0325d5416bf748048",
-      "en_sha256": "8509422dbd63f5e9885aa603d3f524ec1b230424d33ebd1cba0402c96cc672f7"
+      "zh_sha256": "c719fa253fb58f17ec8eb08886c68ac1f05e45c6caeb47b27821f4d0142900e4",
+      "en_sha256": "55829cde0bd1402957cb1ed8c5153a799055d9b2e741e478cde106ab93d8edf8"
+    },
+    {
+      "zh": "templates/authorization-record.yaml",
+      "en": "en/templates/authorization-record.yaml",
+      "zh_sha256": "9461696ba6795da6f060956c9a394bbec82e7629e74543e124dfb72c44878d70",
+      "en_sha256": "6c7dea4928c3263dc5f64a0d18918da4b1bf726653d0d95bc47dc68f3d2f6bf7"
+    },
+    {
+      "zh": "templates/check-registry.yaml",
+      "en": "en/templates/check-registry.yaml",
+      "zh_sha256": "6ee1494ede6469759b38fcbc76478b1b9641577ae1bc415e48cd9267ee84985a",
+      "en_sha256": "5aed5133a250040f9afbe78a22a046ea534a51c82e53c0f41a9357b3dbd78196"
     },
     {
       "zh": "templates/decision-brief.md",
       "en": "en/templates/decision-brief.md",
-      "zh_sha256": "68f94c34ff31c6c4bc23527dc9aaabaa0e2451130f7d206ddab3b612c0cc0c87",
-      "en_sha256": "a7edb9a3ac7cd359e2bfeab0d00cc2acb216fe4635266fd490c3ee867891c990"
+      "zh_sha256": "fd4a65e6e8480ed278ca21b64687191572680d25e2ab7825edf12dc3ee5dd736",
+      "en_sha256": "da27572ff7e1f5ee9c1257d3bf138252d102d6e9c8a64e3b396dd005ee65bd00"
     },
     {
       "zh": "templates/decision-log.md",
       "en": "en/templates/decision-log.md",
-      "zh_sha256": "4c458930ac3f2624d6f234a49331367c14c66b5a53f07786da1fe2affda26bc0",
-      "en_sha256": "a29bb601f6450f2be84e8a348cd244a596c2d34b74def0f4ee34ca2942a1941d"
+      "zh_sha256": "bbe226b48a9940bd8b6ea5222ffaae0ba7c0d2bc68f340af0962fe411e583b00",
+      "en_sha256": "a0cc18b4843f63c13d388ec5c74080b3e7e26f7f71d04b03a302ae4405ebd845"
     },
     {
       "zh": "templates/evidence-ledger.csv",
       "en": "en/templates/evidence-ledger.csv",
-      "zh_sha256": "0fe3357a08649a900ac0f77592323fa8fdb9496a61aa8e773cab4004d2501301",
-      "en_sha256": "0fe3357a08649a900ac0f77592323fa8fdb9496a61aa8e773cab4004d2501301"
+      "zh_sha256": "0d735b620ed68de2380a8dbccf031f40f82e08e0e70c63a9b44aeb2e2b1a154b",
+      "en_sha256": "0d735b620ed68de2380a8dbccf031f40f82e08e0e70c63a9b44aeb2e2b1a154b"
     },
     {
       "zh": "templates/method-comparison.md",
       "en": "en/templates/method-comparison.md",
-      "zh_sha256": "313fc2d3d6d1e9d80a91a8bc33d24bc87f9e7e352e5dba6f6e6a41e3ca710307",
-      "en_sha256": "24c4e93b58272ced0e25bd7e38404b1084f046bbe9b7719dba5d6ce0d9950cfc"
+      "zh_sha256": "91bb95991c0afc6aec23d742b0e784583029c451e14b21a920603d824857c7e8",
+      "en_sha256": "2dcc2f301e4e37204f68fd55262a14f7e45b9a2226fbaf2b1fee8b036421998a"
     },
     {
       "zh": "templates/pilot-check.md",
       "en": "en/templates/pilot-check.md",
-      "zh_sha256": "ca46c6f4908cf28874024f3328ea04fdc06d1a733e0427b6906a222f5ebc3fc2",
-      "en_sha256": "dd08cf856ee8ca0d0437e7068e16edc348d344bcf0da994c2790ae2c053c03a1"
+      "zh_sha256": "d99a07368b7cfdb67631ca1c303cfe18957f1080613759a3a1e8cd6450fa829a",
+      "en_sha256": "2ed829938093dbe7b712218186a33a981a75a6f48081f9416f49bbaa520e7569"
     },
     {
       "zh": "templates/project-brief.md",
       "en": "en/templates/project-brief.md",
-      "zh_sha256": "f7038aca9f006bfb21fd57bca42adbea1c064474bea2270817022fa6a776ff94",
-      "en_sha256": "7f9f23075cf97189daae8c19d46fceb3f547592a6f652f2e5324379eca77fe82"
+      "zh_sha256": "105599943353f7d1f44f0d0a06b7228d171f77ccae469228aabcd29997b9bda7",
+      "en_sha256": "2ee5180febc8eaaa6d4d8cd4f407b891b332e6c2d79506e5481f8404a7de379c"
     },
     {
       "zh": "templates/research-protocol.md",
       "en": "en/templates/research-protocol.md",
-      "zh_sha256": "0d968c4b20adf8688e352c8554f0542ed6449616dd7b5338398b6a06035e7434",
-      "en_sha256": "cfba388bf6b9bfba43fbe7a39fd6c2efa48086663402e5b9b34035c3d74c85d1"
+      "zh_sha256": "1befb58b384ce31a4928133f2edf6fd80f939f208e87001193e2bd27d3ffe72d",
+      "en_sha256": "3111fecba102c3afe7f893da3c407a65207bc70309bc5e55912be1ac68f72745"
+    },
+    {
+      "zh": "templates/role-assignments.yaml",
+      "en": "en/templates/role-assignments.yaml",
+      "zh_sha256": "46e4f12a9d55461076462deb4796121921b5526d46c5aeecd80813cc0233896a",
+      "en_sha256": "c827f489cd0bf47c62636c0e248993f5572a22982b6bccb05fdcd435fe492dd2"
     },
     {
       "zh": "templates/stage-contract.yaml",
       "en": "en/templates/stage-contract.yaml",
-      "zh_sha256": "0b80e52303ca9cb2773741ebcdfb47f5e6330f8453cde0516cbb4a6c8f1a028b",
-      "en_sha256": "b738a6886cc7643b2516c84805619756bd31a83357e55c31cd6775c0f61ef64b"
+      "zh_sha256": "320a6b4adacb118b43c5c1e91c791fd8d9db67ecfb30b30d5377187e4309696e",
+      "en_sha256": "01ad709c9b2a96093959d913054646ccbda0c10ea2cf32b263192915c1450590"
     },
     {
       "zh": "templates/step-3-plan.yaml",
       "en": "en/templates/step-3-plan.yaml",
-      "zh_sha256": "41fb3a355297ee8a3f0996ea337e2e492742a1b79fe117d3667c83b55f17e0a2",
-      "en_sha256": "88beb3a1b5231e58c0f9eacbdd1ab16c4de2ac83578f7fb9f2375fe1e7914a39"
+      "zh_sha256": "4c660dd39dc7bb9b866f3a3929a24d024edabca0964090f4407fd21af3206cfd",
+      "en_sha256": "2e3be7d59606ea07256a97e9374309f2c6fd47f4d9edd830b3fd4a4c4a31d089"
     },
     {
       "zh": "templates/step-3-report.md",
       "en": "en/templates/step-3-report.md",
-      "zh_sha256": "7a02fcc9073bd4e3dfc3529b9a7c175a7b7f5f3907d426b54faffae5b507ba9a",
-      "en_sha256": "251f3583b980145c5a8ff805937a381817d3aa8a1d7c735dc8186a2350db9434"
+      "zh_sha256": "b059221a526c042c7ee4bb41f8b3a82e6b7a577a69148305f1d6fe4c1a88d8d9",
+      "en_sha256": "b7756d883bd9b928c483336b9eef54ca33b5b548e44148c6d1b607a6b4a74435"
     },
     {
       "zh": "templates/step-4-plan.yaml",
       "en": "en/templates/step-4-plan.yaml",
-      "zh_sha256": "f044bd84fdc0f35997d7cd938d288a80539a2be1087e38e172af9edad004eb8b",
-      "en_sha256": "e6d7e9d89359d7c7a28a50d5cca143d7a08ca219553f4335fa34aa65a78531f2"
+      "zh_sha256": "c0bb7b75312c4eaac64179b2c2f5ffa5694c891f6cae140cebc0f92688bf8a4f",
+      "en_sha256": "21e053dbcb86455b258a824f9da1619bb89c82288762d3d329641603f60426bc"
     },
     {
       "zh": "templates/step-4-results.md",
       "en": "en/templates/step-4-results.md",
-      "zh_sha256": "63053163c379cd859446585d0eae56e1b7b0c33695e0d4d7b93e544082d86bae",
-      "en_sha256": "a9c66d7b810a2fde26c53380ce9e225fc74bd4634d9658a16b5eba20ace5fe16"
+      "zh_sha256": "c5f6c692da86103c3128dab18a33439ffb0990af8ed0ec61f4bbc5bc91c76936",
+      "en_sha256": "adc947c754de5f9f4274cd8dfcdbbadc39169e46ff67faef8504fee84c7d5be9"
     },
     {
       "zh": "templates/step-5-delivery.md",
       "en": "en/templates/step-5-delivery.md",
-      "zh_sha256": "6c516d38a5b0bd4755cfb77a11d11ef4b1c8f86dad9663d0402e7369f68bdcdc",
-      "en_sha256": "e295c8bfc056b56f569a1c8bcc505d6bee08a364895fcb2bf9f45b2420c53ddd"
+      "zh_sha256": "3a718384fcce7ad38abb79ec71b396ebe2e70b76b5b585a4271325ec4e270933",
+      "en_sha256": "dc2905da29d3a0b70321563468df935d690d3290b70dea19a18f88a10228d819"
     },
     {
       "zh": "templates/step-5-plan.yaml",
       "en": "en/templates/step-5-plan.yaml",
-      "zh_sha256": "f3fe2609586cfcd80856be9a81e757c8ebd06965aa11a8f0901869e39ec31b46",
-      "en_sha256": "a478a5fc1681435c59d097616c574c9057f04d786f0406826b8b2c338ed9aaf7"
+      "zh_sha256": "2077c27983c3454b9b0ef976b98f0394c31637fc93d1b5710ea04043297cf154",
+      "en_sha256": "b457d76ad02f075bac0a7a59c9c9e21bd3cfcaff277cd3ed61d4f0deec4822b2"
     },
     {
       "zh": "templates/step-6-handoff.md",
       "en": "en/templates/step-6-handoff.md",
-      "zh_sha256": "6cf39cb01dadef2044cb9f106c008089ddfa603dce4c1e09f3ba47d8154646c9",
-      "en_sha256": "d387f4ce10c06359132105c07c566eb682e8a89835edff71a40512392f368d57"
+      "zh_sha256": "19a4de8c86bb3d5420c65c11ab3b9b1daa3afff2f76ce550fb90e5af38fe6738",
+      "en_sha256": "b34022dddb644e49738762eb400e9a9296b400b992e89dea4a948896ff0c8c98"
     },
     {
       "zh": "templates/step-6-plan.yaml",
       "en": "en/templates/step-6-plan.yaml",
-      "zh_sha256": "9382ec50206cb45ec7eef53cebc7b252d092fa6626f93b1cd3a776987815f1c1",
-      "en_sha256": "975f48aa3db8cca9e0a13799e2544e908512ba44abad9a811e2a4cf28fff9df2"
+      "zh_sha256": "54fcd4db0cbd25b7784a780375c675cc61f107535b79248fbc68aab12ab90178",
+      "en_sha256": "9758be5f3b4afd48df4be94ac920f6d51768a6ef184840175628d45337be8e49"
+    },
+    {
+      "zh": "templates/task-launch.yaml",
+      "en": "en/templates/task-launch.yaml",
+      "zh_sha256": "ad0af63a78b6d9c72f16e408541b82184416af7759f8be9b82f16001836e41a9",
+      "en_sha256": "cdd39130ab8e7c2e93756fb7d4af151c5dc087673bcce9083568cfa0e7d40122"
     },
     {
       "zh": "templates/upstream-review.md",
       "en": "en/templates/upstream-review.md",
-      "zh_sha256": "1c5cde5ab17934ec6f9e6aef7f25580bd18c8e17ffd3a9eb6023fd2dc08d544d",
-      "en_sha256": "eab1000aec35758a50e467684cd4843271f1d895f05db2751112c7cf955be38f"
+      "zh_sha256": "15df43206abff4f528ccac44ebf258a2b4727899da4c23a29cea72c815b92dde",
+      "en_sha256": "626eeba2827c41cb4bc0818e499236324de4c9fd8571bda3f226040d6232798e"
     },
     {
       "zh": "templates/verification-report.md",
       "en": "en/templates/verification-report.md",
-      "zh_sha256": "abb17c64b2a69362aa43e7e9f2d04822b49ef7927118f7d311db0221f3998304",
-      "en_sha256": "ee4edba24d7e5cd5d95545636eadd75ad73b030f27069938a104ea18d91980c0"
+      "zh_sha256": "0d042579f931fd372efbaf669dc1a21528c2967b98a9e0a2eb74f0f714e53c8c",
+      "en_sha256": "2ff3d836f976f8ebacc16e66e8e22088f86a699d72da3d8990cedfef76a80dfe"
     }
   ]
 }

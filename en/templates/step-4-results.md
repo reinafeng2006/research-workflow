@@ -54,3 +54,11 @@ Next-stage proposed scope, budget and expected outcomes:
 Human choice: further checks / stop / defer / proceed with explicit qualifications
 Exact authorization and retained limitations:
 Approval to proceed never changes an unresolved result into verified evidence.
+
+## Shared record references
+
+Authorization IDs and covered versions/actions:
+Check IDs (new / reused / invalidated), applicability and basis:
+Role assignments and independence:
+Task launch reservations and cumulative usage:
+Unresolved items and human decisions (not verified passes):

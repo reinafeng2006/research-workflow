@@ -81,3 +81,5 @@ See [Step 5 workflow and gates](docs/step-5.md), [plan](templates/step-5-plan.ya
 ## Step 6 required delivery and closure
 
 See [Step 6 workflow and gates](docs/step-6.md), [plan](templates/step-6-plan.yaml), and [handoff](templates/step-6-handoff.md). Recipient requirements guide necessary delivery/archive and the human-approved completion criterion. Optional follow-up never blocks closure. Actual submission requires explicit exact-version/action authority; record prepared, authorized, submitted, recipient confirmed, closed and maintenance-started states separately.
+
+Read [shared controls](docs/shared-controls.md) alongside stage rules. Use the authorization, check-registry, task-launch and role-assignment templates. Existing authority is reusable only within its recorded bounds; human decisions remain authoritative.

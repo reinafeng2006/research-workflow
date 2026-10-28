@@ -107,3 +107,10 @@ maintenance:
   material_conclusion_evidence_authorship_disclosure_issues_pause: true
   no_automatic_rerun_retraction_or_republication: true
 plan_human_approval_record: null
+
+shared_control_records:
+  authorization_ids: []
+  check_registry_reference: null
+  role_assignments_reference: null
+  task_launch_records: []
+  recipient_requirements_reference: null

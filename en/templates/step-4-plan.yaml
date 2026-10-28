@@ -36,3 +36,10 @@ new_exploration_or_method_changes:
   prior_human_approval_required: true
   separate_from_prespecified_analysis: true
 human_authorization_record: null
+
+shared_control_records:
+  authorization_ids: []
+  check_registry_reference: null
+  role_assignments_reference: null
+  task_launch_records: []
+  recipient_requirements_reference: null

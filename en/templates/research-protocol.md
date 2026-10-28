@@ -54,3 +54,13 @@ Implementation scope, budget, expected outcomes explicitly included in approval:
 If absent: implementation not authorized; request separate approval.
 
 Step 3 handoff: valid evidence/artifacts, versions, assumptions, dependencies, applicability boundaries, known gaps; optional combined approval of Step 3 scope, budget and pass criteria. Step 3 implementation validation and later formal execution remain distinct.
+
+## Shared record references
+
+Authorization IDs and covered versions/actions:
+Check IDs (new / reused / invalidated), applicability and basis:
+Role assignments and independence:
+Task launch reservations and cumulative usage:
+Unresolved items and human decisions (not verified passes):
+
+Recipient requirements: ID, source, known/unknown status, required deliverable, design impact, owner and resolution point. Capture known constraints in Step 1, map design implications in Step 2, check deliverables in Step 5 and reconcile only deltas in Step 6. Material unknowns remain open; no speculative full investigation.

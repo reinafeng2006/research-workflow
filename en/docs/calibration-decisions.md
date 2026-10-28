@@ -149,3 +149,7 @@ See [Step 6](step-6.md). The later delivery-first clarification governs; early o
 
 
 Current checkpoint: Steps 1–6 calibrated and saved. Project budgets, numeric limits, recipient completion criteria and optional follow-up authority still require project-specific approval. Earlier Step 6-pending statements are historical and superseded here. Documentation publication authorizes no research run, submission or scheduled maintenance.
+
+## v0.8 — 2026-10-27
+
+Human-approved cross-stage corrections: (1) Step 3 warnings cannot bypass batch gates; (2) capture delivery constraints early; (3) separate applicability, verdict, readiness and authority; (4) reuse exact matching stage authorization. Implement a single check registry, authorization records, serialized pre-dispatch budget admission and artifact-level role combination boundaries. No new research or automatic publication authority. See shared-controls.md and the fictional walkthrough.

@@ -14,6 +14,7 @@ Step 2 resolves method-selection, assumption, and protocol-design uncertainties.
 
 ```mermaid
 flowchart TD
+    DELIVERY["Known recipient requirements: Step 1 capture;<br/>Step 2 design mapping; Step 5 deliverable check;<br/>Step 6 reconcile deltas; preserve material unknowns"]
     IN["Approved question, goals, constraints and evidence"] --> PLAN["Propose comparison scope, time, tokens, outcomes and checkpoints"]
     PLAN --> AP{"Human approval"}
     AP -->|Revise| PLAN
@@ -108,3 +109,7 @@ Predefine human-approved fallback, pause, and upstream-review triggers and conse
 | Implementation authorized | Explicit implementation scope, budget and outcomes | Combined or separate approval |
 
 Deliver the decision summary first: recommendation and reasons, assumptions, risks, unresolved choices, alternatives, dissent, and approval items. Attach the traceable executable protocol. Use [method comparison](../templates/method-comparison.md), [pilot check](../templates/pilot-check.md), and [research protocol](../templates/research-protocol.md), plus shared contracts, evidence, review, decision, and rollback records. Continue calibration one multiple-choice question at a time.
+
+## Shared controls (v0.8)
+
+Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.

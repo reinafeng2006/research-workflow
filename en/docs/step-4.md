@@ -13,7 +13,9 @@ Inputs are the approved protocol, Step 3 implementation version, valid validatio
 ```mermaid
 flowchart TD
     IN["Approved protocol, implementation, validation evidence and unresolved issues"] --> PLAN["Propose scope, scale, batches, budget, stops, access rules, critical results and sampling"]
-    PLAN --> APPROVE{"Human approval"}
+    PLAN --> COVERED{"Existing authority matches version, scope,<br/>budget, outcomes and conditions?"}
+    COVERED -->|Yes: cite ID| REUSE
+    COVERED -->|No| APPROVE{"Approve uncovered delta"}
     APPROVE -->|Revise| PLAN
     APPROVE -->|Approve| REUSE["Check applicability; reuse valid evidence without retesting"]
     REUSE --> RUN["Execute and analyze in approved batches; save results, versions and cumulative usage"]
@@ -122,3 +124,7 @@ Present a decision summary first: major results, uncertainty, protocol deviation
 ## Handoff to Step 5
 
 Pass the exact results-package version, protocol, evidence and verification states, open issues, goals and intended use to [Step 5](step-5.md). Step 5 adds cross-result synthesis and delivery-suitability review, not duplicate verification of valid results. Additional analysis or return to this stage requires explicit authorization. Continuation does not verify unresolved results; Step 5 finalization does not authorize external publication.
+
+## Shared controls (v0.8)
+
+Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.

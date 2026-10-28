@@ -19,8 +19,11 @@ Inputs include the Step 4 package, protocol and versions, valid evidence, verifi
 
 ```mermaid
 flowchart TD
+    DELIVERY["Known recipient requirements: Step 1 capture;<br/>Step 2 design mapping; Step 5 deliverable check;<br/>Step 6 reconcile deltas; preserve material unknowns"]
     IN["Inputs: Step 4 results package<br/>Protocol, versions, valid evidence and verification status<br/>Unresolved issues, goals and intended use"] --> PLAN
-    PLAN["Propose Step 5 plan<br/>Scope, budget, outcomes and tradeoffs<br/>Framework approval or direct draft<br/>Review roles, version approvals, revision authority<br/>Revision limits, progress and stop criteria"] --> APPROVE{"Human approves plan"}
+    PLAN["Propose Step 5 plan<br/>Scope, budget, outcomes and tradeoffs<br/>Framework approval or direct draft<br/>Review roles, version approvals, revision authority<br/>Revision limits, progress and stop criteria"] --> COVERED{"Existing authority matches version, scope,<br/>budget, outcomes and conditions?"}
+    COVERED -->|Yes: cite ID| MAP
+    COVERED -->|No| APPROVE{"Approve uncovered delta"}
     APPROVE -->|Revise| PLAN
     APPROVE -->|Approve| MAP["Map conclusions to evidence<br/>Reuse valid evidence and reviews<br/>Retain unresolved status; no duplicate verification"]
     MAP --> ROUTE{"Approved approach"}
@@ -123,3 +126,7 @@ Define meaningful progress per project, for example resolving substantive review
 Present main conclusions, evidence boundaries, review status, unresolved issues and approval items first. Attach deliverables, conclusion-to-evidence mapping, review/revision records and resource use. Use the [Step 5 plan](../templates/step-5-plan.yaml) and [delivery package](../templates/step-5-delivery.md).
 
 Record evidence verification, content finalization and external-publication authority separately. Finalization approves an exact version, applicability boundaries and accepted limitations, not publication. Retain accepted versions, open issues, usage and next actions for continuity. Follow [Step 6](step-6.md) for required delivery/archive; actual submission and optional follow-up need explicit authority.
+
+## Shared controls (v0.8)
+
+Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.

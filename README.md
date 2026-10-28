@@ -61,3 +61,5 @@
 使用 [Step 5 计划](templates/step-5-plan.yaml) 和 [交付包](templates/step-5-delivery.md)。Step 4 核验结果，Step 5 审查新增综合与表述；有效证据直接复用。
 
 使用 [Step 6 计划](templates/step-6-plan.yaml) 和 [交接包](templates/step-6-handoff.md)。实际提交必须明确授权准确版本与动作；准备、授权、提交、接收确认、收尾和维护启动分别记录。
+
+各阶段同时遵循[共享控制](docs/shared-controls.md)，使用授权记录、统一检查记录、任务启动和角色分工模板。已有授权仅在记录的边界内复用，人类保留决策权。

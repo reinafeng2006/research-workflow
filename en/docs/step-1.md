@@ -14,6 +14,7 @@ Return only to the phase needed to repair a missing prerequisite or a human-requ
 
 ```mermaid
 flowchart TD
+    DELIVERY["Known recipient requirements: Step 1 capture;<br/>Step 2 design mapping; Step 5 deliverable check;<br/>Step 6 reconcile deltas; preserve material unknowns"]
     B["B · Broad topic or idea"] --> P1
     C["C · Candidate research questions"] --> Ccheck
     A["A · Calibrated research question"] --> Acheck
@@ -118,3 +119,7 @@ Approval may also authorize Step 2 only when its scope, time/token budget, and e
 ## Outputs
 
 Use the project brief, stage contract, evidence ledger, verification report, decision brief, and decision log templates. Record the entry phase and missing-prerequisite repairs so another session can resume without restarting framing.
+
+## Shared controls (v0.8)
+
+Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.

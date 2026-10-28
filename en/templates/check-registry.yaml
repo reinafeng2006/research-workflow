@@ -1,0 +1,29 @@
+# Fill project-specific values; null is not approval. See docs/shared-controls.md.
+checks:
+  - id: null
+    artifact_version_and_portion: null
+    criterion_id: null
+    method: null
+    applicability: undetermined
+    applicability_basis_and_approval: null
+    verdict: pending
+    evidence_references: []
+    authors_and_material_contributors: []
+    verifier: null
+    independence_and_limits: null
+    inputs_assumptions_dependencies: []
+    permitted_uses: []
+    validity: undetermined
+    invalidation_reason_and_affected_scope: null
+    supersedes_check_ids: []
+reuse_assessments:
+  - check_id: null
+    assessed_by: null
+    assessed_at: null
+    assessed_by: null
+    assessed_at: null
+    target_version_and_use: null
+    applicability_basis: null
+    decision: pending
+    affected_dependencies: []
+    recheck_authorization_id: null

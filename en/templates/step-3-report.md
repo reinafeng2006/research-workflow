@@ -48,3 +48,11 @@ Scope and scale:
 Budget, milestones/checkpoints and stop rules:
 Unresolved issues and proposed dispositions:
 Human decision and exact authorization:
+
+## Shared record references
+
+Authorization IDs and covered versions/actions:
+Check IDs (new / reused / invalidated), applicability and basis:
+Role assignments and independence:
+Task launch reservations and cumulative usage:
+Unresolved items and human decisions (not verified passes):

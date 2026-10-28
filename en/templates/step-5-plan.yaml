@@ -73,3 +73,10 @@ human_authorization:
   scope_budget_outcomes_and_controls_record: null
   new_analysis_or_checks_require_authorization: true
   finalization_is_not_external_publication_authority: true
+
+shared_control_records:
+  authorization_ids: []
+  check_registry_reference: null
+  role_assignments_reference: null
+  task_launch_records: []
+  recipient_requirements_reference: null

@@ -37,8 +37,10 @@ flowchart TD
     FIRST --> CHECK["Assess pass criteria, effective progress, use, rate and forecast; save checkpoint"]
     CHECK --> STATE{"Batch state"}
     STATE -->|Ordinary rate anomaly| WARN["Notify immediately; continue only if no pause condition"]
-    WARN --> NEXT
-    STATE -->|Pass and no pause condition| NEXT{"Approved batches remain?"}
+    WARN --> CONTINUE
+    STATE -->|Normal| CONTINUE{"Batch passed, meaningful progress,<br/>no stop and remaining work authorized?"}
+    CONTINUE -->|Yes| NEXT{"Approved batches remain?"}
+    CONTINUE -->|No| BLOCK["Do not advance; diagnose within authority<br/>or pause at stop/authority boundary"]
     NEXT -->|Yes| RUN["Run next planned batch"]
     RUN --> CHECK
     NEXT -->|No| FINAL["Decision summary, full records, risks and formal-execution proposal"]
@@ -124,3 +126,7 @@ A single transient technical fault may retry only under preapproved rules, origi
 Deliver a decision summary plus complete records: recommendation on formal execution, passes/failures, risks, protocol mapping, reused evidence and new-check reasons, resource records, and a formal-execution plan. Record protocol finalized, implementation validated, and formal execution authorized as separate states.
 
 Use the [Step 3 plan](../templates/step-3-plan.yaml) and [validation report](../templates/step-3-report.md). These are policies and templates, not an implemented runtime monitor.
+
+## Shared controls (v0.8)
+
+Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.

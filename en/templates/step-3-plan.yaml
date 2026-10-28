@@ -70,3 +70,10 @@ human_approval:
   exact_scope_budget_criteria: null
   combined_with_step_2: false
 # Step 3 approval is not formal-execution authorization.
+
+shared_control_records:
+  authorization_ids: []
+  check_registry_reference: null
+  role_assignments_reference: null
+  task_launch_records: []
+  recipient_requirements_reference: null

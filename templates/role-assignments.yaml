@@ -1,0 +1,17 @@
+# 按项目填写；null 不构成批准。参见 docs/shared-controls.md。
+assignments:
+  - artifact_version_and_portion: null
+    coordinator: null
+    producer_and_material_contributors: []
+    methods_specialist: null
+    verifier: null
+    challenger: null
+    uninvolved_walkthrough_reviewer: null
+    audience_reviewer: null
+    combined_roles_and_rationale: []
+    independence_check_and_limits: null
+    review_scope_budget_and_done_criteria: null
+    repair_authorship_and_reassigned_verifier: null
+    resolved_objection_ids: []
+    reopening_reason: null
+    approved_alternative_if_independence_unavailable: null

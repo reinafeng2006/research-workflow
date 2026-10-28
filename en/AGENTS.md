@@ -91,3 +91,5 @@ Actual submission/publication needs explicit changed exact-version/action author
 Approve total and work-type subbudgets, meaningful progress and stops; any stop pauses and reports, with recovery scope/remaining budget approved. Compare none/on-demand/bounded periodic maintenance and approve scope/triggers/frequency/duration/budget/stops before activation. Preserve cumulative usage across runs; stop at expiry and approve renewal first. Material maintenance issues pause for decision; preserve originals, no automatic reruns, retraction, republication or new analysis.
 
 Use templates/step-6-plan.yaml and templates/step-6-handoff.md for summary/full handoff including exact versions, archive index, authority, actual outcomes, reviews, resources and resumption. Human confirms closure or follow-up. A calibrated six-stage policy authorizes no specific research or scheduled maintenance.
+
+Read [shared controls](docs/shared-controls.md) alongside stage rules. Use the authorization, check-registry, task-launch and role-assignment templates. Existing authority is reusable only within its recorded bounds; human decisions remain authoritative.

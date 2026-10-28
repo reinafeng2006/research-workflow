@@ -35,3 +35,11 @@ Original-criteria assessment:
 Proposed amendment, reason, interpretation impact and approval (preserve original results):
 Next-step recommendation and alternatives:
 Human decision (no automatic extension):
+
+## Shared record references
+
+Authorization IDs and covered versions/actions:
+Check IDs (new / reused / invalidated), applicability and basis:
+Role assignments and independence:
+Task launch reservations and cumulative usage:
+Unresolved items and human decisions (not verified passes):
