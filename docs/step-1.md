@@ -1,120 +1,120 @@
-# Step 1 — Define and select a research question
+# Step 1 — 定义与选择研究问题
 
-Status: calibrated with the human on 2026-10-27. This is reusable policy, not a claim that any particular project's Step 1 has passed. Detailed methodology belongs to Step 2, whose details remain uncalibrated.
+状态：已由用户于 2026-10-27 校准。本文是可复用规则，不代表具体项目已通过 Step 1。详细方法设计属于 Step 2；当前 Steps 1–4 已校准，Step 5 待校准。
 
-## Objective and entry routing
+## 目标与进入位置
 
-End with a human-approved specific research question, accepted goals, documented evidence limits, and explicit authorization boundaries. Use one shared sequence, entering according to input readiness:
+本阶段结束时应有用户批准的具体研究问题、已接受目标、证据局限和明确授权边界。使用同一流程，根据输入成熟度进入不同位置：
 
-- B: a broad topic enters goal clarification and direction generation.
-- C: candidate questions enter refinement/comparison; check goal sufficiency and revisit clarification only if necessary. Do not automatically regenerate directions.
-- A: an already calibrated question enters the feasibility contract phase; check prerequisites without redoing completed framing.
+- B：宽泛主题从目标澄清和方向生成开始。
+- C：候选问题从细化／比较开始；先检查目标是否足够明确，只有缺失时才回到澄清，不自动重新生成方向。
+- A：已校准问题从可行性契约开始；检查前提，不重复已完成的问题定义。
 
-Return only to the phase needed to repair a missing prerequisite or a human-requested revision. Preserve the entry point after goal clarification. C may include proposed synthesis questions; combinations are options, not automatic scope changes.
+仅返回修复缺失前提或用户要求修订所需的位置。目标澄清后仍按原进入位置继续。C 可包含综合问题提案；组合是选项，不自动改变范围。
 
 ```mermaid
 flowchart TD
-    B["B · Broad topic or idea"] --> P1
-    C["C · Candidate research questions"] --> Ccheck
-    A["A · Calibrated research question"] --> Acheck
-    P1["1 · Clarify project goals<br/>Human confirms intended outcomes<br/>No forced ranking"]
-    P1 --> Route{"Continue from entry point"}
+    B["B · 宽泛主题或想法"] --> P1
+    C["C · 候选研究问题"] --> Ccheck
+    A["A · 已校准研究问题"] --> Acheck
+    P1["1 · 澄清项目目标<br/>用户确认期望成果<br/>不强制排序"]
+    P1 --> Route{"按原进入位置继续"}
     Route -->|B| P2
     Route -->|C| P4
     Route -->|A| P5
-    P2["2 · Generate distinct directions<br/>Approve scope, budget, and proposed range first<br/>Include close and unconventional options"]
+    P2["2 · 生成有实质差异的方向<br/>先批准范围、预算与建议数量范围<br/>包含近似及非常规选项"]
     P2 --> P3
-    P3["3 · Human selects one or several directions<br/>Feasibility not yet assessed"] --> P4
-    Ccheck{"Goals sufficiently defined?"}
-    Ccheck -->|Yes| P4
-    Ccheck -->|Missing or unclear| P1
-    P4["4 · Refine candidate questions<br/>Reuse existing questions where sufficient<br/>Human confirms candidates to assess"] --> P5
-    Acheck{"Goals and specific question<br/>sufficiently defined?"}
-    Acheck -->|Yes| P5
-    Acheck -->|Goals missing or unclear| P1
-    Acheck -->|Question needs refinement| P4
-    P5["5 · Agree feasibility-check contract<br/>Scope, time, tokens, expected outcomes<br/>Human approval before investigation"] --> P6
-    P6["6 · Assess candidates individually<br/>Evidence, feasibility, assumptions, tradeoffs<br/>Combinations remain optional proposals"] --> V
-    V["7 · Independently verify and challenge"] --> Gate{"Decision brief ready?"}
-    Gate -->|Repair within approved budget| P6
-    Gate -->|Ready, including disclosed disagreements| P8
-    Gate -->|Budget insufficient or prerequisite missing| E
-    E["Explain unresolved issues and options<br/>Human decides the next action"]
-    E -->|Approve bounded extension| P5
-    E -->|Clarify missing goals| P1
-    E -->|Repair question framing| P4
-    E -->|Proceed with disclosed uncertainty| P8
-    E -->|Stop or defer| Stop["Stop / defer"]
-    P8["8 · Present recommendation and alternatives<br/>Explain evidence, uncertainties, and tradeoffs"] --> H{"Human decision"}
-    H -->|Approve specific question| Done["Step 1 complete<br/>Record question, goals, limitations, and approval"]
-    H -->|Request revision or further investigation| E
-    H -->|Stop or defer| Stop
-    Done --> Next["Next: detailed methodology<br/>Begin only within explicitly approved scope and budget"]
+    P3["3 · 用户选择一个或多个方向<br/>尚未评估可行性"] --> P4
+    Ccheck{"目标是否足够明确？"}
+    Ccheck -->|是| P4
+    Ccheck -->|缺失或不明确| P1
+    P4["4 · 细化候选问题<br/>已有问题足够明确时直接复用<br/>用户确认待评估候选"] --> P5
+    Acheck{"目标与具体问题<br/>是否足够明确？"}
+    Acheck -->|是| P5
+    Acheck -->|目标缺失或不明确| P1
+    Acheck -->|问题需要细化| P4
+    P5["5 · 确认可行性检查契约<br/>范围、时间、token、预期产出<br/>调查前由用户批准"] --> P6
+    P6["6 · 分别评估各候选<br/>证据、可行性、假设与取舍<br/>组合仍为可选提案"] --> V
+    V["7 · 独立核验与质疑"] --> Gate{"决策摘要就绪？"}
+    Gate -->|在批准预算内修正| P6
+    Gate -->|就绪，含已披露分歧| P8
+    Gate -->|预算不足或缺失前提| E
+    E["说明未决问题与选项<br/>用户决定下一步"]
+    E -->|批准有限扩展| P5
+    E -->|补充缺失目标| P1
+    E -->|修正问题定义| P4
+    E -->|带已披露不确定性继续| P8
+    E -->|停止或暂缓| Stop["停止／暂缓"]
+    P8["8 · 提交推荐与替代方案<br/>说明证据、不确定性与取舍"] --> H{"用户决定"}
+    H -->|批准具体问题| Done["Step 1 完成<br/>记录问题、目标、局限与批准"]
+    H -->|要求修订或进一步调查| E
+    H -->|停止或暂缓| Stop
+    Done --> Next["下一阶段：详细方法设计<br/>仅在明确批准的范围与预算内开始"]
 ```
 
-## Goals and options
+## 目标与选项
 
-Allow multiple goals without forced ranking. Describe desired outcome, beneficiary/context, observable evidence of success, and boundaries in project-specific terms, not just labels such as novelty or publication. Ask for priorities only when an actual decision requires resolving a tradeoff.
+允许多个目标并存，不强制排序。用项目特定的期望成果、受益者／背景、可观察成功证据与边界描述目标，不停留于“创新”“发表”等标签。只有具体决定需要解决取舍时才请用户确定优先级。
 
-Agents actively propose additional outcomes and explain why they matter, but keep accepted goals, proposed outcomes, and rejected/deferred options separate. Only the human may adopt proposed goals.
+智能体主动建议其他成果并说明价值，但分开记录已接受、提议、拒绝和暂缓的成果。只有用户可以把建议纳入目标。
 
-For brainstorming, propose a range of meaningfully distinct directions and explain why that coverage is useful within the budget; obtain approval. Include close-to-original and unconventional options connected to accepted goals. Do not fill a quota with redundant options. Explain if fewer useful options emerge.
+头脑风暴前提出有实质差异的方向数量范围，解释预算内这种覆盖为何有用并取得批准。包含贴近原想法与非常规的选项，说明与已接受目标的关系；不凑固定数量，不以重复选项填充。若有用选项较少，应说明原因。
 
-Present goal alignment and tentative tradeoffs before feasibility checks, explicitly marking feasibility as not yet assessed. The human first selects one or multiple directions. Refine those into questions and obtain approval for a bounded feasibility investigation. Assess selected options individually first. Suggest combinations where useful, explaining added value, complexity, and tradeoffs; seek approval before expanding investigation scope.
+可行性检查前先展示目标匹配与初步取舍，并明确标记可行性尚未评估。用户先选一个或多个方向，再细化问题并批准有限调查。先分别评估；有价值时建议组合，说明新增价值、复杂度与取舍，扩展调查范围前先获批准。
 
-## Agent responsibilities and conduct
+## 角色责任与行为
 
-| Role | Step 1 responsibility | Principles and reactions |
+| 角色 | Step 1 责任 | 原则与反应 |
 | --- | --- | --- |
-| Coordinator | Route entry, clarify goals, propose budgets, maintain approvals, assemble recommendations and alternatives | Respect human intent and bounded authority; preserve dissent; ask priorities only when a decision requires them |
-| Researcher / producer | Develop distinct options; assess selected candidates; inspect sources; identify critical claims; self-check and repair | Prefer traceable evidence to plausible prose; update on contrary evidence; label uncertainty and offer alternatives |
-| Verifier | Check exact brief version, sources, evidence labels, goal approval, and compliance with the agreed contract | Distinguish failed evidence checks from interpretive disagreement; never turn an exception into verified evidence |
-| Challenger | Test assumptions, option diversity, hidden priorities, recommendation sensitivity, and overlooked critical dependencies | Constructive skepticism; explain material objections and retire resolved ones; do not demand consensus or endless review |
-| Methods specialist, when needed | Preliminary checks of data/method/resource requirements and assumptions | Explain limits and verification needs; do not perform detailed methodology design prematurely |
+| 协调者 | 确定进入位置、澄清目标、提出预算、维护批准记录、组织推荐与替代方案 | 尊重人类意图和有限授权；保留分歧；仅在决定需要时询问优先级 |
+| 研究者／产出者 | 生成有区别的选项、评估候选、检查来源、识别关键主张、自查修正 | 重视可追溯证据；根据反证修订；标注不确定性并提供替代方案 |
+| 独立核验者 | 检查准确版本、来源、证据标记、目标批准与契约遵循 | 区分证据检查失败和解释分歧；不把例外当作已核验证据 |
+| 质疑者 | 检查假设、选项多样性、隐含优先级、推荐敏感性与遗漏的关键依赖 | 建设性质疑；说明实质异议并撤销已解决异议；不强求共识或无限审查 |
+| 方法专家（按需） | 初步检查数据、方法、资源要求与假设 | 说明局限与待验证事项，不提前开展详细设计 |
 
-The researcher flags decision-critical claims; the challenger checks for omissions; the verifier checks their support. The human can add claims for verification. The coordinator handles any resulting budget change.
+研究者标记决策关键主张，质疑者检查遗漏，独立核验者检查支持证据。用户可以增加核验目标，协调者处理相应预算变更。
 
-## Budget contract and bounded work cycle
+## 预算契约与有限工作循环
 
-Before brainstorming or preliminary evidence investigation, agents propose a project-complexity-based budget and explain the rationale. Include estimated time, estimated tokens, investigation scope, exclusions, expected resolution, likely residual uncertainty, and verification effort. The human approves before work starts.
+头脑风暴或初步证据调查前，按项目复杂度提出预算并解释理由。包含预计时间、token、调查范围、排除项、预计解决事项、可能残余不确定性与核验工作。开始前由用户批准。
 
-Track estimates and measured actual usage separately; mark unavailable telemetry. Do not claim exact token enforcement without support. Proposed iteration counts and checkpoint percentages in the base configuration remain unapproved defaults until adopted in a project contract.
+分别记录估算、测量实际用量和不可用遥测。无工具支持时不声称精确执行 token 限额。配置中的轮数和检查点百分比只是初始提案，须在项目契约中采用才生效。
 
-Produce → self-check → independently verify/challenge → diagnose → repair → verify again within authorized limits. Budget exhaustion is not a quality pass. If insufficient, pause and explain unresolved questions, their decision consequences, usage, and options: bounded extension, narrower scope, alternative approach, proceeding with disclosed uncertainty, or stopping. Obtain approval before extension or scope expansion.
+产出 → 自查 → 独立核验／质疑 → 诊断 → 修正 → 再核验，始终受授权限制。预算耗尽不是质量通过。预算不足时暂停，解释未决问题、决策影响、用量和选项：有限扩展、缩小范围、替代方法、带已披露不确定性继续或停止。扩预算或范围前先批准。
 
-When a missing input or flawed earlier assumption causes trouble, propose the smallest upstream repair. Preserve previous versions, mark affected downstream claims stale, and revalidate them. Do not automatically repeat all earlier phases.
+缺失输入或上游假设错误时，提出最小上游修复。保留旧版本，标记受影响下游主张失效并重新核验，不自动重做全部前序步骤。
 
-## Evidence policy
+## 证据规则
 
-- Claims about existing research and data availability require directly inspected sources. A catalog entry may establish that a dataset is advertised, but not that usable access, coverage, or entitlement is verified.
-- Abstract-level findings are allowed for orientation, explicitly labeled; they do not establish full-text review.
-- Research claims driving a recommendation require full-text verification of relevant passages and limitations. Mark a claim decision-critical whenever changing/removing it could alter the recommendation; explain the affected decision and sensitivity. The human may designate additional verification targets.
-- If full text is unavailable, identify the unverified claim, uncertainty, decision impact, and alternatives. Let the human decide on further investigation or proceeding; the claim stays unverified.
-- Methodological feasibility may use clearly labeled inference, with assumptions, uncertainty, and required future verification.
-- Preserve claim-level provenance and permitted-use limits. Never substitute agent agreement for evidence or imply that an unsuccessful search proves absence.
+- 既有研究与数据可用性主张需要直接检查的来源。目录条目只能证明数据被列出，不能自动证明实际可获取、覆盖适用或有使用权限。
+- 摘要级发现可用于方向了解，但须明确标记，不能冒充全文审阅。
+- 驱动推荐的研究主张须核验全文相关段落及局限。如果改变或删除主张可能改变推荐，就标为决策关键，说明受影响决定和敏感性；用户可增加核验目标。
+- 全文不可用时，说明未核验主张、不确定性、决策影响与替代方案。用户决定继续调查或推进，主张仍保持未核验。
+- 方法可行性允许明确标注的推断，列出假设、不确定性和后续核验要求。
+- 保留逐项来源和允许用途边界。不以智能体共识代替证据，不把未检索到当作不存在的证明。
 
-## Two distinct gates
+## 两个不同门槛
 
-### Gate 1: decision readiness
+### 门槛 1：决策材料就绪
 
-The independent verifier checks that:
+独立核验者检查：
 
-1. Goals are specific enough to compare options and reflect human-confirmed intent; proposed outcomes have not been silently adopted.
-2. Relevant candidates and their goal alignment are clear; investigation covers only the approved set/scope, and combinations remain proposals unless accepted.
-3. The preliminary assessment is bounded, evidence-backed where required, and explicit about unresolved support, inferences, and assumptions.
-4. Decision-critical claims are identified with their impact, evidence level, locators, verification outcome, and any human-requested checks.
-5. Recommendation, alternatives, tradeoffs, and uncertainties are accurately represented without silently ranking goals.
-6. Unresolved disagreement includes each position's evidence, assumptions, and consequence for the recommendation. Consensus is not a requirement.
-7. Budget reporting separates estimates, actuals, and unavailable measures; outstanding work and next-step options are visible.
+1. 目标足以比较选项且由用户确认，没有擅自采纳新增成果。
+2. 候选及目标匹配清楚，只调查获批集合与范围；未接受的组合保持提案状态。
+3. 初步评估有边界，按要求提供证据，明确未获支持的内容、推断和假设。
+4. 关键主张列明影响、证据级别、来源定位、核验结果与用户追加检查。
+5. 如实展示推荐、替代方案、取舍和不确定性，不擅自给目标排序。
+6. 分歧列明各方证据、假设及推荐影响，不要求共识。
+7. 预算报告区分估算、实际值和不可用测量，展示未完成工作与后续选项。
 
-A brief can be ready for an informed decision while a scientific claim remains unverified. Readiness requires honest disclosure, not a finding that the project is feasible. A defective or misleading brief must be repaired; a human-authorized evidence exception never changes that claim's verification status.
+材料可供知情决定，不等于每个科学主张均已核验，也不等于项目可行。就绪要求诚实披露；有缺陷或误导性的摘要须修复。用户接受证据例外不改变该主张的核验状态。
 
-### Gate 2: human selection and authorization
+### 门槛 2：人类选择与授权
 
-The human selects, revises, defers, rejects, or approves the specific research question. Record accepted goals, supporting evidence, assumptions, unresolved claims/disagreements, and exceptions. Approval does not imply agent consensus or complete evidence.
+用户选择、修订、暂缓、拒绝或批准具体问题。记录目标、支持证据、假设、未核验主张、分歧和例外。批准不代表共识或证据完整。
 
-Approval may also authorize Step 2 only when its scope, time/token budget, and expected outcomes are explicitly included. Otherwise request separate authorization. Approval of a direction is never unlimited permission.
+只有批准明确包含 Step 2 范围、时间／token 预算及预期产出时，才能一并授权下一阶段，否则另行取得授权。方向批准不是无限权限。
 
-## Outputs
+## 交付
 
-Use the project brief, stage contract, evidence ledger, verification report, decision brief, and decision log templates. Record the entry phase and missing-prerequisite repairs so another session can resume without restarting framing.
+使用项目说明、阶段契约、证据台账、核验报告、决策摘要和决策日志模板。记录进入位置与缺失前提修复，使后续会话可以续接而不重新定义问题。

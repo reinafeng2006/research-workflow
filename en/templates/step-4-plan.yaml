@@ -1,0 +1,38 @@
+status: proposed_not_authorized
+protocol_version: null
+implementation_version: null
+step_3_evidence_and_unresolved_issues: []
+formal_scope_and_scale: null
+prespecified_analyses: []
+formal_resource_control_plan:
+  # Complete a Step 3 plan template adapted to formal scale; no implied reuse of thresholds.
+  plan_reference_and_version: null
+  batches_budgets_stop_threshold_rationale: null
+  human_approval: null
+interim_access:
+  continuously_visible_operational_metrics: []
+  judgment_sensitive_results_and_risks: []
+  approved_viewing_times_and_use_boundaries: []
+  prescribed_actions: []
+  preapproved_low_impact_exposure_rules: []
+  material_or_uncertain_exposure: Explain impact and minimal remedy; human decides before affected work continues.
+review:
+  critical_results:
+    - result_id: null
+      protocol_basis: null
+      importance_reason_independent_of_desirability: null
+      main_claim_dependencies: []
+      verification_method_and_valid_evidence_reuse: null
+  other_results_sampling_plan: null
+  rationale_scope_budget: null
+  human_approval: null
+  new_critical_results_or_expansion: Explain reason, impact, scope and budget; obtain approval before new checks.
+repairs:
+  explicitly_preapproved_diagnostics_and_repairs: []
+  budget_and_rerun_bounds: null
+  preserve_original_and_unaffected_results: true
+  broad_rerun: Human approval required with impact and budget rationale.
+new_exploration_or_method_changes:
+  prior_human_approval_required: true
+  separate_from_prespecified_analysis: true
+human_authorization_record: null

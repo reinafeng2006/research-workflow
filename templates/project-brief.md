@@ -1,41 +1,41 @@
-# Project brief
+# 项目说明
 
-Status: draft
-Starter repository and commit:
-Project name and domain:
-Entry type: A calibrated question / B broad idea / C candidate questions
-Entry phase:
-Existing inputs and versions:
-Missing prerequisites and minimum return phase:
-Desired deliverables and deadline:
-Sources, data, tools, expertise, and constraints:
+状态: draft
+模板仓库与提交版本:
+项目名称与领域:
+进入类型: A 已校准问题／B 宽泛想法／C 候选问题
+进入阶段:
+已有输入及版本:
+缺失前提与最小返回阶段:
+目标交付物与截止时间:
+来源、数据、工具、专业能力与约束:
 
-## Goals
+## 目标
 
-Do not force ranking. Ask one clarification question at a time, using existing answers first.
+不强制排序；优先使用已有答案，一次一个澄清问题。
 
-| Goal ID | Desired outcome | Beneficiary / context | Evidence of success | Boundaries | Human status: accepted / proposed / rejected / deferred |
+| 目标 ID | 期望成果 | 受益者／背景 | 成功的证据 | 边界 | 人类决定状态: accepted / proposed / rejected / deferred |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
 
-Decision that requires prioritization, if any:
-Human resolution of that tradeoff:
-Suggested additional outcomes and why they matter:
+需要优先级取舍的具体决定（如有）:
+用户对该取舍的决定:
+建议的新增成果及其价值:
 
-## Options
+## 选项
 
-Approved brainstorming range, rationale, and budget reference:
-Distinct close and unconventional options:
-Human shortlist (one or multiple):
-Candidate specific questions:
-Proposed combinations, added value, complexity, and tradeoffs:
-Feasibility investigation contract and approval:
+获批方向数量范围、理由和预算记录:
+有实质差异的近似方向与非常规方向:
+用户入选清单（一个或多个）:
+候选具体问题:
+建议组合、新增价值、复杂度与取舍:
+可行性调查契约与批准:
 
-## Completion
+## 完成记录
 
-Selected specific question:
-Evidence and verification report references:
-Unresolved critical claims and disagreements:
-Human decision and accepted limitations:
-Next-stage scope, budget, and expected outcomes if included in approval:
-Otherwise: next-stage execution not authorized.
+选定的具体问题:
+证据与核验报告引用:
+未解决的关键主张和分歧:
+人类决定与接受的局限:
+批准中包含的下一阶段范围、预算和预期产出:
+否则：下一阶段执行尚未授权。

@@ -1,40 +1,40 @@
-# Step 1 decision brief
+# Step 1 决策摘要
 
-Artifact version and stage-contract version:
-Entry route and prerequisite repairs:
-Accepted goals:
-Selected candidates assessed:
-Recommended specific question and rationale:
+产物版本与阶段契约版本:
+进入路径与前提补齐记录:
+已接受目标:
+已评估的入选方案:
+推荐的具体问题与理由:
 
-| Alternative | Goal alignment | Evidence / feasibility | Benefits | Costs, complexity, and tradeoffs | Assumptions and uncertainty |
+| 替代方案 | 与目标的关系 | 证据／可行性 | 收益 | 成本、复杂度与取舍 | 假设与不确定性 |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
 
-Optional combinations and scope changes (not yet approved):
-Priorities requiring human resolution, if any:
+可选组合与范围变化（尚未批准）:
+需要用户决定的优先级（如有）:
 
-## Decision-critical evidence
+## 决策关键证据
 
-| Claim ID | Why it could change the recommendation | Source and exact locator | Evidence level | Verification outcome | Missing support and alternatives |
+| 主张 ID | 为何可能改变推荐 | 来源及准确定位 | 证据层级 | 核验结果 | 缺失支持与替代选项 |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
 
-Human-added verification targets:
-Methodological inferences, assumptions, and future checks:
+用户新增核验目标:
+方法推断、假设及后续检查:
 
-## Disagreement
+## 未解决分歧
 
-| Position / reviewer | Evidence | Assumptions | Effect on recommendation | Proposed discriminating check |
+| 立场／审查者 | 证据 | 假设 | 对推荐的影响 | 建议的区分性检查 |
 | --- | --- | --- | --- | --- |
 | | | | | |
 
-## Budget and decision
+## 预算与决定
 
-Estimated time/tokens:
-Measured actual time/tokens (or explicitly unavailable):
-Completed scope and unresolved questions:
-Verifier's decision-readiness outcome:
-Human choice: proceed / revise / alternative / further investigation / stop / defer
-Accepted evidence limitations (never relabeled as verified):
-Exact scope, time/token budget, and expected outcomes authorized next:
-Approval record:
+估算时间／token:
+实际测量时间／token（不可用时明确说明）:
+已完成范围与未决问题:
+独立核验者的决策就绪判断:
+用户选择: proceed / revise / alternative / further investigation / stop / defer
+用户接受的证据局限（不得改标为已核验）:
+下一步明确授权的范围、时间／token 预算和预期产出:
+批准记录:

@@ -1,0 +1,72 @@
+status: proposed_not_authorized
+protocol_version: null
+scope: []
+expected_outcomes: []
+valid_evidence_and_artifacts:
+  - id: null
+    version: null
+    assumptions_inputs_dependencies: []
+    applicability: null
+    reuse_without_rerun: true
+necessary_checks:
+  - requirement: null
+    coverage_gap_or_invalidation_reason: null
+    smallest_affected_scope: null
+    authorization: null
+materials:
+  synthetic_and_real_scope: []
+  limitations_and_reuse_risks: []
+  reserved_data_excluded: []
+coverage:
+  normal_paths: []
+  decision_critical_exceptions: []
+  pass_criteria: []
+reproducibility:
+  deterministic_consistency: null
+  stochastic_or_manual_tolerances: null
+  repetition_and_records: null
+  rationale: null
+budgets:
+  total_time_limit: null
+  total_token_limit: null
+  review_retry_repair_save_recovery_included: true
+  batch_agent_allocations: []
+  attribution_and_aggregation_method: null
+batches:
+  smallest_representative_batch: null
+  subsequent_approved_scope: []
+  effective_progress_criteria: []
+  checkpoint_schedule: []
+monitoring:
+  telemetry_sources_and_granularity: []
+  unavailable_measures_and_interrupt_limits: []
+  approved_baselines: []
+  windows_and_sustained_duration: null
+  startup_and_spike_allowances: null
+  warning_thresholds: []
+  hard_rate_limits: []
+  progress_cost_and_completion_forecast_rules: []
+  no_output_repeated_failure_abnormal_cost_triggers: []
+  repair_round_time_token_progress_stop_conditions: []
+  pause_scope_subtask_vs_total: null
+  # Each approved stop condition is sufficient. No silent baseline/budget increase.
+persistence:
+  batch_end_and_costly_step_save_points: []
+  approved_overhead: null
+  result_config_version_usage_records: []
+recovery:
+  human_approval_required_for: [resource, rate, progress, repeated_failure]
+  preapproved_single_transient_fault_rules: []
+  retry_limit: null
+  original_budget_and_cumulative_counters_preserved: true
+  integrity_and_applicability_checks: []
+  rerun_only_missing_corrupt_invalid: true
+fallbacks:
+  approved_triggers_bounds_consequences: []
+  normal_reporting: next_checkpoint
+  unexpected_consequences: immediate_notification
+human_approval:
+  record: null
+  exact_scope_budget_criteria: null
+  combined_with_step_2: false
+# Step 3 approval is not formal-execution authorization.

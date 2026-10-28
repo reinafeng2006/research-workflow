@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "policy_version": "0.5",
+  "authoritative_language": "zh-CN",
+  "reference_language": "en",
+  "source_commit": "52c6fec0ef487038e2c038c001075ff7f429a159",
+  "synchronized_on": "2026-10-27",
+  "status": "synchronized",
+  "note": "Hashes detect drift, not semantic equivalence. Update both languages after reviewing rule consistency.",
+  "files": [
+    {
+      "zh": "README.md",
+      "en": "en/README.md",
+      "zh_sha256": "ff9a0742882b59b854b13684e02de66170de00462da41fabd8beb5a27814e924",
+      "en_sha256": "a6d57d5b77291e038f27f75f583fa975da8eb6d490017bafdeda84afd39ff52c"
+    },
+    {
+      "zh": "AGENTS.md",
+      "en": "en/AGENTS.md",
+      "zh_sha256": "233de5bba6dfb34eeb0fbf471c8a8f0dfbd826c3678adac33ddebd430037b9bc",
+      "en_sha256": "01f051d69659763a83b3d5303f31a6bab1fa2d02f22312c0d7c1b6e72dc00bda"
+    },
+    {
+      "zh": "research-workflow.yaml",
+      "en": "en/research-workflow.yaml",
+      "zh_sha256": "251cb8c0b9445fe045fbd397971f89b4f0e9f50a0550c414f7a681bd50e34158",
+      "en_sha256": "6aa74ad6452cc0e4949052e1c80080127eb01041b92f84b447a8822a6b5b7a07"
+    },
+    {
+      "zh": "docs/calibration-decisions.md",
+      "en": "en/docs/calibration-decisions.md",
+      "zh_sha256": "572b5454dd6f45bda90bcedf46fa3905c72d55b82839d91dc00af190cbcd9859",
+      "en_sha256": "807f4aeb09c1bc0f29197d0528faa94838bc25688ab3b845cbc840c7de62b334"
+    },
+    {
+      "zh": "docs/language-policy.md",
+      "en": "en/docs/language-policy.md",
+      "zh_sha256": "fc70f402c75e1c8e7ccfabe84cba3170cdbe5936d359ea954b271bd054eca163",
+      "en_sha256": "a99d64e390224ebd2915192c6469addeba12a55f424a008442e096cc724e5d63"
+    },
+    {
+      "zh": "docs/step-1.md",
+      "en": "en/docs/step-1.md",
+      "zh_sha256": "9e4b2cae832088dbe7f72daabef39dbee57742faf5c1e839fca82d5ae778b7c8",
+      "en_sha256": "54cc521812a1a45b63915e952b183aeef45201ed10ac7d3672d8d8ef965d66e4"
+    },
+    {
+      "zh": "docs/step-2.md",
+      "en": "en/docs/step-2.md",
+      "zh_sha256": "25d0d30e9592c079d49d432c94a2d76c05651c416d410cdb20b36c070b7f5f49",
+      "en_sha256": "e5c74935179c5d00e6f1deb2b90f716839ffce9e94028dd1c781c7d624acfe8b"
+    },
+    {
+      "zh": "docs/step-3.md",
+      "en": "en/docs/step-3.md",
+      "zh_sha256": "4d6bcd1d9f67c6aeba8e6a6d036bf4330be2ace8d6f5bd5a28156c75a3a56b30",
+      "en_sha256": "cd298f68c570c3c3b00da4ff5ead9ce6608ebdbfc6558b2ee29748913c6eda8e"
+    },
+    {
+      "zh": "docs/step-4.md",
+      "en": "en/docs/step-4.md",
+      "zh_sha256": "cbd629be37189b594897c2d4bf7e4f402116c1a23c990067f413988dbbb66a57",
+      "en_sha256": "a4a3c89ee0ee16249bf9a8f711ab746338b9893c3f5d96020dfb8ed89aed2980"
+    },
+    {
+      "zh": "templates/decision-brief.md",
+      "en": "en/templates/decision-brief.md",
+      "zh_sha256": "68f94c34ff31c6c4bc23527dc9aaabaa0e2451130f7d206ddab3b612c0cc0c87",
+      "en_sha256": "a7edb9a3ac7cd359e2bfeab0d00cc2acb216fe4635266fd490c3ee867891c990"
+    },
+    {
+      "zh": "templates/decision-log.md",
+      "en": "en/templates/decision-log.md",
+      "zh_sha256": "4c458930ac3f2624d6f234a49331367c14c66b5a53f07786da1fe2affda26bc0",
+      "en_sha256": "a29bb601f6450f2be84e8a348cd244a596c2d34b74def0f4ee34ca2942a1941d"
+    },
+    {
+      "zh": "templates/evidence-ledger.csv",
+      "en": "en/templates/evidence-ledger.csv",
+      "zh_sha256": "0fe3357a08649a900ac0f77592323fa8fdb9496a61aa8e773cab4004d2501301",
+      "en_sha256": "0fe3357a08649a900ac0f77592323fa8fdb9496a61aa8e773cab4004d2501301"
+    },
+    {
+      "zh": "templates/method-comparison.md",
+      "en": "en/templates/method-comparison.md",
+      "zh_sha256": "313fc2d3d6d1e9d80a91a8bc33d24bc87f9e7e352e5dba6f6e6a41e3ca710307",
+      "en_sha256": "24c4e93b58272ced0e25bd7e38404b1084f046bbe9b7719dba5d6ce0d9950cfc"
+    },
+    {
+      "zh": "templates/pilot-check.md",
+      "en": "en/templates/pilot-check.md",
+      "zh_sha256": "ca46c6f4908cf28874024f3328ea04fdc06d1a733e0427b6906a222f5ebc3fc2",
+      "en_sha256": "dd08cf856ee8ca0d0437e7068e16edc348d344bcf0da994c2790ae2c053c03a1"
+    },
+    {
+      "zh": "templates/project-brief.md",
+      "en": "en/templates/project-brief.md",
+      "zh_sha256": "f7038aca9f006bfb21fd57bca42adbea1c064474bea2270817022fa6a776ff94",
+      "en_sha256": "7f9f23075cf97189daae8c19d46fceb3f547592a6f652f2e5324379eca77fe82"
+    },
+    {
+      "zh": "templates/research-protocol.md",
+      "en": "en/templates/research-protocol.md",
+      "zh_sha256": "0d968c4b20adf8688e352c8554f0542ed6449616dd7b5338398b6a06035e7434",
+      "en_sha256": "cfba388bf6b9bfba43fbe7a39fd6c2efa48086663402e5b9b34035c3d74c85d1"
+    },
+    {
+      "zh": "templates/stage-contract.yaml",
+      "en": "en/templates/stage-contract.yaml",
+      "zh_sha256": "0b80e52303ca9cb2773741ebcdfb47f5e6330f8453cde0516cbb4a6c8f1a028b",
+      "en_sha256": "b738a6886cc7643b2516c84805619756bd31a83357e55c31cd6775c0f61ef64b"
+    },
+    {
+      "zh": "templates/step-3-plan.yaml",
+      "en": "en/templates/step-3-plan.yaml",
+      "zh_sha256": "41fb3a355297ee8a3f0996ea337e2e492742a1b79fe117d3667c83b55f17e0a2",
+      "en_sha256": "88beb3a1b5231e58c0f9eacbdd1ab16c4de2ac83578f7fb9f2375fe1e7914a39"
+    },
+    {
+      "zh": "templates/step-3-report.md",
+      "en": "en/templates/step-3-report.md",
+      "zh_sha256": "7a02fcc9073bd4e3dfc3529b9a7c175a7b7f5f3907d426b54faffae5b507ba9a",
+      "en_sha256": "251f3583b980145c5a8ff805937a381817d3aa8a1d7c735dc8186a2350db9434"
+    },
+    {
+      "zh": "templates/step-4-plan.yaml",
+      "en": "en/templates/step-4-plan.yaml",
+      "zh_sha256": "f044bd84fdc0f35997d7cd938d288a80539a2be1087e38e172af9edad004eb8b",
+      "en_sha256": "e6d7e9d89359d7c7a28a50d5cca143d7a08ca219553f4335fa34aa65a78531f2"
+    },
+    {
+      "zh": "templates/step-4-results.md",
+      "en": "en/templates/step-4-results.md",
+      "zh_sha256": "63053163c379cd859446585d0eae56e1b7b0c33695e0d4d7b93e544082d86bae",
+      "en_sha256": "a9c66d7b810a2fde26c53380ce9e225fc74bd4634d9658a16b5eba20ace5fe16"
+    },
+    {
+      "zh": "templates/upstream-review.md",
+      "en": "en/templates/upstream-review.md",
+      "zh_sha256": "1c5cde5ab17934ec6f9e6aef7f25580bd18c8e17ffd3a9eb6023fd2dc08d544d",
+      "en_sha256": "eab1000aec35758a50e467684cd4843271f1d895f05db2751112c7cf955be38f"
+    },
+    {
+      "zh": "templates/verification-report.md",
+      "en": "en/templates/verification-report.md",
+      "zh_sha256": "abb17c64b2a69362aa43e7e9f2d04822b49ef7927118f7d311db0221f3998304",
+      "en_sha256": "ee4edba24d7e5cd5d95545636eadd75ad73b030f27069938a104ea18d91980c0"
+    }
+  ]
+}

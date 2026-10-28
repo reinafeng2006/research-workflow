@@ -1,37 +1,37 @@
-# Bounded pilot / technical trial
+# 有限测试／技术试运行
 
-Status: proposed, not authorized
-Check ID and version:
-Type: preliminary feasibility / shortlisted-method pilot / protocol technical trial
-Question/protocol version and selected approach:
-Uncertainty or assumption addressed:
-What this check can and cannot establish:
-Scope, inputs, procedures, outputs, and exclusions:
-Shared evaluation criteria and rationale:
-Approach-specific checks and rationale:
-Limits to comparability:
+状态: proposed, not authorized
+检查 ID 与版本:
+类型: 初步可行性／入选方法有限测试／协议技术检查
+问题／协议版本及入选方法:
+针对的不确定性或假设:
+检查能与不能建立的结论:
+范围、输入、程序、输出及排除项:
+共享评估标准与理由:
+方法专属检查与理由:
+可比性限制:
 
-| Outcome | Predefined observable condition | Recommendation consequence | Remaining uncertainty |
+| 结果类型 | 预定义可观察条件 | 对推荐的后果 | 剩余不确定性 |
 | --- | --- | --- | --- |
-| Positive | | | |
-| Negative | | | |
-| Inconclusive | | | |
+| 正面 | | | |
+| 负面 | | | |
+| 不确定 | | | |
 
-Estimated time/tokens and hard limits, including review:
-Expected resolution:
-Proposed milestone and budget/progress checkpoints, with rationale:
-Repair-round/time/token limits and observable progress conditions (stop at ANY approved stop condition):
-Preapproved fallbacks, triggers, boundaries, consequences and reporting:
-Allowed pilot-evidence reuse and independent validation needs:
-Human approval reference, scope and limits:
+含审查在内的时间／token 估算及硬限额:
+预期解决事项:
+建议的里程碑及预算／进展检查点与理由:
+修正轮数／时间／token 限额及可观察进展条件（任一获批停止条件触发即暂停）:
+预批准备用方案、触发条件、边界、后果与报告方式:
+允许的有限测试证据复用与独立验证需求:
+人类批准记录、范围与限额:
 
-## Results — append without overwriting original plan
+## 结果——追加记录，不覆盖原计划
 
-Measured usage, separately labeled estimates, and unavailable telemetry:
-Completed scope and results with artifact versions:
-Unexpected findings and limitations:
-Fallback and repair log:
-Original-criteria assessment:
-Proposed amendment, reason, interpretation impact and approval (preserve original results):
-Next-step recommendation and alternatives:
-Human decision (no automatic extension):
+实际用量、另行标注的估算及不可用遥测:
+已完成范围、结果及产物版本:
+意外发现与局限:
+备用方案及修正日志:
+按原标准的评估:
+拟议修订、原因、解释影响与批准（保留原结果）:
+下一步推荐与替代选项:
+人类决定（不自动扩展）:

@@ -1,25 +1,25 @@
-# Verification report
+# 核验报告
 
-Stage and contract version:
-Artifact paths and exact versions:
-Producer:
-Verifier:
-Independence and review limitations:
-Cycle number:
+阶段与契约版本:
+产物路径与准确版本:
+产出者:
+独立核验者:
+独立性及审查局限:
+循环轮次:
 
-| Criterion | Check performed | Evidence or reproduction command | Verdict: pass / fail / not_verifiable | Defect severity | Observable repair condition |
+| 标准 | 已执行检查 | 证据或复现命令 | 核验判断: pass / fail / not_verifiable | 缺陷严重性 | 可观察的修复条件 |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
 
-Severity: critical invalidates the central result; major materially affects a mandatory requirement or conclusion; minor does not block mandatory criteria. Define task-specific examples in the contract.
+严重性：critical 使核心结果失效；major 实质影响必需要求或结论；minor 不阻碍必需标准。在契约中定义项目示例。
 
-Checks rerun after repairs:
-Unresolved challenger objections:
-Resources used (measured or estimated):
-Progress since last cycle:
-Decision-readiness verdict: pending
-Evidence verification outcomes remain separate:
-Human-authorized exceptions (do not count as evidence passes):
-Next action:
+修复后重新开展的检查:
+质疑者的未决异议:
+资源用量（测量或估算）:
+相比上一轮的进展:
+决策就绪判断: pending
+证据核验结果另行记录:
+人类授权例外（不计为证据通过）:
+下一行动:
 
-A readiness pass requires the agreed readiness criteria to pass with no misleading or defective assessment. Scientific claims may remain unresolved if accurately disclosed for human decision. Lack of evidence is never an evidence-verification pass. Consensus is not required; record each unresolved position and its implications.
+就绪通过要求已约定的就绪标准满足，评估无误导或缺陷。科学主张仍可未决，但须准确披露供人类决定。缺乏证据绝不等于核验通过。不强求共识，记录各未决立场及影响。

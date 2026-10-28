@@ -1,56 +1,56 @@
-# Step 4 — decision summary and complete results package
+# Step 4 决策摘要与完整结果包
 
-Protocol / implementation / execution-plan versions and approval:
-Execution status: complete / incomplete / paused / stopped
-Verification status: per-result below, not implied by execution completion
-Next-stage authorization: absent unless explicitly recorded below
+协议／实现／执行计划版本及批准:
+执行状态: complete / incomplete / paused / stopped
+核验状态：按下表逐项记录，执行完成不代表核验通过
+下一阶段授权：除非下文明确记录，否则未授权
 
-## Decision summary
+## 决策摘要
 
-Main results (including negative, nonsignificant or inconclusive findings):
-Uncertainty, protocol deviations and remaining concerns:
-Items requiring human decision:
-Recommendation and alternatives:
+主要结果（包括负面、不显著或不确定发现）:
+不确定性、协议偏差与剩余疑虑:
+需要人类决定的事项:
+推荐与替代选项:
 
-## Traceable results and tiered review
+## 可追溯结果与分层复核
 
-| Result/version | Protocol analysis | Evidence/inputs | Criticality and preapproval | Verification or sampling performed | Valid evidence reused | Verdict and unresolved concerns |
+| 结果／版本 | 协议规定的分析 | 证据／输入 | 关键性与预批准 | 已开展核验或抽查 | 复用的有效证据 | 核验判断与未决疑虑 |
 | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | |
 
-Independent verifier:
-New critical results / sampling anomalies and approved expanded review:
-Original results retained, error scope/dependencies and affected versions:
-Approved minimal repairs/reruns; reason and approval for any broad rerun:
-Unaffected results preserved:
+独立核验者:
+新增关键结果／抽查异常与获批扩大复核:
+保留的原结果、错误范围／依赖和受影响版本:
+获批最小修复／重跑；大范围重跑的理由与批准:
+保留的未受影响结果:
 
-## Interpretation boundary
+## 解释边界
 
-Challenger and authorized evidence used:
+质疑者及使用的获准证据:
 
-| Current statement | Supporting results | Uncertainty / competing explanations | Unresolved validity concern | Permitted qualified wording |
+| 当前表述 | 支持结果 | 不确定性／竞争解释 | 未解决的有效性疑虑 | 允许的限定表述 |
 | --- | --- | --- | --- | --- |
 | | | | | |
 
-Additional analysis/method-change proposals, reasons, impact and budget:
-Human approvals and separate post-hoc records (preserve original criteria/results):
+补充分析／方法变更提案、理由、影响与预算:
+人类批准及独立的事后分析记录（保留原标准／结果）:
 
-## Execution and resource records
+## 执行与资源记录
 
-Batch/agent records and cumulative measured usage:
-Estimates and unavailable telemetry, interruption limitations:
-Warnings, stops, retry/fallback logs, saved checkpoints and recovery approvals:
-Approved interim-result access and actual access log:
-Accidental exposure, impact assessment, applicable preapproval or human decision:
-Deviations and remaining work (do not label unfinished work complete):
+批次／智能体记录与累计实际测量用量:
+估算、不可用遥测与中断限制:
+警告、暂停、重试／备用方案记录、保存点及恢复批准:
+中间结果查看批准与实际查看记录:
+意外查看、影响评估、适用的预批准或人类决定:
+偏差和剩余工作（不把未完成标为完成）:
 
-## Unresolved issues and next-stage decision
+## 未决问题与下一阶段决定
 
-| Issue | Affected result/statement | Material impact or other limitation | Verification status | Options and proposed budget | Human disposition |
+| 问题 | 受影响结果／表述 | 重大影响或其他局限 | 核验状态 | 选项与拟议预算 | 人类处理决定 |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
 
-Next-stage proposed scope, budget and expected outcomes:
-Human choice: further checks / stop / defer / proceed with explicit qualifications
-Exact authorization and retained limitations:
-Approval to proceed never changes an unresolved result into verified evidence.
+下一阶段拟议范围、预算和预期产出:
+用户选择: further checks / stop / defer / proceed with explicit qualifications
+准确授权边界与保留的局限:
+批准继续绝不将未决结果变成已核验证据。

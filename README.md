@@ -1,72 +1,58 @@
-# Research workflow
+# 研究工作流
 
-A reusable starter for research and study projects driven by multiple agents, fixed stage objectives, independent verification, and budget-aware upstream review.
+用于研究与学习项目的可复用多智能体工作流：固定阶段目标、独立核验、质量门槛，以及受预算约束的修正和前序阶段复查。
 
-**Status: v0.5 — Steps 1–4 calibrated; Step 5 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
+**版本：v0.5；Step 1–4 已校准，Step 5 及后续阶段待校准。** 本次仅统一语言，不改变研究规则。仓库提供说明和模板，不是可执行的编排服务或实时资源监控器。
 
-## Start a new project
+## 语言与版本
 
-Create a new repository from this template using GitHub's **Use this template** button, then open that project's checkout in your agent environment. Keep project-specific work in the new repository so this starter stays reusable.
+主目录为中文权威版本；[英文参考版](en/README.md)保留同一套规则。文件名、配置键、ID 和状态值保持英文。英文版不独立修改规则；同步关系见 [语言政策与术语](docs/language-policy.md) 和 `translation-manifest.json`。工作流说明语言不限制项目产出的语言。
 
-Paste this prompt:
+## 开始新项目
 
-> Use this repository's AGENTS.md and research-workflow.yaml to initialize my research project. My topic is [topic], my desired output is [output], and my deadline is [deadline]. Ask me the unanswered calibration questions in templates/project-brief.md as multiple-choice questions one at a time, record the answers, and draft the first stage contract. Use separate producer and verifier agents when supported. Do not begin substantive research until the initial contract is agreed.
+在 GitHub 点击 **Use this template** 创建新项目仓库，再在智能体环境中打开该项目。项目成果保存在新仓库，避免与通用模板混杂。
 
-To adopt the workflow in an existing project, copy research-workflow.yaml, docs/, and templates/ into it, and merge the relevant instructions from AGENTS.md with its existing instructions. Do not overwrite project instructions. Alternatively, provide an assistant with this repository URL and explicitly ask it to read the files; a URL alone does not load or execute the workflow.
+启动提示词：
 
-## Roles
+> 按本仓库 AGENTS.md 和 research-workflow.yaml 初始化研究项目。主题是 [主题]，目标产出是 [产出]，截止时间是 [日期]。先读取已有材料，再按 templates/project-brief.md 一次问一个尚未回答的选择题，记录答案并起草阶段契约。环境支持时使用独立的产出者与核验者。初始契约获批前，不开展实质研究。
 
-| Role | Job | Why it exists |
+已有项目可复制 `research-workflow.yaml`、`docs/` 和 `templates/`，并将 AGENTS.md 的相关规则合并到已有指令中，不覆盖项目原有指令。也可把仓库链接交给智能体并明确要求读取；链接本身不会自动加载或执行流程。英文项目可使用 `en/` 下的对应参考文件。
+
+## 角色
+
+| 角色 | 责任 | 存在理由 |
 | --- | --- | --- |
-| Coordinator | Contracts, delegation, dependencies, budgets, and stage transitions | Keeps work aligned and iterations bounded |
-| Researcher | Evidence, analysis, deliverables, self-checks, and repairs | Owns substantive production |
-| Verifier | Independent checks against frozen acceptance criteria | Separates production from acceptance |
-| Challenger | Counterexamples, assumptions, alternative explanations | Detects conceptual weaknesses beyond checklist compliance |
-| Methods specialist | Domain, statistical, mathematical, or computational methods | Adds technical depth when needed |
+| 协调者（Coordinator） | 契约、分工、依赖、预算及阶段转换 | 保持工作一致，限制无效循环 |
+| 研究者／产出者（Researcher / Producer） | 证据、分析、交付物、自查和修正 | 负责实质产出 |
+| 独立核验者（Verifier） | 按固定标准独立核查 | 将产出与验收分离 |
+| 质疑者（Challenger） | 检查假设、反例和竞争解释 | 发现清单以外的概念问题 |
+| 方法专家（Methods specialist） | 领域、统计、数学或计算方法 | 按需提供技术深度 |
 
-Detailed responsibilities, beliefs, reactions, and limits are in [research-workflow.yaml](research-workflow.yaml).
+详细责任、原则和反应见 [配置](research-workflow.yaml)。
 
-## Stage cycle
+## 阶段与规则
 
-Step 1: define and select a specific research question → Step 2: detailed methodology → Step 3: implementation preparation and bounded end-to-end validation → Step 4: formal execution and prespecified analyses → Step 5 onward to be calibrated.
+1. [Step 1：定义并选择研究问题](docs/step-1.md)：不同输入进入同一流程的不同阶段。
+2. [Step 2：方法比较与协议定稿](docs/step-2.md)：形成可进入实施的协议。
+3. [Step 3：实施准备与小规模端到端验证](docs/step-3.md)：复用有效证据，只验证新增或失效部分。
+4. [Step 4：正式执行与预先规定的分析](docs/step-4.md)：分层复核结果及解释边界。
+5. Step 5 及后续阶段待校准。
 
-See the [Step 1 workflow and diagram](docs/step-1.md) , [Step 2 workflow and gates](docs/step-2.md), [Step 3 workflow and resource controls](docs/step-3.md), [Step 4 execution and result review](docs/step-4.md), and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
+每阶段采用产出 → 自查 → 独立核验 → 诊断 → 修正 → 复核的有界循环。决策就绪、科学证据核验与人类授权分别记录。严谨的负面或不确定结果也可能满足研究目标；批准继续不会将未决问题变为已通过。
 
-Within each stage: produce → self-check → independent verification → diagnose → revise → verify again. Separate decision-readiness checks from scientific verification and human approval. Unresolved evidence or disagreement may be presented honestly for human decision; approval never converts it into verified evidence. A rigorous negative or inconclusive result may pass.
+达到资源或停滞触发条件时，区分执行问题、前序假设缺陷和工作量低估；只提出必要的前序修正，保留版本并重验受影响部分。不因预算不足降低标准，不因换阶段重复有效测试。
 
-At a resource checkpoint or stagnation trigger, diagnose local execution problems, upstream defects, or underestimated workload. Reopen the smallest affected upstream stage when warranted, preserve prior versions, and revalidate dependent outputs. Never silently lower the quality gate.
+初始的三轮修正、连续两轮无进展、80% 预算检查点仍只是提案。具体限额和规则须按项目批准。
 
-The initial proposals are three revision cycles, two consecutive cycles without progress, and a budget review at 80%. These are escalation triggers, not substitutes for project-specific runtime and token budgets.
+## 文件与模板
 
-## Files and records
+- `research-workflow.yaml`：结构化角色和阶段政策索引。
+- `AGENTS.md`：智能体操作指令。
+- [校准记录](docs/calibration-decisions.md)：已批准设计决定与待定项。
+- [项目说明](templates/project-brief.md)、[阶段契约](templates/stage-contract.yaml)、[核验报告](templates/verification-report.md)、[前序复查](templates/upstream-review.md)、[决策记录](templates/decision-log.md)。
+- [方法比较](templates/method-comparison.md)、[有限测试](templates/pilot-check.md)、[研究协议](templates/research-protocol.md)。
+- [Step 3 计划](templates/step-3-plan.yaml)及[验证记录](templates/step-3-report.md)。
+- [Step 4 计划](templates/step-4-plan.yaml)及[结果包](templates/step-4-results.md)。
+- `templates/evidence-ledger.csv`：稳定英文列名的证据台账；字段含义见语言政策。
 
-- `research-workflow.yaml`: source of truth for roles and workflow policy.
-- `AGENTS.md`: operating instructions for assistants using this repository.
-- `templates/project-brief.md`: calibration questions and project definition.
-- `templates/stage-contract.yaml`: objectives, evidence checks, dependencies, budgets.
-- `templates/verification-report.md`: criterion-by-criterion acceptance record.
-- `templates/upstream-review.md`: diagnosis and recovery proposal.
-- `templates/evidence-ledger.csv`: traceable claims and inspected sources.
-- `templates/decision-log.md`: decisions, exceptions, and policy revisions.
-
-For each project, create `project/brief.md`, `project/stages/`, `project/reviews/`, `project/artifacts/`, and `project/decisions.md` from these templates. Record the starter commit used so later policy updates can be adopted deliberately.
-
-## Calibration still open
-
-Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 comparison, limited tests, independent review, protocol gates, checkpoints, fallback and repair rules are calibrated. Step 3 batching, reuse, resource monitoring and pause/recovery rules are calibrated. Step 4 protocol-bound execution, tiered review, interpretation boundaries and unresolved-issue handling are calibrated. Step 5 and later remain open.
-
-## Step 2 templates
-
-- [Method comparison](templates/method-comparison.md)
-- [Bounded pilot or technical trial](templates/pilot-check.md)
-- [Decision summary and execution-ready protocol](templates/research-protocol.md)
-
-A material unresolved design choice blocks protocol-ready status. Transparent uncertainty in a Step 1 decision brief does not waive this Step 2 requirement.
-
-## Step 3 templates and reuse
-
-Use [Step 3 plan](templates/step-3-plan.yaml) and [validation report](templates/step-3-report.md). Step 2 finalizes the protocol; Step 3 checks implementation. Reuse valid evidence and pilot artifacts; only new gaps or invalidated portions need checks. These documents specify monitoring requirements; they do not implement a realtime resource controller.
-
-## Step 4 templates
-
-Use [formal execution and review plan](templates/step-4-plan.yaml) and [results package](templates/step-4-results.md). Execution completion, per-result verification and authorization to proceed are distinct. Reuse valid evidence; do not repeat checks merely because the stage changed.
+每个项目从模板建立 `project/brief.md`、`project/stages/`、`project/reviews/`、`project/artifacts/` 和 `project/decisions.md`，记录采用的模板提交版本。Step 1–4 规则已校准，项目预算仍须批准；Step 5 尚未选择方案。

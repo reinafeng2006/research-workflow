@@ -1,0 +1,56 @@
+status: draft
+id: null
+version: 1
+objective: null
+scope_and_exclusions: []
+input_artifact_versions: []
+assumptions: []
+upstream_dependencies: []
+deliverables: []
+acceptance_criteria_and_check_methods:
+  - id: C1
+    requirement: null
+    mandatory: true
+    check_method: null
+    threshold: null
+    required_evidence: null
+resource_budget:
+  complexity_rationale: null
+  investigation_scope: []
+  exclusions: []
+  expected_resolution: []
+  anticipated_uncertainties: []
+  expected_runtime_minutes: null
+  hard_runtime_minutes: null
+  expected_tokens: null
+  hard_tokens: null
+  review_reserve: null
+  telemetry_or_estimation_method: null
+  # Select limits per project; 3 / 2 / 0.80 are unapproved starter proposals.
+  max_revision_cycles: null
+  consecutive_cycles_without_progress: null
+  budget_review_fraction: null
+assigned_roles:
+  coordinator: null
+  producer: null
+  verifier: null
+  challenger: null
+  methods_specialist: null
+freeze_record:
+  agreed_by: null
+  date: null
+  contract_revision: null
+
+entry_route: null
+missing_prerequisites: []
+usage_record:
+  measured_runtime_minutes: null
+  measured_tokens: null
+  estimated_usage_when_unmeasured: null
+  unavailable_telemetry: []
+human_authorization:
+  decision_record: null
+  approved_scope: []
+  approved_budget: null
+  expected_outcomes: []
+  next_stage_explicitly_included: false

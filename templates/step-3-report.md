@@ -1,50 +1,50 @@
-# Step 3 — decision summary and complete validation record
+# Step 3 决策摘要与完整验证记录
 
-Protocol / implementation / approved-plan versions:
-Recommendation on formal execution:
-Passed / failed / unresolved items and remaining risks:
-Human decisions needed:
+协议／实现／获批计划版本:
+是否建议正式执行:
+通过／未通过／未决事项及剩余风险:
+需要人类决定的事项:
 
-## Traceability and evidence reuse
+## 可追溯性与证据复用
 
-| Protocol requirement | Implementation location or operation | Evidence ID / version | Applicability, inputs and dependencies | Reused or new | Gap/invalidation reason for new check | Verdict |
+| 协议要求 | 实现位置或操作步骤 | 证据 ID／版本 | 适用性、输入与依赖 | 复用或新增 | 新增检查对应的缺口／失效原因 | 核验判断 |
 | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | |
 
-Implementer self-check:
-Independent verifier and findings:
-Result-impacting issues notified before repair:
-Authorized implementation repairs and results:
-Protocol ambiguities / method or conclusion changes referred to human:
-Material-use and reserved-data boundary compliance:
-Reproducibility evidence, tolerances, and coverage limitations:
+实现者自查:
+独立核验者及发现:
+修正前已通知的结果影响问题:
+获批实现修复与结果:
+交由人类决定的协议歧义／方法或结论变化:
+材料使用及预留数据边界遵循情况:
+可复现性证据、容差及覆盖局限:
 
-## Batches and cumulative usage
+## 批次与累计用量
 
-| Batch / agent / call | Approved scope and allocation | Effective progress | Pass criteria outcome | Measured usage | Estimated or unavailable measures | Rate / forecast assessment | Saved output version |
+| 批次／智能体／调用 | 获批范围与分配 | 有效进展 | 通过标准检查结果 | 测量用量 | 估算或不可用测量 | 速率／预测评估 | 保存产物版本 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | | |
 
-Aggregated total including review, retry, repair, storage and recovery:
-Attribution method avoiding omissions / duplicate counting:
-Warnings, baseline/window used, initialization or spike treatment:
-Stop conditions triggered and affected tasks paused:
-Fallback/retry log and cumulative counts:
+含审查、重试、修正、保存与恢复的汇总用量:
+避免漏算／重复计数的归属方法:
+警告、采用的基准／窗口、初始化及峰值处理:
+触发的停止条件与暂停任务:
+备用方案／重试记录及累计次数:
 
-## Pause and recovery
+## 暂停与恢复
 
-Cause and evidence:
-Consumed resources and preserved outputs:
-Repair options and remaining-budget estimate:
-Human recovery approval (or exact preapproved transient retry rule):
-Saved-result integrity/applicability checks:
-Only missing/corrupt/invalid portions rerun:
-Unaffected evidence reused:
-Telemetry / interruption limitations:
+原因与证据:
+已消耗资源与保留产物:
+修复选项与剩余预算估算:
+人类恢复批准（或准确的预批准临时故障重试规则）:
+保存结果的完整性／适用性检查:
+仅重跑缺失／损坏／失效部分:
+复用未受影响的证据:
+遥测／中断能力限制:
 
-## Formal-execution proposal — not automatically authorized
+## 正式执行提案——不自动授权
 
-Scope and scale:
-Budget, milestones/checkpoints and stop rules:
-Unresolved issues and proposed dispositions:
-Human decision and exact authorization:
+范围与规模:
+预算、里程碑／检查点与停止规则:
+未决问题与拟议处理:
+人类决定与准确授权边界:

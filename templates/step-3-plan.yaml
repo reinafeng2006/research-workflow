@@ -49,7 +49,7 @@ monitoring:
   no_output_repeated_failure_abnormal_cost_triggers: []
   repair_round_time_token_progress_stop_conditions: []
   pause_scope_subtask_vs_total: null
-  # Each approved stop condition is sufficient. No silent baseline/budget increase.
+  # 任一获批停止条件足以触发暂停，不静默上调基准或预算。
 persistence:
   batch_end_and_costly_step_save_points: []
   approved_overhead: null
@@ -69,4 +69,4 @@ human_approval:
   record: null
   exact_scope_budget_criteria: null
   combined_with_step_2: false
-# Step 3 approval is not formal-execution authorization.
+# Step 3 批准不是正式执行授权。

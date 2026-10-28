@@ -1,111 +1,111 @@
-# Calibration record — 2026-10-27
+# 校准记录 — 2026-10-27
 
-These decisions were explicitly calibrated with the human. The detailed Step 1 specification is [step-1.md](step-1.md); the configuration indexes it. This record is design history, not approval for a particular research run.
+以下为用户明确校准的决定，是工作流设计历史，不是具体研究运行授权。详细规则见各阶段文档；后续明确的边界修订取代旧笼统表述。
 
-| ID | Agreed decision |
+## Step 1 — 已批准校准
+
+详细规则与流程图：[step-1.md](step-1.md)。
+
+| ID | 已同意决定 |
 | --- | --- |
-| S1-01 | Support multiple starting stages; B enters goal clarification, C candidate refinement/comparison, A feasibility assessment preparation. Revisit earlier phases only for missing prerequisites or requested changes. |
-| S1-02 | Goals are project-specific, more detailed than generic labels, and may coexist without ranking. Ask priorities only when a concrete decision needs them. |
-| S1-03 | Suggest additional outcomes with reasons, but keep them optional until human acceptance. Track accepted, proposed, rejected, and deferred outcomes separately. |
-| S1-04 | Conduct a bounded preliminary check of plausibility and value; explain uncertainty, alternatives, and tradeoffs. Human decides whether to proceed. |
-| S1-05 | Agents propose a complexity-based budget and explain expected resolution before investigation. Human approval is required. |
-| S1-06 | Budget combines time, tokens, and investigation scope. Separate estimates, measured actual usage, and unavailable telemetry. |
-| S1-07 | If the budget is insufficient, explain unresolved work and options before any extension; no silent expansion. |
-| S1-08 | Existing-research and data-availability claims need direct inspected sources. Methodological feasibility may include labeled inference with assumptions, uncertainty, and verification needs. |
-| S1-09 | Abstract findings may orient the project but must be labeled. Decision-critical research claims need full-text verification. Unavailable full text requires uncertainty/alternative disclosure and human decision. |
-| S1-10 | Flag claims whose change could alter the recommendation, explain their importance, and let the human add verification targets. |
-| S1-11 | Recommend a path with alternatives and tradeoffs; disclose assumptions and uncertainty. Final choice belongs to the human. |
-| S1-12 | Present unresolved disagreements with each position's evidence, assumptions, and recommendation impact. Human chooses whether to proceed or investigate further. Consensus is not mandatory. |
-| S1-13 | Combined approval may authorize the next stage only if scope, budget, and expected outcomes are explicit. Otherwise ask separately. Direction approval is not unlimited permission. |
-| S1-14 | Brainstorm both close and unconventional directions tied to accepted goals. Do not automatically expand scope. |
-| S1-15 | Propose and justify a useful range of distinct directions within budget for human approval. No fixed number or redundant filler. |
-| S1-16 | Human selects one or multiple directions before feasibility investigation. Mark initial feasibility as not assessed. |
-| S1-17 | Assess selected options individually first. Suggest combinations with added value, complexity, and tradeoffs; obtain approval before scope expansion. |
-| S1-18 | Step 1 ends with a human-approved specific research question. Detailed methodology belongs to Step 2. |
-| S1-19 | Calibrate interactively, one question at a time. |
+| S1-01 | 支持多个进入位置：B 从目标澄清进入，C 从候选细化／比较进入，A 从可行性评估准备进入。仅因缺失前提或要求修改返回前序。 |
+| S1-02 | 目标按项目具体描述，超越通用标签，可并存而不排序。只在具体决定需要时询问优先级。 |
+| S1-03 | 说明新增成果的价值，用户接受前保持可选；分开记录已接受、提议、拒绝与暂缓项。 |
+| S1-04 | 进行有限的合理性与价值初查，说明不确定性、替代方案与取舍，由用户决定推进。 |
+| S1-05 | 调查前按复杂度提出预算和预计解决事项，由用户批准。 |
+| S1-06 | 预算结合时间、token 与调查范围；区分估算、实际测量和不可用遥测。 |
+| S1-07 | 预算不足时先解释未决工作和选项，扩展前批准，不静默扩张。 |
+| S1-08 | 既有研究和数据可用性主张需要直接检查的来源；方法可行性可用标注的推断，说明假设、不确定性和核验需要。 |
+| S1-09 | 摘要发现可用于方向了解并明确标记；决策关键研究主张需全文核验。全文不可用时说明不确定性与替代方案，由用户决定。 |
+| S1-10 | 标记可能改变推荐的主张并说明重要性，用户可增加核验目标。 |
+| S1-11 | 推荐路径并展示替代方案和取舍，披露假设与不确定性，最终选择属于用户。 |
+| S1-12 | 展示未解决分歧及各方证据、假设、推荐影响。用户决定继续还是调查，不强求共识。 |
+| S1-13 | 合并批准下一阶段须明确范围、预算、预期产出，否则单独询问；方向批准不是无限权限。 |
+| S1-14 | 头脑风暴包含与已接受目标相关的近似和非常规方向，不自动扩范围。 |
+| S1-15 | 提出并解释预算内有意义的方向数量范围供批准，不固定数量、不凑重复项。 |
+| S1-16 | 用户先选一个或多个方向，再调查可行性；初始可行性标为尚未评估。 |
+| S1-17 | 先分别评估；建议组合时说明价值、复杂度与取舍，扩范围前批准。 |
+| S1-18 | Step 1 以用户批准具体研究问题结束；详细方法属于 Step 2。 |
+| S1-19 | 互动校准，一次一个问题。 |
 
-## Literature-workflow review: reference, not wholesale adoption
+## Step 2 — 已批准校准
 
-Reviewed the user's [literature workflow](https://github.com/reinafeng2006/Mechanism-Aware-Statistical-Arbitrage/tree/d0d6f19d439efe573d1c0b5f94ded790c3ede9d9/literature) as process evidence, not as authority over this project or verification of its papers.
+详细规则与流程图：[step-2.md](step-2.md)。
 
-Suggested reusable practices: decision-driven depth, claim provenance, reasoning labels, permitted-use boundaries, contradiction/dependency tracking, and bounded stopping/reopening. Suggested improvements: one authoritative current state, separate readiness/access/approval statuses, generic validators rather than fixed historical counts, more precise source locators, and stage-appropriate evidence detail. These are recommendations pending detailed literature/methodology calibration, except the abstract/full-text and criticality policies explicitly accepted above. Do not import domain-specific claims, statuses, or historical approval rules.
-
-## Still open
-
-Step 5 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
-
-## Step 2 — approved calibration
-
-The human approved the complete [Step 2 workflow](step-2.md) and its publication. This approves reusable policy, not a project run.
-
-| ID | Agreed decision |
+| ID | 已同意决定 |
 | --- | --- |
-| S2-01 | Compare several approaches with a recommendation, assumptions, feasibility, and tradeoffs; human shortlists one or more before detailed design. |
-| S2-02 | Explain what each approach can/cannot establish and the assumptions needed for each conclusion. |
-| S2-03 | Propose small pilot checks when useful; specify uncertainty resolved, scope, budget, and limits; obtain approval before running. |
-| S2-04 | Predefine positive, negative, and inconclusive meanings and recommendation consequences; human decides next steps. |
-| S2-05 | Test shortlisted approaches independently and only on a small scale first; combinations require value/complexity/tradeoff explanation and approval before expansion. |
-| S2-06 | Compare test results and recommend; human selects and approves detailed-design scope and budget before it starts. |
-| S2-07 | Deliver an execution-ready protocol with data, procedures, assumption checks, evaluation and stopping rules; human approves before implementation. |
-| S2-08 | Material unresolved choices block execution-ready status. Minor choices need explicit boundaries and human-approved classification. |
-| S2-09 | If pilots undermine answerability, pause and propose targeted Step 1 return with evidence, failed assumptions, revisions, and tradeoffs; human approves changes. |
-| S2-10 | Approve shared criteria and method-specific checks before tests; explain fit and comparability limits. |
-| S2-11 | Preserve original criteria/results; explain amendments and interpretation effects; approve before application or additional testing; disclose post-result changes. |
-| S2-12 | Separate verifier checks completeness/reproducibility; challenger checks support for conclusions; present unresolved concerns and dissent for human decision. |
-| S2-13 | Approve project-specific pilot-reuse and independent-validation safeguards before finalizing them. |
-| S2-14 | Approve fallback, pause, and upstream-review triggers and consequences. Log preapproved fallback use for next checkpoint; notify unexpected consequences immediately and pause before exceeding scope/budget. |
-| S2-15 | Agents propose justified major milestones plus budget/progress checkpoints; human approves before starting. |
-| S2-16 | Diagnose and repair stagnation within authority while informing human; agents propose repair rounds, time/token limits and observable progress criteria for approval; any stop condition pauses work for analysis/options. |
-| S2-17 | Present decision summary first, then full traceable executable protocol. Include recommendation, assumptions, risk, unresolved choices and approval items. |
-| S2-18 | Require document review, independent desktop walkthrough, and a separately proposed and approved minimal technical trial. |
-| S2-19 | Recheck modified parts and dependencies; core-method/conclusion-boundary changes trigger whole review; new trials or budget expansion need approval. |
-| S2-20 | If all candidates fail, diagnose methods/data/test insufficiency/answerability and offer options; human decides, no automatic standard reduction. |
-| S2-21 | Minor issues may accompany submission only with impact, allowed bounds, owner and resolution time for approval; core-result or uncertain-impact risks are not automatically minor. |
-| S2-22 | Continue calibration with one multiple-choice question at a time. |
+| S2-01 | 比较多个方法，说明推荐、假设、可行性与取舍；用户选一个或多个后才详细设计。 |
+| S2-02 | 解释各方法能和不能建立的结论及相应假设。 |
+| S2-03 | 有用时提出小型有限测试，说明解决的不确定性、范围、预算与局限，运行前批准。 |
+| S2-04 | 预定义正面、负面、不确定结果的含义及推荐影响，由用户决定下一步。 |
+| S2-05 | 先对入选方法分别小规模测试；组合须说明价值、复杂度、取舍，扩展前批准。 |
+| S2-06 | 比较测试并推荐；用户选择并批准详细设计范围、预算后再开始。 |
+| S2-07 | 交付包含数据、程序、假设检查、评估和停止规则的可执行协议；实施前用户批准。 |
+| S2-08 | 重大未决选择阻止协议定稿就绪；轻微选择须明确边界并由用户批准分类。 |
+| S2-09 | 有限测试动摇可回答性时暂停，提出针对性返回 Step 1，说明证据、失败假设、修订与取舍；用户批准变化。 |
+| S2-10 | 测试前批准共享与方法专属检查，说明适切性和可比性限制。 |
+| S2-11 | 保留原标准和结果；解释修订及其解释影响，应用或新增测试前批准，披露事后变更。 |
+| S2-12 | 独立核验者检查完整性和可复现性，质疑者检查结论支持；未决问题与分歧交用户决定。 |
+| S2-13 | 定稿前批准按项目设置的有限测试复用与独立验证保障。 |
+| S2-14 | 批准备用方案、暂停和上游审查触发条件及后果；预批准备用方案记录后下个检查点报告，意外后果立即通知，超范围／预算前暂停。 |
+| S2-15 | 智能体提出有理由的主要里程碑及预算／进展检查点，开始前由用户批准。 |
+| S2-16 | 授权内诊断修复停滞并通知用户；提出修复轮数、时间／token 限额与可观察进展供批准，任一停止条件触发则暂停并报告分析／选项。 |
+| S2-17 | 先决策摘要，再完整可追溯可执行协议，包含推荐、假设、风险、未决选择与待批事项。 |
+| S2-18 | 要求文档审查、独立桌面演练及单独提出并批准的最小技术试运行；后续 Step 2／3 边界修订明确复用有效证据，不强制新增重复试运行。 |
+| S2-19 | 复查修改及受影响依赖；核心方法／结论边界改变则整体审查；新增试运行或扩预算先批准。 |
+| S2-20 | 全部候选失败时诊断方法、数据、测试不足或可回答性，给出选项由用户决定，不自动降标准。 |
+| S2-21 | 轻微问题可随提交保留，但须记录影响、边界、负责人和解决时点供批准；核心结果或影响不明风险不默认轻微。 |
+| S2-22 | 继续一次一个选择题。 |
 
-## Step 3 — approved calibration and Step 2 boundary amendment
+## Step 3 — 已批准校准
 
-The human approved publication of [Step 3](step-3.md), both diagrams, and the boundary clarification in [Step 2](step-2.md). This supersedes generic earlier wording implying full implementation validation in Step 2. The policy is not authorization for a particular run.
+详细规则与流程图：[step-3.md](step-3.md)。
 
-| ID | Agreed decision |
+| ID | 已同意决定 |
 | --- | --- |
-| S3-01 | Step 3 prepares implementation and performs approved small-scale end-to-end validation; results go to human before formal execution. |
-| S3-02 | Propose mixed synthetic/real materials, limits and reuse risks with scope/budget/pass criteria; never silently use reserved final-validation data. |
-| S3-03 | Implementer self-check plus independent verifier maps protocol → implementation/operations → evidence; notify result-impacting issues, never silently amend protocol. |
-| S3-04 | Default separate stages: Step 2 design decisions/protocol, Step 3 implementation/integration. Reuse valid evidence and pilot outputs, only recheck affected parts. |
-| S3-05 | Step 2 approval may explicitly include Step 3 scope, budget and pass criteria if the human agrees. Stage transition alone never requires duplicate testing. |
-| S3-06 | Evidence invalidation requires cause/impact record; minimally recheck only if explicitly authorized within budget, otherwise seek approval. |
-| S3-07 | Clear implementation defects may be repaired within approved scope/budget with records. Protocol ambiguity or method/conclusion change pauses affected work for human decision. |
-| S3-08 | Cover normal and decision-critical exceptional paths with approved rationale/budget/criteria; no exhaustive or redundant testing. |
-| S3-09 | Project-specific reproducibility: deterministic consistency; approved stochastic/manual tolerances, repetition and records; reuse valid checks. |
-| S3-10 | Recommend formal execution with scope, scale, budget, checkpoints, stop rules and unresolved issues; wait for approval after results. |
-| S3-11 | Inherit Step 2 bounded repairs/fallback mechanism, but approve Step 3-specific limits and triggers; any stop condition pauses. |
-| S3-12 | Representative-first batches with effective-progress checks; approved next batches continue normally; no output, repeated failure, abnormal costs or limits pause immediately. Logs/process survival are not progress. |
-| S3-13 | Tiered rate monitoring: ordinary anomaly warns; sustained overspeed with poor progress, forecast overrun or hard-rate limit pauses. Approve baselines/windows/thresholds, distinguish startup/spikes; never inflate expectations. |
-| S3-14 | Approve total and batch/agent budgets and triggers; aggregate parallel use without omission/double counting. Subtask anomalies pause corresponding work; total anomalies pause related parallel work. No silent budget increases. |
-| S3-15 | Resource/rate/progress/repeated-failure pauses need cause, usage, saved work, repair proposal and remaining estimate plus human recovery approval. Single transient faults may retry only under bounded preapproval, original budget and retry count. |
-| S3-16 | Approve save points and overhead at batch ends and costly milestones; record results/config/versions/usage; check integrity/applicability on recovery; rerun only missing/corrupt/invalid portions. |
-| S3-17 | Deliver decision summary plus full validation records, traceability, reuse, usage, pass/fail status, risks and formal-execution proposal. |
-| S3-18 | Disclose actual telemetry and interrupt granularity; propose smaller batches or supported runtime limits for blind spots; do not claim unavailable realtime protection. |
+| S3-01 | Step 3 准备实施并开展获批小规模端到端验证，结果交用户决定后再正式执行。 |
+| S3-02 | 提出合成／真实材料组合、局限、复用风险、范围／预算／通过标准；不擅用正式验证预留数据。 |
+| S3-03 | 实现者自查加独立核验者建立协议→实现／操作→证据对应；先通知结果影响，不擅改协议。 |
+| S3-04 | 默认分阶段：Step 2 设计决定／协议，Step 3 实现／集成。复用有效证据与测试产物，只查受影响部分。 |
+| S3-05 | 用户同意时 Step 2 批准可明确含 Step 3 范围、预算与通过标准；阶段转换不要求重复测试。 |
+| S3-06 | 证据失效须记录原因／影响，明确授权和预算内才最小复查，否则先批准。 |
+| S3-07 | 明确实现错误可在批准范围／预算内修复并记录；协议歧义或方法／结论变化暂停受影响工作，由用户决定。 |
+| S3-08 | 覆盖正常与决策关键异常，理由／预算／标准先批准，不穷尽或重复测试。 |
+| S3-09 | 按项目定义可复现性：确定性一致；随机／人工流程批准误差、重复和记录要求；复用有效检查。 |
+| S3-10 | 正式执行建议包含范围、规模、预算、检查点、停止规则与未决问题，结果报告后等待批准。 |
+| S3-11 | 沿用 Step 2 有限修正／备用机制，但批准 Step 3 专属限额和触发规则，任一停止条件触发即暂停。 |
+| S3-12 | 先代表性最小批次并检查有效进展，正常按获批计划继续；无产出、重复失败、成本异常或限额触发立即暂停；日志／进程存活不是进展。 |
+| S3-13 | 速率分级监测：一般异常提醒；持续超速且进展不足、预计超支或硬速率限额则暂停。基准／窗口／阈值先批准，区分初始化／峰值，不上调预期。 |
+| S3-14 | 批准总体与批次／智能体子预算和触发规则；汇总并行消耗不漏算、不重复；子任务异常暂停对应任务，总体异常暂停相关并行工作，不静默提高预算。 |
+| S3-15 | 资源／速率／进展／重复失败暂停后，报告原因、用量、成果、修复方案和剩余估算，经用户批准恢复；单次临时故障仅按预批准原预算和次数有限重试。 |
+| S3-16 | 批准批次末和耗时节点的保存点与开销，记录结果／配置／版本／用量；恢复检查完整性和适用性，只重跑缺失／损坏／失效部分。 |
+| S3-17 | 交付决策摘要和完整验证记录、对应关系、复用、用量、通过／失败状态、风险及正式执行建议。 |
+| S3-18 | 披露实际遥测和中断粒度；为盲区提出更小批次或工具支持的运行限额，不声称不存在的实时保护。 |
 
-Historical checkpoint after Step 3: Steps 1–3 accepted; superseded by the Step 4 checkpoint below. No research execution has been authorized by these documentation updates. Runtime/token thresholds remain project-specific, not universal numeric defaults.
+## Step 4 — 已批准校准
 
-## Step 4 — approved calibration
+详细规则与流程图：[step-4.md](step-4.md)。
 
-User approved [Step 4](step-4.md), its diagram and gates for publication. This is reusable policy, not authorization for a specific formal run.
-
-| ID | Agreed decision |
+| ID | 已同意决定 |
 | --- | --- |
-| S4-01 | Execute the approved protocol plus prespecified analyses; report results, uncertainty and deviations; new exploration/method changes need reasons, impact, scope/budget and prior approval, separate from original analysis. |
-| S4-02 | Reuse Step 3 batching, monitoring and pause/recovery rules, but approve formal-scale batches, budgets and stop thresholds. Normal batches continue; no interim-result-driven standard changes. |
-| S4-03 | Propose project-specific visible metrics, viewing times, use boundaries and actions for approval. Monitor operational quality/resources continuously; do not seal every result by default. |
-| S4-04 | Low-impact accidental exposure continues under preapproved rules with log/checkpoint report. Possible method-selection/validation impact requires minimal remedy options for human decision; no automatic invalidation or reruns. |
-| S4-05 | Negative/nonsignificant/inconclusive results are reported and original protocol completed subject to stop rules. Only preapproved bounded data/implementation diagnostics; no tuning for favorable results. |
-| S4-06 | Preserve original results, mark errors and affected dependencies. Repair/rerun within explicit approved bounds, otherwise propose minimal plan. Broad impact may justify human-approved broad reruns; unaffected results remain. |
-| S4-07 | Independent verifier fully checks key results; other results sampled under agent-proposed human-approved plan. Reuse valid evidence. Anomalies requiring expansion need impact, scope, rationale, budget and prior approval. |
-| S4-08 | Approve protocol-derived critical-results list before execution. Additions require significance-to-conclusion explanation and supplementary scope/budget approval. Importance never follows outcome desirability. |
-| S4-09 | Challenger checks support for current wording, uncertainty and competing explanations using authorized evidence only. New analyses require approval; comprehensive synthesis belongs to next stage. |
-| S4-10 | Material unresolved correctness or interpretation concerns block affected results being marked verified. Other limits are recorded; human chooses further work or qualified continuation; no unresolved-to-pass conversion. |
-| S4-11 | Deliver decision summary plus full traceable results, deviations, verification status, execution/resource records, unresolved concerns and next-stage scope/budget/outcomes proposal. Human decides progression. |
+| S4-01 | 按批准协议及预先规定分析执行，报告结果、不确定性与偏差；新探索／方法变化先说明理由、影响、范围／预算并批准，与原分析分开。 |
+| S4-02 | 沿用 Step 3 分批、监测、暂停／恢复，但批准正式规模批次、预算与阈值；正常批次继续，不因中间结果改标准。 |
+| S4-03 | 按项目提出可查看指标、时间、用途边界与规则供批准；运行质量／资源持续监测，不默认封存所有结果。 |
+| S4-04 | 低影响意外查看按预批准规则继续并记录／检查点报告；可能影响方法选择或验证时提出最小补救选项供决定，不自动作废或重跑。 |
+| S4-05 | 如实报告负面／不显著／不确定结果，在停止规则约束下完成原协议；只做预批准有限诊断，不为理想结果调参改标准。 |
+| S4-06 | 保留原结果，标记错误和受影响依赖；明确批准边界内修复／重跑，否则提最小方案；广泛影响可经批准大范围重跑，保留未受影响结果。 |
+| S4-07 | 独立核验者全面查关键结果，其他按智能体提出且用户批准的方案抽查；复用有效证据；扩大检查先说明影响、范围、理由、预算并批准。 |
+| S4-08 | 执行前批准基于协议的关键结果清单；新增项说明结论影响，补充范围／预算先批准；重要性不随结果是否理想变化。 |
+| S4-09 | 质疑者仅用获准证据检查当前表述支持、不确定性与竞争解释；新分析须批准，全面综合留到下一阶段。 |
+| S4-10 | 重大未决正确性或解释疑虑阻止相关结果标为已核验；其他局限记录，用户决定补查或带限定继续，不把未决转为通过。 |
+| S4-11 | 交付决策摘要加完整可追溯结果、偏差、核验状态、执行／资源记录、未决问题及下一阶段范围／预算／预期产出建议，由用户决定推进。 |
 
-Current checkpoint: Steps 1–4 calibrated and published; Step 5 pending. No research runs authorized by this documentation update. Continue one multiple-choice question at a time. Numeric resource limits remain project-specific.
+## 文献工作流审阅：参考而非整体采用
+
+此前审阅用户的[文献工作流](https://github.com/reinafeng2006/Mechanism-Aware-Statistical-Arbitrage/tree/d0d6f19d439efe573d1c0b5f94ded790c3ede9d9/literature)，作为流程参考，不作为本项目指令或其论文已核验的证明。
+
+建议复用：按决策需要决定深度、主张来源追溯、推理标签、允许用途边界、矛盾／依赖跟踪及有限停止／重启。建议改进：单一权威当前状态，分开记录就绪／访问／批准状态，通用检查而非历史固定数量，更精确的来源定位和阶段适用证据细节。除已明确接受的摘要／全文和关键性规则外，这些仍是待详细校准的建议。不要导入领域特定主张、状态或历史审批规则。
+
+## 当前检查点与未决事项
+
+Steps 1–4 已校准并发布；Step 5 及后续结构待校准。Step 3 后的旧检查点已由此状态取代。项目预算、数值修正限额与检查点需按项目批准。文档发布不授权任何新研究运行。继续一次一个选择题。

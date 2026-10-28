@@ -1,56 +1,56 @@
-# Research protocol — Step 2
+# Step 2 研究协议
 
-Status: draft / blocked_material_choices / ready_for_human_review / approved_protocol_ready
-Protocol version:
-Question and accepted goals/version:
-Approved design contract and budget:
+状态: draft / blocked_material_choices / ready_for_human_review / approved_protocol_ready
+协议版本:
+问题及已接受目标／版本:
+获批设计契约与预算:
 
-## Decision summary
+## 决策摘要
 
-Recommended approach and rationale:
-Alternatives and tradeoffs:
-Key assumptions and risks:
-Unresolved concerns and disagreements (positions, evidence, assumptions, effects):
-Items requiring human approval:
+推荐方法与理由:
+替代选项与取舍:
+关键假设与风险:
+未决疑虑与分歧（立场、证据、假设、影响）:
+需要人类批准的事项:
 
-## Full executable protocol
+## 完整可执行研究协议
 
-1. Intended conclusions and prohibited interpretations:
-2. Data/input requirements, availability/access evidence, versions and constraints:
-3. Procedures, dependencies, outputs and reproducibility instructions:
-4. Assumption checks, failure implications, and handling rules:
-5. Evaluation criteria, shared/specific checks, and interpretation boundaries:
-6. Pilot evidence used in design; permitted/prohibited reuse; independent validation safeguards:
-7. Stopping rules, time/token budget, progress standards and approved checkpoints:
-8. Preapproved fallbacks: triggers, bounds, consequences, owner, log and reporting:
-9. Pause and targeted upstream-review rules:
-10. Evidence lineage, versioned amendments, and authorization records:
+1. 预期结论与禁止的解释:
+2. 数据／输入要求、可用性／访问证据、版本和约束:
+3. 程序、依赖、输出及可复现性说明:
+4. 假设检查、失败影响与处理规则:
+5. 评估标准、共享／专属检查及解释边界:
+6. 设计采用的有限测试证据；允许／禁止复用范围；独立验证保护:
+7. 停止规则、时间／token 预算、进展标准与获批检查点:
+8. 预批准备用方案：触发条件、边界、后果、负责人、记录与报告:
+9. 暂停与针对性前序复查规则:
+10. 证据来源链、版本化修订与授权记录:
 
-## Outstanding choices
+## 未决选择
 
-| Issue | Material / minor and rationale | Result/validity impact | Allowed handling bounds | Owner | Resolution time | Human decision |
+| 问题 | 重大／轻微分类及理由 | 对结果／有效性的影响 | 允许处理边界 | 负责人 | 解决时点 | 人类决定 |
 | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | |
 
-Material unresolved choices block protocol-ready status. Unknown impact does not default to minor.
+重大未决选择阻止协议定稿就绪；影响不明不能默认归为轻微。
 
-## Independent review and bounded technical trial
+## 独立审查与有限技术检查
 
-Verifier identity, independence, completeness/reproducibility findings:
-Challenger identity and conclusion-support findings:
-Walkthrough reviewer uninvolved in design, scenarios, findings:
-Necessary design-focused technical checks: approved plans, results, limits, usage or valid evidence reused; no duplicate checks:
-Corrections, affected dependencies and invalidated evidence:
-Rechecks (whole review when core method/conclusion boundary changes):
-Approval for any new trial or expanded budget:
-Remaining disagreements and recommendations:
+独立核验者身份、独立性、完整性／可复现性发现:
+质疑者身份与结论支持能力检查:
+未参与设计的桌面演练审查者、场景与发现:
+必要设计技术检查：获批计划、结果、局限、用量或复用的有效证据；不重复检查:
+修正、受影响依赖与失效证据:
+复查（核心方法／结论边界改变时整体审查）:
+新增试运行或扩大预算的批准:
+剩余分歧与建议:
 
-## Final human decision and separate implementation authority
+## 最终人类决定及独立记录的实施授权
 
-Protocol approval/version/date:
-Approved minor-issue dispositions:
-Protocol-ready determination and evidence:
-Implementation scope, budget, expected outcomes explicitly included in approval:
-If absent: implementation not authorized; request separate approval.
+协议批准／版本／日期:
+获批轻微问题处理安排:
+协议定稿就绪判断与证据:
+批准中明确包含的实施范围、预算和预期产出:
+如缺失：实施未授权，须单独申请批准。
 
-Step 3 handoff: valid evidence/artifacts, versions, assumptions, dependencies, applicability boundaries, known gaps; optional combined approval of Step 3 scope, budget and pass criteria. Step 3 implementation validation and later formal execution remain distinct.
+Step 3 交接：有效证据／产物、版本、假设、依赖、适用边界及已知缺口；可合并审批 Step 3 范围、预算和通过标准。实现验证与后续正式执行仍然分开。

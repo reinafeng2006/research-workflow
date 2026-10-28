@@ -1,16 +1,16 @@
-# Upstream review
+# 前序阶段复查
 
-Current stage and contract version:
-Trigger and observed usage:
-Remaining authorized budget:
-Progress across recent cycles:
-Diagnosis: local execution / upstream defect / underestimated workload / infeasible or unresolved
-Evidence for diagnosis:
-Earliest affected input, assumption, or stage:
-Alternative recovery approaches:
-Recommended bounded action and expected cost:
-Prior artifact versions to preserve:
-Downstream outputs to mark stale:
-Required revalidation:
-User decision needed, if any:
-Decision and rationale:
+当前阶段及契约版本:
+触发条件及已观察用量:
+剩余授权预算:
+近期各轮进展:
+诊断: 本阶段执行／前序缺陷／工作量低估／不可行或未决
+诊断依据:
+最早受影响的输入、假设或阶段:
+替代恢复方案:
+推荐的有界行动及预计成本:
+需要保留的先前产物版本:
+需要标记失效的下游产物:
+所需复核:
+需要用户决定的事项（如有）:
+决定与理由:

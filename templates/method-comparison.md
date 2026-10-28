@@ -1,24 +1,24 @@
-# Method comparison — Step 2
+# Step 2 方法比较
 
-Question and accepted goals/version:
-Approved comparison scope, budget, expected outcomes, and checkpoints:
+问题及已接受目标／版本:
+获批比较范围、预算、预期产出与检查点:
 
-| Approach | Can establish | Cannot establish | Assumptions / how checked / failure impact | Evidence | Feasibility | Tradeoffs and limits to comparability |
+| 方法 | 能建立的结论 | 不能建立的结论 | 假设／检查方式／失败影响 | 证据 | 可行性 | 取舍与可比性限制 |
 | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | |
 
-Recommendation and rationale:
-Uncertainty and competing positions:
-Proposed optional preliminary checks (not yet authorized):
-Human shortlist (one or multiple):
-Bounded test plans and approval references:
+推荐与理由:
+不确定性与不同立场:
+建议的可选初步检查（尚未授权）:
+用户入选清单（一个或多个）:
+有限测试计划与批准记录:
 
-## After independent small tests
+## 独立小测试之后
 
-| Approach | Preapproved criteria | Results and evidence | Limits | Recommendation effect |
+| 方法 | 预批准标准 | 结果与证据 | 局限 | 对推荐的影响 |
 | --- | --- | --- | --- | --- |
 | | | | | |
 
-Proposed combinations: added value, added complexity, tradeoffs, expected versus demonstrated benefit:
-If all fail: diagnose method/data/test adequacy/answerability; no automatic lowering of standards:
-Human choice and approved detailed-design scope, budget, and expected outcomes:
+建议组合：新增价值、复杂度、取舍、预期收益与已验证收益的区分:
+全部未达标时：诊断方法／数据／测试充分性／可回答性，不自动降低标准:
+用户选择及获批详细设计范围、预算、预期产出:

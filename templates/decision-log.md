@@ -1,7 +1,7 @@
-# Decision log
+# 决策记录
 
-| Date | Stage / version | Decision | Evidence and rationale | Alternatives | Approved by | Affected artifacts | Required revalidation |
+| 日期 | 阶段／版本 | 决定 | 证据与理由 | 替代选项 | 批准者 | 受影响产物 | 所需复核 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | | |
 
-Record unresolved objections and user-authorized exceptions explicitly. Preserve earlier decisions when superseding them.
+明确记录未解决异议及用户批准的例外；替代旧决定时仍保留原记录。

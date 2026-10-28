@@ -26,7 +26,7 @@ resource_budget:
   hard_tokens: null
   review_reserve: null
   telemetry_or_estimation_method: null
-  # Select limits per project; 3 / 2 / 0.80 are unapproved starter proposals.
+  # 按项目选择限额；3 / 2 / 0.80 只是未批准的初始提案。
   max_revision_cycles: null
   consecutive_cycles_without_progress: null
   budget_review_fraction: null
