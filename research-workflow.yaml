@@ -1,7 +1,7 @@
 # Workflow specification, not executable agent software.
-# Steps 1 and 2 are calibrated; numeric defaults and Step 3 onward remain proposals.
-version: "0.3"
-status: steps_1_2_calibrated_step_3_pending
+# Steps 1 through 3 are calibrated; numeric defaults and Step 4 onward remain proposals.
+version: "0.4"
+status: steps_1_2_3_calibrated_step_4_pending
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
 principles:
@@ -121,7 +121,8 @@ stage_contract:
   gate_rule: All mandatory decision-readiness criteria pass; disclose scientific uncertainty separately from defects in the assessment.
   step_1_policy: docs/step-1.md
   step_2_policy: docs/step-2.md
-  execution_readiness: Material unresolved design choices block execution-ready status even when disclosed.
+  step_3_policy: docs/step-3.md
+  execution_readiness: Material unresolved design choices block protocol-ready-for-implementation status even when disclosed.
   unverifiable_mandatory_criterion: Blocks a verification pass; the human may proceed with a recorded exception without relabeling evidence as verified.
   review_record: Include artifact version, criterion, evidence, verdict, severity, and repair condition.
 
@@ -169,10 +170,14 @@ stages:
     status: calibrated
     specification: docs/step-1.md
   - id: step_2
-    objective: Produce a human-approved execution-ready protocol through method comparison and bounded testing.
+    objective: Produce a human-approved protocol-ready-for-implementation protocol through method comparison and bounded testing.
     status: calibrated
     specification: docs/step-2.md
-  - id: step_3_and_later
+  - id: step_3
+    objective: Implement the approved protocol and validate small-scale end-to-end operation using valid existing evidence.
+    status: calibrated
+    specification: docs/step-3.md
+  - id: step_4_and_later
     objective: Execution, validation, and synthesis; structure to be calibrated.
     status: pending_calibration
 
@@ -235,9 +240,34 @@ step_2:
     - Independent completeness and reproducibility verification.
     - Challenger review of support for intended conclusions.
     - Desktop walkthrough by an agent not involved in design.
-    - Explicitly approved minimal technical trial; not scientific validation.
+    - Approved necessary technical checks for design decisions; reuse valid evidence, no mandatory duplicate trial.
   recheck: Changed parts and affected dependencies; whole review if core method or conclusion boundary changes; new trials need approval.
-  material_issues: Block execution-ready status.
+  material_issues: Block protocol-ready-for-implementation status.
   minor_issues: Human-approved impact, allowed bounds, owner, and resolution time; never classify uncertain or core-result risks as minor by default.
   deliverable: Decision summary plus traceable executable protocol, unresolved concerns, dissent, and explicit approval items.
   implementation: Separate authorization unless protocol approval explicitly includes implementation scope, budget, and expected outcomes.
+
+step_3:
+  specification: docs/step-3.md
+  boundary: Step 2 finalizes protocol; Step 3 validates implementation; formal execution requires a later explicit human decision.
+  evidence_reuse: Reuse valid versions, inputs, assumptions, dependencies and scope; no stage-based duplicate testing.
+  rechecks: Record invalidation and minimal affected scope; run only if explicitly authorized within budget, otherwise ask.
+  mapping: Implementer self-check plus independent verifier maps protocol requirements to implementation or operations and evidence.
+  repairs: Notify possible result impact first; fix clear implementation bugs within approved bounds; pause protocol ambiguity or method/conclusion changes.
+  materials: Human-approved synthetic/real mixture and reuse risks; never use reserved final-validation data without authorization.
+  coverage: Normal and decision-critical exceptional paths, not exhaustive; justify scope, budget, and criteria for approval.
+  reproducibility: Deterministic consistency or human-approved project-specific tolerances, repetition and records.
+  batches: Minimal representative batch first; continue only on approved pass/progress criteria within plan.
+  progress: Valid outputs and resolved defects, never mere logs or process survival.
+  budgets: Approved total plus batch/agent allocations; aggregate all parallel review, retries, repairs, storage and recovery without omissions or double counting.
+  rates: Approved baselines, windows, duration and thresholds distinguish startup/spikes; ordinary anomaly warns; sustained overspeed with low progress, forecast overrun, or hard-rate limit pauses.
+  stop: No effective output, repeated failure, abnormal cost, or any approved repair-round/time/token/progress limit pauses affected work.
+  scope_of_pause: Subtask anomaly pauses that task; overall anomaly pauses related parallel work and notifies human.
+  telemetry: Distinguish measured, estimated and unavailable data; disclose interruption blind spots; do not inflate expected rates or claim unsupported realtime enforcement.
+  fallbacks: Preapproved bounded use logged for checkpoint; unexpected consequences notify immediately; expansions need approval.
+  persistence: Approve checkpoints and overhead; save batch ends and costly milestones with results, config, versions and cumulative usage.
+  recovery: Resource/rate/progress/repeated-failure pauses need human approval with diagnosis, usage, saved outputs, repair plan and remaining estimate.
+  retry: Single transient technical fault only under preapproved original-budget and retry-count rules; log and report; never reset cumulative counters.
+  resume: Validate integrity/applicability; rerun only missing, corrupt or invalid portions.
+  output: Decision summary plus full validation records, reuse ledger, traceability, usage, risks and formal-execution plan.
+  next_stage: Human approves formal-execution scope, scale, budget, checkpoints, stop rules and unresolved issues after results.

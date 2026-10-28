@@ -2,7 +2,7 @@
 
 A reusable starter for research and study projects driven by multiple agents, fixed stage objectives, independent verification, and budget-aware upstream review.
 
-**Status: v0.3 — Steps 1 and 2 calibrated; Step 3 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
+**Status: v0.4 — Steps 1–3 calibrated; Step 4 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
 
 ## Start a new project
 
@@ -28,9 +28,9 @@ Detailed responsibilities, beliefs, reactions, and limits are in [research-workf
 
 ## Stage cycle
 
-Step 1: define and select a specific research question → Step 2: detailed methodology → later execution, validation, and synthesis stages to be calibrated.
+Step 1: define and select a specific research question → Step 2: detailed methodology → Step 3: implementation preparation and bounded end-to-end validation → Step 4 onward to be calibrated.
 
-See the [Step 1 workflow and diagram](docs/step-1.md) , [Step 2 workflow and gates](docs/step-2.md), and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
+See the [Step 1 workflow and diagram](docs/step-1.md) , [Step 2 workflow and gates](docs/step-2.md), [Step 3 workflow and resource controls](docs/step-3.md), and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
 
 Within each stage: produce → self-check → independent verification → diagnose → revise → verify again. Separate decision-readiness checks from scientific verification and human approval. Unresolved evidence or disagreement may be presented honestly for human decision; approval never converts it into verified evidence. A rigorous negative or inconclusive result may pass.
 
@@ -53,7 +53,7 @@ For each project, create `project/brief.md`, `project/stages/`, `project/reviews
 
 ## Calibration still open
 
-Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 comparison, limited tests, independent review, protocol gates, checkpoints, fallback and repair rules are calibrated. Step 3 and later remain open.
+Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 comparison, limited tests, independent review, protocol gates, checkpoints, fallback and repair rules are calibrated. Step 3 batching, reuse, resource monitoring and pause/recovery rules are calibrated. Step 4 and later remain open.
 
 ## Step 2 templates
 
@@ -61,4 +61,8 @@ Step 1 goal handling, entry routing, budgets, evidence policy, decision authorit
 - [Bounded pilot or technical trial](templates/pilot-check.md)
 - [Decision summary and execution-ready protocol](templates/research-protocol.md)
 
-A material unresolved design choice blocks execution-ready status. Transparent uncertainty in a Step 1 decision brief does not waive this Step 2 requirement.
+A material unresolved design choice blocks protocol-ready status. Transparent uncertainty in a Step 1 decision brief does not waive this Step 2 requirement.
+
+## Step 3 templates and reuse
+
+Use [Step 3 plan](templates/step-3-plan.yaml) and [validation report](templates/step-3-report.md). Step 2 finalizes the protocol; Step 3 checks implementation. Reuse valid evidence and pilot artifacts; only new gaps or invalidated portions need checks. These documents specify monitoring requirements; they do not implement a realtime resource controller.

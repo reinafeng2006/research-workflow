@@ -1,6 +1,6 @@
 # Research workflow operating instructions
 
-Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. For Step 2, read docs/step-2.md. Step 3 and later remain pending calibration. Follow the user's explicit preferences and applicable higher-priority instructions.
+Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. For Step 2, read docs/step-2.md. For Step 3, read docs/step-3.md. Step 4 and later remain pending calibration. Follow the user's explicit preferences and applicable higher-priority instructions.
 
 ## Initialize
 
@@ -41,6 +41,16 @@ A next-stage approval must explicitly cover scope, budget, and expected outcomes
 
 Follow docs/step-2.md. Compare methods before the human shortlists; only run explicitly approved bounded tests, not full designs. Predefine shared and method-specific criteria and positive/negative/inconclusive interpretations. Preserve original criteria/results when proposing amendments. Obtain selection and design-budget approval before detailed design.
 
-Final protocol review requires independent verification, challenge, a walkthrough by an agent uninvolved in design, and an approved minimal technical trial. Unresolved material choices block execution-ready status. Minor issues need documented impact, bounds, owner, deadline, and human approval. Recheck changes and affected dependencies; core-method or conclusion-boundary changes require full review. New trials or expanded budgets need prior approval.
+Final protocol review requires independent verification, challenge, a walkthrough by an agent uninvolved in design, and approved minimal technical checks only for unresolved design decisions; reuse valid existing evidence instead of rerunning checks. Unresolved material choices block protocol-ready-for-implementation status. Minor issues need documented impact, bounds, owner, deadline, and human approval. Recheck changes and affected dependencies; core-method or conclusion-boundary changes require full review. New trials or expanded budgets need prior approval.
 
 Use approved milestones and resource/progress checkpoints. Diagnose stagnation and repair within authority while informing the human; stop at any approved repair-round, time, token, or progress limit. Log preapproved fallbacks for the next checkpoint, notify unexpected consequences immediately, and pause before exceeding authority. Present dissent without forcing consensus or lowering standards. Ask approval before targeted question/scope changes in Step 1. Deliver a decision summary plus the full protocol; protocol approval alone does not authorize implementation.
+
+## Step 3 controls and Step 2 boundary
+
+Follow docs/step-3.md. Step 2 finalizes the protocol; Step 3 implements it and validates small-scale end-to-end operation. Reuse valid evidence and pilot artifacts across stages. Record applicability/version/dependencies; only recheck gaps or affected invalid evidence. Do not repeat valid tests merely to complete a stage. Rechecks must be explicitly covered by approval or proposed for approval first.
+
+Require implementer self-check plus independent protocol-to-implementation-to-evidence mapping. Notify result-impacting issues first; repair clear implementation defects only within approved repair scope/budget. Pause ambiguity or method/conclusion-boundary changes for human decision. Protect reserved final-validation data.
+
+Use approved representative-first batches, shared total and per-agent/batch budgets, meaningful progress criteria, rate windows and hard limits, and saved checkpoints. Count review, retries, repairs, persistence and recovery without omission or double counting. Ordinary rate anomalies notify immediately; sustained overspeed with insufficient progress, forecast overrun or hard-rate limits pause affected work. No-output, repeated failure, abnormal cost or stop limits also pause. Logs/process survival are not progress. Disclose telemetry/interruption limitations; never inflate baselines or reset usage on restart.
+
+Resource/rate/progress/repeated-failure pauses require human-approved recovery after reporting cause, usage, saved work, repair proposal and remaining budget estimate. Only a single transient technical fault may retry under preapproved bounded rules. Check checkpoint integrity and applicability; rerun only missing, corrupted or invalid outputs. Valid evidence stays reused. Final summary and full records include a formal-execution proposal; passing validation never automatically starts formal research.

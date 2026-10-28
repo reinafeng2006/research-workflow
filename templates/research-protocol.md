@@ -1,6 +1,6 @@
 # Research protocol — Step 2
 
-Status: draft / blocked_material_choices / ready_for_human_review / approved_execution_ready
+Status: draft / blocked_material_choices / ready_for_human_review / approved_protocol_ready
 Protocol version:
 Question and accepted goals/version:
 Approved design contract and budget:
@@ -32,14 +32,14 @@ Items requiring human approval:
 | --- | --- | --- | --- | --- | --- | --- |
 | | | | | | | |
 
-Material unresolved choices block execution-ready status. Unknown impact does not default to minor.
+Material unresolved choices block protocol-ready status. Unknown impact does not default to minor.
 
 ## Independent review and bounded technical trial
 
 Verifier identity, independence, completeness/reproducibility findings:
 Challenger identity and conclusion-support findings:
 Walkthrough reviewer uninvolved in design, scenarios, findings:
-Approved minimal technical trial plan, results, limits and usage:
+Necessary design-focused technical checks: approved plans, results, limits, usage or valid evidence reused; no duplicate checks:
 Corrections, affected dependencies and invalidated evidence:
 Rechecks (whole review when core method/conclusion boundary changes):
 Approval for any new trial or expanded budget:
@@ -49,6 +49,8 @@ Remaining disagreements and recommendations:
 
 Protocol approval/version/date:
 Approved minor-issue dispositions:
-Execution-ready determination and evidence:
+Protocol-ready determination and evidence:
 Implementation scope, budget, expected outcomes explicitly included in approval:
 If absent: implementation not authorized; request separate approval.
+
+Step 3 handoff: valid evidence/artifacts, versions, assumptions, dependencies, applicability boundaries, known gaps; optional combined approval of Step 3 scope, budget and pass criteria. Step 3 implementation validation and later formal execution remain distinct.

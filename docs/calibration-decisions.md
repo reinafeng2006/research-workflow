@@ -32,7 +32,7 @@ Suggested reusable practices: decision-driven depth, claim provenance, reasoning
 
 ## Still open
 
-Step 3 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
+Step 4 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
 
 ## Step 2 — approved calibration
 
@@ -62,3 +62,30 @@ The human approved the complete [Step 2 workflow](step-2.md) and its publication
 | S2-20 | If all candidates fail, diagnose methods/data/test insufficiency/answerability and offer options; human decides, no automatic standard reduction. |
 | S2-21 | Minor issues may accompany submission only with impact, allowed bounds, owner and resolution time for approval; core-result or uncertain-impact risks are not automatically minor. |
 | S2-22 | Continue calibration with one multiple-choice question at a time. |
+
+## Step 3 — approved calibration and Step 2 boundary amendment
+
+The human approved publication of [Step 3](step-3.md), both diagrams, and the boundary clarification in [Step 2](step-2.md). This supersedes generic earlier wording implying full implementation validation in Step 2. The policy is not authorization for a particular run.
+
+| ID | Agreed decision |
+| --- | --- |
+| S3-01 | Step 3 prepares implementation and performs approved small-scale end-to-end validation; results go to human before formal execution. |
+| S3-02 | Propose mixed synthetic/real materials, limits and reuse risks with scope/budget/pass criteria; never silently use reserved final-validation data. |
+| S3-03 | Implementer self-check plus independent verifier maps protocol → implementation/operations → evidence; notify result-impacting issues, never silently amend protocol. |
+| S3-04 | Default separate stages: Step 2 design decisions/protocol, Step 3 implementation/integration. Reuse valid evidence and pilot outputs, only recheck affected parts. |
+| S3-05 | Step 2 approval may explicitly include Step 3 scope, budget and pass criteria if the human agrees. Stage transition alone never requires duplicate testing. |
+| S3-06 | Evidence invalidation requires cause/impact record; minimally recheck only if explicitly authorized within budget, otherwise seek approval. |
+| S3-07 | Clear implementation defects may be repaired within approved scope/budget with records. Protocol ambiguity or method/conclusion change pauses affected work for human decision. |
+| S3-08 | Cover normal and decision-critical exceptional paths with approved rationale/budget/criteria; no exhaustive or redundant testing. |
+| S3-09 | Project-specific reproducibility: deterministic consistency; approved stochastic/manual tolerances, repetition and records; reuse valid checks. |
+| S3-10 | Recommend formal execution with scope, scale, budget, checkpoints, stop rules and unresolved issues; wait for approval after results. |
+| S3-11 | Inherit Step 2 bounded repairs/fallback mechanism, but approve Step 3-specific limits and triggers; any stop condition pauses. |
+| S3-12 | Representative-first batches with effective-progress checks; approved next batches continue normally; no output, repeated failure, abnormal costs or limits pause immediately. Logs/process survival are not progress. |
+| S3-13 | Tiered rate monitoring: ordinary anomaly warns; sustained overspeed with poor progress, forecast overrun or hard-rate limit pauses. Approve baselines/windows/thresholds, distinguish startup/spikes; never inflate expectations. |
+| S3-14 | Approve total and batch/agent budgets and triggers; aggregate parallel use without omission/double counting. Subtask anomalies pause corresponding work; total anomalies pause related parallel work. No silent budget increases. |
+| S3-15 | Resource/rate/progress/repeated-failure pauses need cause, usage, saved work, repair proposal and remaining estimate plus human recovery approval. Single transient faults may retry only under bounded preapproval, original budget and retry count. |
+| S3-16 | Approve save points and overhead at batch ends and costly milestones; record results/config/versions/usage; check integrity/applicability on recovery; rerun only missing/corrupt/invalid portions. |
+| S3-17 | Deliver decision summary plus full validation records, traceability, reuse, usage, pass/fail status, risks and formal-execution proposal. |
+| S3-18 | Disclose actual telemetry and interrupt granularity; propose smaller batches or supported runtime limits for blind spots; do not claim unavailable realtime protection. |
+
+Current calibration checkpoint: Steps 1–3 accepted as reusable specifications; Step 4 is next. No research execution has been authorized by these documentation updates. Runtime/token thresholds remain project-specific, not universal numeric defaults.
