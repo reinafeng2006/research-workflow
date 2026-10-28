@@ -3,16 +3,16 @@
   "policy_version": "0.8",
   "authoritative_language": "zh-CN",
   "reference_language": "en",
-  "source_commit": "d694dcbfa24c0c7f0e472efa9afa095e6f16dbef",
-  "synchronized_on": "2026-10-27",
+  "source_commit": "947dfe3ef4225e8e91110f21fd76fe6b6ce87832",
+  "synchronized_on": "2026-10-28",
   "status": "synchronized",
   "note": "Hashes detect drift, not semantic equivalence. Both language policies reviewed together.",
   "files": [
     {
       "zh": "README.md",
       "en": "en/README.md",
-      "zh_sha256": "d668c84458daff41b206ad65bcf3411a8cdf08301397240366812bfdf5518ea7",
-      "en_sha256": "dc8ec30e6ecdf6e117a8b487ca86019007ddc17a489ef544a50bba03d8bea65b"
+      "zh_sha256": "375e071a4c68861f23898a31b2cba8821583eddead15091bf0f0cc8702e60033",
+      "en_sha256": "b6f9d2c6a902a17ea6b675fbdecdccb8794df14e749fd2a12c44e71adb90cc90"
     },
     {
       "zh": "AGENTS.md",
