@@ -47,6 +47,6 @@ Keep `pass`, `fail`, `not_verifiable`, `pending`, `draft`, `calibrated`, `pendin
 | alternatives / permitted_use | Alternatives and permitted uses |
 | dependent_artifacts | Artifacts depending on the claim |
 
-## Synchronization scope
+## Current synchronization scope
 
-Documentation, Steps 1–4, calibration records, configuration, and templates have Chinese primary and English reference versions. Stale stage-status prose and duplicated wording were corrected. Step 5 is still pending. Configuration keys, IDs, status values, proposed numeric defaults, approval/budget boundaries, and evidence-reuse rules are unchanged.
+v0.6 provides Chinese primary and English reference documentation, diagrams, calibration records, configuration and templates for Steps 1–5. Step 5 policy/fields are added and stage status/indexes updated; Step 6 is pending. Existing numeric proposals and substantive Steps 1–4 rules remain unchanged, with an explicit Step 4/5 handoff. Configuration keys, IDs and statuses remain English.

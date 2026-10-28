@@ -1,6 +1,6 @@
 # Step 3 — Implementation preparation and small-scale end-to-end validation
 
-Status: human-calibrated reusable policy, not authorization for a project run. Steps 1–4 are calibrated; Step 5 is pending. The [Chinese specification](../../docs/step-3.md) is authoritative; this is its English reference.
+Status: human-calibrated reusable policy, not authorization for a project run. Steps 1–5 are calibrated; Step 6 is pending. The [Chinese specification](../../docs/step-3.md) is authoritative; this is its English reference.
 
 ## Boundary and evidence reuse
 

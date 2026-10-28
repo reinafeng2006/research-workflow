@@ -5,7 +5,7 @@ English reference of the [authoritative Chinese README.md](../README.md). Both v
 
 A reusable starter for research and study projects driven by multiple agents, fixed stage objectives, independent verification, and budget-aware upstream review.
 
-**Status: v0.5 — Steps 1–4 calibrated; Step 5 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
+**Status: v0.6 — Steps 1–5 calibrated; Step 6 and later pending.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
 
 ## Start a new project
 
@@ -31,7 +31,7 @@ Detailed responsibilities, beliefs, reactions, and limits are in [research-workf
 
 ## Stage cycle
 
-Step 1: define and select a specific research question → Step 2: detailed methodology → Step 3: implementation preparation and bounded end-to-end validation → Step 4: formal execution and prespecified analyses → Step 5 onward to be calibrated.
+Step 1: define and select a specific research question → Step 2: detailed methodology → Step 3: implementation preparation and bounded end-to-end validation → Step 4: formal execution and prespecified analyses → Step 5: research synthesis and delivery finalization → Step 6 onward to be calibrated.
 
 See the [Step 1 workflow and diagram](docs/step-1.md) , [Step 2 workflow and gates](docs/step-2.md), [Step 3 workflow and resource controls](docs/step-3.md), [Step 4 execution and result review](docs/step-4.md), and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
 
@@ -56,7 +56,7 @@ For each project, create `project/brief.md`, `project/stages/`, `project/reviews
 
 ## Calibration still open
 
-Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 comparison, limited tests, independent review, protocol gates, checkpoints, fallback and repair rules are calibrated. Step 3 batching, reuse, resource monitoring and pause/recovery rules are calibrated. Step 4 protocol-bound execution, tiered review, interpretation boundaries and unresolved-issue handling are calibrated. Step 5 and later remain open.
+Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 comparison, limited tests, independent review, protocol gates, checkpoints, fallback and repair rules are calibrated. Step 3 batching, reuse, resource monitoring and pause/recovery rules are calibrated. Step 4 protocol-bound execution, tiered review, interpretation boundaries and unresolved-issue handling are calibrated. Step 6 and later remain open.
 
 ## Step 2 templates
 
@@ -73,3 +73,7 @@ Use [Step 3 plan](templates/step-3-plan.yaml) and [validation report](templates/
 ## Step 4 templates
 
 Use [formal execution and review plan](templates/step-4-plan.yaml) and [results package](templates/step-4-results.md). Execution completion, per-result verification and authorization to proceed are distinct. Reuse valid evidence; do not repeat checks merely because the stage changed.
+
+## Step 5 synthesis and delivery
+
+See [Step 5 workflow and gates](docs/step-5.md), [plan](templates/step-5-plan.yaml) and [delivery package](templates/step-5-delivery.md). Step 4 verifies results; Step 5 reviews new synthesis and wording. Reuse valid evidence, classify issues by impact, and obtain human finalization approval. Finalization does not authorize external publication. Step 5 is calibrated; Step 6 and later remain open.

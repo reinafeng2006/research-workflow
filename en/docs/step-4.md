@@ -1,6 +1,6 @@
 # Step 4 — Formal execution and prespecified analysis
 
-Status: calibrated and approved for publication. This reusable policy does not authorize a specific research run. Step 5 remains pending. The [Chinese specification](../../docs/step-4.md) is authoritative; this is its English reference.
+Status: calibrated and approved for publication. This reusable policy does not authorize a specific research run. Step 6 remains pending. The [Chinese specification](../../docs/step-4.md) is authoritative; this is its English reference.
 
 ## Objective and boundary
 
@@ -118,3 +118,7 @@ Keep three statuses separate: execution completion, individual result verificati
 | Next stage authorized | Human chooses further checks, stop, or qualified continuation from the package; continuation has explicit scope, budget and outcomes |
 
 Present a decision summary first: major results, uncertainty, protocol deviations, verification status, unresolved issues, and required decisions. Attach full traceable results, tiered review and interpretation records, reused evidence, execution/resource records, and a proposed next-stage scope, budget, and expected outcomes. Use the [execution/review plan](../templates/step-4-plan.yaml) and [results package](../templates/step-4-results.md).
+
+## Handoff to Step 5
+
+Pass the exact results-package version, protocol, evidence and verification states, open issues, goals and intended use to [Step 5](step-5.md). Step 5 adds cross-result synthesis and delivery-suitability review, not duplicate verification of valid results. Additional analysis or return to this stage requires explicit authorization. Continuation does not verify unresolved results; Step 5 finalization does not authorize external publication.

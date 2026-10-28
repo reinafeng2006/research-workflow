@@ -1,0 +1,75 @@
+# 项目使用前补齐字段并取得批准；本模板本身不授权运行或发布。
+status: proposed_not_authorized
+stage: step_5
+contract_version: null
+step_4_package_version: null
+protocol_and_input_versions: []
+project_goals: []
+target_audience_and_intended_use: null
+inherited_unresolved_issues: []
+synthesis_and_delivery:
+  scope: []
+  exclusions: []
+  expected_outcomes: []
+  deliverables_and_formats: []
+  rationale_and_tradeoffs: null
+  approach: null
+  # 按复杂度、争议及用途选择 framework_first 或 direct_draft，说明成本与取舍。
+  complexity_disagreement_use_rationale: null
+  approach_cost_and_tradeoffs: null
+evidence_reuse:
+  - evidence_id: null
+    version: null
+    prior_verification_record: null
+    validity_inputs_assumptions_dependencies_scope: null
+    inherited_verification_status: null
+    reuse_without_repeat_check: true
+new_or_invalidated_gaps:
+  - issue_id: null
+    impact_and_invalidation_reason: null
+    affected_content_and_dependencies: []
+    minimal_work_options_and_budget: null
+    authorization_record: null
+review_plan:
+  scope_new_synthesis_wording_and_affected_dependencies: []
+  accuracy_and_traceability_verifier: null
+  interpretation_boundaries_challenger: null
+  audience_suitability_reviewer: null
+  independence_and_role_assignment: null
+  rationale_and_budget: null
+  human_approval_record: null
+version_checkpoints:
+  - version_or_milestone: null
+    requires_human_approval: null
+    rationale: null
+    permitted_continuous_revision_bounds: null
+revision_authority:
+  nonmaterial_scope_and_budget: null
+  preserve_conclusion_meaning_evidence_strength_applicability: true
+  material_change_requires_human_decision: true
+  record_versions_and_recheck_affected_content_only: true
+resource_controls:
+  time_budget: null
+  token_budget: null
+  review_revision_recovery_included: true
+  max_revision_rounds: null
+  effective_progress_criteria: []
+  stop_conditions: []
+  pause_on_any_stop_condition: true
+  telemetry_or_estimation_method: null
+  recovery_scope_budget_approval: null
+issue_handling:
+  material_issues_pause_affected_work_and_block_affected_finalization: true
+  qualification_omission_analysis_upstream_options_and_budgets: []
+  nonmaterial_issue_records:
+    - issue_id: null
+      impact: null
+      handling_bounds: null
+      owner: null
+      resolution_time: null
+      human_acceptance_record: null
+human_authorization:
+  exact_plan_version: null
+  scope_budget_outcomes_and_controls_record: null
+  new_analysis_or_checks_require_authorization: true
+  finalization_is_not_external_publication_authority: true

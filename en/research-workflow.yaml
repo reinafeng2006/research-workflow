@@ -1,7 +1,7 @@
 # Workflow specification, not executable agent software.
-# Steps 1 through 4 are calibrated; numeric defaults and Step 5 onward remain proposals.
-version: "0.5"
-status: steps_1_2_3_4_calibrated_step_5_pending
+# Steps 1 through 5 are calibrated; numeric defaults and Step 6 onward remain proposals.
+version: "0.6"
+status: steps_1_2_3_4_5_calibrated_step_6_pending
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
 principles:
@@ -123,6 +123,7 @@ stage_contract:
   step_2_policy: docs/step-2.md
   step_3_policy: docs/step-3.md
   step_4_policy: docs/step-4.md
+  step_5_policy: docs/step-5.md
   execution_readiness: Material unresolved design choices block protocol-ready-for-implementation status even when disclosed.
   unverifiable_mandatory_criterion: Blocks a verification pass; the human may proceed with a recorded exception without relabeling evidence as verified.
   review_record: Include artifact version, criterion, evidence, verdict, severity, and repair condition.
@@ -182,8 +183,12 @@ stages:
     objective: Execute the approved protocol and prespecified analyses, verify results and interpretation boundaries.
     status: calibrated
     specification: docs/step-4.md
-  - id: step_5_and_later
-    objective: Execution, validation, and synthesis; structure to be calibrated.
+  - id: step_5
+    objective: Synthesize existing results and finalize human-approved deliverables, preserving evidence boundaries and open status without automatic publication authority.
+    status: calibrated
+    specification: docs/step-5.md
+  - id: step_6_and_later
+    objective: Scope and structure of subsequent stages remain to be calibrated.
     status: pending_calibration
 
 step_1:
@@ -295,3 +300,23 @@ step_4:
   statuses: Separate execution completion, per-result verification and authorization to continue.
   output: Decision summary plus traceable full results, deviations, verification, uncertainty, execution/resource logs, unresolved issues and next-stage scope/budget/outcomes proposal.
   next_stage: Human decides; proceeding never turns unresolved evidence into a pass.
+
+step_5:
+  specification: docs/step-5.md
+  scope: Propose project-specific synthesis and delivery scope, budget, outcomes and tradeoffs; obtain human approval before starting.
+  boundary: Step 4 executes and verifies results; Step 5 synthesizes existing results and produces deliverables without automatic new analyses.
+  evidence_reuse: Reuse valid evidence and reviews; review new synthesis, wording and affected dependencies only; preserve inherited unresolved and verification states; no duplicate valid checks.
+  approach: Recommend framework-first or direct drafting based on complexity, disagreement and intended use; explain costs and tradeoffs for plan approval.
+  review: Independent accuracy/traceability verification, interpretation-boundary and rival-explanation challenge, and audience suitability review; approve scope, budget, rationale and assignments first.
+  independence: Verifiers never accept content they authored; audience suitability is a duty, not a mandatory additional permanent agent.
+  gaps: Record nonmaterial gaps as limits and continue; potential core-conclusion or use changes pause affected portions with impact, qualification, analysis or upstream options and budgets for human decision.
+  revisions: Revisions preserving meaning, evidence strength and applicability may proceed within approved scope/budget with records; material or unauthorized changes pause affected portions for human decision.
+  versions: Approve project-specific version checkpoints and continuous-revision bounds with reasons; do not duplicate explicit existing approval.
+  resources: Approve project-specific time/token budgets, revision rounds, effective progress and stops; include review/revision and separate measured, estimated and unavailable usage.
+  stop: Any stop condition pauses work; report usage, progress, unresolved issues, saved work and options; recovery needs explicit scope and remaining budget authority.
+  progress: Measure substantive issue resolution, traceable synthesis and approved delivery requirements, not word count or revision count alone.
+  material_issues: Core correctness, evidence-support or intended-use issues block affected finalization; human decides qualifications or omissions; retain unresolved status.
+  other_issues: Record impact, handling bounds, owner and resolution time for human acceptance.
+  output: 'Decision summary and full package: conclusions, evidence limits, review status, open issues, approvals, deliverables, conclusion-evidence map, review/revision and resource records.'
+  finalization: Human approves exact version and applicability; record evidence verification, finalization and publication authority separately; finalization never automatically authorizes publication.
+  next_stage: Step 6 and later scope remains pending; no automatic publication or other follow-up work.

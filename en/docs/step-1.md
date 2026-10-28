@@ -1,6 +1,6 @@
 # Step 1 — Define and select a research question
 
-Status: calibrated with the human on 2026-10-27. This is reusable policy, not a claim that any particular project's Step 1 has passed. Detailed methodology belongs to Step 2. Steps 1–4 are calibrated; Step 5 remains pending.
+Status: calibrated with the human on 2026-10-27. This is reusable policy, not a claim that any particular project's Step 1 has passed. Detailed methodology belongs to Step 2. Steps 1–5 are calibrated; Step 6 remains pending.
 
 ## Objective and entry routing
 

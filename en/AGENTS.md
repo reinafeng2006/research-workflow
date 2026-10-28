@@ -3,7 +3,7 @@
 English reference of the [authoritative Chinese AGENTS.md](../AGENTS.md). Both versions express the same calibrated rules; see [language policy](docs/language-policy.md) and [translation manifest](../translation-manifest.json). Use the mirrored configuration, docs, and templates together.
 
 
-Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. For Step 2, read docs/step-2.md. For Step 3, read docs/step-3.md. For Step 4, read docs/step-4.md. Step 5 and later remain pending calibration. Follow the user's explicit preferences and applicable higher-priority instructions.
+Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. For Step 2, read docs/step-2.md. For Step 3, read docs/step-3.md. For Step 4, read docs/step-4.md. For Step 5, read docs/step-5.md. Step 6 and later remain pending calibration. Follow the user's explicit preferences and applicable higher-priority instructions.
 
 ## Initialize
 
@@ -67,3 +67,13 @@ Approve project-specific result-viewing times, metrics and use boundaries before
 Independent verifier fully checks a preapproved protocol-based critical-results list and samples others under an approved plan. Criticality is independent of desirability. New critical results or anomalous sampling require approval for supplementary scope/budget. Challenger checks current wording, uncertainty and rival explanations using authorized evidence only; full synthesis is later. New exploration or method adjustments require prior approval and separate records.
 
 Preserve original and unaffected results. Mark errors and dependencies; use minimal explicitly approved repairs/reruns, otherwise request approval; broad reruns need approval. Separate execution completion, per-result verification and next-stage authority. Material unresolved correctness/interpretation concerns cannot pass verification. Deliver decision summary plus full results and a next-stage proposal; human-authorized continuation preserves all unresolved statuses.
+
+## Step 5 controls
+
+Follow docs/step-5.md. Propose project-specific synthesis/delivery scope, time/token budget, outcomes and tradeoffs for approval before starting. Recommend framework-first or direct drafting based on complexity, disagreement and use. Approve version checkpoints, continuous-revision bounds, review assignments, revision rounds, effective progress and stops.
+
+Step 4 executes and verifies results; Step 5 synthesizes and produces audience-appropriate deliverables. Review new synthesis/wording and affected dependencies only, reusing valid evidence and retaining inherited open status. No automatic new analysis or repeated valid checks. Verifier checks accuracy/traceability, challenger checks inference boundaries and rivals, audience review checks structure/clarity/use; approve scope, budget and reasons first. Never verify own authored content; audience review is not a mandatory additional permanent agent.
+
+Nonmaterial revisions proceed within approved scope/budget with records. Changes to meaning, evidence strength, applicability or intended use pause affected portions with impact, reasons, options and budget for human decision. Material gaps may lead to qualified claims, omissions, extra analysis or upstream return; affected content cannot be final. Other issues need impact, bounds, owner and deadline for human acceptance. Any stop condition pauses work with usage, progress, issues and options; recovery needs explicit scope and budget authority.
+
+Use templates/step-5-plan.yaml and templates/step-5-delivery.md for the plan and decision summary plus full package, including conclusion-evidence mapping, review/revision records and resource use. Human approval identifies exact versions and qualifications without erasing open status. Record verification, finalization and external-publication authority separately; finalization never automatically authorizes external publication. Step 6 is pending.

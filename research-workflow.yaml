@@ -1,7 +1,7 @@
 # 工作流规范，不是可执行的智能体软件。
-# Steps 1–4 已校准；数值默认值与 Step 5 以后仍为提案。
-version: "0.5"
-status: steps_1_2_3_4_calibrated_step_5_pending
+# Steps 1–5 已校准；数值默认值与 Step 6 以后仍为提案。
+version: "0.6"
+status: steps_1_2_3_4_5_calibrated_step_6_pending
 purpose: 通过阶段门槛与有限修订，形成严谨、可追溯的研究。
 
 principles:
@@ -123,6 +123,7 @@ stage_contract:
   step_2_policy: docs/step-2.md
   step_3_policy: docs/step-3.md
   step_4_policy: docs/step-4.md
+  step_5_policy: docs/step-5.md
   execution_readiness: 重大未决设计选择即使已披露，仍阻止协议定稿就绪。
   unverifiable_mandatory_criterion: 阻止核验通过；用户可记录例外后继续，但不把证据改标为已核验。
   review_record: 记录产物版本、标准、证据、结论、严重程度和修复条件。
@@ -182,8 +183,12 @@ stages:
     objective: 执行批准协议和预先规定的分析，核验结果与解释边界。
     status: calibrated
     specification: docs/step-4.md
-  - id: step_5_and_later
-    objective: 执行、验证与综合的后续结构待校准。
+  - id: step_5
+    objective: 综合已有结果并形成经用户批准的交付物，保留证据边界与未决状态，不自动授权发布。
+    status: calibrated
+    specification: docs/step-5.md
+  - id: step_6_and_later
+    objective: 后续阶段的范围与结构待校准。
     status: pending_calibration
 
 step_1:
@@ -295,3 +300,23 @@ step_4:
   statuses: 区分执行完成、逐项结果核验与继续授权。
   output: 决策摘要加完整可追溯结果、偏差、核验、不确定性、执行／资源日志、未决问题及下一阶段范围／预算／预期产出建议。
   next_stage: 用户决定；继续不把未解决证据变成通过。
+
+step_5:
+  specification: docs/step-5.md
+  scope: 按项目目标提出综合与交付范围、预算、预期产出和取舍，由用户批准后开始。
+  boundary: Step 4 执行并核验结果；Step 5 综合已有结果和形成交付物，不自动新增分析。
+  evidence_reuse: 复用有效证据与审查记录，只审新增综合、表述及受影响依赖；保留继承的未决和核验状态，不重复有效检查。
+  approach: 按结论复杂度、争议和交付用途建议先审框架或直接起草，说明成本与取舍，由用户在计划中批准。
+  review: 准确性与可追溯性独立核验、解释边界与竞争解释质疑、目标读者适用性审阅；范围、预算、理由和分工先批准。
+  independence: 核验者不验收自己编写的内容；读者适用性是职责，不默认增加固定智能体。
+  gaps: 一般缺口记录局限并继续；可能改变核心结论或用途时暂停受影响部分，提出影响、限定结论、补充分析或返回前序的选项及预算，由用户决定。
+  revisions: 不改变结论含义、证据强度或适用边界的修订在批准范围与预算内完成并记录；实质变化或超授权暂停受影响部分供用户决定。
+  versions: 按项目批准需审批的版本和可连续修订的边界及理由，不重复请求明确已有授权。
+  resources: 按项目批准时间／token 预算、修订轮数、有效进展和停止条件；计入审查与修订，区分测量、估算和不可用遥测。
+  stop: 任一停止条件触发即暂停，报告用量、进展、未决问题、保留成果和选项；恢复须明确授权范围与剩余预算。
+  progress: 以实质问题解决、可追溯综合和获批交付要求衡量，不能只以字数或修订次数充数。
+  material_issues: 影响核心正确性、证据支持或交付用途的问题阻止相关内容定稿；限定或删减方案由用户决定，保留未决状态。
+  other_issues: 记录影响、处理边界、负责人和解决时点，由用户决定是否接受。
+  output: 决策摘要加完整交付包：结论、证据边界、审查状态、未决问题、待批事项、交付物、结论证据对应表、审查修订和资源记录。
+  finalization: 由用户批准准确版本和适用边界；证据核验、内容定稿和对外发布授权分别记录，定稿不自动授权发布。
+  next_stage: Step 6 及后续范围待校准；不自动启动发布或其他后续工作。

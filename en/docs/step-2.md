@@ -1,6 +1,6 @@
 # Step 2 — Method comparison, bounded tests, and a research protocol
 
-Status: calibrated and approved for publication. These are reusable policies, not authorization for a particular investigation, test, or implementation. Steps 1–4 are calibrated; Step 5 is pending. The [Chinese specification](../../docs/step-2.md) is authoritative; this is its English reference.
+Status: calibrated and approved for publication. These are reusable policies, not authorization for a particular investigation, test, or implementation. Steps 1–5 are calibrated; Step 6 is pending. The [Chinese specification](../../docs/step-2.md) is authoritative; this is its English reference.
 
 ## Objective and boundary
 

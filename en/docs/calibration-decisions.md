@@ -32,7 +32,7 @@ Suggested reusable practices: decision-driven depth, claim provenance, reasoning
 
 ## Still open
 
-Step 5 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
+Step 6 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
 
 ## Step 2 — approved calibration
 
@@ -108,4 +108,22 @@ User approved [Step 4](step-4.md), its diagram and gates for publication. This i
 | S4-10 | Material unresolved correctness or interpretation concerns block affected results being marked verified. Other limits are recorded; human chooses further work or qualified continuation; no unresolved-to-pass conversion. |
 | S4-11 | Deliver decision summary plus full traceable results, deviations, verification status, execution/resource records, unresolved concerns and next-stage scope/budget/outcomes proposal. Human decides progression. |
 
-Current checkpoint: Steps 1–4 calibrated and published; Step 5 pending. No research runs authorized by this documentation update. Continue one multiple-choice question at a time. Numeric resource limits remain project-specific.
+
+## Step 5 — approved calibration
+
+The human approved the [Step 5](step-5.md) workflow, gates and bilingual publication as reusable policy, not a project run or external research-publication authorization.
+
+| ID | Agreed decision |
+| --- | --- |
+| S5-01 | Propose project-specific synthesis and delivery scope, budget, outcomes and tradeoffs for human approval before starting; reuse valid evidence, no automatic new analysis. |
+| S5-02 | Classify gaps by impact: record ordinary limitations and continue; potential core-conclusion/use changes pause affected work with impact, qualification, additional-analysis or upstream options and budgets for human decision. |
+| S5-03 | Recommend framework-first or direct drafting based on complexity, disagreement and use; explain costs/tradeoffs for stage-plan approval. |
+| S5-04 | Review accuracy, traceability, interpretation boundaries and audience suitability; approve scope, budget and rationale first; review new synthesis/wording and affected content only, reusing valid evidence. |
+| S5-05 | Revisions preserving meaning, evidence strength and applicability may proceed within approved scope/budget with records; material conclusion, qualification or use changes pause affected portions with reasons/options/budget for human decision. |
+| S5-06 | Approve project-specific version checkpoints, continuous-revision bounds and reasons, budgets, revision rounds, effective progress and stops; any stop condition pauses work with unresolved issues and next options. |
+| S5-07 | Core correctness, evidence-support or use issues block affected finalization; other issues need impact, bounds, owner and deadline for human acceptance; qualifications/omissions require human decision and retain unresolved status. |
+| S5-08 | Submit decision summary and full package with conclusions, evidence limits, reviews, open issues, approvals, deliverables, conclusion-evidence map, review/revision and resource records; human approves exact final version without automatic publication authority. |
+| S5-09 | Approve full workflow, pause diagram and gates. Separate Step 4 result verification from Step 5 synthesis/delivery; preserve unresolved status across stages and never repeat valid checks. |
+| S5-10 | Synchronize Chinese/English documentation, diagrams, templates and calibration records; Step 6 scope remains pending; continue one multiple-choice question at a time. |
+
+Current checkpoint: Steps 1–5 calibrated and published; Step 6 pending. No research runs authorized by this documentation update. Continue one multiple-choice question at a time. Numeric resource limits remain project-specific.
