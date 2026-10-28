@@ -2,7 +2,7 @@
 
 用于研究与学习项目的可复用多智能体工作流：固定阶段目标、独立核验、质量门槛，以及受预算约束的修正和前序阶段复查。
 
-**版本：v0.6；Step 1–5 已校准，Step 6 及后续阶段待校准。** 本次新增已批准的 Step 5 规则，保持中英文同步。仓库提供说明和模板，不是可执行的编排服务或实时资源监控器。
+**版本：v0.7；Step 1–6 已校准，具体项目规则仍须批准。** 本次新增已批准的 Step 6 规则，保持中英文同步。仓库提供说明和模板，不是可执行的编排服务或实时资源监控器。
 
 ## 语言与版本
 
@@ -37,7 +37,7 @@
 3. [Step 3：实施准备与小规模端到端验证](docs/step-3.md)：复用有效证据，只验证新增或失效部分。
 4. [Step 4：正式执行与预先规定的分析](docs/step-4.md)：分层复核结果及解释边界。
 5. [Step 5：研究综合与交付定稿](docs/step-5.md)：按项目综合与交付，分级处理问题，定稿不自动授权发布。
-6. Step 6 及后续阶段待校准。
+6. [Step 6：必要交付、归档与收尾](docs/step-6.md)：满足接收方要求，按获批标准收尾，可选后续不阻碍完成。
 
 每阶段采用产出 → 自查 → 独立核验 → 诊断 → 修正 → 复核的有界循环。决策就绪、科学证据核验与人类授权分别记录。严谨的负面或不确定结果也可能满足研究目标；批准继续不会将未决问题变为已通过。
 
@@ -56,6 +56,8 @@
 - [Step 4 计划](templates/step-4-plan.yaml)及[结果包](templates/step-4-results.md)。
 - `templates/evidence-ledger.csv`：稳定英文列名的证据台账；字段含义见语言政策。
 
-每个项目从模板建立 `project/brief.md`、`project/stages/`、`project/reviews/`、`project/artifacts/` 和 `project/decisions.md`，记录采用的模板提交版本。Step 1–5 规则已校准，项目预算仍须批准；Step 6 尚未选择方案。
+每个项目从模板建立 `project/brief.md`、`project/stages/`、`project/reviews/`、`project/artifacts/` 和 `project/decisions.md`，记录采用的模板提交版本。Step 1–6 规则已校准，项目预算仍须批准；具体交付与收尾标准按项目批准。
 
 使用 [Step 5 计划](templates/step-5-plan.yaml) 和 [交付包](templates/step-5-delivery.md)。Step 4 核验结果，Step 5 审查新增综合与表述；有效证据直接复用。
+
+使用 [Step 6 计划](templates/step-6-plan.yaml) 和 [交接包](templates/step-6-handoff.md)。实际提交必须明确授权准确版本与动作；准备、授权、提交、接收确认、收尾和维护启动分别记录。

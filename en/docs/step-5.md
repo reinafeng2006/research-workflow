@@ -1,6 +1,6 @@
 # Step 5 — Research synthesis and delivery finalization
 
-Status: human-calibrated and approved for publication as reusable policy, not authorization for a project run or external publication. Steps 1–5 are calibrated; Step 6 and later are pending. The [Chinese specification](../../docs/step-5.md) is authoritative; this is its English reference.
+Status: human-calibrated and approved for publication as reusable policy, not authorization for a project run or external publication. Steps 1–6 are calibrated; project controls require approval. The [Chinese specification](../../docs/step-5.md) is authoritative; this is its English reference.
 
 ## Objective and Step 4/5 boundary
 
@@ -122,4 +122,4 @@ Define meaningful progress per project, for example resolving substantive review
 
 Present main conclusions, evidence boundaries, review status, unresolved issues and approval items first. Attach deliverables, conclusion-to-evidence mapping, review/revision records and resource use. Use the [Step 5 plan](../templates/step-5-plan.yaml) and [delivery package](../templates/step-5-delivery.md).
 
-Record evidence verification, content finalization and external-publication authority separately. Finalization approves an exact version, applicability boundaries and accepted limitations, not publication. Retain accepted versions, open issues, usage and next actions for continuity. Step 6 scope is pending calibration; this policy does not automatically start publication or other follow-up work.
+Record evidence verification, content finalization and external-publication authority separately. Finalization approves an exact version, applicability boundaries and accepted limitations, not publication. Retain accepted versions, open issues, usage and next actions for continuity. Follow [Step 6](step-6.md) for required delivery/archive; actual submission and optional follow-up need explicit authority.

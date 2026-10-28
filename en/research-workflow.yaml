@@ -1,7 +1,7 @@
 # Workflow specification, not executable agent software.
-# Steps 1 through 5 are calibrated; numeric defaults and Step 6 onward remain proposals.
-version: "0.6"
-status: steps_1_2_3_4_5_calibrated_step_6_pending
+# Steps 1 through 6 are calibrated; numeric defaults remain proposals and project limits/authority require approval.
+version: "0.7"
+status: steps_1_2_3_4_5_6_calibrated
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
 principles:
@@ -124,6 +124,7 @@ stage_contract:
   step_3_policy: docs/step-3.md
   step_4_policy: docs/step-4.md
   step_5_policy: docs/step-5.md
+  step_6_policy: docs/step-6.md
   execution_readiness: Material unresolved design choices block protocol-ready-for-implementation status even when disclosed.
   unverifiable_mandatory_criterion: Blocks a verification pass; the human may proceed with a recorded exception without relabeling evidence as verified.
   review_record: Include artifact version, criterion, evidence, verdict, severity, and repair condition.
@@ -187,9 +188,10 @@ stages:
     objective: Synthesize existing results and finalize human-approved deliverables, preserving evidence boundaries and open status without automatic publication authority.
     status: calibrated
     specification: docs/step-5.md
-  - id: step_6_and_later
-    objective: Scope and structure of subsequent stages remain to be calibrated.
-    status: pending_calibration
+  - id: step_6
+    objective: Complete required delivery/archive for the recipient and close against the approved criterion; separately authorize optional follow-up.
+    status: calibrated
+    specification: docs/step-6.md
 
 step_1:
   entry_phases:
@@ -319,4 +321,26 @@ step_5:
   other_issues: Record impact, handling bounds, owner and resolution time for human acceptance.
   output: 'Decision summary and full package: conclusions, evidence limits, review status, open issues, approvals, deliverables, conclusion-evidence map, review/revision and resource records.'
   finalization: Human approves exact version and applicability; record evidence verification, finalization and publication authority separately; finalization never automatically authorizes publication.
-  next_stage: Step 6 and later scope remains pending; no automatic publication or other follow-up work.
+  next_stage: Propose required delivery/archive under docs/step-6.md; actual submission and optional follow-up need explicit authorization.
+
+step_6:
+  specification: docs/step-6.md
+  priority: Identify required delivery, complete necessary delivery/archive, close against the approved criterion, then suggest optional follow-up; follow-up never blocks closure.
+  requirements: Use project type and recipient requirements for items, formats, method, deadline and acceptance criteria; reuse known information and clarify gaps only.
+  planning: Approve scope, budget, outcomes, reasons and tradeoffs; scale and approve pre-submission checks/depth by channel, audience and material restrictions.
+  archive: Propose archive depth, scope, budget and criteria from reuse/resumption needs, storage cost and restrictions; human approves; no default rerun of validation.
+  completion: Propose materials-ready, submission-success, recipient-confirmation or another explicit criterion and rationale for approval; preserve unachieved states; criterion changes need approval.
+  reuse: Reuse valid outputs and records; check only new, changed, invalidated or affected portions; no duplicate research verification or automatic new analysis.
+  revisions: Record nonmaterial format/file changes within preapproval; new analysis or conclusion, qualification, authorship or disclosure changes pause affected work with minimal plan, impact, options and budget for human decision; return to Step 5 or earlier as approved.
+  verification: Executor self-check plus independent verifier; approve scope, depth, assignments, reasons and budget for delivery, archive continuity, version/authority and maintenance boundaries; never accept own authored work.
+  issues: Issues affecting required delivery, archive usability, submission/publication authority accuracy or maintenance boundaries block affected completion; other issues need impact, bounds, owner and deadline for acceptance; passed unaffected portions may be confirmed separately.
+  submission: Submission/publication needs explicit exact-version, action, recipient/channel and scope authority; preparation/finalization is not authority; record actual receipts, never mark failed/unknown as success or resubmit without authority.
+  confirmation_tracking: Track recipient confirmation only within approved scope, duration and budget; never infer it from submission success.
+  resources: Approve work-type subbudgets, progress and stops for delivery preparation, archive and authorized maintenance plus total budget; count preparation, review, repairs and recovery cumulatively without omissions/double counting.
+  stop: Any approved stop pauses work and reports; subtask pauses corresponding work, total pauses constrained work; recovery specifies scope and remaining budget; separate measured, estimated and unavailable telemetry.
+  follow_up: Offer bounded suggestions after closure with value, costs and tradeoffs; separately approve selected scope, budget and outcomes; no required-delivery budget diversion or automatic investigation, analysis or monitoring.
+  maintenance: Compare none, on-demand and bounded periodic maintenance; approve scope, triggers, frequency, duration, budget and stops; approved plan is not actual activation.
+  renewal: Periodic maintenance counts usage cumulatively and stops at expiry; renew only with prior approval; new runs never reset total budget.
+  maintenance_issues: Record nonmaterial maintenance within preapproval; potential conclusion/evidence-validity/authorship/disclosure impact pauses work for impact, minimal remedy and budget decision; preserve originals, no automatic reruns, retraction or republication.
+  states: Record prepared, authorized, submitted/published, recipient confirmed, project closed and maintenance actually started separately; never infer one from another.
+  handoff: 'Summary and full handoff: completion/acceptance, open issues, exact versions, requirement-output map, archive index, authority, actual receipts, review, usage and resumption; human confirms closure or follow-up.'

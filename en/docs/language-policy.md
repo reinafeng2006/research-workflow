@@ -49,4 +49,4 @@ Keep `pass`, `fail`, `not_verifiable`, `pending`, `draft`, `calibrated`, `pendin
 
 ## Current synchronization scope
 
-v0.6 provides Chinese primary and English reference documentation, diagrams, calibration records, configuration and templates for Steps 1–5. Step 5 policy/fields are added and stage status/indexes updated; Step 6 is pending. Existing numeric proposals and substantive Steps 1–4 rules remain unchanged, with an explicit Step 4/5 handoff. Configuration keys, IDs and statuses remain English.
+v0.7 provides Chinese primary and English reference docs, diagrams, configuration, templates and calibration records for Steps 1–6. Step 6 adds required delivery/archive, approved closure and optional follow-up rules with current indexes updated. Existing substantive stage rules and numeric proposals are unchanged; the Step 5/6 handoff is explicit. Keys, IDs and statuses remain English; project budgets and authority still require approval.

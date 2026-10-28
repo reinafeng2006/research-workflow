@@ -3,7 +3,7 @@
 English reference of the [authoritative Chinese AGENTS.md](../AGENTS.md). Both versions express the same calibrated rules; see [language policy](docs/language-policy.md) and [translation manifest](../translation-manifest.json). Use the mirrored configuration, docs, and templates together.
 
 
-Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. For Step 2, read docs/step-2.md. For Step 3, read docs/step-3.md. For Step 4, read docs/step-4.md. For Step 5, read docs/step-5.md. Step 6 and later remain pending calibration. Follow the user's explicit preferences and applicable higher-priority instructions.
+Read research-workflow.yaml before initializing or continuing a research project. It indexes role responsibilities and stage policy. For Step 1, read docs/step-1.md, the detailed calibrated specification. For Step 2, read docs/step-2.md. For Step 3, read docs/step-3.md. For Step 4, read docs/step-4.md. For Step 5, read docs/step-5.md. For Step 6, read docs/step-6.md. The six-stage core is calibrated; project controls require approval. Follow the user's explicit preferences and applicable higher-priority instructions.
 
 ## Initialize
 
@@ -76,4 +76,18 @@ Step 4 executes and verifies results; Step 5 synthesizes and produces audience-a
 
 Nonmaterial revisions proceed within approved scope/budget with records. Changes to meaning, evidence strength, applicability or intended use pause affected portions with impact, reasons, options and budget for human decision. Material gaps may lead to qualified claims, omissions, extra analysis or upstream return; affected content cannot be final. Other issues need impact, bounds, owner and deadline for human acceptance. Any stop condition pauses work with usage, progress, issues and options; recovery needs explicit scope and budget authority.
 
-Use templates/step-5-plan.yaml and templates/step-5-delivery.md for the plan and decision summary plus full package, including conclusion-evidence mapping, review/revision records and resource use. Human approval identifies exact versions and qualifications without erasing open status. Record verification, finalization and external-publication authority separately; finalization never automatically authorizes external publication. Step 6 is pending.
+Use templates/step-5-plan.yaml and templates/step-5-delivery.md for the plan and decision summary plus full package, including conclusion-evidence mapping, review/revision records and resource use. Human approval identifies exact versions and qualifications without erasing open status. Record verification, finalization and external-publication authority separately; finalization never automatically authorizes external publication. Step 6 is calibrated.
+
+## Step 6 controls
+
+Follow docs/step-6.md. Use project type and recipient requirements to identify required items, formats, method, deadline and criteria; reuse known information and clarify gaps only. Complete necessary delivery/archive and close against a human-approved materials-ready, submission-success or recipient-confirmation criterion before optional suggestions with value/cost/tradeoffs. Follow-up never blocks closure or consumes required-delivery budget; separately approve selected scope, budget and outcomes.
+
+Approve project-specific archive depth/scope/budget/criteria and pre-submission checks/depth. Self-check then independent verification covers required delivery, archive usability/resumption, exact-version authority and maintenance boundaries under approved scope/depth/assignments/reasons/budget. Check new, changed, invalid or affected portions only; reuse valid records, no self-approval or default research reruns.
+
+Record nonmaterial format/file changes within preapproval. New analysis or conclusion, qualification, authorship or disclosure changes pause affected work with minimal plan, impact, options and budget for human decision, returning to Step 5 or earlier if approved. Material delivery/archive/authority/maintenance issues block affected completion; other issues need impact/bounds/owner/deadline for acceptance. Passed unaffected portions may be confirmed separately; retain unresolved states.
+
+Actual submission/publication needs explicit changed exact-version/action authority. Failed/unknown outcomes are not success and never trigger automatic resubmission; track recipient confirmation only within approved scope/duration/budget. Record preparation, authority, actual submission/publication, recipient confirmation, closure and actual maintenance start separately; finalization is not submission permission.
+
+Approve total and work-type subbudgets, meaningful progress and stops; any stop pauses and reports, with recovery scope/remaining budget approved. Compare none/on-demand/bounded periodic maintenance and approve scope/triggers/frequency/duration/budget/stops before activation. Preserve cumulative usage across runs; stop at expiry and approve renewal first. Material maintenance issues pause for decision; preserve originals, no automatic reruns, retraction, republication or new analysis.
+
+Use templates/step-6-plan.yaml and templates/step-6-handoff.md for summary/full handoff including exact versions, archive index, authority, actual outcomes, reviews, resources and resumption. Human confirms closure or follow-up. A calibrated six-stage policy authorizes no specific research or scheduled maintenance.

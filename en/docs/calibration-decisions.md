@@ -32,7 +32,7 @@ Suggested reusable practices: decision-driven depth, claim provenance, reasoning
 
 ## Still open
 
-Step 6 and subsequent stage structure; project-specific budgets and numerical revision/checkpoint values. Publishing this policy does not authorize a new investigation.
+Project-specific budgets, numerical revision/checkpoint values, recipient completion criteria and optional follow-up authorization. Publishing this policy does not authorize a new investigation.
 
 ## Step 2 — approved calibration
 
@@ -126,4 +126,26 @@ The human approved the [Step 5](step-5.md) workflow, gates and bilingual publica
 | S5-09 | Approve full workflow, pause diagram and gates. Separate Step 4 result verification from Step 5 synthesis/delivery; preserve unresolved status across stages and never repeat valid checks. |
 | S5-10 | Synchronize Chinese/English documentation, diagrams, templates and calibration records; Step 6 scope remains pending; continue one multiple-choice question at a time. |
 
-Current checkpoint: Steps 1–5 calibrated and published; Step 6 pending. No research runs authorized by this documentation update. Continue one multiple-choice question at a time. Numeric resource limits remain project-specific.
+## Step 6 — approved calibration
+
+See [Step 6](step-6.md). The later delivery-first clarification governs; early optional work combinations are not prerequisites for required delivery.
+
+| ID | Agreed decision |
+| --- | --- |
+| S6-01 | Prioritize project/recipient-based required delivery, necessary archive and approved closure before optional follow-up; this supersedes the earlier equal-priority ordering of the three work types. |
+| S6-02 | Propose scope, budget, outcomes, reasons and tradeoffs for human selection/approval; reuse known requirements, valid outputs and records without automatic analysis or duplicate checks. |
+| S6-03 | Propose archive depth, scope, budget and criteria based on reuse/resumption needs, storage cost and restrictions for approval; no default validation reruns. |
+| S6-04 | Propose prepublication checks, depth, budget and decision items based on channel, audience and restrictions; reuse valid records, no research reverification; actual submission/publication needs explicit authority. |
+| S6-05 | Record nonmaterial formatting/layout/file changes within preapproval; new analysis or changes to conclusions, qualifications, authorship or disclosure pause affected work with minimal plan, impact, options and budget; approved upstream return may target Step 5 or earlier. |
+| S6-06 | Propose materials-ready, submission-success, recipient-confirmation or another explicit completion criterion and reasons for approval; retain unachieved states, no automatic relaxation, optional follow-up never blocks closure. |
+| S6-07 | After closure offer bounded follow-up value/cost/tradeoff suggestions; separately approve selected scope/budget/outcomes, no automatic goals/execution or required-delivery budget diversion. |
+| S6-08 | Compare none/on-demand/bounded periodic maintenance; approve scope, triggers, frequency, duration, budget and stops; no monitoring, execution or modification before explicit approval. |
+| S6-09 | Record preapproved nonmaterial maintenance; potential conclusion/evidence-validity/authorship/disclosure impact pauses work with impact, minimal remedy and budget for decision; preserve originals, no automatic reruns, retraction or republication. |
+| S6-10 | Approve total plus work-type subbudgets, effective-progress criteria and stops; any stop pauses and reports; periodic maintenance preserves cumulative usage, stops at expiry and requires prior renewal, without per-run budget resets. |
+| S6-11 | Executor self-check plus independent verifier under approved project-specific scope/depth/assignments/reasons/budget; check archive continuity, delivery/authority accuracy and maintenance boundaries; new or affected content only. |
+| S6-12 | Material delivery/archive-usability/authority/maintenance issues block affected completion; other issues need impact/bounds/owner/deadline for acceptance; passed unaffected portions may be confirmed separately, retaining open status. |
+| S6-13 | Summary/full handoff includes completion/acceptance, issues, exact versions, archive index, authority/actual receipts, reviews, resources and resumption; separately record prepared, authorized, submitted/published, recipient confirmed, closed and maintenance actually started. |
+| S6-14 | Human approved revised main workflow, resource/stop diagram and gates for bilingual docs/templates/calibration records; saving policy grants no project submission or scheduled-maintenance authority. |
+
+
+Current checkpoint: Steps 1–6 calibrated and saved. Project budgets, numeric limits, recipient completion criteria and optional follow-up authority still require project-specific approval. Earlier Step 6-pending statements are historical and superseded here. Documentation publication authorizes no research run, submission or scheduled maintenance.

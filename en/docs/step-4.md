@@ -1,6 +1,6 @@
 # Step 4 — Formal execution and prespecified analysis
 
-Status: calibrated and approved for publication. This reusable policy does not authorize a specific research run. Step 6 remains pending. The [Chinese specification](../../docs/step-4.md) is authoritative; this is its English reference.
+Status: calibrated and approved for publication. This reusable policy does not authorize a specific research run. Step 6 is calibrated. The [Chinese specification](../../docs/step-4.md) is authoritative; this is its English reference.
 
 ## Objective and boundary
 

@@ -1,0 +1,109 @@
+# Complete and approve per project. Preparation/finalization do not authorize submission; follow-up must not block closure.
+status: proposed_not_authorized
+stage: step_6
+contract_version: null
+step_5_approved_version: null
+project_type_and_goals: null
+recipient_and_channel: null
+existing_requirements_and_approval_records: []
+missing_information_only: []
+material_and_access_restrictions: []
+inherited_unresolved_issues: []
+required_delivery:
+  scope: []
+  exclusions: []
+  expected_outcomes: []
+  rationale_and_tradeoffs: null
+  requirements:
+    - requirement_id: null
+      recipient_requirement_source: null
+      required_item_format_method_deadline: null
+      acceptance_criterion: null
+      artifact_path_and_exact_version: null
+      valid_existing_check_and_reuse_basis: null
+      gap_or_affected_dependency: null
+  preparation_checks:
+    channel_audience_material_basis: null
+    items_and_depth: []
+    budget_and_human_approval: null
+completion:
+  # Select materials_ready / submission_success / recipient_confirmation or an explicit custom criterion based on recipient requirements.
+  criterion: null
+  rationale: null
+  required_evidence: []
+  human_approval: null
+  criterion_changes_require_human_decision: true
+archive:
+  reuse_and_resumption_needs: null
+  storage_cost_and_material_limits: null
+  approved_depth_and_scope: null
+  budget: null
+  acceptance_criteria: []
+  index_and_exact_versions: []
+  data_material_locations_and_access_limits: []
+  selected_config_environment_execution_review_records: []
+  resumption_instructions: null
+  reuse_valid_records_without_default_reruns: true
+review:
+  executor_self_check: null
+  independent_verifier: null
+  independence_and_assignments: null
+  scope_depth_rationale: null
+  budget_and_approval: null
+  required_delivery_archive_authority_maintenance_checks: []
+  new_changed_invalid_or_affected_parts_only: true
+revision_authority:
+  preapproved_format_layout_file_organization_scope_budget: null
+  material_changes_pause_for_human_decision: true
+  analysis_conclusions_qualifications_authorship_disclosure: []
+  preserve_original_versions: true
+  minimal_remedy_options_impact_budget_and_upstream_approval: null
+submission_authorization:
+  record: null
+  exact_version: null
+  recipient_channel_and_action: null
+  approved_scope_and_conditions: null
+  preparation_or_finalization_is_not_submission_authority: true
+  failed_or_unknown_result_requires_report_not_automatic_resubmission: true
+recipient_confirmation_tracking:
+  needed_for_approved_completion_criterion: null
+  approved_scope_duration_budget: null
+resource_controls:
+  total_time_budget: null
+  total_token_budget: null
+  work_type_subbudgets:
+    required_delivery_preparation: null
+    archiving: null
+    separately_approved_maintenance: null
+  effective_progress_by_work_type: []
+  stop_conditions_by_work_type: []
+  overall_stop_conditions: []
+  pause_on_any_approved_stop_condition: true
+  subtask_vs_total_pause_scope: null
+  preparation_selfcheck_review_repair_recovery_included: true
+  cumulative_usage_attribution: null
+  telemetry_estimation_and_interrupt_limits: null
+  recovery_scope_and_remaining_budget_approval: null
+optional_follow_up:
+  does_not_block_current_closure: true
+  cannot_consume_required_delivery_budget: true
+  suggestions_after_closure_value_cost_tradeoffs: []
+  human_selection_and_separate_scope_budget_outcomes_approval: null
+  no_automatic_investigation_analysis_or_execution: true
+maintenance:
+  # Optional; no activation without approval: none / on_demand / bounded_periodic.
+  selected_mode: null
+  alternatives_value_cost_tradeoffs: null
+  scope: []
+  triggers: []
+  frequency: null
+  duration_and_expiry: null
+  budget_and_stop_rules: null
+  human_approval: null
+  actual_start_record: null
+  preserve_cumulative_usage_across_runs: true
+  stop_at_expiry_and_approve_before_renewal: true
+  preapproved_nonmaterial_actions: []
+  material_conclusion_evidence_authorship_disclosure_issues_pause: true
+  no_automatic_rerun_retraction_or_republication: true
+plan_human_approval_record: null
