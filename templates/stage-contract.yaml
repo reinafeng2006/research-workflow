@@ -1,6 +1,9 @@
 status: draft
 id: null
 version: 1
+# lite / standard / strict。由 principal 批准并记入决策记录；降档须另行批准。
+# 档位只裁剪 G1／G2 清单项的广度，不裁剪 G3 授权点，也不改变证据级别要求。
+profile: null
 objective: null
 scope_and_exclusions: []
 input_artifact_versions: []
@@ -10,6 +13,10 @@ deliverables: []
 acceptance_criteria_and_check_methods:
   - id: C1
     requirement: null
+    # G1 材料就绪 / G2 独立核验完成 / G3 人类授权 / runtime 运行期条件。参见 docs/gates.md。
+    gate: null
+    # 该清单项的最低适用档位：lite / standard / strict。
+    tier: null
     mandatory: true
     applicability: undetermined
     applicability_condition: null
@@ -35,12 +42,19 @@ resource_budget:
   max_revision_cycles: null
   consecutive_cycles_without_progress: null
   budget_review_fraction: null
+# 智能体角色。人员角色与任务单元见 templates/work-assignment.yaml。
 assigned_roles:
   coordinator: null
   producer: null
   verifier: null
   challenger: null
   methods_specialist: null
+people:
+  principal: null
+  approvers: []            # 门槛类别 × 范围；委派须有授权记录
+  collaborators: []
+  reviewers: []
+work_assignment_reference: null
 freeze_record:
   agreed_by: null
   date: null

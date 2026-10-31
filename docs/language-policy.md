@@ -12,6 +12,13 @@
 
 | 中文 | 英文／稳定标识 |
 | --- | --- |
+| 用户 | user：与智能体对话并保留决策权的人。单人项目中用户即 principal，两者等同 |
+| principal | principal：最终决策人。团队项目中用户可指定其他批准人，但不可委派的决定仍属 principal，见 docs/teamwork.md |
+| 批准人 | approver：在 principal 明确授权的门槛类别与范围内批准的人 |
+| 任务单元 | work unit：分配的最小单位，一个负责人、互斥的可写产物 |
+| 档位 | profile：`lite` / `standard` / `strict`，裁剪 G1／G2 清单项的广度 |
+| 三类门槛 | G1 材料就绪 material ready／G2 独立核验完成 independently verified／G3 人类授权 human authorization |
+| 运行期条件 | runtime condition：判定已授权的工作能否继续，不在阶段末判定 |
 | 智能体 | agent |
 | 协调者 | coordinator |
 | 研究者／产出者 | researcher / producer |
@@ -30,7 +37,7 @@
 | 预批准备用方案 | preapproved fallback |
 | 暂停／恢复 | pause / recovery |
 
-`pass`、`fail`、`not_verifiable` 分别表示通过、未通过、不可核验；`pending`、`draft`、`calibrated`、`pending_calibration`、`proposed_not_authorized` 等状态值保持原样。人类授权例外不是 `pass`。估算、测量实际值和不可用遥测必须区分。
+`pass`、`fail`、`not_verifiable` 分别表示通过、未通过、不可核验；`pending`、`draft`、`calibrated`、`pending_calibration`、`proposed_not_authorized` 等状态值保持原样。门槛标识 `G1`、`G2`、`G3`、`runtime` 和档位值 `lite`、`standard`、`strict` 保持原样，不翻译。人类授权例外不是 `pass`。估算、测量实际值和不可用遥测必须区分。
 
 ## 证据台账字段
 

@@ -1,6 +1,12 @@
-# 按项目填写；null 不构成批准。参见 docs/shared-controls.md。
+# 按项目填写；null 不构成批准。参见 docs/shared-controls.md 第 6 节。
+# 本表记录「哪个产物由谁负责、由谁核验」，对人和对智能体同样适用。
+# 人员角色定义、授权矩阵与任务单元见 docs/teamwork.md 与 templates/work-assignment.yaml。
 assignments:
   - artifact_version_and_portion: null
+    responsible_person: null          # 人员：任务单元负责人
+    verifying_person: null            # 人员：承担 G2 的人；不得与 responsible_person 相同
+    approving_person: null            # 人员：承担 G3 的批准人
+    g2_g3_overlap_recorded: null      # 同一人承担 G2 与 G3 时的例外记录；非通过
     coordinator: null
     producer_and_material_contributors: []
     methods_specialist: null

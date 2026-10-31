@@ -17,7 +17,10 @@ version_mapping_and_basis: []
 external_submission_exact_version: null
 replaces_authorization_ids: []
 revocation_record: null
-recipient_or_channel: null
-validity_period_or_expiry: null
+# G3 的授权点标识，参见 docs/gates.md；委派批准须填写下列三项。
+gate_authorization_points: []
+delegated_to_approver: null
+delegation_scope_and_ceiling: null
+self_approval_overlap_recorded: null
 recipient_or_channel: null
 validity_period_or_expiry: null
