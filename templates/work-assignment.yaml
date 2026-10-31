@@ -1,0 +1,66 @@
+# 任务分配表。按项目填写；null 不构成批准。
+# 参见 docs/teamwork.md 与 docs/shared-controls.md 第 5、6 节。
+status: proposed
+stage: null
+profile: null            # lite / standard / strict，继承本阶段契约
+people:
+  principal: null        # 最终决策人；不可委派的决定见 docs/teamwork.md 第 2 节
+  approvers:
+    - person: null
+      gate_classes: []   # G3 中可批准的门槛类别
+      scope: []
+      budget_ceiling: null
+      expiry: null
+      authorization_id: null
+  collaborators: []
+  reviewers: []
+  observers: []
+work_units:
+  - unit_id: null
+    objective: null
+    owner: null                      # 唯一负责人
+    material_contributors: []        # 实质贡献者；用于贡献与署名的可追溯
+    allowed_inputs: []               # 含版本
+    allowed_outputs: []
+    writable_artifacts: []           # 必须与其他进行中单元互斥
+    acceptance_criteria: []
+    serves_checklist_items: []       # 指向 G1 / G2 的具体清单项；填不出就不要派发
+    due: null
+    budget_share:
+      runtime_minutes: null
+      tokens: null
+      person_hours: null
+      measurement_or_estimation_basis: null
+    depends_on: []
+    task_launch_record: null         # templates/task-launch.yaml 的记录 ID
+    self_check_record: null
+    g2_verifier: null                # 不得是 owner 或实质贡献者
+    g2_check_ids: []
+    g3_authorization_id: null
+    self_approval_overlap_recorded: null   # 轻量档自批例外的记录；非通过
+    status: proposed                 # proposed / admitted / running / self_checked / verified / authorized / blocked / handed_over
+handoffs:
+  - unit_id: null
+    artifact_version: null
+    passed_checklist_items: []
+    check_ids: []
+    open_issues: []
+    remaining_budget: null
+    from_person: null
+    to_person: null
+    verifier_reassigned_to: null     # 接手人参与产出时必须另指派
+    date: null
+blocks:
+  - unit_id: null
+    reason: null
+    impact: null
+    budget_spent: null
+    options: []
+    reported_to: null
+    decision: null
+    decided_at: null
+disagreements:
+  - subject: null
+    positions: []                    # 各方的证据、假设与对推荐的影响
+    unresolved: true
+    decided_by_principal: null

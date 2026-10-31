@@ -5,8 +5,8 @@
   "reference_language": "en",
   "source_commit": "947dfe3ef4225e8e91110f21fd76fe6b6ce87832",
   "synchronized_on": "2026-10-28",
-  "status": "synchronized",
-  "note": "Hashes detect drift, not semantic equivalence. Both language policies reviewed together.",
+  "status": "zh_updated_en_stale",
+  "note": "Hashes detect drift, not semantic equivalence. v0.9 batch 1 updated the Chinese authoritative version only: the English files listed under stale are OUT OF DATE and must not be treated as the current rules. Hashes are refreshed when en/ is synchronized in a later batch.",
   "files": [
     {
       "zh": "README.md",
@@ -218,5 +218,34 @@
       "zh_sha256": "0d042579f931fd372efbaf669dc1a21528c2967b98a9e0a2eb74f0f714e53c8c",
       "en_sha256": "2ff3d836f976f8ebacc16e66e8e22088f86a699d72da3d8990cedfef76a80dfe"
     }
-  ]
+  ],
+  "stale": {
+    "as_of": "2026-10-31",
+    "reason": "v0.9 batch 1: three universal gates, project tiers, team layer",
+    "zh_updated": [
+      "docs/step-1.md"
+    ],
+    "en_outdated": [
+      "en/docs/step-1.md"
+    ],
+    "zh_new_pending_translation": [
+      "docs/gates.md",
+      "docs/teamwork.md",
+      "templates/work-assignment.yaml"
+    ],
+    "zh_pending_update": [
+      "docs/step-2.md",
+      "docs/step-3.md",
+      "docs/step-4.md",
+      "docs/step-5.md",
+      "docs/step-6.md",
+      "docs/shared-controls.md",
+      "docs/calibration-decisions.md",
+      "research-workflow.yaml",
+      "AGENTS.md",
+      "README.md",
+      "templates/stage-contract.yaml",
+      "templates/role-assignments.yaml"
+    ]
+  }
 }
