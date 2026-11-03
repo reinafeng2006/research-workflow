@@ -6,6 +6,8 @@ status: steps_1_2_3_4_5_6_calibrated
 purpose: 通过阶段门槛与有限修订，形成严谨、可追溯的研究。
 
 principles:
+  - 后果归谁，落槌归谁；可核查的事由 AI 判定；过程两边都在。见 docs/division-of-labor.md。
+  - 做得又多又诚实但决策者看不懂，不算交付。
   - 证据优先于自信、文采和智能体共识。
   - 档位是记录在案的人类决定，不是隐形降低标准。
   - 负面或不确定发现也可以满足研究目标。
@@ -133,6 +135,18 @@ stage_contract:
   unverifiable_mandatory_criterion: 阻止核验通过；用户可记录例外后继续，但不把证据改标为已核验。
   review_record: 记录产物版本、标准、证据、结论、严重程度和修复条件。
 
+division_of_labor:
+  specification: docs/division-of-labor.md
+  precedence: 与本配置或任何阶段文档冲突时以它为准。
+  rule: 后果归谁，落槌归谁；可核查的事由 AI 判定；过程两边都在。
+  person_calls: [什么值得做, 什么算够了, 什么对外发生, 推翻判定]
+  ai_must_contribute_in_person_calls: true   # 包括明确反对；"你决定吧"不合格
+  ai_owns: [产出, 核验, 记账, 提案, 转达]
+  broadcast_before_each_segment: [在做什么, 会得到什么, 接下来进哪一步, 全局在哪]
+  decision_point_four_items: [一句话结论与建议, 取决于什么（最多三条）, 判断错了的损失, 最少必要信息与自查位置]
+  ideas: 谁都可以提；来源要分得清；进目标要人点头。
+  refused_claims: [人比 AI 更能发散（未核验）, 用途只有人知道（错的）]
+
 gates:
   specification: docs/gates.md
   classes:
@@ -159,9 +173,11 @@ gates:
   counts:
     original_criteria: 38
     merged: 4
-    substantive_requirements: 34
-    checklist_items: 22
-    checklist_by_gate: {G1: 9, G2: 13}
+    # 34 条来自 v0.8 映射；另加 1 条跨阶段清单项「决策材料可用」（docs/gates.md 第 7 节）。
+    substantive_requirements: 35
+    cross_stage_items: 1
+    checklist_items: 23
+    checklist_by_gate: {G1: 10, G2: 13}
     # 映射自 v0.8 条目的授权点数；阶段文档按实际决定点展开为 12 个
     # （Step 1 的「人类选择与授权」拆为档位、问题、下一阶段三点）。
     authorization_points_mapped: 10
@@ -177,7 +193,7 @@ profiles:
   values: [lite, standard, strict]
   selected_in: Step 1 阶段契约的 profile 字段
   approved_by: principal
-  checklist_items: {lite: 13, standard: 21, strict: 22}
+  checklist_items: {lite: 14, standard: 22, strict: 23}
   strict_adds: 独立性要求、决策关键主张核验覆盖面、检查登记与归档完整度
   does_not_trim: G3 授权点
   does_not_change: 决策关键主张的全文核验要求在三档都成立

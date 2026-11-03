@@ -220,9 +220,10 @@
     }
   ],
   "stale": {
-    "as_of": "2026-10-31",
-    "reason": "v0.9 batches 1-2: three universal gates, project tiers, team layer. Chinese authoritative version complete; English mirror not yet synchronized.",
+    "as_of": "2026-11-03",
+    "reason": "v0.9 batches 1-2 and v0.9.1 division of labor. Chinese authoritative version complete; English mirror not yet synchronized.",
     "zh_new_pending_translation": [
+      "docs/division-of-labor.md",
       "docs/gates.md",
       "docs/teamwork.md",
       "templates/work-assignment.yaml"
@@ -241,6 +242,7 @@
       "docs/step-6.md",
       "research-workflow.yaml",
       "templates/authorization-record.yaml",
+      "templates/decision-brief.md",
       "templates/role-assignments.yaml",
       "templates/stage-contract.yaml"
     ],
@@ -258,6 +260,7 @@
       "en/docs/step-6.md",
       "en/research-workflow.yaml",
       "en/templates/authorization-record.yaml",
+      "en/templates/decision-brief.md",
       "en/templates/role-assignments.yaml",
       "en/templates/stage-contract.yaml"
     ],
