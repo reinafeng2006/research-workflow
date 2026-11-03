@@ -68,6 +68,7 @@ agent 只有在获得访问权限并收到明确指令时才会读取文件；�
 
 - [人机分工](docs/division-of-labor.md) — 先读这份。
 - [门槛、档位与运行期条件](docs/gates.md) — 三类门槛、`lite` / `standard` / `strict` 三档、清单项映射。
+- [发散与评估](docs/divergence-and-appraisal.md) — Step 1 怎么找方向、怎么比较候选。
 - [团队研究](docs/teamwork.md) — 人员角色、授权矩阵、任务单元、交接。
 - [共享控制](docs/shared-controls.md) — 授权复用、检查记录、启动前预算、角色独立性。
 - `AGENTS.md`（agent 操作指令）、`research-workflow.yaml`（结构化索引）、[语言政策与术语](docs/language-policy.md)、[校准记录](docs/calibration-decisions.md)。
@@ -75,6 +76,7 @@ agent 只有在获得访问权限并收到明确指令时才会读取文件；�
 **模板**（`templates/`）
 
 - 通用：项目说明、阶段契约、决策摘要、决策记录、核验报告、前序复查、证据台账（CSV）、授权记录、检查登记、启动检查、角色分配、任务分配。
+- Step 1：方向记录、评估矩阵。
 - 分阶段：Step 2 方法比较、有限测试、研究协议；Step 3–6 各一份计划与一份报告／交付包。
 
 每个项目建立 `project/brief.md`、`project/stages/`、`project/reviews/`、`project/artifacts/` 和 `project/decisions.md`，并记录采用的模板提交版本。

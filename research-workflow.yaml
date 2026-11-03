@@ -290,9 +290,29 @@ step_1:
     A_calibrated_question: feasibility_contract_with_prerequisite_check
   goals: 允许多个具体目标，仅在具体决定需要时排序。
   suggested_outcomes: 新增为项目目标前必须由用户接受。
-  brainstorming: 用户批准有区别的近似与非常规选项范围，不设固定配额。
+  brainstorming: 用户批准发散范围与预算；按两条轴发散（八个算子、五类扩展），逐项交代覆盖度，不设固定配额。见 docs/divergence-and-appraisal.md。
+  divergence:
+    specification: docs/divergence-and-appraisal.md
+    record_template: templates/direction-log.md
+    lateral_operators: [换对象, 换结果, 换对比, 换尺度, 换机制层级, 反转假设, 移动边界, 换用途与受众]
+    vertical_extensions: [上游机制, 下游后果, 边界失效, 推广, 方法重做]
+    coverage: 每个算子与扩展类须有交代：产出方向、试过未产出、或未试及理由。
+    substantive_difference: 对象、结果测量、对比条件、能回答的决定，至少一项不同。
+    provenance: 每个方向标明提出者；淘汰的方向保留理由，不删除。
+    status: 算子与扩展类是工作清单，不声称穷尽方向空间。
   selection: 可行性调查前由用户选一个或多个方向。
   feasibility: 先分别评估；可提出组合，不自动扩展范围。
+  appraisal:
+    specification: docs/divergence-and-appraisal.md
+    template: templates/appraisal-matrix.md
+    argument_base: [A1 最多能说什么, A2 不能说什么, A3 关键假设, A4 假设失败后果, A5 竞争解释, A6 预先写的淘汰条件, A7 已有工作, A8 与目标关系]
+    score_dimensions: [重要性, 新颖性, 可解答性, 数据与权限, 方法就绪度, 预算匹配, 伦理与风险]
+    score_anchors: {0: 确定不行, 1: 有已知硬障碍, 3: 没有已知障碍但未验证, 5: 有直接证据支持}
+    score_validity: 每分须指回底座条目并标证据级别，缺一即无效、不参与排序。
+    weighted_total: false
+    decision_rules_status: 阈值为提案；修改须记入决策记录并对所有候选重新判定。
+    sensitivity: 写明最敏感的一到三项分数或假设，以及它们变化后的判定。
+    gate_status: 发散覆盖度与评分可追溯是否成为 G1/G2 清单项，待用户决定；决定前不改变门槛计数。
   budget: 提出有理由的时间、token、范围、预计解决事项和审查工作；开始前批准。
   usage: 区分估算、测量实际值与不可用遥测。
   extensions: 说明未决工作与替代方案，扩展前先批准。
