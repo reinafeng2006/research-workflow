@@ -399,7 +399,7 @@ step_4:
   specification: docs/step-4.md
   scope: 正式执行与预先规定的分析；全面综合属于下一阶段。
   execution: 遵守批准协议；报告结果、不确定性与偏差；不为改善结果而调整标准。
-  resources: 沿用 Step 3 控制，按正式规模重新提出批次、预算与阈值由用户批准；复用有效证据。
+  resources: 沿用 docs/shared-controls.md 第 7 节的运行期控制，按正式规模重新提出批次、预算与阈值由用户批准；复用有效证据。
   interim_access: 按项目批准指标、查看时间、用途边界与处理规则；允许运行监测，不默认全面封存或暗中偷看结果。
   accidental_exposure: 预批准低影响情况继续并记录／检查点报告；可能影响方法选择或验证时，解释影响和最小补救方案供用户决定；不自动作废或重跑。
   adverse_results: 如实报告负面、不显著和不确定结果；除获批停止规则触发外完成协议；只做预批准有限诊断。
@@ -458,6 +458,7 @@ step_6:
 
 shared_controls:
   specification: docs/shared-controls.md
+  runtime_controls: docs/shared-controls.md 第 7 节（批次、速率、暂停、重试、保存与恢复；原在 Step 3，v0.9.3 移入，规则未改）
   gates_specification: docs/gates.md
   teamwork_specification: docs/teamwork.md
   assignment_template: templates/work-assignment.yaml

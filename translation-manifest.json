@@ -220,8 +220,8 @@
     }
   ],
   "stale": {
-    "as_of": "2026-11-03",
-    "reason": "v0.9 batches 1-2, v0.9.1 division of labor, v0.9.2 Step 1 divergence and appraisal. Chinese authoritative version complete; English mirror not yet synchronized.",
+    "as_of": "2026-11-04",
+    "reason": "v0.9 through v0.9.3 (stage documents slimmed). Chinese authoritative version complete; English mirror not yet synchronized.",
     "zh_new_pending_translation": [
       "docs/divergence-and-appraisal.md",
       "docs/division-of-labor.md",
