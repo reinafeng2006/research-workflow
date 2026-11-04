@@ -116,7 +116,11 @@ project_specialists:
   status: 未经验证的默认设计
   fixed_functions: [coordinator, researcher, verifier, challenger]
   derived_from: [研究问题的组成（对象、结果测量、对比、边界、要支持的决定）, 评估矩阵的敏感性]
-  library_check: 逐条对照 docs/agents.md 第 4 节专长库，写明需要／不需要及理由；库不声称完整。
+  axes: 一个专长 = 学科视角 × 研究职能（docs/agents.md 第 2 节）。
+  discipline_axis: 采用 OECD《弗拉斯卡蒂手册》2015 第 3 章 FORD 分类（6 大类、42 子领域；摘要级，大类名称待核对原文）；本学科 1 个，近邻／远邻 1–2 个，后者用于发散借框架。
+  function_axis: 按研究类型分组（所有研究、量化实证、质性、理论与形式、史料与文本、构建与工程）；工作清单，不声称完整。
+  library_check: 两条轴分别逐条对照，写明需要／不需要及理由。
+  expert_claims: AI 以某学科视角所说不是证据，仍按 Step 1 证据规则给出直接来源。
   approval: 并入 Step 1「档位与可行性检查契约」授权点；各阶段调整在该阶段启动授权中批准；不新增授权点。
   per_stage_count_proposal: "2-4"
   each_specialist_defines: [看什么, 能读什么, 交出什么, 不能做什么]
