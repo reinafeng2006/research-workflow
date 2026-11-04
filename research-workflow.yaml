@@ -173,11 +173,12 @@ gates:
   counts:
     original_criteria: 38
     merged: 4
-    # 34 条来自 v0.8 映射；另加 1 条跨阶段清单项「决策材料可用」（docs/gates.md 第 7 节）。
-    substantive_requirements: 35
-    cross_stage_items: 1
-    checklist_items: 23
-    checklist_by_gate: {G1: 10, G2: 13}
+    # 34 条来自 v0.8 映射；另加 v0.9 之后新增的 3 条（docs/gates.md 第 7 节）：
+    # 跨阶段「决策材料可用」，Step 1「发散覆盖度已交代」与「评估可比且分数可追溯」。
+    substantive_requirements: 37
+    added_after_v0_8: 3
+    checklist_items: 25
+    checklist_by_gate: {G1: 11, G2: 14}
     # 映射自 v0.8 条目的授权点数；阶段文档按实际决定点展开为 12 个
     # （Step 1 的「人类选择与授权」拆为档位、问题、下一阶段三点）。
     authorization_points_mapped: 10
@@ -193,7 +194,7 @@ profiles:
   values: [lite, standard, strict]
   selected_in: Step 1 阶段契约的 profile 字段
   approved_by: principal
-  checklist_items: {lite: 14, standard: 22, strict: 23}
+  checklist_items: {lite: 16, standard: 24, strict: 25}
   strict_adds: 独立性要求、决策关键主张核验覆盖面、检查登记与归档完整度
   does_not_trim: G3 授权点
   does_not_change: 决策关键主张的全文核验要求在三档都成立
@@ -312,7 +313,7 @@ step_1:
     weighted_total: false
     decision_rules_status: 阈值为提案；修改须记入决策记录并对所有候选重新判定。
     sensitivity: 写明最敏感的一到三项分数或假设，以及它们变化后的判定。
-    gate_status: 发散覆盖度与评分可追溯是否成为 G1/G2 清单项，待用户决定；决定前不改变门槛计数。
+    gate_status: 「发散覆盖度已交代」为 Step 1 G1 清单项，「评估可比且分数可追溯」为 Step 1 G2 清单项，三档都适用。
   budget: 提出有理由的时间、token、范围、预计解决事项和审查工作；开始前批准。
   usage: 区分估算、测量实际值与不可用遥测。
   extensions: 说明未决工作与替代方案，扩展前先批准。
