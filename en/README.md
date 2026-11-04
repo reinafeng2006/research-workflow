@@ -6,7 +6,7 @@ A reusable workflow for research and study projects: six stages, three gates per
 
 **Before starting you need to read only two documents: this one and the [Division of labor](docs/division-of-labor.md).** The latter sets out what the person and the AI are each responsible for, and prevails over any other document it conflicts with. Read the rest as needed.
 
-**Version v0.9.6**; Steps 1–6 are calibrated, and each project's budgets, standards and authorizations still need approval per project. The repository root holds the authoritative Chinese version.
+**Version v0.9.7**; Steps 1–6 are calibrated, and each project's budgets, standards and authorizations still need approval per project. The repository root holds the authoritative Chinese version.
 
 This repository provides specifications and record templates; it is not an executable orchestration service or a real-time resource monitor.
 
@@ -51,7 +51,7 @@ Documents can set rules but cannot enforce them. The following must come from th
 
 | Control | Defined by the repository | Runtime support still needed |
 | --- | --- | --- |
-| Independent verification | Authors do not accept their own artifacts | An independent agent or reviewer; the same agent switching roles does not count |
+| Independent verification | Authors do not accept their own artifacts | An independent reviewer, or an "independent instance": a separate call that receives only the artifact and underlying evidence and cannot see how it was produced; the same conversation switching roles does not count. The website must provide this |
 | Resource accounting | Aggregate the cost of every role, retry, repair and review | Token/cost telemetry; without it, only labelled estimates |
 | Real-time pausing | Stop rules for rates, budgets, lack of progress and so on | Continuous monitoring, timeouts and cancellation; documents cannot interrupt a running call |
 | Parallel budgets | Reserve before launch to avoid duplicate dispatch and overcommitment | A coordinator dispatching serially, or a shared budget record with atomic operations |

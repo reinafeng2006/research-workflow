@@ -49,12 +49,13 @@ assigned_roles:
   verifier: null
   challenger: null
   methods_specialist: null
-# Project specialists, see docs/agents.md. The list is approved with the Step 1 "tier and feasibility contract".
+# Project specialists, see docs/agents.md. Approved in two steps in Step 1: divergence specialists before phase 2, sensitivity specialists after phase 6.
 project_specialists:
   - name: null                  # e.g. psychometrics
     discipline: null            # discipline lens (FORD classification); mark home / near / far
     function: null              # research function, see docs/agents.md section 2
     derived_from: null          # which part of the research question, or which sensitive point of the appraisal matrix
+    approval_point: null        # divergence (before phase 2) / sensitivity (after phase 6) / a stage start authorization
     looks_at: null
     may_read: []
     delivers: null

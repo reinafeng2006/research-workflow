@@ -31,6 +31,20 @@ Every row needs an answer: which directions it produced, tried without result, o
 | Vertical | Generalization | | | |
 | Vertical | Method redo | | | |
 
+## Roundtable record
+
+Leave blank if no roundtable is used. See docs/divergence-and-appraisal.md section 8.
+
+Approved rounds and budget (authorization ID):
+Specialists at the table and their assigned operators:
+
+| Round | Speaking order | New directions this round (IDs) | Of which substantively different | Challenger's conclusion (converged / not converged) and basis | Operators switched? |
+| --- | --- | --- | --- | --- | --- |
+| 1 | | | | | |
+
+Rounds and usage actually used (measured or estimated):
+Reason for stopping (rounds reached / budget reached / you stopped it / other):
+
 ## Your confirmation
 
 Substantive-difference judgments confirmed (list any you dispute):

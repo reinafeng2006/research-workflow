@@ -25,7 +25,7 @@ In the four kinds of decision where the user makes the call (what is worth doing
 
 ## Work and verification
 
-Where the environment supports it, use a coordinator, producer and independent verifier, enable the challenger as configured, and divide work by the project specialists the user has approved (derivation and specialty library in docs/agents.md); do not spawn subagents merely to edit these template documents. When independent verification is not possible, state the limitation and agree an alternative with the user.
+Where the environment supports it, use a coordinator, producer and independent verifier, keep the challenger as a fixed function that is always present, and divide work by the project specialists the user has approved (derivation and specialty library in docs/agents.md); do not spawn subagents merely to edit these template documents. When independent verification is not possible, state the limitation and agree an alternative with the user.
 
 A task brief includes the objective, allowed inputs and outputs, acceptance criteria, budget and return format. Executors return artifact paths, evidence, checks, open questions and actual or clearly labelled estimated usage. Concurrent executors own different writable artifacts.
 

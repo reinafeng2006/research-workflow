@@ -1,8 +1,8 @@
 # 工作流规范，不是可执行的智能体软件。
 # Steps 1–6 已校准；数值默认值仍为提案，具体项目限额和授权须批准。
 # v0.9：门槛统一为三类并按档位裁剪清单项（docs/gates.md）；新增人员与任务分配层（docs/teamwork.md）。
-# v0.9.1–v0.9.5：人机分工、发散与评估、阶段文档精简、项目专长、圆桌；v0.9.6：全部模板与文件对齐到同一版本。版本历史见 docs/calibration-decisions.md。
-version: "0.9.6"
+# v0.9.1–v0.9.5：人机分工、发散与评估、阶段文档精简、项目专长、圆桌；v0.9.6：全部模板与文件对齐到同一版本；v0.9.7：静态核对发现的 6 个问题按用户逐条决定修正。版本历史见 docs/calibration-decisions.md。
+version: "0.9.7"
 status: steps_1_2_3_4_5_6_calibrated
 purpose: 通过阶段门槛与有限修订，形成严谨、可追溯的研究。
 
@@ -76,7 +76,7 @@ roles:
     why_present: 提供独立于产出者自评的验收检查。
 
   challenger:
-    activation: 在方法与结论门槛、停滞或重大假设需要检查时启用。
+    activation: 固定职能，所有项目、所有阶段始终在场（docs/agents.md）。
     responsibilities:
       - 识别竞争解释、反例和隐含假设。
       - 除清单通过外，检查阶段是否解决了正确的问题。
@@ -122,7 +122,8 @@ project_specialists:
   function_axis: 按研究类型分组（所有研究、量化实证、质性、理论与形式、史料与文本、构建与工程）；工作清单，不声称完整。
   library_check: 两条轴分别逐条对照，写明需要／不需要及理由。
   expert_claims: AI 以某学科视角所说不是证据，仍按 Step 1 证据规则给出直接来源。
-  approval: 并入 Step 1「档位与可行性检查契约」授权点；各阶段调整在该阶段启动授权中批准；不新增授权点。
+  approval: Step 1 分两次批——第 2 步前随「发散范围、预算与发散专长」批发散专长，第 6 步后在「敏感点专长」批核验用专长；各阶段调整在该阶段启动授权中批准。
+  independent_instance: 单独的调用或智能体，只拿到产物和底层证据、看不到产出过程；同一对话换角色不算；环境做不到时 G2 只能记为例外。
   per_stage_count_proposal: "2-4"
   each_specialist_defines: [看什么, 能读什么, 交出什么, 不能做什么]
   independence: 参与产出的专长不能独立验收同一产物。
@@ -200,9 +201,9 @@ gates:
     checklist_items: 25
     checklist_by_gate: {G1: 11, G2: 14}
     # 映射自 v0.8 条目的授权点数；阶段文档按实际决定点展开为 12 个
-    # （Step 1 的「人类选择与授权」拆为档位、问题、下一阶段三点）。
+    # （Step 1 的「人类选择与授权」拆为发散范围与专长、档位、敏感点专长、问题、下一阶段五点）。
     authorization_points_mapped: 10
-    authorization_points_as_listed: 12
+    authorization_points_as_listed: 14
     runtime_conditions: 2
   runtime_conditions:
     batch_may_continue: {stages: [step_3, step_4], judged: 每批次}
@@ -317,7 +318,7 @@ step_1:
     record_template: templates/direction-log.md
     lateral_operators: [换对象, 换结果, 换对比, 换尺度, 换机制层级, 反转假设, 移动边界, 换用途与受众]
     vertical_extensions: [上游机制, 下游后果, 边界失效, 推广, 方法重做]
-    coverage: 每个算子与扩展类须有交代：产出方向、试过未产出、或未试及理由。
+    coverage: 每个算子与扩展类须有交代：产出方向、试过未产出、或未试及理由。只在实际发散时适用；A、C 入口未发散时记为不适用，C 入口由 AI 提议是否补发散。
     substantive_difference: 对象、结果测量、对比条件、能回答的决定，至少一项不同。
     provenance: 每个方向标明提出者；淘汰的方向保留理由，不删除。
     status: 算子与扩展类是工作清单，不声称穷尽方向空间。
@@ -332,7 +333,7 @@ step_1:
       human_may_interject_or_veto: true
       disclose_same_model: true
       agreement_is_not_evidence: true
-      budget: 轮数与预算并入 Step 1 发散预算一并批准，达到即停。
+      budget: 轮数与预算在 Step 1 第 2 步前的「发散范围、预算与发散专长」授权点批准，达到即停；每轮记入方向记录的圆桌记录。
   selection: 可行性调查前由用户选一个或多个方向。
   feasibility: 先分别评估；可提出组合，不自动扩展范围。
   appraisal:

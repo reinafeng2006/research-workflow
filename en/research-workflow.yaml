@@ -1,8 +1,8 @@
 # Workflow specification, not executable agent software.
 # Steps 1 through 6 are calibrated; numeric defaults remain proposals and project limits/authority require approval.
 # v0.9: gates unified into three kinds with checklist items trimmed by tier (docs/gates.md); people and work-assignment layer added (docs/teamwork.md).
-# v0.9.1–v0.9.5: division of labor, divergence and appraisal, slimmed stage documents, project specialists, roundtable; v0.9.6: all templates and files aligned to one version. Version history in docs/calibration-decisions.md.
-version: "0.9.6"
+# v0.9.1–v0.9.5: division of labor, divergence and appraisal, slimmed stage documents, project specialists, roundtable; v0.9.6: all templates and files aligned to one version; v0.9.7: the six issues from the static check fixed by the user's item-by-item decisions. Version history in docs/calibration-decisions.md.
+version: "0.9.7"
 status: steps_1_2_3_4_5_6_calibrated
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 
@@ -76,7 +76,7 @@ roles:
     why_present: Provides an acceptance check independent of the producer's self-assessment.
 
   challenger:
-    activation: At method and conclusion gates, on stagnation, or for consequential assumptions.
+    activation: A fixed function, always present in every project and stage (docs/agents.md).
     responsibilities:
       - Identify alternative explanations, counterexamples, and hidden assumptions.
       - Ask whether the stage solves the right problem, beyond passing its checklist.
@@ -122,7 +122,8 @@ project_specialists:
   function_axis: Grouped by type of research (all research, quantitative empirical, qualitative, theoretical and formal, sources and texts, building and engineering); a working checklist, not claimed complete.
   library_check: Check each axis item by item, stating needed / not needed with reasons.
   expert_claims: What an AI says from a discipline's point of view is not evidence; direct sources are still required under the Step 1 evidence rules.
-  approval: Part of the Step 1 tier-and-feasibility-contract authorization point; per-stage adjustments approved in that stage's start authorization; no authorization point added.
+  approval: Approved in two steps in Step 1 — divergence specialists before phase 2 with "divergence scope, budget and specialists", verification specialists after phase 6 at "sensitivity specialists"; per-stage adjustments approved in that stage's start authorization.
+  independent_instance: A separate call or agent that receives only the artifact and underlying evidence and cannot see how it was produced; the same conversation switching roles does not count; where unavailable, G2 can only be an exception.
   per_stage_count_proposal: "2-4"
   each_specialist_defines: [looks at, may read, delivers, must not]
   independence: A specialist that took part in production may not independently accept the same artifact.
@@ -200,9 +201,9 @@ gates:
     checklist_items: 25
     checklist_by_gate: {G1: 11, G2: 14}
     # Authorization points mapped from v0.8 items; the stage documents list 12 actual decision points
-    # (Step 1 "human selection and authorization" splits into tier, question and next stage).
+    # (Step 1 "human selection and authorization" splits into divergence scope and specialists, tier, sensitivity specialists, question and next stage).
     authorization_points_mapped: 10
-    authorization_points_as_listed: 12
+    authorization_points_as_listed: 14
     runtime_conditions: 2
   runtime_conditions:
     batch_may_continue: {stages: [step_3, step_4], judged: per batch}
@@ -317,7 +318,7 @@ step_1:
     record_template: templates/direction-log.md
     lateral_operators: [change the subject, change the outcome, change the contrast, change the scale, change the level of mechanism, invert an assumption, move the boundary, change the use and audience]
     vertical_extensions: [upstream mechanism, downstream consequence, boundary failure, generalization, method redo]
-    coverage: Every operator and extension type must be accounted for — directions produced, tried without result, or not tried with a reason.
+    coverage: Every operator and extension type must be accounted for — directions produced, tried without result, or not tried with a reason. Applies only when divergence actually took place; if entry A or C did not diverge it is not applicable, and with entry C the AI proposes whether to diverge again.
     substantive_difference: At least one of subject, outcome measure, contrast or the decision it can inform differs.
     provenance: Every direction names its proposer; dropped directions keep their reasons and are not deleted.
     status: Operators and extension types are working checklists and do not claim to exhaust the space of directions.
@@ -332,7 +333,7 @@ step_1:
       human_may_interject_or_veto: true
       disclose_same_model: true
       agreement_is_not_evidence: true
-      budget: Rounds and budget approved with the Step 1 divergence budget; stops when reached.
+      budget: Rounds and budget approved at the "divergence scope, budget and specialists" point before Step 1 phase 2; stops when reached; each round recorded in the direction log's roundtable record.
   selection: Human shortlists one or several directions before feasibility investigation.
   feasibility: Assess individually first; propose combinations without expanding scope automatically.
   appraisal:

@@ -15,7 +15,7 @@ Detailed methodology belongs to Step 2. In this stage a methods specialist only 
 One sequence, entered at different points according to how developed the input is:
 
 - **B broad topic**: starts with goal clarification and divergence.
-- **C candidate questions**: starts with refinement and comparison; first check whether the goals are clear enough, returning to clarification only if they are not, and without automatically diverging again. C may include proposed synthesis questions; combinations are only options and do not change scope automatically.
+- **C candidate questions**: starts with refinement and comparison; first check whether the goals are clear enough, returning to clarification only if they are not, and without automatically diverging again, but the AI must propose whether another round of divergence is worth it, with reasons and cost, for you to decide. C may include proposed synthesis questions; combinations are only options and do not change scope automatically.
 - **A calibrated question**: starts with the feasibility contract; check prerequisites without redoing completed framing.
 
 Return to an earlier point only for a missing prerequisite or a revision you request; after goal clarification, continue from the original entry point.
@@ -30,12 +30,14 @@ flowchart TD
     AK -->|Goals missing| P1
     AK -->|Question needs refining| P4
     AK -->|Yes| P5
-    P1 -->|continue from the entry point| P2["2 Two-axis divergence"]
+    P1 -->|continue from the entry point| PA{"You approve divergence scope, budget and specialists"}
+    PA --> P2["2 Two-axis divergence"]
     P2 --> P3["3 You choose directions"]
     P3 --> P4["4 Refine candidate questions"]
     P4 --> P5["5 You approve tier and investigation contract"]
     P5 --> P6["6 Appraise each with the appraisal matrix"]
-    P6 --> P7["7 Independent verification and challenge"]
+    P6 --> PS{"You approve sensitivity specialists"}
+    PS --> P7["7 Independent verification and challenge"]
     P7 -->|G1 or G2 not passed| P6
     P7 -->|Passed| P8["8 Recommendation and alternatives"]
     P8 --> H{"You approve the specific question?"}
@@ -54,7 +56,7 @@ Every "you" node in the diagram comes with the four items under the [Division of
 
 ### Divergence and selection
 
-- Before brainstorming, propose the divergence scope and budget for your approval; when a roundtable is used, its rounds and budget are approved at the same time.
+- Before brainstorming, propose the divergence scope, budget and divergence specialists for your approval; when a roundtable is used, its rounds are approved at the same time. This is the first G3 authorization point.
 - Diverge along the two axes of [Divergence and appraisal](divergence-and-appraisal.md): eight operators look for different directions, and five extension types grow the next question from a chosen direction. Account for coverage item by item rather than counting; "substantively different" is judged on subject, outcome, contrast and the decision the answer can inform. Every direction names who proposed it, and dropped directions stay in the [direction log](../templates/direction-log.md) with their reasons. A full roundtable may be used: specialists build on each other in one discussion from the start, speaking order rotates, each proposes directions every round using its assigned operators, and the challenger reports every round whether directions are converging; the verifier does not sit at the table. See [Divergence and appraisal](divergence-and-appraisal.md) section 8.
 - Before any feasibility check, show goal fit and preliminary trade-offs and mark **feasibility not yet assessed**. You first choose one or more directions; then the question is refined and a bounded investigation approved.
 - Appraise candidates separately first. Combinations are only proposals: state the added value, complexity and trade-offs, and get approval before widening the investigation.
@@ -82,7 +84,7 @@ All other stages follow the evidence rules here.
 Also includes the cross-stage checklist item "decision material usable" (lite); see [Gates, tiers and runtime conditions](gates.md) section 7. The lowest tier is given in parentheses.
 
 1. **Decision readiness** (lite). Goals are clear enough to compare options and confirmed by the principal, with no unilateral adoption of new outcomes; candidates and their goal fit are clear, only the approved set and scope were investigated, and unaccepted combinations remain proposals; preliminary appraisal is bounded and clearly marks unsupported content, inferences and assumptions; key claims list impact, evidence level, source locator, verification result and any added checks; recommendation, alternatives, trade-offs and uncertainty are presented truthfully without ranking goals unilaterally; disagreements list each side's evidence, assumptions and effect on the recommendation without requiring consensus; the budget report separates estimated, measured and unavailable measurements and shows unfinished work and next options.
-2. **Divergence coverage accounted for** (lite). In the coverage table of the [direction log](../templates/direction-log.md), every one of the eight operators and five extension types is accounted for: which directions it produced, tried without result, or not tried with a reason; every direction names who proposed it; dropped directions keep their reasons. Counting directions does not count as accounting for them. See [Divergence and appraisal](divergence-and-appraisal.md) sections 2–4.
+2. **Divergence coverage accounted for** (lite). In the coverage table of the [direction log](../templates/direction-log.md), every one of the eight operators and five extension types is accounted for: which directions it produced, tried without result, or not tried with a reason; every direction names who proposed it; dropped directions keep their reasons. Counting directions does not count as accounting for them. See [Divergence and appraisal](divergence-and-appraisal.md) sections 2–4. **Applies only when divergence actually took place**: if entry A or C did not diverge, record `not_applicable` with a reason citing the entry route approved at initialization.
 
 Material ready for an informed decision does not mean every scientific claim is verified, **nor that the project is feasible**.
 
@@ -98,7 +100,9 @@ The verifier also checks the underlying sources, evidence labels, goal-approval 
 
 | Authorization point | What is approved | When |
 | --- | --- | --- |
-| Tier and feasibility contract | Project tier, investigation scope, time/token budget, expected outputs, list of [project specialists](agents.md) | Phase 5, before investigation |
+| Divergence scope, budget and specialists | Divergence scope, time/token budget, roundtable rounds, and the [project specialists](agents.md) used for divergence (derived from the parts of the research question) | Before phase 2; not applicable when entry A or C does not diverge |
+| Tier and feasibility contract | Project tier, investigation scope, time/token budget, expected outputs | Phase 5, before investigation |
+| Sensitivity specialists | [Project specialists](agents.md) assigned by the appraisal matrix's sensitivity, used in phase 7 verification | After phase 6, before phase 7 |
 | Specific research question | Select, revise, defer, reject or approve the specific question | After phase 8 |
 | Next-stage authorization (may be combined) | Step 2 scope, time/token budget and expected outputs | With the previous point or separately |
 

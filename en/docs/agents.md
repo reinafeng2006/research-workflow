@@ -13,9 +13,11 @@ Agents are distinguished by **specialty** — what they look at, what they may r
 | Coordinator | Contracts, division of work, dependencies, budget, stage transitions; the four-field update | Keeps the whole consistent |
 | Producer | Generates options, implements, executes, analyses, drafts, and self-checks | Owns substantive output |
 | Independent verifier | Checks the underlying evidence and records pass / fail / not_verifiable item by item | Gate G2 requires that it took no part in producing what it verifies |
-| Challenger | Checks assumptions, counterexamples and competing explanations; **looks for angles no specialist covers** | A dedicated opposing voice cannot depend on a project happening to include that viewpoint |
+| Challenger | Checks assumptions, counterexamples and competing explanations; **looks for angles no specialist covers**; checks for convergence every roundtable round | A dedicated opposing voice cannot depend on a project happening to include that viewpoint; **always present, never enabled on demand** |
 
 This layer does not vary by project because its reasons are structural, independent of the field. Independence rules are in [Shared controls](shared-controls.md) section 6.
+
+**What counts as an "independent instance"**: a separate call or a separate agent that receives only the artifact under verification and the underlying evidence, and cannot see how it was produced (the conversation, drafts, the producer's reasoning). The same conversation under a different role name does not count. Where the environment cannot provide this, G2 can only be recorded as a human-approved exception, never as a pass.
 
 ### Project specialists: configured per project and per stage
 
@@ -64,11 +66,11 @@ Grouped by type of research, so that not all research is assumed to be quantitat
 
 ## 3. How specialists are chosen
 
-1. **Derive.** The AI derives specialists from two sources and states which one each came from:
+1. **Derive.** The AI derives specialists from two sources and states which one each came from. The two sources are available at different times: the parts of the research question exist from the start and are used for divergence specialists; sensitivity exists only once the appraisal matrix has been scored and is used for the specialists who watch sensitive points during verification.
    - The parts of the research question: subject, outcome measure, contrast, boundaries, the decision it should inform. For example, "outcome measure" calls for a measurement lens, "the decision it should inform" for a user's lens.
    - The sensitivity of the [appraisal matrix](../templates/appraisal-matrix.md): assign specialists to the few scores or assumptions the recommendation depends on most. Specialists are spent where the project is most uncertain, not spread evenly.
 2. **Check each axis for gaps.** Discipline axis: go through the FORD broad fields one by one to identify the home, near and far disciplines. Function axis: first decide which types of research the project involves, then go through "all research" and the functions for those types one by one. Mark each "needed", "not needed", or "not needed, because…".
-3. **You approve the list.** The list is approved together with the Step 1 "tier and feasibility contract" authorization point; later adjustments are approved in each stage's start authorization. No authorization point is added.
+3. **You approve the list, in two steps.** In Step 1: divergence specialists are approved before phase 2 with the "divergence scope, budget and specialists" authorization point; specialists watching sensitive points are approved after phase 6 and before phase 7 at the "sensitivity specialists" authorization point. Later adjustments are approved in each stage's start authorization.
 4. **Number**: 2–4 specialists per stage, of which at most one home-discipline lens and one or two near or far lenses. This is a proposal, adjusted per project.
 
 ## 4. Each specialist states four things

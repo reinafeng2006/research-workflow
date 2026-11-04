@@ -30,7 +30,7 @@ Each stage has exactly three gate judgments: 18 across the six stages.
 ### G2 independently verified
 
 - **Object**: the stage's applicable checklist items.
-- **Judged**: an independent verifier who did not take part in producing the artifact (a person or an agent, meeting the tier's independence requirement).
+- **Judged**: an independent verifier who did not take part in producing the artifact (a person or an agent, meeting the tier's independence requirement). An agent must be an "independent instance", as defined in [Agent roles and project specialists](agents.md) section 1; the same conversation switching roles does not count.
 - **Pass condition**: each item recorded as `pass` / `fail` / `not_verifiable`, with check IDs and locators for the underlying evidence; every `fail` has an observable repair condition.
 - **Blocking rule**: a `fail` affecting core correctness, evidential support or the stage's conclusion boundaries blocks the affected part; other issues record impact, handling bounds, owner and resolution time, and a person decides whether to accept them.
 - **Not a substitute**: the producer's self-check, a successful run, restating the producer's claims, `not_verifiable` items.
@@ -108,7 +108,7 @@ Four items are merged: three handoff gates were the same authorization recorded 
 
 Check: 38 original items − 4 merged = 34 substantive requirements = 22 checklist items (G1 nine, G2 thirteen) + 10 authorization points + 2 runtime conditions.
 
-**Both authorization-point counts hold, with different meanings.** The 10 above are mapped from v0.8 items; the stage documents, listing actual decision points, have **12**. The difference is Step 1: v0.8's "human selection and authorization" bundled three decisions — the tier and feasibility contract, the specific question, and the next-stage authorization for Step 2. v0.9 lists them separately because they happen at different times (before investigation, after appraisal, optionally together with the question). The number of checklist items is unaffected.
+**Both authorization-point counts hold, with different meanings.** The 10 above are mapped from v0.8 items; the stage documents, listing actual decision points, have **14**. The difference is all in Step 1: v0.8's "human selection and authorization" bundled several decisions. v0.9 lists them separately because they happen at different times: divergence scope, budget and specialists (before phase 2); the tier and feasibility contract (phase 5); sensitivity specialists (after phase 6); the specific question (after phase 8); the next-stage authorization for Step 2 (optionally together with the question). The number of checklist items is unaffected.
 
 ## 5. Two runtime conditions
 
@@ -137,7 +137,7 @@ These three items are not among v0.8's 38, so they are not in the section 4 mapp
 | Checklist item | Condition | Gate | Lowest tier |
 | --- | --- | --- | --- |
 | Decision material usable (cross-stage) | Every point awaiting decision carries the four items: one-sentence conclusion and recommendation; what the decision turns on (at most three, ordered by impact); what the decider loses if the AI is wrong; the least necessary information and where to check it. Volume is no substitute for clarity; points that cannot be explained have been escalated, not covered by more text. | G1 | lite |
-| Divergence coverage accounted for (Step 1) | Every one of the eight operators and five extension types is accounted for: directions produced, tried without result, or not tried with a reason; directions name who proposed them; dropped directions keep their reason. Counting directions does not satisfy it. | G1 | lite |
+| Divergence coverage accounted for (Step 1) | Every one of the eight operators and five extension types is accounted for: directions produced, tried without result, or not tried with a reason; directions name who proposed them; dropped directions keep their reason. Counting directions does not satisfy it. Applies only when divergence actually took place; if entry A or C did not diverge, it is not applicable with a reason citing the entry route. | G1 | lite |
 | Appraisal comparable and scores traceable (Step 1) | All candidates use the same argument base and scoring dimensions; every score used in ranking points back to the base and carries an evidence level; verdicts follow the published rules and state their sensitivity. | G2 | lite |
 
 With these counted: 37 substantive requirements = 25 checklist items (G1 eleven, G2 fourteen) + 10 authorization points + 2 runtime conditions; tier breadth is 16 / 24 / 25 items.

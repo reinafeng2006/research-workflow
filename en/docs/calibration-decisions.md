@@ -281,3 +281,16 @@ Before checking whether the workflow can run, the user asked for all files to be
 | S16-05 | The duplicated `assessed_by` and `assessed_at` keys in the check registry are removed, the same kind of defect as the earlier duplicate keys in the authorization record template. |
 | S16-06 | The v0.8 walkthrough is marked "historical record, superseded, to be redone" without rewriting its content; a walkthrough of the current rules belongs to the later verification step, which is not yet approved. |
 
+## v0.9.7 — 2026-11-04: six issues from the static check
+
+The first verification layer (static check) found six issues, decided by the user item by item.
+
+| ID | Agreed decision |
+| --- | --- |
+| S17-01 | Circular specialist timing: the roundtable uses specialists in phase 2, but the list was approved in phase 5 and one derivation source (appraisal sensitivity) exists only in phase 6. Now approved in two steps: divergence specialists before phase 2, derived only from the parts of the research question; sensitivity specialists after phase 6 and before phase 7, used in verification. Before deciding, the user asked what "sensitivity" means: the one or two judgments the recommendation depends on most, which would flip it if wrong. |
+| S17-02 | Entries A and C skip divergence, while "divergence coverage accounted for" is required in all tiers. It now applies only when divergence actually took place; without divergence it is `not_applicable` citing the entry route approved at initialization; with entry C the AI must propose whether another round of divergence is worth it, with reasons and cost, for the user to decide. |
+| S17-03 | Inconsistent challenger: agents.md made it a fixed function (S13-02), the configuration and AGENTS.md enabled it on demand, and the roundtable requires a convergence check every round. Unified per S13-02 as a fixed function, always present. |
+| S17-04 | Approval of divergence scope and budget was not an authorization point. It merges into the first approval of S17-01 as the Step 1 point "divergence scope, budget and specialists" (including roundtable rounds). Step 1 authorization points 3 → 5; authorization points as listed 12 → 14; the 10 mapped from v0.8 and checklist counts are unchanged. |
+| S17-05 | The direction log gains a "roundtable record": approved rounds and budget, specialists at the table and their operators, per-round speaking order, new directions, how many were substantively different, the challenger's convergence conclusion, operator switches, actual usage and reason for stopping. |
+| S17-06 | In a single-person project with only one conversation, G2 could only ever be an exception. An "independent instance" is defined: a separate call or agent that receives only the artifact and underlying evidence and cannot see how it was produced; the same conversation switching roles does not count. Written into the README runtime table, agents.md, gates.md and the configuration, and listed as a capability the website must provide; where unavailable, G2 is still recorded as an exception. |
+

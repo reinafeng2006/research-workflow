@@ -49,12 +49,13 @@ assigned_roles:
   verifier: null
   challenger: null
   methods_specialist: null
-# 项目专长，见 docs/agents.md。名单随 Step 1「档位与可行性检查契约」一并批准。
+# 项目专长，见 docs/agents.md。Step 1 分两次批：发散专长在第 2 步前，敏感点专长在第 6 步后。
 project_specialists:
   - name: null                  # 例：心理测量
     discipline: null            # 学科视角（FORD 分类）；标明本学科／近邻／远邻
     function: null              # 研究职能，见 docs/agents.md 第 2 节
     derived_from: null          # 研究问题的哪一部分，或评估矩阵的哪个敏感点
+    approval_point: null        # divergence（第 2 步前）/ sensitivity（第 6 步后）/ 某阶段启动授权
     looks_at: null
     may_read: []
     delivers: null

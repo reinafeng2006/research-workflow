@@ -130,7 +130,7 @@ When something is handed to you for decision, the AI gives the four items under 
 
 Two requirements can block Step 1 readiness, in all three tiers:
 
-- **Divergence coverage accounted for** (sections 2–4) is a G1 checklist item: if the coverage table has a blank row, G1 does not pass.
+- **Divergence coverage accounted for** (sections 2–4) is a G1 checklist item: if the coverage table has a blank row, G1 does not pass. It applies only when divergence actually took place; if entry A or C did not diverge, it is `not_applicable` with a reason citing the entry route. With entry C the AI must propose whether another round of divergence is worth it, for you to decide.
 - **Appraisal comparable and scores traceable** (section 5) is a G2 checklist item: if any score used in ranking does not point back to the base or lacks an evidence level, G2 does not pass.
 
 Counts are in [Gates, tiers and runtime conditions](gates.md) section 7.
@@ -139,7 +139,7 @@ Counts are in [Gates, tiers and runtime conditions](gates.md) section 7.
 
 Status: new in v0.9.5, **an unverified default design**. Used for now only in Step 1 divergence (phases 2–4).
 
-The user chose a **full roundtable**: the approved [project specialists](agents.md) think about directions together in one discussion from the start, building on each other.
+The user chose a **full roundtable**: the divergence [project specialists](agents.md) approved before phase 2 think about directions together in one discussion from the start, building on each other. The challenger is a fixed function and always sits at the table.
 
 **The roundtable starts from your question.** Before round one, every mate at the table shares the same starting point: the topic, candidate question or settled question you brought, together with the goals and boundaries already accepted in the project brief. This follows from how Step 1 is entered, not from a hypothesis about who should speak first. The benefit is that everyone is aligned on the same question — when mates diverge separately, each may misread the question, and the output looks diverse when it is really a mismatch in understanding.
 
@@ -158,7 +158,7 @@ Rules:
 - **The verifier does not sit at the table.** Gate G2 requires that it took no part in producing what it verifies.
 - You may interject, add directions or veto any of them at any time. The roundtable does not choose directions for you and does not force consensus. Besides the question itself, you may write down directions you already have before round one (optional).
 - The interface must say whether the mates are the same model. **Agreement among mates is not evidence, and does not mean you agree.**
-- Rounds and budget are approved together with the divergence budget before Step 1 brainstorming; when reached, the roundtable stops and moves to your choice.
+- Rounds and budget are approved at the "divergence scope, budget and specialists" authorization point before Step 1 phase 2; when reached, the roundtable stops and moves to your choice. Each round is recorded in the "roundtable record" of the [direction log](../templates/direction-log.md).
 - The four-field update applies as usual: before each round, say what it is doing, what it will produce, which step comes next, and where this sits in the whole project.
 
 Unverified: whether the three countermeasures are enough to prevent convergence; whether a full roundtable yields more directions you want to keep than separate divergence does; the token cost per round. The "produced in" column of the direction log and the challenger's convergence reports are there for later comparison.
