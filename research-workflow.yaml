@@ -324,6 +324,8 @@ step_1:
       specification: docs/divergence-and-appraisal.md 第 8 节
       status: 未经验证的默认设计；先只用于 Step 1 发散
       form: 全程圆桌（用户选定）；专长从一开始在同一场讨论里互相接话
+      starts_from: 用户提出的问题与已接受的目标、边界；所有 mate 共享同一起点
+      align_vs_diverge: 对齐问题与目标，发散方向；对问题的理解与用户不一致时提出来交用户澄清，不自行改写问题
       convergence_countermeasures: [发言顺序每轮轮换, 每位 mate 每轮至少按分配的算子提一个方向, 质疑者每轮按实质差异四项检查并报告趋同]
       verifier_at_table: false
       human_may_interject_or_veto: true
