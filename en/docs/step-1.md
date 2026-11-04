@@ -1,125 +1,109 @@
 # Step 1 — Define and select a research question
 
-Status: calibrated with the human on 2026-10-27. This is reusable policy, not a claim that any particular project's Step 1 has passed. Detailed methodology belongs to Step 2. Steps 1–6 are calibrated; Step 6 is calibrated.
+Status: calibrated with the human on 2026-10-27; gates and team layer adjusted in v0.9; slimmed in v0.9.3. This is reusable policy, not a claim that any particular project has passed Step 1.
 
-## Objective and entry routing
+This document covers only what is specific to Step 1. Rules that apply everywhere — who makes the call, budgets and stopping, evidence reuse, verification independence — are in the [Division of labor](division-of-labor.md), [Shared controls](shared-controls.md) and [Gates, tiers and runtime conditions](gates.md); where they conflict with this document, the Division of labor prevails.
 
-End with a human-approved specific research question, accepted goals, documented evidence limits, and explicit authorization boundaries. Use one shared sequence, entering according to input readiness:
+## Output and boundaries
 
-- B: a broad topic enters goal clarification and direction generation.
-- C: candidate questions enter refinement/comparison; check goal sufficiency and revisit clarification only if necessary. Do not automatically regenerate directions.
-- A: an already calibrated question enters the feasibility contract phase; check prerequisites without redoing completed framing.
+Step 1 ends with: a specific research question you have approved, accepted goals, evidence limits and explicit authorization boundaries.
 
-Return only to the phase needed to repair a missing prerequisite or a human-requested revision. Preserve the entry point after goal clarification. C may include proposed synthesis questions; combinations are options, not automatic scope changes.
+Detailed methodology belongs to Step 2. In this stage a methods specialist only performs a preliminary check (data, methods, resources and assumptions), stating limitations and what remains to be verified; it does not start detailed design.
+
+## Where to enter
+
+One sequence, entered at different points according to how developed the input is:
+
+- **B broad topic**: starts with goal clarification and divergence.
+- **C candidate questions**: starts with refinement and comparison; first check whether the goals are clear enough, returning to clarification only if they are not, and without automatically diverging again. C may include proposed synthesis questions; combinations are only options and do not change scope automatically.
+- **A calibrated question**: starts with the feasibility contract; check prerequisites without redoing completed framing.
+
+Return to an earlier point only for a missing prerequisite or a revision you request; after goal clarification, continue from the original entry point.
 
 ```mermaid
 flowchart TD
-    DELIVERY["Known recipient requirements: Step 1 capture;<br/>Step 2 design mapping; Step 5 deliverable check;<br/>Step 6 reconcile deltas; preserve material unknowns"]
-    B["B · Broad topic or idea"] --> P1
-    C["C · Candidate research questions"] --> Ccheck
-    A["A · Calibrated research question"] --> Acheck
-    P1["1 · Clarify project goals<br/>Human confirms intended outcomes<br/>No forced ranking"]
-    P1 --> Route{"Continue from entry point"}
-    Route -->|B| P2
-    Route -->|C| P4
-    Route -->|A| P5
-    P2["2 · Generate distinct directions<br/>Approve scope, budget, and proposed range first<br/>Include close and unconventional options"]
-    P2 --> P3
-    P3["3 · Human selects one or several directions<br/>Feasibility not yet assessed"] --> P4
-    Ccheck{"Goals sufficiently defined?"}
-    Ccheck -->|Yes| P4
-    Ccheck -->|Missing or unclear| P1
-    P4["4 · Refine candidate questions<br/>Reuse existing questions where sufficient<br/>Human confirms candidates to assess"] --> P5
-    Acheck{"Goals and specific question<br/>sufficiently defined?"}
-    Acheck -->|Yes| P5
-    Acheck -->|Goals missing or unclear| P1
-    Acheck -->|Question needs refinement| P4
-    P5["5 · Agree feasibility-check contract<br/>Scope, time, tokens, expected outcomes<br/>Human approval before investigation"] --> P6
-    P6["6 · Assess candidates individually<br/>Evidence, feasibility, assumptions, tradeoffs<br/>Combinations remain optional proposals"] --> V
-    V["7 · Independently verify and challenge"] --> Gate{"Decision brief ready?"}
-    Gate -->|Repair within approved budget| P6
-    Gate -->|Ready, including disclosed disagreements| P8
-    Gate -->|Budget insufficient or prerequisite missing| E
-    E["Explain unresolved issues and options<br/>Human decides the next action"]
-    E -->|Approve bounded extension| P5
-    E -->|Clarify missing goals| P1
-    E -->|Repair question framing| P4
-    E -->|Proceed with disclosed uncertainty| P8
-    E -->|Stop or defer| Stop["Stop / defer"]
-    P8["8 · Present recommendation and alternatives<br/>Explain evidence, uncertainties, and tradeoffs"] --> H{"Human decision"}
-    H -->|Approve specific question| Done["Step 1 complete<br/>Record question, goals, limitations, and approval"]
-    H -->|Request revision or further investigation| E
-    H -->|Stop or defer| Stop
-    Done --> Next["Next: detailed methodology<br/>Begin only within explicitly approved scope and budget"]
+    B["B broad topic"] --> P1["1 Clarify goals"]
+    C["C candidate questions"] --> CK{"Goals clear enough?"}
+    A["A calibrated question"] --> AK{"Prerequisites complete?"}
+    CK -->|No| P1
+    CK -->|Yes| P4
+    AK -->|Goals missing| P1
+    AK -->|Question needs refining| P4
+    AK -->|Yes| P5
+    P1 -->|continue from the entry point| P2["2 Two-axis divergence"]
+    P2 --> P3["3 You choose directions"]
+    P3 --> P4["4 Refine candidate questions"]
+    P4 --> P5["5 You approve tier and investigation contract"]
+    P5 --> P6["6 Appraise each with the appraisal matrix"]
+    P6 --> P7["7 Independent verification and challenge"]
+    P7 -->|G1 or G2 not passed| P6
+    P7 -->|Passed| P8["8 Recommendation and alternatives"]
+    P8 --> H{"You approve the specific question?"}
+    H -->|Approve| DONE["Step 1 complete"]
+    H -->|Revise, investigate further or defer| P5
 ```
 
-## Goals and options
+Every "you" node in the diagram comes with the four items under the [Division of labor](division-of-labor.md); revising, deferring and stopping are possible at any time and are not all drawn.
 
-Allow multiple goals without forced ranking. Describe desired outcome, beneficiary/context, observable evidence of success, and boundaries in project-specific terms, not just labels such as novelty or publication. Ask for priorities only when an actual decision requires resolving a tradeoff.
+## Rules specific to this stage
 
-Agents actively propose additional outcomes and explain why they matter, but keep accepted goals, proposed outcomes, and rejected/deferred options separate. Only the human may adopt proposed goals.
+### Goals
 
-For brainstorming, propose a range of meaningfully distinct directions and explain why that coverage is useful within the budget; obtain approval. Include close-to-original and unconventional options connected to accepted goals. Do not fill a quota with redundant options. Explain if fewer useful options emerge.
+- Several goals may coexist without forced ranking. Describe them by project-specific intended outcomes, beneficiaries/context, observable evidence of success and boundaries, not labels such as "innovation" or "publication". Ask you to rank only when a specific decision needs a trade-off.
+- The AI proactively suggests other outcomes and explains their value. Accepted, proposed, rejected and deferred outcomes are recorded separately; only you can make a suggestion a goal.
 
-Present goal alignment and tentative tradeoffs before feasibility checks, explicitly marking feasibility as not yet assessed. The human first selects one or multiple directions. Refine those into questions and obtain approval for a bounded feasibility investigation. Assess selected options individually first. Suggest combinations where useful, explaining added value, complexity, and tradeoffs; seek approval before expanding investigation scope.
+### Divergence and selection
 
-## Agent responsibilities and conduct
+- Before brainstorming, propose the divergence scope and budget for your approval; when a roundtable is used, its rounds and budget are approved at the same time.
+- Diverge along the two axes of [Divergence and appraisal](divergence-and-appraisal.md): eight operators look for different directions, and five extension types grow the next question from a chosen direction. Account for coverage item by item rather than counting; "substantively different" is judged on subject, outcome, contrast and the decision the answer can inform. Every direction names who proposed it, and dropped directions stay in the [direction log](../templates/direction-log.md) with their reasons. A full roundtable may be used: specialists build on each other in one discussion from the start, speaking order rotates, each proposes directions every round using its assigned operators, and the challenger reports every round whether directions are converging; the verifier does not sit at the table. See [Divergence and appraisal](divergence-and-appraisal.md) section 8.
+- Before any feasibility check, show goal fit and preliminary trade-offs and mark **feasibility not yet assessed**. You first choose one or more directions; then the question is refined and a bounded investigation approved.
+- Appraise candidates separately first. Combinations are only proposals: state the added value, complexity and trade-offs, and get approval before widening the investigation.
 
-| Role | Step 1 responsibility | Principles and reactions |
+### Appraisal
+
+Use the [appraisal matrix](../templates/appraisal-matrix.md): every candidate first fills in the same argument base (A1–A8), then is scored on the same dimensions. Every score must point back to base items and carry an evidence level, or it is invalid; no weighted total is computed, ranking follows the published decision rules, and the sensitivity is stated.
+
+### Evidence rules
+
+All other stages follow the evidence rules here.
+
+- Claims about existing research and data availability need sources read directly. A catalogue entry proves only that data is listed, not that it is actually obtainable, covers what is needed, or may be used.
+- Abstract-level findings may be used to explore directions but must be labelled as such; they may not pass for full-text review.
+- Research claims that drive a recommendation require verification of the relevant full-text passages and their limitations. If changing or removing a claim could change the recommendation, it is decision-critical: state the affected decision and its sensitivity. You may add verification targets.
+- If the full text is unavailable, state the unverified claims, uncertainty, impact on the decision and alternatives. You may decide to proceed, but the claim stays unverified.
+- Methodological feasibility may rest on clearly labelled inference, listing assumptions, uncertainty and follow-up verification needs.
+- Keep sources item by item with their permitted uses. Agent consensus does not replace evidence, and "not found" is not proof of absence.
+- Division of work: the researcher flags decision-critical claims, the challenger checks for omissions, and the independent verifier checks the supporting evidence.
+
+## Quality gates
+
+### G1 material ready
+
+Also includes the cross-stage checklist item "decision material usable" (lite); see [Gates, tiers and runtime conditions](gates.md) section 7. The lowest tier is given in parentheses.
+
+1. **Decision readiness** (lite). Goals are clear enough to compare options and confirmed by the principal, with no unilateral adoption of new outcomes; candidates and their goal fit are clear, only the approved set and scope were investigated, and unaccepted combinations remain proposals; preliminary appraisal is bounded and clearly marks unsupported content, inferences and assumptions; key claims list impact, evidence level, source locator, verification result and any added checks; recommendation, alternatives, trade-offs and uncertainty are presented truthfully without ranking goals unilaterally; disagreements list each side's evidence, assumptions and effect on the recommendation without requiring consensus; the budget report separates estimated, measured and unavailable measurements and shows unfinished work and next options.
+2. **Divergence coverage accounted for** (lite). In the coverage table of the [direction log](../templates/direction-log.md), every one of the eight operators and five extension types is accounted for: which directions it produced, tried without result, or not tried with a reason; every direction names who proposed it; dropped directions keep their reasons. Counting directions does not count as accounting for them. See [Divergence and appraisal](divergence-and-appraisal.md) sections 2–4.
+
+Material ready for an informed decision does not mean every scientific claim is verified, **nor that the project is feasible**.
+
+### G2 independently verified
+
+| Checklist item | Condition | Lowest tier |
 | --- | --- | --- |
-| Coordinator | Route entry, clarify goals, propose budgets, maintain approvals, assemble recommendations and alternatives | Respect human intent and bounded authority; preserve dissent; ask priorities only when a decision requires them |
-| Researcher / producer | Develop distinct options; assess selected candidates; inspect sources; identify critical claims; self-check and repair | Prefer traceable evidence to plausible prose; update on contrary evidence; label uncertainty and offer alternatives |
-| Verifier | Check exact brief version, sources, evidence labels, goal approval, and compliance with the agreed contract | Distinguish failed evidence checks from interpretive disagreement; never turn an exception into verified evidence |
-| Challenger | Test assumptions, option diversity, hidden priorities, recommendation sensitivity, and overlooked critical dependencies | Constructive skepticism; explain material objections and retire resolved ones; do not demand consensus or endless review |
-| Methods specialist, when needed | Preliminary checks of data/method/resource requirements and assumptions | Explain limits and verification needs; do not perform detailed methodology design prematurely |
+| Appraisal comparable and scores traceable | Every candidate fills in the same argument base (A1–A8) and is scored on the same dimensions; every score used in ranking points back to base items and carries an evidence level; verdicts follow the published rules and state their sensitivity. See [Divergence and appraisal](divergence-and-appraisal.md) section 5 | lite |
 
-The researcher flags decision-critical claims; the challenger checks for omissions; the verifier checks their support. The human can add claims for verification. The coordinator handles any resulting budget change.
+The verifier also checks the underlying sources, evidence labels, goal-approval records and contract compliance for the G1 items above, and separates **failed evidence checks** from **interpretive disagreement** — the latter is not a verification failure. In this stage the challenger concentrates on assumptions, whether the options are genuinely diverse, hidden priorities, which evidence the recommendation is most sensitive to, and missing critical dependencies.
 
-## Budget contract and bounded work cycle
+### G3 human authorization
 
-Before brainstorming or preliminary evidence investigation, agents propose a project-complexity-based budget and explain the rationale. Include estimated time, estimated tokens, investigation scope, exclusions, expected resolution, likely residual uncertainty, and verification effort. The human approves before work starts.
+| Authorization point | What is approved | When |
+| --- | --- | --- |
+| Tier and feasibility contract | Project tier, investigation scope, time/token budget, expected outputs, list of [project specialists](agents.md) | Phase 5, before investigation |
+| Specific research question | Select, revise, defer, reject or approve the specific question | After phase 8 |
+| Next-stage authorization (may be combined) | Step 2 scope, time/token budget and expected outputs | With the previous point or separately |
 
-Track estimates and measured actual usage separately; mark unavailable telemetry. Do not claim exact token enforcement without support. Proposed iteration counts and checkpoint percentages in the base configuration remain unapproved defaults until adopted in a project contract.
-
-Produce → self-check → independently verify/challenge → diagnose → repair → verify again within authorized limits. Budget exhaustion is not a quality pass. If insufficient, pause and explain unresolved questions, their decision consequences, usage, and options: bounded extension, narrower scope, alternative approach, proceeding with disclosed uncertainty, or stopping. Obtain approval before extension or scope expansion.
-
-When a missing input or flawed earlier assumption causes trouble, propose the smallest upstream repair. Preserve previous versions, mark affected downstream claims stale, and revalidate them. Do not automatically repeat all earlier phases.
-
-## Evidence policy
-
-- Claims about existing research and data availability require directly inspected sources. A catalog entry may establish that a dataset is advertised, but not that usable access, coverage, or entitlement is verified.
-- Abstract-level findings are allowed for orientation, explicitly labeled; they do not establish full-text review.
-- Research claims driving a recommendation require full-text verification of relevant passages and limitations. Mark a claim decision-critical whenever changing/removing it could alter the recommendation; explain the affected decision and sensitivity. The human may designate additional verification targets.
-- If full text is unavailable, identify the unverified claim, uncertainty, decision impact, and alternatives. Let the human decide on further investigation or proceeding; the claim stays unverified.
-- Methodological feasibility may use clearly labeled inference, with assumptions, uncertainty, and required future verification.
-- Preserve claim-level provenance and permitted-use limits. Never substitute agent agreement for evidence or imply that an unsuccessful search proves absence.
-
-## Two distinct gates
-
-### Gate 1: decision readiness
-
-The independent verifier checks that:
-
-1. Goals are specific enough to compare options and reflect human-confirmed intent; proposed outcomes have not been silently adopted.
-2. Relevant candidates and their goal alignment are clear; investigation covers only the approved set/scope, and combinations remain proposals unless accepted.
-3. The preliminary assessment is bounded, evidence-backed where required, and explicit about unresolved support, inferences, and assumptions.
-4. Decision-critical claims are identified with their impact, evidence level, locators, verification outcome, and any human-requested checks.
-5. Recommendation, alternatives, tradeoffs, and uncertainties are accurately represented without silently ranking goals.
-6. Unresolved disagreement includes each position's evidence, assumptions, and consequence for the recommendation. Consensus is not a requirement.
-7. Budget reporting separates estimates, actuals, and unavailable measures; outstanding work and next-step options are visible.
-
-A brief can be ready for an informed decision while a scientific claim remains unverified. Readiness requires honest disclosure, not a finding that the project is feasible. A defective or misleading brief must be repaired; a human-authorized evidence exception never changes that claim's verification status.
-
-### Gate 2: human selection and authorization
-
-The human selects, revises, defers, rejects, or approves the specific research question. Record accepted goals, supporting evidence, assumptions, unresolved claims/disagreements, and exceptions. Approval does not imply agent consensus or complete evidence.
-
-Approval may also authorize Step 2 only when its scope, time/token budget, and expected outcomes are explicitly included. Otherwise request separate authorization. Approval of a direction is never unlimited permission.
+When approving the specific question, record the goals, supporting evidence, assumptions, unverified claims, disagreements and exceptions. Approval does not mean consensus or complete evidence; approving a direction is not unlimited authority; the next stage is authorized together only if the authorization states Step 2's scope, budget and expected outputs.
 
 ## Outputs
 
-Use the project brief, stage contract, evidence ledger, verification report, decision brief, and decision log templates. Record the entry phase and missing-prerequisite repairs so another session can resume without restarting framing.
-
-## Shared controls (v0.8)
-
-Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.
+Decision brief (opening with the four items), project brief, stage contract (with `profile`, and `gate` and `tier` on every acceptance criterion), direction log, appraisal matrix, evidence ledger, verification report and decision log; team projects add the work assignment. Record the entry point and the prerequisites filled in, so later sessions can resume without reframing the question.

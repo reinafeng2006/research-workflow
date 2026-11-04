@@ -1,0 +1,66 @@
+# Work assignment. Fill project-specific values; null is not approval.
+# See docs/teamwork.md and docs/shared-controls.md sections 5 and 6.
+status: proposed
+stage: null
+profile: null            # lite / standard / strict, inherited from this stage's contract
+people:
+  principal: null        # final decision-maker; non-delegable decisions are in docs/teamwork.md section 2
+  approvers:
+    - person: null
+      gate_classes: []   # gate classes within G3 this person may approve
+      scope: []
+      budget_ceiling: null
+      expiry: null
+      authorization_id: null
+  collaborators: []
+  reviewers: []
+  observers: []
+work_units:
+  - unit_id: null
+    objective: null
+    owner: null                      # the single owner
+    material_contributors: []        # material contributors; for traceable contribution and authorship
+    allowed_inputs: []               # with versions
+    allowed_outputs: []
+    writable_artifacts: []           # must be exclusive of other running units
+    acceptance_criteria: []
+    serves_checklist_items: []       # points to specific G1 / G2 checklist items; if none can be named, do not dispatch
+    due: null
+    budget_share:
+      runtime_minutes: null
+      tokens: null
+      person_hours: null
+      measurement_or_estimation_basis: null
+    depends_on: []
+    task_launch_record: null         # record ID in templates/task-launch.yaml
+    self_check_record: null
+    g2_verifier: null                # may not be the owner or a material contributor
+    g2_check_ids: []
+    g3_authorization_id: null
+    self_approval_overlap_recorded: null   # lite-tier self-approval exception record; not a pass
+    status: proposed                 # proposed / admitted / running / self_checked / verified / authorized / blocked / handed_over
+handoffs:
+  - unit_id: null
+    artifact_version: null
+    passed_checklist_items: []
+    check_ids: []
+    open_issues: []
+    remaining_budget: null
+    from_person: null
+    to_person: null
+    verifier_reassigned_to: null     # required when the new owner took part in production
+    date: null
+blocks:
+  - unit_id: null
+    reason: null
+    impact: null
+    budget_spent: null
+    options: []
+    reported_to: null
+    decision: null
+    decided_at: null
+disagreements:
+  - subject: null
+    positions: []                    # each side's evidence, assumptions and effect on the recommendation
+    unresolved: true
+    decided_by_principal: null

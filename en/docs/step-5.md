@@ -1,132 +1,102 @@
-# Step 5 — Research synthesis and delivery finalization
+# Step 5 — Research synthesis and finalizing the deliverable
 
-Status: human-calibrated and approved for publication as reusable policy, not authorization for a project run or external publication. Steps 1–6 are calibrated; project controls require approval. The [Chinese specification](../../docs/step-5.md) is authoritative; this is its English reference.
+Status: calibrated and saved with the human's approval; gates and team layer adjusted in v0.9; slimmed in v0.9.3. This is reusable policy; it does not authorize any specific project run or external release.
 
-## Objective and Step 4/5 boundary
+This document covers only what is specific to Step 5. General rules are in the [Division of labor](division-of-labor.md), [Shared controls](shared-controls.md) and [Gates, tiers and runtime conditions](gates.md).
 
-Synthesize existing results and produce project-appropriate deliverables for human-approved finalization. Agents propose scope, budget, expected outcomes and tradeoffs based on project goals; obtain approval before starting.
+## Output and boundaries
 
 | | Step 4 | Step 5 |
 | --- | --- | --- |
-| Core work | Formal execution, prespecified analyses, result verification and boundaries of current statements | Cross-result synthesis, answering the research question and producing audience-appropriate deliverables |
-| Input/output | Traceable results package retaining verification status and unresolved issues | Receive that package and produce synthesized conclusions and delivery package |
-| Review scope | Full review of critical results and approved sampling of others | New synthesis and wording, evidence mapping and delivery suitability |
-| Evidence reuse | Reuse valid validation evidence | Do not reverify valid results; new analyses or checks require prior authorization |
+| Core work | Formal execution, prespecified analysis, result verification and bounds checking of current wording | Synthesis across results, answering the research question, producing a deliverable fit for its readers |
+| Scope of checking | Critical results checked in full, others sampled under the plan | Only new synthesis and wording, evidence mapping and fitness for delivery |
+| Evidence | Valid validation evidence reused directly | Valid results are not re-verified; new analysis or extra checks need authorization first |
 
-Inputs include the Step 4 package, protocol and versions, valid evidence, verification status, unresolved issues, goals and intended use. Inherited issues retain their status: permission to synthesize is not verification of results. Reuse evidence and reviews whose versions, inputs, assumptions, dependencies and scope remain applicable; applicability review is not rerunning original checks. For gaps or invalidation, explain impact and a minimal supplementary plan and work only under authorization. Never automatically add analyses or repeat valid checks.
+The input is the Step 4 results package, the protocol and its version, valid evidence, verification status, open questions, project goals and intended use. **Open questions from Step 4 keep their status; being allowed to synthesize does not mean the results are verified.**
 
-## Complete workflow
+**Finalization does not authorize external release.** Evidence verification, content finalization and external release authorization are recorded separately.
 
 ```mermaid
 flowchart TD
-    DELIVERY["Known recipient requirements: Step 1 capture;<br/>Step 2 design mapping; Step 5 deliverable check;<br/>Step 6 reconcile deltas; preserve material unknowns"]
-    IN["Inputs: Step 4 results package<br/>Protocol, versions, valid evidence and verification status<br/>Unresolved issues, goals and intended use"] --> PLAN
-    PLAN["Propose Step 5 plan<br/>Scope, budget, outcomes and tradeoffs<br/>Framework approval or direct draft<br/>Review roles, version approvals, revision authority<br/>Revision limits, progress and stop criteria"] --> COVERED{"Existing authority matches version, scope,<br/>budget, outcomes and conditions?"}
-    COVERED -->|Yes: cite ID| MAP
-    COVERED -->|No| APPROVE{"Approve uncovered delta"}
-    APPROVE -->|Revise| PLAN
-    APPROVE -->|Approve| MAP["Map conclusions to evidence<br/>Reuse valid evidence and reviews<br/>Retain unresolved status; no duplicate verification"]
-    MAP --> ROUTE{"Approved approach"}
-    ROUTE -->|Review framework first| FRAME["Main conclusions and evidence<br/>Uncertainty, competing explanations and wording boundaries"]
-    FRAME --> FA{"Human reviews framework"}
-    FA -->|Approve| WRITE
-    FA -->|Request revision| CHANGE
-    ROUTE -->|Draft directly| WRITE["Synthesize and draft within approval<br/>Address goals and audience<br/>No automatic new analyses"]
-    WRITE --> REVIEW["Self-check and independent review<br/>Verifier: accuracy and traceability<br/>Challenger: inference limits and rival explanations<br/>Audience review: structure, clarity and intended use"]
-    REVIEW --> ISSUE{"Issues or evidence gaps?"}
-    ISSUE -->|No unresolved issues| VERSION
-    ISSUE -->|Limitations without core conclusion or use impact| MINOR["Record impact, handling bounds<br/>Owner and resolution time<br/>Retain limitations and continue"]
-    MINOR --> VERSION
-    ISSUE -->|Revision needed| CHANGE{"Change conclusion meaning<br/>Evidence strength or applicability?"}
-    CHANGE -->|No; within approved scope and budget| FIX["Revise and version<br/>Recheck new or affected content only"]
-    FIX --> REVIEW
-    CHANGE -->|Yes, or outside authority| HOLD
-    ISSUE -->|May change core conclusions or intended use| HOLD["Pause affected portions<br/>Explain issue, impact and unresolved status<br/>Propose qualified claims, omissions, extra analysis<br/>Or upstream return with budgets"]
-    HOLD --> HD{"Human decision"}
-    HD -->|Approve qualification or omission| FIX
-    HD -->|Approve additional work or upstream return| UP["Perform explicitly authorized work<br/>Preserve versions and dependencies<br/>Update affected content only"]
-    UP --> MAP
-    HD -->|Defer or stop| SAVE["Preserve work and unresolved issues<br/>Affected content is not final"]
-    VERSION{"Scheduled version approval due?"}
-    VERSION -->|Yes| VA{"Human reviews current version"}
-    VA -->|Request revision| CHANGE
-    VA -->|Approve continuation| NEXT
-    VA -->|Defer or stop| SAVE
-    VERSION -->|No| NEXT{"Planned work remains?"}
-    NEXT -->|Yes| WRITE
-    NEXT -->|No| GATE{"Finalization readiness gate"}
-    GATE -->|Material issues remain| HOLD
-    GATE -->|Ready; other limitations disclosed| PACKAGE["Decision summary and full delivery package<br/>Conclusions, evidence limits, review status<br/>Open issues and approval items<br/>Deliverables and conclusion-evidence map<br/>Review, revision and resource records"]
-    PACKAGE --> FINAL{"Human decision"}
-    FINAL -->|Request revision| CHANGE
-    FINAL -->|Accept listed limits and approve final version| DONE["Record approved exact version and applicability<br/>Unresolved issues remain unresolved"]
-    FINAL -->|Defer or stop| SAVE
-    DONE --> PUB["Finalized<br/>No automatic external publication authority"]
+    IN["Step 4 results package"] --> PLAN["Step 5 plan: scope, budget, outputs<br/>review a framework first or draft directly, version checkpoints"]
+    PLAN --> W{"Approved approach"}
+    W -->|framework first| FR["Conclusion framework: conclusions, evidence, uncertainty<br/>competing explanations, wording bounds"]
+    FR --> FA{"You review the framework"}
+    FA --> DR
+    W -->|draft directly| DR["Synthesize and draft"]
+    DR --> REV["Verification · challenge · audience-fit review"]
+    REV --> CH{"Would the issue change the meaning of a conclusion,<br/>evidence strength, bounds or use?"}
+    CH -->|No| FIX["Revise within authorization and record it"]
+    FIX --> REV
+    CH -->|Yes| HOLD["Pause the affected part<br/>qualify, cut, add analysis or return earlier — your decision"]
+    REV -->|passed| PKG["Delivery package"]
+    PKG --> D{"You approve the final version?"}
 ```
 
-All work and loops obey approved budgets, revision limits, progress criteria and stop rules. Arrows do not authorize new analyses, checks or budget expansions. The human may stop or defer at approval points even where not drawn explicitly; revision is never endless.
+## Rules specific to this stage
 
-## Project plan and version approvals
+### Plan and versions
 
-Based on conclusion complexity, disagreement and intended use, recommend framework review before drafting or direct drafting, explain costs and tradeoffs, and obtain approval in the stage plan. Frameworks include main conclusions, evidence, uncertainty, rival explanations and wording boundaries; direct drafts must address the same requirements.
+- Depending on how complex and contested the conclusions are and how the deliverable will be used, recommend either **reviewing a conclusion framework first** or **drafting directly**, with the costs and trade-offs, and let you choose in the plan. A framework review presents the main conclusions, evidence, uncertainty, competing explanations and wording bounds; direct drafting must meet the same requirements.
+- The plan states **which versions must come to you for approval and which may be revised continuously within authorization**, with reasons, together with the scope and division of review, the number of revision rounds, the criteria for effective progress and the stop conditions, all approved at once.
+- Effective progress in writing is defined per project, for example resolving substantive review issues, completing traceable synthesis, or meeting approved delivery requirements. **It cannot be measured by words added or by the number of revisions.**
 
-Specify which versions need human approval and which may be revised continuously within authority, with reasons. Propose scope, time/token budget, expected outcomes, review scope and assignments, revision rounds, effective-progress criteria and stopping conditions for joint approval. Do not request duplicate approval for explicitly authorized work.
+### Three reviews
 
-## Review roles and principles
+- **Independent verifier**: accuracy of the new synthesis and wording, citations, correspondence with results and important limitations; reuses valid verification records and does not accept its own writing.
+- **Challenger**: whether the synthesized conclusions go beyond the evidence, whether competing explanations are treated fairly, and whether the project goals are addressed; keeps well-founded disagreement.
+- **Audience-fit review**: structure, clarity and fit against the approved use, without overstating conclusions to persuade. This is a duty, not a requirement for an extra permanent agent.
 
-| Role/duty | Work and reactions | Why present |
-| --- | --- | --- |
-| Coordinator | Plan, approved versions, evidence dependencies, budgets/stops, issue classification and delivery | Prevent scope drift; separate verification, finalization and publication authority |
-| Researcher / producer | Synthesize existing results, draft faithfully, self-check and revise within authority; retain limits and open status | Produce a traceable deliverable that answers project goals |
-| Independent verifier | Check accuracy, citations, result correspondence and material limitations of new synthesis/wording; reuse valid review records | Prevent distortion or omission during synthesis; never accept own authored content |
-| Challenger | Check whether synthesis exceeds evidence, fairly represents rival explanations and responds to goals; retain supported dissent | Detect cross-result inference and wording overreach; no automatic new analysis |
-| Target-audience suitability review | Review structure, clarity and fitness for approved use; do not exaggerate claims for persuasion | Ensure usefulness to intended readers |
+The scope, budget and reasons for the three reviews are approved by you first. Independent review does not require all interpretive disagreement to be resolved.
 
-The human approves review scope, budget and rationale. Audience review is a duty, not a mandatory permanent additional agent; assignments belong in the approved plan. Review new synthesis/wording and affected dependencies only; reuse valid result verification. Additional analysis/checks require authorization. Independent review does not require eliminating every interpretive disagreement.
+### Handling issues by impact
 
-## Impact-based handling
+- Evidence gaps that do not affect the core conclusions or the intended use are recorded as limitations, and synthesis may continue. Other non-substantive issues record impact, handling bounds, owner and resolution time, and you decide whether to accept them.
+- Revisions that **do not change the meaning of conclusions, the strength of evidence or the bounds of application** may be made within the approved scope and budget and recorded.
+- Issues that **would change** the main conclusions, qualifications, evidence strength, bounds of application or intended use: pause the affected part, explain the impact, and propose qualifying the conclusion, cutting, further analysis or a return to an earlier stage, with options and budget, for your decision.
+- Issues affecting the correctness of core conclusions, evidential support or the intended use prevent the related content from being marked final. **Rewording does not turn an open question into a resolved one.**
+- Keep the original versions, verification status and dependencies; approved further work is done in the relevant stage, updating only the affected content. Your permission to continue, or your acceptance of a limitation, does not turn unverified into passed.
 
-- Evidence gaps not affecting core conclusions or intended use may be recorded as limitations while synthesis continues. Other nonmaterial issues require impact, handling bounds, owner and resolution time for human acceptance.
-- Gaps that may change core conclusions or intended use pause affected portions. Explain impact and offer qualified conclusions, additional analysis or an upstream return, with budgets, for human decision.
-- Revisions that preserve conclusion meaning, evidence strength and applicability may proceed within approved scope/budget and must be recorded. Material changes to main conclusions, qualifications or intended use pause affected work; explain reasons, options and budgets for human decision.
-- Issues affecting core correctness, evidential support or intended use block affected content being marked final. Propose omission or qualified conclusions when appropriate, for human decision. Rewording alone must not disguise an unresolved issue as resolved.
-- Preserve prior versions, verification states and dependencies. Approved additional work returns to the appropriate stage and updates affected portions only. Permission to continue or accept a limitation never converts unverified evidence to a pass or an unresolved issue to resolved.
+### Pausing
 
-## Resource and pause controls throughout
-
-```mermaid
-flowchart LR
-    WORK["Synthesis, drafting, review and revision"] --> CHECK{"Any approved stop condition reached?"}
-    CHECK -->|No| CONT["Continue within authority only<br/>Submit versions at approved checkpoints"]
-    CHECK -->|Yes| PAUSE["Pause and report<br/>Usage, effective progress, open issues<br/>Saved work and next options"]
-    PAUSE --> HUMAN{"Human decision"}
-    HUMAN -->|Approve recovery or revised plan| RESUME["Specify recovery scope and remaining budget<br/>Reuse valid work; no duplicate checks"]
-    HUMAN -->|Stop or defer| SAVE["Save versions and unresolved status"]
-```
-
-Pause at any approved stop condition and explain unresolved work and next options. Remaining budget does not override other stops. Recovery or plan changes require explicit authority and remaining budget. Count synthesis, drafting, review, revision and recovery costs; distinguish measurements, estimates and unavailable telemetry. Never claim unsupported precise enforcement.
-
-Define meaningful progress per project, for example resolving substantive review issues, completing traceable synthesis or meeting approved delivery requirements. More words or revision rounds alone are not progress. The reusable template does not impose project thresholds.
+When any approved stop condition is reached, pause and report usage, effective progress, open questions, retained outputs and next options; remaining budget does not cancel a stop condition. Resumption needs explicit authorization of scope and remaining budget; the procedure is in [Shared controls](shared-controls.md) section 7.
 
 ## Quality gates
 
-| Gate | Condition |
-| --- | --- |
-| Start authorized | Scope, budget, outcomes, tradeoffs, work approach, reviews, version approvals and stops approved |
-| Evidence/status traceable | Conclusions map to source/result versions; valid evidence reused; inherited unresolved/unverified status preserved |
-| Synthesis and wording supported | Answer the question; state evidence strength, applicability, uncertainty and rival explanations; no unapproved analysis |
-| Delivery suitable | Approved review of structure, clarity and intended use; no exaggeration |
-| Revision authority clear | Nonmaterial revisions within authority; material changes pause affected portions for human decision |
-| Issues classified accurately | Material issues block affected finalization; other issues have impact, bounds, owner and deadline for human acceptance |
-| Finalization package ready | Summary and full package accurately report reviews, unresolved status, revisions and usage |
-| Finalization/publication separate | Human approves exact version and qualifications; no automatic authority to publish externally |
+Items below their lowest tier are marked `not_applicable`, with a reason based on approved scope.
 
-## Final package and continuity
+### G1 material ready
 
-Present main conclusions, evidence boundaries, review status, unresolved issues and approval items first. Attach deliverables, conclusion-to-evidence mapping, review/revision records and resource use. Use the [Step 5 plan](../templates/step-5-plan.yaml) and [delivery package](../templates/step-5-delivery.md).
+Also includes the cross-stage checklist item "decision material usable" (lite); see [Gates, tiers and runtime conditions](gates.md) section 7.
 
-Record evidence verification, content finalization and external-publication authority separately. Finalization approves an exact version, applicability boundaries and accepted limitations, not publication. Retain accepted versions, open issues, usage and next actions for continuity. Follow [Step 6](step-6.md) for required delivery/archive; actual submission and optional follow-up need explicit authority.
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Finalization package ready | Summary and full delivery package present review results, open status, revisions and resource records accurately | lite |
+| Issues classified accurately | Substantive issues block finalization of the related content; other issues record impact, bounds, owner and time, and the approver decides whether to accept them | standard |
 
-## Shared controls (v0.8)
+### G2 independently verified
 
-Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Evidence/status traceable | Conclusions map to sources or result versions; valid evidence reused; open status inherited, nothing unverified marked verified | lite |
+| Synthesis and wording supported | Answers the research question; evidence strength, bounds of application, uncertainty and competing explanations stated; no unapproved new analysis | lite |
+| Delivery suitable | Structure, clarity and fit reviewed against the approved scope, without overstating conclusions | standard |
+
+### G3 human authorization
+
+| Authorization point | What is approved | Applies |
+| --- | --- | --- |
+| Revision authority clear | Which versions need approval, which may be revised continuously within authorization, and the number of revision rounds and stop conditions | All tiers |
+| Finalization/publication separate | The exact delivery version and its qualifications | All tiers |
+
+This stage's start authorization is Step 4's "Next stage authorized" and is not recorded again here.
+
+### Work units
+
+Synthesis drafting, verification, challenge and audience-fit review may be split into parallel units. Sections of the deliverable are owned separately, and verification and challenge records are not written into the body of the deliverable.
+
+## Outputs
+
+Decision brief (opening with the four items): main conclusions, evidence bounds, review status, open questions and items awaiting approval. Attach the deliverable, the conclusion-to-evidence map, review and revision records and resource usage.
+
+Templates: [Step 5 plan](../templates/step-5-plan.yaml), [Step 5 delivery package](../templates/step-5-delivery.md). Actual submission and optional follow-up are in [Step 6](step-6.md) and need separate explicit authorization.

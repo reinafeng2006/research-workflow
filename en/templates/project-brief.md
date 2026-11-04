@@ -24,8 +24,8 @@ Suggested additional outcomes and why they matter:
 
 ## Options
 
-Approved brainstorming range, rationale, and budget reference:
-Distinct close and unconventional options:
+Approved divergence scope, rationale, and budget reference:
+Direction log (templates/direction-log.md) reference, including coverage and reasons for dropping:
 Human shortlist (one or multiple):
 Candidate specific questions:
 Proposed combinations, added value, complexity, and tradeoffs:

@@ -1,6 +1,9 @@
 status: draft
 id: null
 version: 1
+# lite / standard / strict. Approved by the principal and recorded in the decision log; lowering it needs separate approval.
+# The tier trims only the breadth of G1/G2 checklist items; it does not trim G3 authorization points or change evidence requirements.
+profile: null
 objective: null
 scope_and_exclusions: []
 input_artifact_versions: []
@@ -10,6 +13,10 @@ deliverables: []
 acceptance_criteria_and_check_methods:
   - id: C1
     requirement: null
+    # G1 material ready / G2 independently verified / G3 human authorization / runtime condition. See docs/gates.md.
+    gate: null
+    # Lowest tier at which this item applies: lite / standard / strict.
+    tier: null
     mandatory: true
     applicability: undetermined
     applicability_condition: null
@@ -35,12 +42,32 @@ resource_budget:
   max_revision_cycles: null
   consecutive_cycles_without_progress: null
   budget_review_fraction: null
+# Agent roles. Person roles and work units are in templates/work-assignment.yaml.
 assigned_roles:
   coordinator: null
   producer: null
   verifier: null
   challenger: null
   methods_specialist: null
+# Project specialists, see docs/agents.md. The list is approved with the Step 1 "tier and feasibility contract".
+project_specialists:
+  - name: null                  # e.g. psychometrics
+    discipline: null            # discipline lens (FORD classification); mark home / near / far
+    function: null              # research function, see docs/agents.md section 2
+    derived_from: null          # which part of the research question, or which sensitive point of the appraisal matrix
+    looks_at: null
+    may_read: []
+    delivers: null
+    must_not: []
+specialist_library_check:
+  disciplines: []              # FORD broad fields one by one: home / near / far / not relevant
+  functions: []                # functions for all research and for this project's research types: needed / not needed with reasons
+people:
+  principal: null
+  approvers: []            # gate class × scope; delegation needs an authorization record
+  collaborators: []
+  reviewers: []
+work_assignment_reference: null
 freeze_record:
   agreed_by: null
   date: null

@@ -1,14 +1,29 @@
 # Step 1 decision brief
 
+## Four items for the decider (required; missing any one means not delivered)
+
+See docs/division-of-labor.md and the "decision material usable" item in docs/gates.md section 7.
+
+One-sentence conclusion and recommendation:
+What the decision turns on (at most three, ordered by impact):
+1.
+2.
+3.
+What you lose if the AI's judgment is wrong:
+Least information you need, and where to check it yourself (file, page, link):
+Points that cannot be explained and need escalating (if any):
+
+## Detailed material
+
 Artifact version and stage-contract version:
 Entry route and prerequisite repairs:
 Accepted goals:
 Selected candidates assessed:
 Recommended specific question and rationale:
 
-| Alternative | Goal alignment | Evidence / feasibility | Benefits | Costs, complexity, and tradeoffs | Assumptions and uncertainty |
-| --- | --- | --- | --- | --- | --- |
-| | | | | | |
+Appraisal matrix (templates/appraisal-matrix.md) reference: argument base, scores (each pointing back to the base with an evidence level), verdicts, sensitivity.
+Direction log (templates/direction-log.md) reference:
+Alternatives and how they differ from the recommendation (cite the matrix verdicts and sensitivity; no separate free-text appraisal):
 
 Optional combinations and scope changes (not yet approved):
 Priorities requiring human resolution, if any:

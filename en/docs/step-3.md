@@ -1,132 +1,99 @@
-# Step 3 — Implementation preparation and small-scale end-to-end validation
+# Step 3 — Implementation readiness and small-scale end-to-end validation
 
-Status: human-calibrated reusable policy, not authorization for a project run. Steps 1–6 are calibrated; Step 6 is calibrated. The [Chinese specification](../../docs/step-3.md) is authoritative; this is its English reference.
+Status: reusable policy saved with the human's approval; gates and team layer adjusted in v0.9; slimmed in v0.9.3. Not run authorization for any specific project.
 
-## Boundary and evidence reuse
+This document covers only what is specific to Step 3. General rules are in the [Division of labor](division-of-labor.md), [Shared controls](shared-controls.md) and [Gates, tiers and runtime conditions](gates.md). **The rules for batches, rates, pauses, retries, saving and recovery are in [Shared controls](shared-controls.md) section 7** — they used to live here and are now shared by Steps 3, 4 and 6.
+
+## Output and boundaries
 
 | | Step 2 | Step 3 |
 | --- | --- | --- |
-| Core question | Is the method suitable and protocol explicit? | Does implementation follow the protocol and does the complete process operate? |
-| Small tests | Resolve method-selection or protocol-design decisions | Check new implementation, integration and uncovered end-to-end behavior |
-| Completion status | Protocol ready for implementation | Implementation validated; formal execution may be proposed |
+| Core question | Is the method sound and the protocol clear? | Is the implementation faithful to the protocol, and does the whole pipeline run? |
+| Small tests | Resolve issues that affect method choice or protocol design | Check new implementation, interfaces and uncovered end-to-end behaviour |
+| Completion state | Protocol final, ready for implementation | Implementation validated, formal execution may be requested |
 
-Do not repeat tests because a new stage begins. Reuse Step 2 evidence and pilot artifacts when versions, inputs, assumptions, dependencies, and scope remain applicable. Checking applicability does not mean rerunning tests. New checks must identify a coverage gap or invalidation reason.
+**Passing validation does not automatically start formal execution.** Protocol finalized, implementation validated and formal execution authorized are three different states, recorded separately. Successful validation shows only that the implementation meets requirements under the covered conditions; it does not prove a scientific conclusion.
 
-Record invalidation causes and affected scope. Perform minimal rechecks only when explicitly covered by approved scope and budget; otherwise explain the impact and plan for human approval. Recheck affected portions only. Protocol approval may jointly approve proposed Step 3 scope, budget, and pass criteria; do not request duplicate approval of explicitly authorized work.
-
-## Main workflow
+**Do not repeat tests just because a new stage has begun.** Step 2 evidence and small-test artifacts are reused directly while their version, input conditions, assumptions, dependencies and scope of validity still hold; checking applicability is not rerunning. A new check must name the specific coverage gap or reason for invalidation. When evidence is invalidated, record the cause and the extent of impact; a minimal recheck may run if it is already within approved scope and budget, otherwise state the impact and a plan for your approval.
 
 ```mermaid
 flowchart TD
-    IN["Approved Step 2 protocol, evidence, pilot artifacts and authorization"] --> MAP["Map requirements; inspect versions, dependencies and applicability"]
-    MAP --> REUSE["Reuse valid evidence without retesting"]
-    REUSE --> PLAN["Propose gaps, implementation and validation plan, materials, budgets and controls"]
-    PLAN --> AUTH{"Explicit authorization already covers this?"}
-    AUTH -->|No| HUMAN{"Human approval"}
-    HUMAN -->|Revise| PLAN
-    HUMAN -->|Approve| BUILD
-    AUTH -->|Yes| BUILD["Implementer self-check; protocol to implementation/operations to evidence mapping"]
-    BUILD --> VERIFY["Independent verification of omissions, deviations and unauthorized choices"]
-    VERIFY --> ISSUE{"Issue type"}
-    ISSUE -->|Clear implementation bug| FIX["Notify possible result impact; repair within authority; recheck affected parts"]
-    FIX --> VERIFY
-    ISSUE -->|Protocol ambiguity or method/conclusion change| UP["Pause affected work; present options for human decision"]
-    UP -->|Approved revision| S2["Targeted Step 2 return; preserve versions and mark affected evidence"]
-    S2 --> MAP
-    ISSUE -->|Ready to validate| FIRST["Minimal representative batch; approved materials only"]
-    FIRST --> CHECK["Assess pass criteria, effective progress, use, rate and forecast; save checkpoint"]
-    CHECK --> STATE{"Batch state"}
-    STATE -->|Ordinary rate anomaly| WARN["Notify immediately; continue only if no pause condition"]
-    WARN --> CONTINUE
-    STATE -->|Normal| CONTINUE{"Batch passed, meaningful progress,<br/>no stop and remaining work authorized?"}
-    CONTINUE -->|Yes| NEXT{"Approved batches remain?"}
-    CONTINUE -->|No| BLOCK["Do not advance; diagnose within authority<br/>or pause at stop/authority boundary"]
-    NEXT -->|Yes| RUN["Run next planned batch"]
-    RUN --> CHECK
-    NEXT -->|No| FINAL["Decision summary, full records, risks and formal-execution proposal"]
-    STATE -->|Stop condition| PAUSE["Enter pause and recovery process"]
-    FINAL --> DECIDE{"Human decision"}
-    DECIDE -->|Supplement or repair| PLAN
-    DECIDE -->|Stop or defer| STOP["Preserve work"]
-    DECIDE -->|Approve explicit formal plan| EXEC["Begin authorized formal execution"]
+    IN["Step 2 protocol and existing evidence"] --> MAP["Map protocol requirements to existing work"]
+    MAP --> PLAN["Step 3 plan: materials, pass criteria<br/>batch, stop and save rules"]
+    PLAN --> BUILD["Implement and self-check<br/>protocol requirement → implementation → evidence"]
+    BUILD --> VER["Independent verification of the mapping"]
+    VER -->|clear implementation error| FIX["Repair within authorization; recheck affected parts only"]
+    FIX --> VER
+    VER -->|protocol ambiguity or method/conclusion boundary change| UP["Pause affected parts for your decision<br/>targeted return to Step 2 if needed"]
+    VER -->|ready to run| BATCH["Smallest representative batch<br/>approved materials only; held-out data untouched"]
+    BATCH --> RT{"Batch may continue?<br/>see Shared controls section 7"}
+    RT -->|yes, more approved batches| BATCH
+    RT -->|stop condition triggered| PAUSE["Pause and recovery flow"]
+    RT -->|all done| FINAL["Validation record and formal execution proposal"]
+    FINAL --> D{"You decide on formal execution"}
 ```
 
-## Monitoring and recovery
+## Rules specific to this stage
 
-```mermaid
-flowchart TD
-    MON["Monitor task/batch and total use; approved progress windows"] --> EVENT{"Event"}
-    EVENT -->|Single transient technical fault| RETRY{"Preapproved retry within original budget and count?"}
-    RETRY -->|Yes| TRY["Bounded retry; cumulative counters; log and report at checkpoint"]
-    TRY --> MON
-    RETRY -->|No or repeated failure| PAUSE
-    EVENT -->|Ordinary rate anomaly| ALERT["Notify immediately; never inflate expectations"]
-    ALERT --> MON
-    EVENT -->|No effective output, repeated failure, abnormal cost or limit| PAUSE
-    EVENT -->|Sustained overspeed with poor progress, forecast overrun or hard rate cap| PAUSE
-    PAUSE["Pause affected work and notify; subtask anomaly affects subtask, total anomaly affects related parallel work"] --> REPORT
-    REPORT["Cause, usage, saved work, repair proposal, remaining estimate and options"] --> HUMAN{"Human decision"}
-    HUMAN -->|Stop or defer| STOP["Preserve records and artifacts"]
-    HUMAN -->|Change method or scope| CHANGE["Required approval and upstream revision"]
-    HUMAN -->|Approve recovery| RESTORE["Check saved artifact integrity and applicability"]
-    RESTORE --> VALID["Reuse valid work; rerun only missing, corrupt or invalid parts"]
-    VALID --> MON
-```
+### Implementation and verification
 
-Monitoring spans implementation, review, execution, retries, and repairs, not just batch endings. Interruption depends on tools. If a call cannot be interrupted, disclose blind spots and continuing-consumption risks beforehand and propose smaller batches or supported runtime limits for approval. Never claim unsupported real-time protection.
+- The implementer self-checks. The independent verifier checks the mapping "protocol requirement → implementation location or operating step → validation evidence" for omissions, deviations and unapproved choices.
+- Clear implementation errors may be fixed within the approved repair scope and budget, recording the cause and the validation result. **Problems that may affect results are reported to you first.**
+- **Protocol ambiguity, or a change to method or conclusion boundaries**: pause the affected parts and submit options for your decision; do not modify the protocol unilaterally.
 
-## Implementation and validation
+### Materials and held-out data
 
-- The implementer self-checks; an independent verifier checks the protocol requirement → implementation location or operating step → evidence mapping for omissions, deviations, and unauthorized decisions.
-- Clear implementation errors may be fixed within approved repair scope and budget, with cause and verification records. Notify possible result-impacting problems first.
-- Protocol ambiguity or changes to methods or conclusion boundaries pause affected work for human options and decision; do not silently amend the protocol.
-- Combine synthetic and real materials as appropriate to the project. Explain what each validates, limitations, and reuse risk, and approve scope, budget, and pass criteria first. Do not access or use reserved final-validation data without authorization.
-- Cover normal operation and decision-critical exceptions, such as missing inputs, failed assumptions, stop rules, and fallback triggers. Explain coverage; do not pursue exhaustive testing or repeat valid checks.
-- Define reproducibility by project: deterministic workflows require consistent results; stochastic/manual workflows require justified, human-approved tolerances, repetition methods, and records.
-- Successful validation establishes conformity under covered conditions, not scientific truth.
+Combine synthetic and real materials as the project requires, stating what each can validate, its limitations and the risks of reusing evidence; scope, budget and criteria are approved first. **Held-out data reserved for formal validation may not be accessed or used without authorization.**
 
-## Batches and resource controls
+### Coverage and reproducibility
 
-1. Agents propose batch scope, a minimal representative batch, pass and effective-progress criteria, stop thresholds, and rationale for approval. After the initial batch passes normally, continue the approved plan without redundant per-batch approval.
-2. Effective progress means completed valid checks, usable outputs, or resolved defects. Logs, process survival, and repeated retries are not progress.
-3. No effective output, repeated failure, abnormal costs, or approved limits pause affected work immediately and notify the human. Identify these through approved windows and thresholds; do not wait for total exhaustion.
-4. Monitor consumption rates, cost per unit of effective progress, and forecast completion cost. Ordinary rate anomalies notify immediately. Sustained overspeed with insufficient progress, forecast overruns, or a hard-rate cap trigger a pause. Approve baselines, windows, durations, and thresholds first; distinguish startup costs and short peaks. Never raise expectations silently.
-5. Approve total limits plus batch/agent subbudgets and triggers. Monitor separately and aggregate parallel use. Subtask anomalies pause corresponding work; total anomalies pause related parallel work. Never increase subbudgets silently.
-6. Count implementation, review, retries, repair, saving, and recovery checks cumulatively with clear task/call attribution; avoid omissions and double counting, and never reset on restart. Separate measurements, estimates, and unavailable telemetry. Report actual electrical energy only if measured; tokens are not electricity measurements.
-7. Inherit Step 2 diagnosis and bounded repair, but propose and approve Step 3-specific round/time/token limits, progress criteria, and triggers. Inform the human while repairing within authority. Every stop condition overrides continued repair.
-8. Use preapproved fallbacks within bounds, log them, and report at the next checkpoint. Unexpected consequences notify immediately; pause and obtain approval before scope or budget expansion.
+- Cover normal flows and decision-critical exceptions (for example missing inputs, failed assumptions, stop rules and fallbacks being triggered). Explain why each is needed; do not aim for exhaustiveness or repeat existing valid validation.
+- Reproducibility is defined per project: deterministic pipelines must be consistent; stochastic or manual ones propose error tolerances, repetition and logging requirements, with their basis, for your approval.
 
-## Persistence and resumption
+### The first real run
 
-Approve save points and overhead: save results, configuration, versions, and cumulative usage at batch ends and after key expensive steps. Resource, rate, progress, and repeated-failure pauses require cause, consumption, saved work, repair proposal, remaining-budget estimate, and options, followed by human approval to resume.
+Step 3 is the project's first end-to-end run: run the smallest representative batch first, and continue to plan only after it passes. Monitoring, pausing and recovery for resources, rates and progress follow [Shared controls](shared-controls.md) section 7; this stage's specific rounds, time/token limits, progress criteria and triggers are proposed per project and approved.
 
-A single transient technical fault may retry only under preapproved rules, original budget, and bounded retry count; log and report at the checkpoint. No unlimited retry or budget expansion. Before recovery, check integrity and applicability; rerun only missing, corrupted, or invalid portions. A pause does not expand recovery authority or justify rerunning valid artifacts.
+## Quality gates
 
-## Roles
+Items below their lowest tier are marked `not_applicable`, with a reason based on approved scope.
 
-| Role | Responsibility |
-| --- | --- |
-| Coordinator | Approved plan, evidence reuse, batch/budget allocation, aggregate usage, monitoring/notification/pause/recovery, formal-execution proposal |
-| Producer / implementer | Faithful implementation, self-check and mapping, execution/error/repair/checkpoint records, reserved-data boundaries |
-| Independent verifier | Protocol conformity, evidence applicability, coverage, pass criteria, reproducibility; never self-approve or duplicate valid tests |
-| Methods specialist / challenger, as needed | Assess method/conclusion impacts, evidence limits, result risks, and targeted upstream review; never silently alter the protocol |
+### G1 material ready
 
-## Gates and delivery
+Also includes the cross-stage checklist item "decision material usable" (lite); see [Gates, tiers and runtime conditions](gates.md) section 7.
 
-| Gate | Condition |
-| --- | --- |
-| Step 3 authorized | Scope, materials, time/token budget, pass criteria, batches/subbudgets, monitoring, stops, and save/recovery rules approved; reuse explicit existing authorization |
-| Implementation conforms | Self-check and independent traceable mapping complete; no silent resolution of ambiguity or method changes |
-| Appropriate coverage | Normal and critical exceptions covered or gaps disclosed; material uses and reserved-data isolation clear; no unjustified duplicate validation |
-| Batch may continue | Batch pass criteria and effective progress met, no pause condition, remaining work authorized |
-| Reproducibility | Approved consistency or tolerance/repetition/record requirements met, including valid reused evidence |
-| Decision package ready | Passes, failures, unresolved issues and risks honestly reported; failures are not relabeled passes |
-| Formal execution authorized | Human explicitly approves scope, scale, budget, checkpoints, stop rules, and unresolved-issue treatment; validation never automatically authorizes execution |
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Decision package ready | Passed, failed and unresolved items and risks reported truthfully; nothing failed is marked as passed | standard |
 
-Deliver a decision summary plus complete records: recommendation on formal execution, passes/failures, risks, protocol mapping, reused evidence and new-check reasons, resource records, and a formal-execution plan. Record protocol finalized, implementation validated, and formal execution authorized as separate states.
+### G2 independently verified
 
-Use the [Step 3 plan](../templates/step-3-plan.yaml) and [validation report](../templates/step-3-report.md). These are policies and templates, not an implemented runtime monitor.
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Implementation conforms | Self-check and independent verification done, mapping traceable; protocol ambiguities and method changes not resolved unilaterally | lite |
+| Appropriate coverage | Normal and decision-critical exceptional paths covered, or gaps reported; material use and held-out data isolation clear; no unjustified repeat validation | standard |
+| Reproducibility | Meets the approved consistency or tolerance/repetition/logging requirements; valid evidence may be reused | standard |
 
-## Shared controls (v0.8)
+A verifier does not accept parts it wrote **or substantially repaired**.
 
-Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.
+### G3 human authorization
+
+| Authorization point | What is approved | Applies |
+| --- | --- | --- |
+| Formal execution authorized | Scope, scale, budget, checkpoints, stop rules and handling of unresolved issues for formal execution | All tiers |
+
+This stage's start authorization is Step 2's "Implementation authorized" and is not recorded again here; "Formal execution authorized" is also Step 4's start authorization and is likewise recorded once.
+
+### Runtime condition: batch may continue
+
+Judged per batch, not at stage end: the batch met its pass criteria, made effective progress, triggered no pause condition, and further work remains within the approved scope. Rules are in [Shared controls](shared-controls.md) section 7.
+
+### Work units
+
+Implementation, batch runs, maintaining the mapping, and verification may be split into parallel units. Run records, the mapping and verification reports are owned separately. Limits on held-out data use are written into the unit's `allowed_inputs`; it may not be used without authorization.
+
+## Outputs
+
+Decision brief (opening with the four items) plus the full validation record: whether formal execution is recommended, passed/failed items, risks, the protocol mapping, reused evidence and the reasons for any new checks, the full resource record, and the formal execution plan.
+
+Templates: [Step 3 plan](../templates/step-3-plan.yaml), [Step 3 validation record](../templates/step-3-report.md). They are rules and templates, not an implemented runtime monitor.

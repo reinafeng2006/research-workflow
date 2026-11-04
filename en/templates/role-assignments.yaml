@@ -1,9 +1,16 @@
-# Fill project-specific values; null is not approval. See docs/shared-controls.md.
+# Fill project-specific values; null is not approval. See docs/shared-controls.md section 6.
+# This table records which artifact is owned and verified by whom; it applies equally to people and agents.
+# Person roles, the authorization matrix and work units are in docs/teamwork.md and templates/work-assignment.yaml.
 assignments:
   - artifact_version_and_portion: null
+    responsible_person: null          # person: work-unit owner
+    verifying_person: null            # person performing G2; may not be the responsible_person
+    approving_person: null            # person approving G3
+    g2_g3_overlap_recorded: null      # exception record when one person performs both G2 and G3; not a pass
     coordinator: null
     producer_and_material_contributors: []
     methods_specialist: null
+    project_specialists: []        # project specialists involved in this artifact; those who produced it may not independently accept it
     verifier: null
     challenger: null
     uninvolved_walkthrough_reviewer: null

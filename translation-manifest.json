@@ -1,36 +1,36 @@
 {
   "schema_version": 1,
-  "policy_version": "0.8",
+  "policy_version": "0.9",
   "authoritative_language": "zh-CN",
   "reference_language": "en",
-  "source_commit": "947dfe3ef4225e8e91110f21fd76fe6b6ce87832",
-  "synchronized_on": "2026-10-28",
-  "status": "zh_updated_en_stale",
-  "note": "Hashes detect drift, not semantic equivalence. v0.9 batch 1 updated the Chinese authoritative version only: the English files listed under stale are OUT OF DATE and must not be treated as the current rules. Hashes are refreshed when en/ is synchronized in a later batch.",
+  "source_commit": "b48a9c3d98ad817449d81d94c40dea22dab6be0a",
+  "synchronized_on": "2026-11-04",
+  "status": "synchronized",
+  "note": "Hashes detect drift, not semantic equivalence. Synchronized with the Chinese v0.9.5; source_commit is the Chinese state the translation was made from, and the synchronizing commit also contains three Chinese corrections found during translation (calibration record S15-02). Both language policies reviewed together.",
   "files": [
     {
       "zh": "README.md",
       "en": "en/README.md",
-      "zh_sha256": "375e071a4c68861f23898a31b2cba8821583eddead15091bf0f0cc8702e60033",
-      "en_sha256": "b6f9d2c6a902a17ea6b675fbdecdccb8794df14e749fd2a12c44e71adb90cc90"
+      "zh_sha256": "9962760a90121ac721bb560a8f7904ea5ade4ff54f8ca56167e00130bf1aa57a",
+      "en_sha256": "8a6fd947b36c844552836ffa1aa7a7607fff2ce390e77c20ee3bc4ea7ca382ff"
     },
     {
       "zh": "AGENTS.md",
       "en": "en/AGENTS.md",
-      "zh_sha256": "a39cb747fc584ed00918d55aaea7bebad4fdf50c1698dc36693f5b81a73cf5be",
-      "en_sha256": "116416384576faca5354be142ca1e00b8ef7dc16dc29081740554eccbb2c381f"
+      "zh_sha256": "9d2bc432f1878177de6c93fc7426bbd7af156011cac6b4b62117b91d666020ff",
+      "en_sha256": "403f3f3cfeb3a736deafc3e2a28e61da5b0b306d0db1007a647b38e1b7e416f9"
     },
     {
       "zh": "research-workflow.yaml",
       "en": "en/research-workflow.yaml",
-      "zh_sha256": "d1ca332cc417186b882c4bcef5e5d242b2d5945c0314d42fecb1b8373771e4ce",
-      "en_sha256": "a2d4eb9c59627b13d0341572ffb1321d9f6acd22875c5170fbc685d21d01d450"
+      "zh_sha256": "586ae9ec0695e41d88453394420ab110bfbc2998dfc6cee0c60dee07f78d68be",
+      "en_sha256": "35236fef2ea2293b42e17cbff97105cc88c16988690236ef74d5b758f3683180"
     },
     {
       "zh": "docs/calibration-decisions.md",
       "en": "en/docs/calibration-decisions.md",
-      "zh_sha256": "af8eb56e8b178e69117d4d055d6bd34f652139cdee01ce8a6d408590b35fd89b",
-      "en_sha256": "5bcd586c87924f3a8ebc4afce919326329840e09e6d8aa56e8afbaac5f192b8d"
+      "zh_sha256": "b4c7a13db0e7a147d5ca79df4a8341c93d5e85451a835d72d6b68ddadbe4f3dc",
+      "en_sha256": "25174ce06fa984d8b4eea28da78b50682f9bba82efe416e2a5b1adadb3cfe0df"
     },
     {
       "zh": "docs/control-walkthrough.md",
@@ -41,56 +41,56 @@
     {
       "zh": "docs/language-policy.md",
       "en": "en/docs/language-policy.md",
-      "zh_sha256": "d278005fbfee0559a9a17a1adbd5eed9ac8c3f76f9ecbbce8decf99541ea4aec",
-      "en_sha256": "64f6b83e6239ce679d1f857f36341a02576966545a1bcf8c54ef4bb3d0a0278d"
+      "zh_sha256": "1b6e2397ab735e82f5780e14d32c2639c6d643781e084ba16f27ced386387a22",
+      "en_sha256": "2f9fb3a40b0f812738afb8f68f8c5dc4c49be81b1e96ef0659964f9748996640"
     },
     {
       "zh": "docs/shared-controls.md",
       "en": "en/docs/shared-controls.md",
-      "zh_sha256": "50a2b27a749b67c8a5f7b9a9a2df3fc05496cabd7e867ecb3dba25ec97d12618",
-      "en_sha256": "7d00b3b3818342cc8546020e168d76f3fc6c210d6d0e67a5e3b1ab55e4aef0c7"
+      "zh_sha256": "a9eaeb3a9347bfd85223855ea1d46b76e640e12dce667e796e5235200f0c3587",
+      "en_sha256": "adc65d75d9f63b4cbb11863fdf2481300944dcb5c7cf469b9189f59f85142067"
     },
     {
       "zh": "docs/step-1.md",
       "en": "en/docs/step-1.md",
-      "zh_sha256": "3383ab88bf8c982f6f9213270463d35ad9360f7a9f259c18b989d8f65316b6d1",
-      "en_sha256": "4b8f94eb1761da3eb2f216250a6a581135d1abe23bbd31d86bb558bc8da75c88"
+      "zh_sha256": "7a441c4650248326f9f3c02ad3493f2fdb2b3c7fc90029ee4b9ec56ccc841ca5",
+      "en_sha256": "e9430e690c6551adc0e591facf784e04a3554f85d577f12d1b72ad060014d386"
     },
     {
       "zh": "docs/step-2.md",
       "en": "en/docs/step-2.md",
-      "zh_sha256": "873866959046da2822f3243d7be9dc22c6608f66189e6ed1d8909a0a9017097a",
-      "en_sha256": "250676947d27a8fe18bc594adf387ac20ea94761271b375720daa2af9bdeb43b"
+      "zh_sha256": "1e1326cd0052fe625f6b6bc8dde1625ff087d9463f9f368ec377d332c71c993f",
+      "en_sha256": "a2ad8a1d63e2a05b851ceea7d19e6eef9945bff160edd68748b6fc0901deb520"
     },
     {
       "zh": "docs/step-3.md",
       "en": "en/docs/step-3.md",
-      "zh_sha256": "bca68f5dd105139d11682bcb3fd4aae263c27e5b3458f6bf4bb4c9a7d3b10638",
-      "en_sha256": "886cd7da29b28e44eefb9dc5ea5692af9fdf8045fdfec67a51ec8f17f304fb7e"
+      "zh_sha256": "65933d1c30153d30996979fce07b34014a930e13113a4a140a90ed98fd3e2f2a",
+      "en_sha256": "0c68be7fddc5fc3fe05111f73efbdb81432a15de1a05ac5ed8697942a25565a9"
     },
     {
       "zh": "docs/step-4.md",
       "en": "en/docs/step-4.md",
-      "zh_sha256": "215e38718fdeda426d618799a6c4f53df4cbe7efcc0f5f1ad42d3d2df6d55960",
-      "en_sha256": "9606b426238f4d8cfc75430db5cd5e65ec7b16371d497e1fb47c2f3bb44f9122"
+      "zh_sha256": "891256140ef6894b1474ce0531af64f4a2628da03454464f8b624dfb8c843d84",
+      "en_sha256": "d9a5c77a9f80577430b6ccdf9f283543ea394ec8d1826a00ec081ab68377d89b"
     },
     {
       "zh": "docs/step-5.md",
       "en": "en/docs/step-5.md",
-      "zh_sha256": "ca2c475d36df2c373dfba3f5d44b5c902a9ca93a830857a7306dec9eed2e00ec",
-      "en_sha256": "6842baf3eeb3b9c25f871892534737eaf2787f341f9208d12ab6be0fad4ff51c"
+      "zh_sha256": "a37df4b56568488a84495d256f4536f40a2e5bf5dedd3651919e181d24f7e221",
+      "en_sha256": "f00fde041d4efd7e8f1aa0bf2018ecb406730c94ef8a12205f051ee77ee6284e"
     },
     {
       "zh": "docs/step-6.md",
       "en": "en/docs/step-6.md",
-      "zh_sha256": "c719fa253fb58f17ec8eb08886c68ac1f05e45c6caeb47b27821f4d0142900e4",
-      "en_sha256": "55829cde0bd1402957cb1ed8c5153a799055d9b2e741e478cde106ab93d8edf8"
+      "zh_sha256": "00209e425afaeb2622b4a8afe2803d8c88cca51fd7463a44ea5a1814faf1a433",
+      "en_sha256": "cf8cad36e08046f986de0f252e64a38359d69683570b790d7ce55a2eb1fba094"
     },
     {
       "zh": "templates/authorization-record.yaml",
       "en": "en/templates/authorization-record.yaml",
-      "zh_sha256": "9461696ba6795da6f060956c9a394bbec82e7629e74543e124dfb72c44878d70",
-      "en_sha256": "6c7dea4928c3263dc5f64a0d18918da4b1bf726653d0d95bc47dc68f3d2f6bf7"
+      "zh_sha256": "6d9b198aaca5a5841f3513a42ec14c4e57ad4a9a4d20b46721df22fef2b9ed5f",
+      "en_sha256": "552099f899b2a07d8bea77497623bfcfce6cf48267c20ded8049a60d39d25fdf"
     },
     {
       "zh": "templates/check-registry.yaml",
@@ -101,8 +101,8 @@
     {
       "zh": "templates/decision-brief.md",
       "en": "en/templates/decision-brief.md",
-      "zh_sha256": "fd4a65e6e8480ed278ca21b64687191572680d25e2ab7825edf12dc3ee5dd736",
-      "en_sha256": "da27572ff7e1f5ee9c1257d3bf138252d102d6e9c8a64e3b396dd005ee65bd00"
+      "zh_sha256": "a33b680273622619e68061aa80b40bb6efd34132198d47c04cf753a48dd7cb92",
+      "en_sha256": "da75065db306834ebc1a5868af9abbf2ddf632e99e33f264ff1b87f4205e6a1f"
     },
     {
       "zh": "templates/decision-log.md",
@@ -131,8 +131,8 @@
     {
       "zh": "templates/project-brief.md",
       "en": "en/templates/project-brief.md",
-      "zh_sha256": "105599943353f7d1f44f0d0a06b7228d171f77ccae469228aabcd29997b9bda7",
-      "en_sha256": "2ee5180febc8eaaa6d4d8cd4f407b891b332e6c2d79506e5481f8404a7de379c"
+      "zh_sha256": "46b10fe801395793c6a71bf1389c6a01c16097fe46528fe0a207711a0d5bcbfb",
+      "en_sha256": "5aeab765a73c00822b3b97601f4174dcf11cfd5873e7d5f56051f2618a8f99ea"
     },
     {
       "zh": "templates/research-protocol.md",
@@ -143,14 +143,14 @@
     {
       "zh": "templates/role-assignments.yaml",
       "en": "en/templates/role-assignments.yaml",
-      "zh_sha256": "46e4f12a9d55461076462deb4796121921b5526d46c5aeecd80813cc0233896a",
-      "en_sha256": "c827f489cd0bf47c62636c0e248993f5572a22982b6bccb05fdcd435fe492dd2"
+      "zh_sha256": "4c64abd53f1fc934cfbb0555051e4fded04e6f4b720f2a9bb093787e11b3dad4",
+      "en_sha256": "0a935e736d3729be88697fff51e698ad44493810e2013bb9480b841f82103532"
     },
     {
       "zh": "templates/stage-contract.yaml",
       "en": "en/templates/stage-contract.yaml",
-      "zh_sha256": "320a6b4adacb118b43c5c1e91c791fd8d9db67ecfb30b30d5377187e4309696e",
-      "en_sha256": "01ad709c9b2a96093959d913054646ccbda0c10ea2cf32b263192915c1450590"
+      "zh_sha256": "9469385aa0928f800d9b1f196c19401cdbe2d35bd48ba80469b49b00d4e21631",
+      "en_sha256": "0e2e44918b4fd418b54c29c7986e8c73787ebb67a52871744515bbfcd299a45f"
     },
     {
       "zh": "templates/step-3-plan.yaml",
@@ -217,59 +217,54 @@
       "en": "en/templates/verification-report.md",
       "zh_sha256": "0d042579f931fd372efbaf669dc1a21528c2967b98a9e0a2eb74f0f714e53c8c",
       "en_sha256": "2ff3d836f976f8ebacc16e66e8e22088f86a699d72da3d8990cedfef76a80dfe"
+    },
+    {
+      "zh": "docs/agents.md",
+      "en": "en/docs/agents.md",
+      "zh_sha256": "f7cab94f4700998bfaf5505bc8221f5a953fcf75e2cfaaee11258424ff685e5b",
+      "en_sha256": "564fe05d3a9faee094f6e5264d00ead62a4e58638b01ae4e6e76a91b92f07557"
+    },
+    {
+      "zh": "docs/divergence-and-appraisal.md",
+      "en": "en/docs/divergence-and-appraisal.md",
+      "zh_sha256": "94580e63212de4f31510382d0e4053c3e103b4c0fdaec052c5a3ba123d700957",
+      "en_sha256": "17d9077508e6b963f2460ea950b8eb8eb222a42a98b3654583c5d893886e3d0d"
+    },
+    {
+      "zh": "docs/division-of-labor.md",
+      "en": "en/docs/division-of-labor.md",
+      "zh_sha256": "9950de611d2ebe25b9ee22ab9a85e1baf553ad06f87ad9dccfcfa7e56477ccd4",
+      "en_sha256": "f5d50d9d342f178cf4aa177dbbc8963d2ad9a1e885c563712a59e9a945be2bd6"
+    },
+    {
+      "zh": "docs/gates.md",
+      "en": "en/docs/gates.md",
+      "zh_sha256": "75e935185f958706ef6a465f39b3c51db3451347dc4036cace8b4aea85c41d80",
+      "en_sha256": "709d1654de1b818e75220585d1d4200fcf44c4fa8777ab1f692d7787a092ebac"
+    },
+    {
+      "zh": "docs/teamwork.md",
+      "en": "en/docs/teamwork.md",
+      "zh_sha256": "c13e936fff0885352dd5edbf7bd5b1eac576e575973b60e7dfe01c4b030d443e",
+      "en_sha256": "acea6c5c1ae19d16f9f4f6248ed2e9286a2f728e2350ecdd2a5e09dabd53da29"
+    },
+    {
+      "zh": "templates/appraisal-matrix.md",
+      "en": "en/templates/appraisal-matrix.md",
+      "zh_sha256": "d4c06a70d9f872ad297414d8c326685e8bc86ec544bddf6f6a87bcfd9326a701",
+      "en_sha256": "8f0bb08341b3ca87caf916d6345409aa3131ef2d8d8a94617c2a9489fbb77ed2"
+    },
+    {
+      "zh": "templates/direction-log.md",
+      "en": "en/templates/direction-log.md",
+      "zh_sha256": "5a6004f0f82b0ccc1ab8577fe470912703e3e4b9cc1737a184212881389a5de7",
+      "en_sha256": "d805e1cdef8de3a0403054950429f4585c731a98a9aac56a99f44c68ee650f1e"
+    },
+    {
+      "zh": "templates/work-assignment.yaml",
+      "en": "en/templates/work-assignment.yaml",
+      "zh_sha256": "5414ca7535438fdaa8c775206f042e920a850a0bd817de6208074ebda0d7f226",
+      "en_sha256": "caa90362a18f9763e7a63f7ab5287ab99717fb6ba6932149ff571f90bdd26a1c"
     }
-  ],
-  "stale": {
-    "as_of": "2026-11-04",
-    "reason": "v0.9 through v0.9.4 (agent roles and project specialists). Chinese authoritative version complete; English mirror not yet synchronized.",
-    "zh_new_pending_translation": [
-      "docs/agents.md",
-      "docs/divergence-and-appraisal.md",
-      "docs/division-of-labor.md",
-      "docs/gates.md",
-      "docs/teamwork.md",
-      "templates/appraisal-matrix.md",
-      "templates/direction-log.md",
-      "templates/work-assignment.yaml"
-    ],
-    "zh_updated": [
-      "AGENTS.md",
-      "README.md",
-      "docs/calibration-decisions.md",
-      "docs/language-policy.md",
-      "docs/shared-controls.md",
-      "docs/step-1.md",
-      "docs/step-2.md",
-      "docs/step-3.md",
-      "docs/step-4.md",
-      "docs/step-5.md",
-      "docs/step-6.md",
-      "research-workflow.yaml",
-      "templates/authorization-record.yaml",
-      "templates/decision-brief.md",
-      "templates/project-brief.md",
-      "templates/role-assignments.yaml",
-      "templates/stage-contract.yaml"
-    ],
-    "en_outdated": [
-      "en/AGENTS.md",
-      "en/README.md",
-      "en/docs/calibration-decisions.md",
-      "en/docs/language-policy.md",
-      "en/docs/shared-controls.md",
-      "en/docs/step-1.md",
-      "en/docs/step-2.md",
-      "en/docs/step-3.md",
-      "en/docs/step-4.md",
-      "en/docs/step-5.md",
-      "en/docs/step-6.md",
-      "en/research-workflow.yaml",
-      "en/templates/authorization-record.yaml",
-      "en/templates/decision-brief.md",
-      "en/templates/project-brief.md",
-      "en/templates/role-assignments.yaml",
-      "en/templates/stage-contract.yaml"
-    ],
-    "zh_pending_update": []
-  }
+  ]
 }

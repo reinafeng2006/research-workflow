@@ -1,140 +1,90 @@
 # Research workflow
 
-English reference of the [authoritative Chinese README.md](../README.md). Both versions express the same calibrated rules; see [language policy](docs/language-policy.md) and [translation manifest](../translation-manifest.json). Use the mirrored configuration, docs, and templates together.
+English reference of the [authoritative Chinese README.md](../README.md). Both versions express the same calibrated rules; see [language policy](docs/language-policy.md) and [translation manifest](../translation-manifest.json). Use the mirrored configuration, docs and templates together.
 
+A reusable workflow for research and study projects: six stages, three gates per stage (material ready, independently verified, human authorization), budget-bounded revision, and an explicit division of labor between people and AI. Supports individual and group research.
 
-A reusable starter for research and study projects driven by multiple agents, fixed stage objectives, independent verification, and budget-aware upstream review.
+**Before starting you need to read only two documents: this one and the [Division of labor](docs/division-of-labor.md).** The latter sets out what the person and the AI are each responsible for, and prevails over any other document it conflicts with. Read the rest as needed.
 
-**Status: v0.8 — Steps 1–6 calibrated; project controls require approval.** This repository contains instructions and templates, not an executable orchestration service. Quality thresholds and resource budgets must be calibrated for each project. Token accounting depends on the host's telemetry.
+**Version v0.9**; Steps 1–6 are calibrated, and each project's budgets, standards and authorizations still need approval per project. The repository root holds the authoritative Chinese version.
 
-## Minimal startup
+This repository provides specifications and record templates; it is not an executable orchestration service or a real-time resource monitor.
 
-1. On GitHub, select **Use this template** to create a new project repository, then open it in an agent environment that can read project files. Keep project outputs in the new repository, separate from this reusable starter.
-2. Add existing materials or provide accessible file paths/links. You do not need to fill every template yourself or recalibrate all six stages.
-3. Paste the prompt below. Agents first read the inputs, identify the entry stage and propose the first bounded work plan; substantive research starts only after your approval.
+## How to start
 
-### Copyable startup prompt
+1. On GitHub, select **Use this template** to create a new project repository, and open it in an agent environment that can read project files. Keep project outputs in the new repository, separate from the template.
+2. Add existing materials, or give accessible paths/links. You do not need to fill in templates by hand.
+3. Paste the prompt below. The agent reads the materials, decides which stage to enter, and proposes a first plan; substantive research starts only after you approve it.
 
 ```text
-Initialize my research project using this project's AGENTS.md,
-research-workflow.yaml and docs/shared-controls.md, then read the
-specification for the applicable stage.
+Initialize a research project following this project's
+en/docs/division-of-labor.md, en/AGENTS.md and en/research-workflow.yaml,
+and read the specifications for the applicable stage.
 
-Research topic/question: [fill in]
-Current inputs: [broad idea / candidate questions / defined question /
-existing protocol or results]
-Desired project value: [multiple goals are welcome, without ranking;
-uncertainty is fine]
-Existing materials: [file paths or links; write none if unavailable]
-Known delivery requirements, deadline and constraints: [unknowns may be blank]
-Hard budget limits: [if known; otherwise propose a budget]
+My research topic/question: [fill in]
+What I have so far: [broad idea / candidate questions / settled question / existing protocol or results]
+What I hope the project delivers: [several goals allowed, no ranking needed; unsure is fine]
+Existing materials: [file paths or links; otherwise "none"]
+Known delivery requirements, deadlines and constraints: [fill in; leave blank if unknown]
+Hard budget limit: [fill in if any; otherwise ask the agent to propose one]
 
-Read existing materials first and record the workflow commit used.
-Select the entry stage from existing work, filling only missing prerequisites.
-Explain the environment's support for independent verification, resource
-accounting, pausing and persistence before planning execution.
-Create the project brief and propose the first work scope, expected outputs,
-quality gates, roles, budget and stop conditions as one decision package
-for my approval.
+First read the existing materials and record the workflow commit used. Decide the
+entry stage from existing work, filling only missing prerequisites without starting
+over. First state which independent verification, resource accounting, pausing and
+saving capabilities the current environment supports. Then propose the scope,
+expected outputs, tier, budget and stop conditions for the first segment of work as
+one decision package for my approval.
 
-Ask only unanswered questions, one multiple-choice question at a time,
-allowing custom or combined answers. Reuse valid authorization and evidence.
-Do not begin substantive research before the initial plan is approved.
+Before each segment of work, tell me: what you are doing, what it will produce,
+which step comes next, and where it sits in the whole project. Ask one
+multiple-choice question at a time, only about what is still unclear. Do no
+substantive research before the initial plan is approved.
 ```
 
-### What you provide and what agents read and organize
+The agent reads files only when it has access and an explicit instruction; sending a repository link alone does not start the workflow. Private repositories require connecting an account or providing a local copy.
 
-| Item | Your input | Agents' work |
+**Existing projects**: copy `research-workflow.yaml`, `docs/` and `templates/`, and merge the rules in `AGENTS.md` into your existing instructions rather than overwriting them. English projects use the corresponding files under `en/` and adjust the paths in the prompt. Record the commit actually used, not just the README version number.
+
+## What the runtime environment must add
+
+Documents can set rules but cannot enforce them. The following must come from the runtime environment:
+
+| Control | Defined by the repository | Runtime support still needed |
 | --- | --- | --- |
-| Topic and starting point | What you want to study and what already exists | Identify the entry stage and missing prerequisites |
-| Goals | Desired value; multiple unranked goals or initial uncertainty are welcome | Clarify success criteria and propose optional outcomes for your choice |
-| Materials and access | Files/links and necessary access permissions | Read existing briefs, protocols, results, decisions and verification records; organize versions and reusable evidence |
-| Delivery and constraints | Known recipient requirements, deadlines and data/tool limitations | Map requirements to design and acceptance criteria; retain unknowns as unresolved |
-| Budget | Known hard limits, or a request for a proposal | Propose time, tokens, investigation scope and rationale for approval |
-| Project records | No need to fill every template yourself | Create briefs, contracts, authorization, check, resource and decision records as needed |
+| Independent verification | Authors do not accept their own artifacts | An independent agent or reviewer; the same agent switching roles does not count |
+| Resource accounting | Aggregate the cost of every role, retry, repair and review | Token/cost telemetry; without it, only labelled estimates |
+| Real-time pausing | Stop rules for rates, budgets, lack of progress and so on | Continuous monitoring, timeouts and cancellation; documents cannot interrupt a running call |
+| Parallel budgets | Reserve before launch to avoid duplicate dispatch and overcommitment | A coordinator dispatching serially, or a shared budget record with atomic operations |
+| Saving and recovery | Save outputs, versions and cumulative usage | Persistent storage; whether a running computation can resume depends on the implementation |
+| Periodic maintenance | Authorization, duration, cumulative budget and renewal rules | A scheduler; copying the repository does not start any maintenance |
 
-Agents should first read `AGENTS.md`, `research-workflow.yaml` and `docs/shared-controls.md`, then the current stage's specification and relevant templates. They should reuse existing project records before asking unanswered questions. Automatic reading requires access and an explicit startup instruction; sending a repository URL alone neither loads files nor runs the workflow. If a private repository is inaccessible, connect an account or provide a local copy.
+When a capability is missing, the agent says so first, then proposes alternatives (smaller batches, serial execution, human checkpoints, independent review) for your approval; when risk cannot reasonably be bounded, the corresponding task does not start.
 
-For an existing project, copy `research-workflow.yaml`, `docs/` and `templates/`, and merge relevant `AGENTS.md` rules with existing instructions rather than overwriting them. English-language projects may use the corresponding configuration, documents and templates under `en/`; adjust the prompt paths accordingly. Record the actual commit used, not just the README version label.
+## Six stages
 
-### Runtime limitations
+1. [Define and select a research question](docs/step-1.md) — ends with your approval of a specific question.
+2. [Method comparison and protocol](docs/step-2.md) — approving the protocol does not authorize implementation.
+3. [Implementation readiness and small-scale end-to-end validation](docs/step-3.md) — passing validation does not start formal execution.
+4. [Formal execution and prespecified analysis](docs/step-4.md) — negative and uncertain results are reported as they are.
+5. [Synthesis and finalizing the deliverable](docs/step-5.md) — finalization does not authorize external release.
+6. [Required delivery, archiving and closure](docs/step-6.md) — actual submission needs explicit authorization of the exact version and action.
 
-The repository provides policy and record templates. It does not automatically create agents, enforce budgets or launch background tasks.
+## File index
 
-| Control | Repository policy | Required runtime support |
-| --- | --- | --- |
-| Independent verification | Authors cannot independently accept their own artifacts | A separate agent or other independent reviewer; switching roles within one agent is not independent verification |
-| Resource accounting | Include every role, retry, repair and review | Token/cost telemetry; without it, explicitly labeled estimates only |
-| Real-time pausing | Rate, budget and no-progress stop rules | Continuous monitoring, timeouts and cancellation; documents cannot forcibly interrupt an active call |
-| Concurrent budgets and deduplication | Reserve before dispatch; avoid duplicate work and overcommitment | Coordinator-serialized reservations and dispatch, or an atomic shared budget record |
-| Persistence and recovery | Save outputs, versions and cumulative usage; rerun only invalidated portions | Persistent file storage; resuming an in-flight computation depends on its implementation |
-| Scheduled maintenance | Explicit authorization, expiry, cumulative budgets and renewal rules | A scheduler; copying this repository starts no monitoring or maintenance |
+**Rules**
 
-If capabilities are missing, agents must disclose the limits and propose small batches, serial execution, human checkpoints or alternative independent review for your approval. Estimates are not measurements and policy is not technical enforcement; do not launch a task whose resource risk cannot be reasonably bounded. Reuse existing authority only within its recorded bounds and conditions; uncovered changes remain your decision. Finalization or closure does not automatically authorize actual submission/publication.
+- [Division of labor](docs/division-of-labor.md) — read this first.
+- [Gates, tiers and runtime conditions](docs/gates.md) — three gates, three tiers `lite` / `standard` / `strict`, checklist mapping.
+- [Divergence and appraisal](docs/divergence-and-appraisal.md) — how Step 1 finds directions and compares candidates.
+- [Agent roles and project specialists](docs/agents.md) — fixed functions, specialists derived per project, specialty library.
+- [Team research](docs/teamwork.md) — person roles, authorization matrix, work units, handover.
+- [Shared controls](docs/shared-controls.md) — authorization reuse, check records, pre-launch budget, role independence, runtime controls.
+- `AGENTS.md` (agent operating instructions), `research-workflow.yaml` (structured index), [language policy and terms](docs/language-policy.md), [calibration record](docs/calibration-decisions.md).
 
-## Roles
+**Templates** (`templates/`)
 
-| Role | Job | Why it exists |
-| --- | --- | --- |
-| Coordinator | Contracts, delegation, dependencies, budgets, and stage transitions | Keeps work aligned and iterations bounded |
-| Researcher | Evidence, analysis, deliverables, self-checks, and repairs | Owns substantive production |
-| Verifier | Independent checks against frozen acceptance criteria | Separates production from acceptance |
-| Challenger | Counterexamples, assumptions, alternative explanations | Detects conceptual weaknesses beyond checklist compliance |
-| Methods specialist | Domain, statistical, mathematical, or computational methods | Adds technical depth when needed |
+- General: project brief, stage contract, decision brief, decision log, verification report, upstream review, evidence ledger (CSV), authorization record, check registry, task launch, role assignments, work assignment.
+- Step 1: direction log, appraisal matrix.
+- By stage: Step 2 method comparison, pilot check, research protocol; Steps 3–6 one plan and one report/delivery package each.
 
-Detailed responsibilities, beliefs, reactions, and limits are in [research-workflow.yaml](research-workflow.yaml).
-
-## Stage cycle
-
-Step 1: define and select a specific research question → Step 2: detailed methodology → Step 3: implementation preparation and bounded end-to-end validation → Step 4: formal execution and prespecified analyses → Step 5: research synthesis and delivery finalization → Step 6: required delivery, archive and approved project closure; optional follow-up is separately authorized.
-
-See the [Step 1 workflow and diagram](docs/step-1.md) , [Step 2 workflow and gates](docs/step-2.md), [Step 3 workflow and resource controls](docs/step-3.md), [Step 4 execution and result review](docs/step-4.md), and [calibration record](docs/calibration-decisions.md). Broad ideas, candidate questions, and calibrated questions enter different phases of the same sequence.
-
-Within each stage: produce → self-check → independent verification → diagnose → revise → verify again. Separate decision-readiness checks from scientific verification and human approval. Unresolved evidence or disagreement may be presented honestly for human decision; approval never converts it into verified evidence. A rigorous negative or inconclusive result may pass.
-
-At a resource checkpoint or stagnation trigger, diagnose local execution problems, upstream defects, or underestimated workload. Reopen the smallest affected upstream stage when warranted, preserve prior versions, and revalidate dependent outputs. Never silently lower the quality gate.
-
-The initial proposals are three revision cycles, two consecutive cycles without progress, and a budget review at 80%. These are escalation triggers, not substitutes for project-specific runtime and token budgets.
-
-## Files and records
-
-- `research-workflow.yaml`: source of truth for roles and workflow policy.
-- `AGENTS.md`: operating instructions for assistants using this repository.
-- `templates/project-brief.md`: calibration questions and project definition.
-- `templates/stage-contract.yaml`: objectives, evidence checks, dependencies, budgets.
-- `templates/verification-report.md`: criterion-by-criterion acceptance record.
-- `templates/upstream-review.md`: diagnosis and recovery proposal.
-- `templates/evidence-ledger.csv`: traceable claims and inspected sources.
-- `templates/decision-log.md`: decisions, exceptions, and policy revisions.
-
-For each project, create `project/brief.md`, `project/stages/`, `project/reviews/`, `project/artifacts/`, and `project/decisions.md` from these templates. Record the starter commit used so later policy updates can be adopted deliberately.
-
-## Calibration still open
-
-Step 1 goal handling, entry routing, budgets, evidence policy, decision authority, and next-stage authorization are calibrated. Concrete budgets remain project-specific and require approval. The numeric iteration/checkpoint defaults remain proposals. Step 2 comparison, limited tests, independent review, protocol gates, checkpoints, fallback and repair rules are calibrated. Step 3 batching, reuse, resource monitoring and pause/recovery rules are calibrated. Step 4 protocol-bound execution, tiered review, interpretation boundaries and unresolved-issue handling are calibrated. Project-specific controls still require approval.
-
-## Step 2 templates
-
-- [Method comparison](templates/method-comparison.md)
-- [Bounded pilot or technical trial](templates/pilot-check.md)
-- [Decision summary and execution-ready protocol](templates/research-protocol.md)
-
-A material unresolved design choice blocks protocol-ready status. Transparent uncertainty in a Step 1 decision brief does not waive this Step 2 requirement.
-
-## Step 3 templates and reuse
-
-Use [Step 3 plan](templates/step-3-plan.yaml) and [validation report](templates/step-3-report.md). Step 2 finalizes the protocol; Step 3 checks implementation. Reuse valid evidence and pilot artifacts; only new gaps or invalidated portions need checks. These documents specify monitoring requirements; they do not implement a realtime resource controller.
-
-## Step 4 templates
-
-Use [formal execution and review plan](templates/step-4-plan.yaml) and [results package](templates/step-4-results.md). Execution completion, per-result verification and authorization to proceed are distinct. Reuse valid evidence; do not repeat checks merely because the stage changed.
-
-## Step 5 synthesis and delivery
-
-See [Step 5 workflow and gates](docs/step-5.md), [plan](templates/step-5-plan.yaml) and [delivery package](templates/step-5-delivery.md). Step 4 verifies results; Step 5 reviews new synthesis and wording. Reuse valid evidence, classify issues by impact, and obtain human finalization approval. Finalization does not authorize external publication. Step 5 is calibrated; Project-specific controls still require approval.
-
-## Step 6 required delivery and closure
-
-See [Step 6 workflow and gates](docs/step-6.md), [plan](templates/step-6-plan.yaml), and [handoff](templates/step-6-handoff.md). Recipient requirements guide necessary delivery/archive and the human-approved completion criterion. Optional follow-up never blocks closure. Actual submission requires explicit exact-version/action authority; record prepared, authorized, submitted, recipient confirmed, closed and maintenance-started states separately.
-
-Read [shared controls](docs/shared-controls.md) alongside stage rules. Use the authorization, check-registry, task-launch and role-assignment templates. Existing authority is reusable only within its recorded bounds; human decisions remain authoritative.
+Each project creates `project/brief.md`, `project/stages/`, `project/reviews/`, `project/artifacts/` and `project/decisions.md`, and records the template commit used.

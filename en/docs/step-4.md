@@ -1,130 +1,99 @@
 # Step 4 — Formal execution and prespecified analysis
 
-Status: calibrated and approved for publication. This reusable policy does not authorize a specific research run. Step 6 is calibrated. The [Chinese specification](../../docs/step-4.md) is authoritative; this is its English reference.
+Status: calibrated and saved with the human's approval; gates and team layer adjusted in v0.9; slimmed in v0.9.3. This is reusable policy, not authorization for any specific research run.
 
-## Objective and boundary
+This document covers only what is specific to Step 4. General rules are in the [Division of labor](division-of-labor.md), [Shared controls](shared-controls.md) and [Gates, tiers and runtime conditions](gates.md). Batches, pauses and recovery follow [Shared controls](shared-controls.md) section 7.
 
-Complete formal execution and prespecified analyses under the approved protocol, and check results and the interpretation boundaries of current statements. Comprehensive synthesis belongs to the next stage. Report negative, nonsignificant, and inconclusive findings honestly; desirable outcomes are not an execution-quality criterion.
+## Output and boundaries
 
-Inputs are the approved protocol, Step 3 implementation version, valid validation evidence, unresolved issues, and formal-execution authorization. Reuse applicable evidence rather than repeat checks because of a stage transition. Applicability review does not mean rerunning the original test.
+Carry out formal execution and the prespecified analysis under the approved protocol, and check the results and the interpretive bounds of the current wording. **Full synthesis is left to Step 5.**
 
-## Workflow
+The input is the approved protocol, the Step 3 implementation version, valid validation evidence, open questions and the formal execution authorization. Evidence that still applies is reused directly; checking validity is not rerunning the original test.
+
+**Report negative, non-significant and uncertain results as they are. Whether a result is welcome is not a pass criterion for execution quality.**
 
 ```mermaid
 flowchart TD
-    IN["Approved protocol, implementation, validation evidence and unresolved issues"] --> PLAN["Propose scope, scale, batches, budget, stops, access rules, critical results and sampling"]
-    PLAN --> COVERED{"Existing authority matches version, scope,<br/>budget, outcomes and conditions?"}
-    COVERED -->|Yes: cite ID| REUSE
-    COVERED -->|No| APPROVE{"Approve uncovered delta"}
-    APPROVE -->|Revise| PLAN
-    APPROVE -->|Approve| REUSE["Check applicability; reuse valid evidence without retesting"]
-    REUSE --> RUN["Execute and analyze in approved batches; save results, versions and cumulative usage"]
-    RUN --> MON["Monitor operations, resources and progress; view interim research results only as authorized"]
-    MON --> STATE{"Batch state"}
-    STATE -->|Normal pass| MORE{"Planned batches remain?"}
-    MORE -->|Yes| RUN
-    MORE -->|No| REVIEW
-    STATE -->|Resource, rate, progress anomaly or repeated failure| PAUSE
-    STATE -->|Data or implementation issue| DIAG
-    STATE -->|Accidental restricted-result exposure| EXP
-    PAUSE["Pause affected work; notify cause, usage, saved work, repair and remaining estimate"] --> RESUME{"Human decision"}
-    RESUME -->|Approve recovery| RESTORE["Check integrity/applicability; rerun only missing, corrupted or invalid portions"]
-    RESTORE --> RUN
-    RESUME -->|Stop or defer| PACKAGE
-    EXP{"Covered by preapproved low-impact rule?"}
-    EXP -->|Yes| LOG["Log and report at checkpoint; retain original protocol"]
-    LOG --> RUN
-    EXP -->|No or potential method/validation impact| ED["Pause affected work or decisions; explain impact and minimal remedies"]
-    ED --> RESUME
-    DIAG["Diagnose only within preapproved scope/budget; unfavorable outcomes alone are not errors"] --> ERROR{"Result-impacting error confirmed?"}
-    ERROR -->|No and no stop condition| RUN
-    ERROR -->|Yes| IMPACT["Preserve originals; mark affected results/dependencies; explain impact"]
-    IMPACT --> AUTH{"Repair and rerun explicitly authorized?"}
-    AUTH -->|Yes| FIX["Minimal repair/rerun; preserve unaffected results; record verification"]
-    AUTH -->|No or broad rerun needed| ASK["Submit scope, reasons, impact and budget for approval"]
-    ASK -->|Approve| FIX
-    ASK -->|Defer or decline| PACKAGE
-    FIX --> RUN
-    REVIEW["Independent tiered review: all critical results, approved sampling of others; reuse evidence"] --> EXTRA{"New critical result or anomaly needs expanded checks?"}
-    EXTRA -->|Yes| REQUEST["Explain importance/impact, scope, reasons and budget; request approval"]
-    REQUEST -->|Approve| CHECK["Necessary supplementary checks only"]
-    CHECK --> REVIEW
-    REQUEST -->|Decline or defer| BOUND
-    EXTRA -->|No| BOUND
-    BOUND["Challenger checks support for current wording, uncertainty and competing explanations"] --> NEED{"Additional analysis or method change needed?"}
-    NEED -->|Yes| PROPOSE["Proposal only: reasons, impact, scope and budget"]
-    PROPOSE --> DECIDE{"Human decision"}
-    DECIDE -->|Approve| ADD["Perform authorized work separately from original plan; revise protocol for method changes"]
-    ADD --> REVIEW
-    DECIDE -->|Decline or defer| CLASS
-    NEED -->|No| CLASS
-    CLASS["Retain unresolved issues; material correctness/wording doubts block affected verified status; record other limits"] --> PACKAGE
-    PACKAGE["Decision summary and full results, uncertainty, deviations, status, records, usage and next-stage proposal"] --> FINAL{"Human decision"}
-    FINAL -->|Approve supplementary work| REQUEST
-    FINAL -->|Qualified continuation| NEXT["Continue only within explicit scope, budget and expected outcomes"]
-    FINAL -->|Stop or defer| STOP["Preserve outputs and unresolved concerns"]
+    IN["Protocol, Step 3 implementation, execution authorization"] --> PLAN["Formal-scale plan: batches, budget, thresholds<br/>access rules, critical-results list, spot-check plan"]
+    PLAN --> RUN["Execute and analyse in batches per protocol"]
+    RUN --> ST{"Batch status"}
+    ST -->|normal| RUN
+    ST -->|unintended look at restricted results| EXP["Low impact: record and continue<br/>otherwise pause affected work for your decision"]
+    ST -->|confirmed error affecting results| ERR["Keep original results, mark affected parts<br/>minimal repair within authorization, otherwise ask first"]
+    ST -->|stop condition triggered| PAUSE["Pause and recovery flow"]
+    ST -->|all done| REV["Independent verification: critical results in full, others sampled"]
+    REV --> BD["Challenger: is the wording within bounds?"]
+    BD --> PKG["Results package, open status preserved"]
+    PKG --> D{"You decide: more checks, stop<br/>or continue with qualified conclusions"}
 ```
 
-Every loop obeys approved scope, budget, and stop rules; it grants no new authority. Early stopping may still produce a results package, clearly identifying incomplete work. An unconfirmed error is not a resolved concern: retain unresolved issues and pause whenever a stop condition applies.
+## Rules specific to this stage
 
-## Execution and interim access
+### Execution and interim results
 
-- Follow approved procedures and analyses. Do not change methods, criteria, or stopping rules because of interim outcomes, effect direction, or significance.
-- Additional exploration or method adjustments require reasons, impact, scope, budget, and approval before work. Record separately from planned analysis; preserve original standards/results, and use the appropriate protocol amendment process for method changes.
-- Inherit Step 3 batching, monitoring, saving, and pause/recovery rules, but propose and approve formal-scale batches, budgets, and thresholds. Do not assume small-scale thresholds fit formal execution.
-- Normal batches continue as planned. Operational quality and resource metrics may be monitored continuously. Research interim results are viewed only at approved times, through approved metrics, use boundaries, and actions; operational monitoring cannot bypass viewing limits.
-- Do not seal all research results by default. Explain project-specific early-viewing risks and propose rules for human approval.
-- Accidental exposure covered by preapproved low-impact rules may continue, with logging and checkpoint reporting. Potential method-selection or validation impact pauses affected decisions/work; explain impact and minimal remedies for human choice. Do not automatically invalidate the study or rerun it. Do not erase exposure history or assume unknown impact is low impact.
+- Execution and analysis follow the approved protocol. **Interim results, the direction of an effect or its significance never change the method, criteria or stop conditions.**
+- Extra exploration or method adjustment is explained first — reasons, impact, scope, budget — and runs only after your approval; it is recorded separately from the planned analysis, with the original criteria and results kept; method changes go through protocol revision.
+- **Re-set the numbers for formal scale**: batches, budget and stop thresholds are re-proposed for the scale of formal execution and approved by you; Step 3's small-scale thresholds may not simply be assumed to apply.
+- Run quality and resource metrics may be monitored continuously; **interim research results** may be looked at only under the preapproved timing, metrics, use boundaries and handling rules. Quality monitoring may not be used to get around access limits.
+- Results are not sealed by default. The AI explains the specific risks of early access for the project and proposes rules for your approval.
+- **Unintended looks**: when they meet the preapproved low-impact rules, record them and continue, reporting at the checkpoint; when they could affect method choice or validation validity, pause the related decisions or affected work and set out the impact and a minimal remedy for you to decide. Do not automatically declare the study void or rerun it; do not erase a look that has happened; do not class an unclear impact as low by default.
 
-## Resources, reuse, and errors
+### After an error is confirmed
 
-Apply [Step 3](step-3.md) rules for total and batch/agent budgets, rate baselines/windows, effective progress, forecast completion cost, bounded repairs/retries, fallbacks, checkpoint integrity, and recovery approval. Count review, retry, repair, saving, and recovery without omission or double counting. Formal-scale limits need approval; never raise baselines silently or reset cumulative usage.
+Keep the original results, mark the affected parts and their dependencies, and explain the error and its impact. An explicitly approved repair or rerun is done within the original scope and budget; otherwise submit a minimal plan. When the impact really is broad, a large rerun may be proposed for your approval; unaffected results are kept. An unwelcome result is not in itself an error; **an unconfirmed error does not mean the problem is solved** either, and the related doubts must stay among the open questions.
 
-Ordinary rate anomalies notify immediately. Approved pause conditions stop affected work and notify the human. Resource/rate/progress anomalies or repeated failures require cause, usage, saved work, repair proposal, remaining estimate, and human approval before recovery. A single transient fault retries only under bounded preapproval. Disclose actual monitoring and interruption capabilities; never claim nonexistent real-time protection.
+### Critical results and tiered review
 
-Reuse evidence when versions, inputs, dependencies, assumptions, and scope remain applicable; review is not automatic recomputation. For confirmed errors, preserve originals, mark affected portions and dependencies, and explain impact. Repair/rerun within explicitly approved scope and budget; otherwise propose a minimal plan. Broad impact may justify a broad rerun with human approval. Preserve unaffected results. Notify possible result-impacting issues first; never silently change the protocol.
+- **Before** execution, the AI proposes from the protocol a list of critical results and a spot-check plan for the others, with reasons, for your approval.
+- The independent verifier checks in full the critical results that support the main conclusions, and spot-checks the others under the approved plan. **Criticality depends on the effect on the main conclusions, not on whether the result is welcome.**
+- When other results turn out to matter materially, or a spot-check anomaly calls for wider checking, first explain why, the scope and the budget, and check only after approval.
 
-Negative, nonsignificant, or inconclusive findings must be reported and the original protocol completed unless approved stop rules apply. Bounded data or implementation diagnosis is allowed only within preapproval. Do not alter standards to obtain favorable results.
+### Interpretive bounds
 
-## Tiered verification
+The challenger uses only evidence it is authorized to see, checking whether the results support the current wording and whether important uncertainty and competing explanations are stated adequately; it does not add analyses on its own, and further analysis is requested first.
 
-Before execution, agents propose a protocol-derived critical-results list and sampling plan for other results, explain reasons, and obtain approval.
+Keep three states apart: whether execution is complete; whether specific results are verified; whether the next stage is authorized to start. Doubts that could affect the correctness of critical results or the validity of the main wording prevent the related results from being marked verified.
 
-An independent verifier fully checks results supporting major conclusions; other results use the approved sampling plan. Criticality follows consequence for main conclusions, never outcome desirability. If additional consequential results emerge, explain why and approve supplementary scope and budget before new checks. Anomalies requiring expanded checks also need impact, scope, reasons, budget, and prior approval. Reuse valid evidence; do not repeat checks.
+## Quality gates
 
-## Interpretation and unresolved issues
+Items below their lowest tier are marked `not_applicable`, with a reason based on approved scope.
 
-The challenger checks whether results support current wording and whether important uncertainty and competing explanations are explicit. Use only evidence authorized for viewing; do not automatically add analyses. Request approval for additional analysis. Comprehensive synthesis is outside this stage.
+### G1 material ready
 
-Keep three statuses separate: execution completion, individual result verification, and authorization for the next stage. Unresolved concerns affecting critical-result correctness or the validity of major statements block affected results being marked verified. Record other limitations. Agents explain impact, additional-work options, and budget; the human decides further verification, stopping, or qualified continuation. Approval to proceed does not turn a concern into a pass.
+Also includes the cross-stage checklist item "decision material usable" (lite); see [Gates, tiers and runtime conditions](gates.md) section 7.
 
-## Roles
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Accurate unresolved status | Results with material doubts are not marked verified; other limitations are stated | lite |
 
-| Role | Responsibility |
-| --- | --- |
-| Coordinator | Protocol versions, formal authorization, resource/batch/access plans, anomaly response, review requests, results package and three distinct statuses |
-| Producer / executor | Approved execution/analysis, self-checks, versions and original results, honest adverse/inconclusive outcomes and deviations; authorized repairs only |
-| Independent verifier | Approved critical-result review and sampling, evidence applicability, error dependencies; no self-approval or duplicate valid checks |
-| Challenger | Current wording's evidence boundaries, uncertainty, and competing explanations; no access bypass or unapproved analysis |
-| Methods specialist, as needed | Explain deviations, errors and method-change impacts; propose minimal diagnosis/amendment; never adjust criteria according to outcome desirability |
+### G2 independently verified
 
-## Gates and delivery
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Execution/analysis conform | Procedures, criteria and access rules follow the protocol, deviations recorded; negative, non-significant and uncertain results are not hidden or used as grounds to change criteria | lite |
+| Appropriate review | Independent checks of critical results and approved spot-checks done, extra checks approved; valid evidence reused | lite |
+| Interpretation bounded | Current wording is supported; uncertainty and competing explanations stated; only authorized evidence used, no unapproved new analysis | lite |
 
-| Gate | Condition |
-| --- | --- |
-| Formal execution authorized | Protocol/implementation versions clear; formal batches, budgets, monitoring/stops, viewing rules, critical list and sampling approved |
-| Execution/analysis conform | Approved procedures, criteria and access rules followed; deviations recorded; adverse/inconclusive results neither hidden nor used to justify criterion changes |
-| Appropriate review | Independent critical-result review and approved sampling complete; supplementary checks authorized; valid evidence reused |
-| Interpretation bounded | Current wording supported, uncertainty and competing explanations explicit; authorized evidence only, no unapproved new analysis |
-| Accurate unresolved status | Material concerns block affected verified status; other limitations retained |
-| Next stage authorized | Human chooses further checks, stop, or qualified continuation from the package; continuation has explicit scope, budget and outcomes |
+### G3 human authorization
 
-Present a decision summary first: major results, uncertainty, protocol deviations, verification status, unresolved issues, and required decisions. Attach full traceable results, tiered review and interpretation records, reused evidence, execution/resource records, and a proposed next-stage scope, budget, and expected outcomes. Use the [execution/review plan](../templates/step-4-plan.yaml) and [results package](../templates/step-4-results.md).
+| Authorization point | What is approved | Applies |
+| --- | --- | --- |
+| Next stage authorized | From the results package, decide on further checks, stopping, or continuing with qualified conclusions; continuing needs an explicit scope, budget and expected outputs | All tiers |
 
-## Handoff to Step 5
+This stage's start authorization is Step 3's "Formal execution authorized"; "Next stage authorized" is also Step 5's start authorization. Each is recorded once. Approving continuation does not turn unresolved evidence into a pass.
 
-Pass the exact results-package version, protocol, evidence and verification states, open issues, goals and intended use to [Step 5](step-5.md). Step 5 adds cross-result synthesis and delivery-suitability review, not duplicate verification of valid results. Additional analysis or return to this stage requires explicit authorization. Continuation does not verify unresolved results; Step 5 finalization does not authorize external publication.
+### Runtime condition: batch may continue
 
-## Shared controls (v0.8)
+As in Step 3, judged per batch; rules are in [Shared controls](shared-controls.md) section 7.
 
-Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.
+### Work units
+
+Execution, prespecified analysis, critical-result verification and challenge may be split into parallel units. Raw results, analysis outputs and verification reports are owned separately, and **the executor does not write its own verification report**. Limits on access timing and metrics are written into the unit's `allowed_inputs`.
+
+## Outputs
+
+Decision brief (opening with the four items): main results, uncertainty, protocol deviations, verification status, open questions and items awaiting decision. Attach complete traceable results, the tiered review and interpretive-bounds records, reused evidence, execution and resource records, and a proposed scope, budget and expected outputs for the next stage. Stopping early still allows a results package, with the unfinished work marked.
+
+Templates: [execution and review plan](../templates/step-4-plan.yaml), [results package](../templates/step-4-results.md).
+
+What passes to [Step 5](step-5.md): the exact version of the results package, the protocol, the evidence and its verification status, open questions, goals and intended use. Step 5 adds only cross-result synthesis and fitness-for-delivery review; it does not repeat valid result verification.

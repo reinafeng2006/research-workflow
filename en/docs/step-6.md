@@ -1,213 +1,122 @@
 # Step 6 — Required delivery, archiving and project closure
 
-Status: human-calibrated and approved as reusable policy, not authorization for a project run, submission, publication or maintenance. The main sequence is required-delivery requirements → necessary delivery and archive → closure against the approved criterion, then optional follow-up suggestions. Optional work must not block closure. The [Chinese specification](../../docs/step-6.md) is authoritative.
+Status: calibrated and saved with the human's approval; gates and team layer adjusted in v0.9; slimmed in v0.9.3. This is reusable policy; it does not authorize any specific project run, actual submission, publication or maintenance. Publishing these rules creates no automatic maintenance task.
 
-## Objective and Step 5/6 boundary
+This document covers only what is specific to Step 6. General rules are in the [Division of labor](division-of-labor.md), [Shared controls](shared-controls.md) and [Gates, tiers and runtime conditions](gates.md).
 
-Step 5 approves content, conclusion boundaries and exact deliverable versions. Step 6 uses project type and recipient requirements to identify required submissions, adapt materials, prepare delivery, perform explicitly authorized submission and archive necessary records.
+## Output and boundaries
 
-Inputs include approved Step 5 versions, project type/goals, recipient requirements, material restrictions, valid outputs/reviews and unresolved issues. Read existing information and clarify gaps only; do not re-ask settled questions. Identify required items, formats, submission method, deadlines and acceptance requirements, then map requirements to outputs.
+Main line: make the required deliverables explicit → complete the required delivery and archive → close under the approved criteria → only then propose optional follow-up. **Optional follow-up does not block closure of the current project and does not take budget from the required delivery.**
 
-Reuse outputs and records whose versions, inputs, assumptions, dependencies and scope remain valid. Applicability review is not rerunning checks. Check only new, changed, invalidated or affected portions, with reasons; no default research reverification or new analysis. Inherit unresolved status unchanged.
+Step 5 approves the content, conclusion bounds and exact version of the deliverable; Step 6 sets the submission list from the nature of the project and the recipient's requirements, and completes the necessary adaptation, delivery preparation, authorized actual submission and archiving.
 
-## Complete workflow
+The input is the version approved in Step 5, the nature and goals of the project, recipient requirements, material constraints, valid outputs and review records, and open questions. Read existing information first and clarify only what is missing. From the recipient's requirements, make explicit the list of outputs, format, submission method, deadline and acceptance criteria, and build a **requirements-to-outputs map**. Check only new, changed, invalidated or affected parts; do not redo research verification or add analysis by default; open questions keep their status.
 
 ```mermaid
 flowchart TD
-    DELIVERY["Known recipient requirements: Step 1 capture;<br/>Step 2 design mapping; Step 5 deliverable check;<br/>Step 6 reconcile deltas; preserve material unknowns"]
-    IN["Approved Step 5 version, project type and recipient requirements<br/>Valid outputs, records and open issues"]
-    REQ["Identify required items, formats, submission method and deadline<br/>Necessary archive and acceptance requirements<br/>Reuse known information; clarify gaps only"]
-    PLAN["Propose delivery/archive plan and completion criterion<br/>Scope, outcomes, reasons and tradeoffs<br/>Total/subbudgets, independent review, progress and stops"]
-    AP{"Human approves plan"}
-    MAP["Map requirements to outputs<br/>Reuse valid artifacts and verification<br/>Identify gaps and mismatches"]
-    GAP{"Delivery mismatch?"}
-    AUTH{"Repair within preapproved scope and budget?"}
-    FIX["Adjust and record exact version; preserve original<br/>Check changed and affected portions only"]
-    ASK["Pause affected work<br/>Minimal completion plan, impact, options and budget"]
-    DECIDE{"Human decision"}
-    BACK["Return to Step 5 or relevant stage after approval<br/>No automatic new analysis or reruns"]
-    HOLD["Preserve work and open status<br/>Do not mark unfinished items complete"]
-    PREP["Prepare required delivery and archive<br/>Save approved-depth versions, index<br/>Dependencies, access limits and resumption instructions"]
-    SELF["Executor self-check"]
-    VERIFY["Independent verifier follows approved plan<br/>Required delivery, archive usability and continuity<br/>Exact-version and authorization correspondence<br/>Reuse valid evidence without duplicate checks"]
-    ISSUE{"Classify acceptance issues"}
-    BLOCK["Affected portions cannot be complete<br/>Impact, minimal remedy and budget"]
-    MINOR["Record impact, handling bounds, owner and deadline<br/>Human decides acceptance"]
-    READY["Record preparation and acceptance states<br/>Passed unaffected portions may be accepted separately"]
-    CRITERION{"Approved completion criterion"}
-    SUBAUTH{"Explicit authority covers exact version and submission action?"}
-    WAIT["Remain prepared / awaiting authority<br/>No submission or claim of submission completion"]
-    SUBMIT["Perform authorized submission<br/>Record actual outcome and receipt"]
-    RESULT{"Submission outcome"}
-    REPORT["Report failure or unknown outcome honestly<br/>Propose minimal options<br/>No unauthorized resubmission or expanded authority"]
-    RECEIVE["Track recipient confirmation only<br/>Within approved scope, duration and budget"]
-    PACKAGE["Decision summary and full handoff package<br/>Requirements met, acceptance and actual submission state<br/>Versions, archive, authority and receipts<br/>Open issues, resources and resumption"]
-    CLOSE{"Approved completion criterion met and human closes project?"}
-    PENDING["Retain incomplete status and offer options<br/>Never relax criteria automatically"]
-    DONE["Current project closed<br/>Retain accepted limits and open status"]
-    OPTIONS["Offer optional follow-up ideas<br/>Value, costs and tradeoffs<br/>No automatic adoption or execution"]
-    CHOOSE{"Human selects follow-up work?"}
-    END["Retain suggestions; current project remains closed"]
-    NEW["Start only after separate scope, budget and outcome approval<br/>And applicable publication/maintenance rules"]
-    IN --> REQ
-    REQ --> PLAN
-    PLAN --> COVERED{"Matching existing authority?"}
-    COVERED -->|Yes: cite ID| MAP
-    COVERED -->|No: approve delta| AP
-    AP -->|Revise| PLAN
-    AP -->|Approve| MAP
-    MAP --> GAP
-    GAP -->|None| PREP
-    GAP -->|Nonmaterial mismatch| AUTH
-    AUTH -->|Yes; no stop condition| FIX
-    AUTH -->|No| ASK
-    GAP -->|New analysis or conclusion, qualification, authorship or disclosure change| ASK
-    ASK --> DECIDE
-    DECIDE -->|Approve bounded adjustment| FIX
-    DECIDE -->|Approve upstream return| BACK
-    BACK --> MAP
-    DECIDE -->|Change requirements or scope| PLAN
-    DECIDE -->|Defer or stop| HOLD
-    FIX --> PREP
-    PREP --> SELF
-    SELF --> VERIFY
-    VERIFY --> ISSUE
-    ISSUE -->|Material issue| BLOCK
-    BLOCK --> AUTH
-    ISSUE -->|Other issues| MINOR
-    MINOR --> READY
-    ISSUE -->|Pass| READY
-    READY --> CRITERION
-    CRITERION -->|Materials ready| PACKAGE
-    CRITERION -->|Successful submission or recipient confirmation| SUBAUTH
-    SUBAUTH -->|No| WAIT
-    WAIT --> PACKAGE
-    SUBAUTH -->|Yes| SUBMIT
-    SUBMIT --> RESULT
-    RESULT -->|Failed or unknown| REPORT
-    REPORT --> DECIDE
-    RESULT -->|Success; criterion is submission success| PACKAGE
-    RESULT -->|Success; confirmation required| RECEIVE
-    RECEIVE --> PACKAGE
-    PACKAGE --> CLOSE
-    CLOSE -->|Not met or additions requested| PENDING
-    PENDING --> DECIDE
-    CLOSE -->|Met and confirmed| DONE
-    DONE --> OPTIONS
-    OPTIONS --> CHOOSE
-    CHOOSE -->|No or defer| END
-    CHOOSE -->|Yes| NEW
+    IN["Version approved in Step 5, recipient requirements"] --> REQ["Required list and requirements-to-outputs map"]
+    REQ --> PLAN["Delivery and archive plan, completion criterion"]
+    PLAN --> GAP{"Delivery mismatch?"}
+    GAP -->|non-substantive, e.g. format| FIX["Adjust within authorization, keep the original version"]
+    GAP -->|new analysis, or change to conclusions, qualifications,<br/>authorship or disclosure| ASK["Pause the affected part for your decision<br/>return to Step 5 if needed"]
+    GAP -->|none| PREP
+    FIX --> PREP["Delivery preparation and archiving"]
+    PREP --> VER["Self-check → independent verification"]
+    VER --> CR{"Approved completion criterion"}
+    CR -->|materials ready| PKG["Handoff package"]
+    CR -->|submission succeeded or receipt confirmed| SA{"Does the submission authorization<br/>cover the exact version and action?"}
+    SA -->|No| WAIT["Stay at prepared; do not submit"]
+    SA -->|Yes| SUB["Submit; record the actual result and evidence"]
+    SUB -->|failed or unclear| REP["Report truthfully; do not resubmit"]
+    SUB -->|succeeded| PKG
+    WAIT --> PKG
+    PKG --> CLOSE{"You confirm closure?"}
+    CLOSE --> OPT["Only after closure, propose optional follow-up"]
 ```
 
+## Rules specific to this stage
 
-All work and loops obey approved scope, budget and stop rules. Approval points allow stopping or deferral, not endless revision. Prepared is not authorized; authorized is not successful. Arrows never grant automatic submission, analysis, rerun or budget-expansion authority.
+### Delivery and archive plan
 
-## Required delivery and archive plan
+- The AI proposes the required scope, budget, expected outputs, reasons and trade-offs from the nature of the project, the recipient's requirements and material constraints. **Pre-release/pre-submission checks are graded by channel, audience and material constraints**, proposing check items, depth, budget and open points; valid records are reused and research verification is not redone.
+- **Archive depth** is proposed from future reuse and continuation needs, storage cost and material constraints, with explicit scope, budget and acceptance criteria. As needed it may keep: exact versions, an archive index, data/material locations, access restrictions, configuration and environment dependencies, run and review records, recovery instructions. Not every project needs the largest list, and validation is not rerun by default.
+- **Completion criterion**: materials ready, submission succeeded, receipt confirmed or another explicit state, with reasons, approved by you. Materials ready may be the closure criterion without submission, but "not submitted" must be recorded; if receipt confirmation is required, a successful submission is not enough. **Criteria are never relaxed automatically because the budget ran out or waiting took too long.**
+- Preparation, archiving and approved maintenance each have their **own** sub-budget, effective-progress criteria and stop conditions, under an overall budget. A sub-item trigger pauses the corresponding work; an overall trigger pauses the work it constrains. Pausing and recovery follow [Shared controls](shared-controls.md) section 7.
 
-Agents propose required scope, budget, outcomes, reasons and tradeoffs based on project type, recipient requirements and material restrictions for human approval. Scale prepublication/submission checks to channel, audience and material restrictions; propose checks, depth, budget and decision items for approval. Reuse valid records without repeating research verification.
+### Delivery mismatches and issue classification
 
-Propose archive depth from future reuse/resumption needs, storage cost and material restrictions, with scope, budget and acceptance criteria for approval. At the approved depth, retain exact versions, archive index, data/material locations, access restrictions, configuration/environment dependencies, execution/review records and resumption instructions. These are selectable according to need, not a mandatory maximal archive checklist; do not rerun validation by default.
+- Adjustments to format, layout or file organization that do not change meaning may be completed within the preapproved scope and budget and recorded, keeping the original version and checking only the changes.
+- **New analysis, or changes to conclusions, qualifications, authorship or the scope of material disclosure**: pause the affected part and set out the minimal plan to close the gap, its impact, options and budget for your decision, returning to Step 5 or earlier if needed.
+- Issues affecting required deliverables, archive usability, the accuracy of release/submission authorization or maintenance boundaries prevent the related part from being marked complete. Other issues record impact, handling scope, owner and resolution time, and you decide whether to accept them. Parts that passed and are unaffected may be confirmed separately.
 
-Propose materials-ready, successful-submission, recipient-confirmation or another explicit project state as the completion criterion, explaining why for approval. Record unachieved states honestly. Materials-ready may permit closure without submission if approved, but record that no submission occurred. If recipient confirmation is required, submission success alone is insufficient. Only the human may change the criterion; budget exhaustion or delay never automatically relaxes it.
+### Actual submission and six states
 
-## Mismatches, revisions and issue classification
+Actual submission or external release requires explicit authorization covering **the exact revised version, the specific action, the recipient/channel and the scope**. Approval of material preparation, of the final text or of the closure criterion does not grant submission permission.
 
-- Formatting, layout and file-organization changes preserving content meaning may be made within preapproved scope/budget with records. Preserve original versions and check changed/affected portions only.
-- New analysis or changes to conclusions, qualifications, authorship or disclosure scope pause affected work. Explain the minimal completion plan, impact, options and budget for human decision, returning to Step 5 or earlier if approved. Other repairs outside authority also require approval first.
-- Issues affecting required delivery, archive usability, submission/publication authorization accuracy or maintenance boundaries block affected portions being marked complete. Other issues require impact, handling bounds, owner and deadline for human acceptance.
-- Passed, unaffected portions may be accepted separately. Local issues never justify rechecking everything. Preserve unresolved status; an accepted exception is not a verification pass.
+Record the actual result and evidence. **A failed or unclear result may not be marked as success; do not resubmit on your own, and do not automatically withdraw or republish.** Receipt confirmation is tracked only within the approved scope, deadline and budget.
 
-## Self-check and independent verification
-
-After executor self-check, an independent verifier checks against approved criteria. Agents propose project-specific scope, depth, assignments, reasons and budget for human approval. Cover required-delivery compliance, archive completeness/usability/resumability, exact-version/authorization correspondence and approved maintenance scope, budget, duration and activation boundaries.
-
-Review new, changed or affected content only and reuse valid checks. A verifier never accepts work it authored. Plans, review records and handoffs identify exact versions.
-
-| Role/duty | Responsibilities and reactions | Why present |
-| --- | --- | --- |
-| Coordinator | Requirements, closure criterion, plan/assignments/budgets, authority and actual states; pause and report at triggers | Prioritize required delivery; prevent optional work consuming closure authority/budget |
-| Executor | Prepare delivery, archive, self-check, perform explicitly authorized actions only; record versions, usage and actual outcomes | Traceable delivery without confusing intent with completion |
-| Independent verifier | Approved checks of requirements, archive, authority and maintenance boundaries; reuse records; no self-approval | Detect handoff gaps and authority/version mismatches |
-| Methods specialist / challenger, as needed | Assess whether mismatches affect conclusions, evidence or methods; propose minimal upstream repair | Prevent delivery adaptation from silently changing research; no automatic research work |
-
-## Actual submission and separate states
-
-Actual submission or external publication requires explicit authority covering the changed exact version, action, recipient/channel and applicable scope. Reuse explicit authorization that still applies; preparation, finalization or approval of a closure criterion alone does not authorize submission.
-
-Record actual outcomes and receipts. Failed or unknown outcomes cannot be marked successful; report minimal options rather than resubmit or expand authority without permission. Track recipient confirmation only within approved scope, duration and budget; never infer it from submission success. Do not automatically retract or republish.
-
-| State | Required basis |
+| State | Basis required |
 | --- | --- |
-| Prepared | Specified materials are ready; acceptance and open issues recorded separately |
-| Authorized | Human explicitly approved version, action, scope and conditions |
-| Submitted / published | Actual success records or receipts; failure/unknown is not success |
-| Recipient confirmed | Relevant recipient confirmation, not inferred from successful submission |
-| Current project closed | Approved completion criterion met and human confirmed closure |
-| Maintenance started | Approved maintenance actually began; update state on expiry or pause |
+| Prepared | Materials of the specified version ready; acceptance results and open items listed separately |
+| Authorized | You explicitly approved the version, action, scope and conditions |
+| Submitted / published | Record or evidence of actual success; a failed or unclear result does not count |
+| Receipt confirmed | The recipient's corresponding confirmation, never inferred from a successful submission |
+| Project closed | Approved completion criterion met and confirmed by you |
+| Maintenance started | Approved maintenance has actually begun; updated on expiry or pause |
 
-Record these states separately; none substitutes for or implies another.
+The six states are recorded separately; none substitutes for or is inferred from another.
 
-## Budgets, stopping and recovery
+### Optional follow-up and maintenance after closure
 
-```mermaid
-flowchart TD
-    WORK["Required delivery preparation and archive<br/>And separately approved follow-up"]
-    TRACK["Track subbudgets and total usage<br/>Check progress, duration and stops"]
-    CHECK{"Any approved stop condition reached?"}
-    CONT["Continue within authority<br/>Reuse valid outputs and records"]
-    PAUSE["Pause constrained work and report<br/>Usage, progress, saved work, issues and options"]
-    HUMAN{"Human decision"}
-    SAVE["Save exact versions and unresolved status"]
-    RESUME["Approve recovery scope and remaining budget<br/>No duplicate checks of valid work"]
-    WORK --> TRACK
-    TRACK --> CHECK
-    CHECK -->|No| CONT
-    CONT --> WORK
-    CHECK -->|Yes| PAUSE
-    PAUSE --> HUMAN
-    HUMAN -->|Stop or defer| SAVE
-    HUMAN -->|Approve recovery or change| RESUME
-    RESUME --> WORK
-```
-
-
-Propose separate subbudgets, effective-progress criteria and stop conditions for required delivery/publication preparation, archiving and approved maintenance, together with a total budget for human approval. Subtask conditions pause corresponding work; total conditions pause work constrained by that limit. Any approved stop condition pauses work and triggers reporting; remaining budget does not override other stops.
-
-Cumulatively count preparation, self-check, independent review, repairs, recovery and maintenance with clear attribution and no omissions/double counting. Separate measured actuals, estimates and unavailable telemetry; disclose monitoring/interruption limitations and never claim unsupported precise or real-time enforcement. Report use, progress, saved work, open issues and options; obtain explicit recovery scope and remaining-budget authority while reusing valid work.
-
-Optional follow-up requires separate approval, must not consume required-delivery budget, and is not an extra closure gate.
-
-## Optional follow-up and maintenance after closure
-
-After closing against the approved criterion, offer bounded suggestions such as adapting outputs, other publication channels, further research or maintenance, explaining value, costs and tradeoffs. Suggestions do not automatically become goals or start investigation, analysis, monitoring or execution. The human selects and separately approves scope, budget and outcomes. Declining or deferring follow-up does not undo closure.
-
-If maintenance is selected, compare none, on-demand and bounded periodic maintenance and propose scope, triggers, frequency, duration, budget and stop rules for approval. Plan approval is not activation; record started only after actual work begins.
-
-Periodic maintenance counts usage cumulatively and stops at expiry. Renewal requires prior approval; a new run never resets the total budget. Nonmaterial maintenance may follow preapproved rules with records. Potential effects on conclusions, evidence validity, authorship or disclosure pause affected work with impact, minimal remedy and budget for human decision. Preserve originals; no automatic reruns, retractions, republication, new analysis or duplicate valid checks.
+- **After** closing under the approved criteria, propose bounded follow-up (rewriting outputs, release in another channel, extended research or maintenance), stating value, cost and trade-offs. Suggestions do not become goals automatically and start no investigation, analysis, monitoring or execution on their own; once you choose, scope, budget and outputs are approved separately. Declining or deferring follow-up does not affect a confirmed closure.
+- If maintenance is chosen, compare no maintenance, on-demand maintenance and bounded periodic maintenance, proposing scope, triggers, frequency, duration, budget and stop rules. **Approving the plan does not start it**; the started state is recorded only when it actually begins.
+- Bounded periodic maintenance accumulates usage, **stops at expiry, and renewal is approved first**; a new run never resets the overall budget. Non-substantive maintenance may be completed and recorded under preapproved rules; maintenance issues that could affect conclusions, evidential validity, authorship or the scope of disclosure pause the affected work for your decision; keep the original version, and do not automatically rerun, withdraw, republish or add analysis.
 
 ## Quality gates
 
-| Gate | Condition |
-| --- | --- |
-| Required delivery explicit | Project/recipient-based items, format, method, deadline and acceptance; clarify missing information only |
-| Plan and completion criterion approved | Scope, budget, outcomes, verification and stops clear; human selects materials-ready, submission-success, recipient-confirmation or equivalent criterion |
-| Valid outputs reused | Reuse valid records/outputs; new checks target mismatches, invalidation or affected portions, not duplicate checks |
-| Mismatches handled by impact | Nonmaterial adaptation recorded within preapproval; new analysis/material changes pause for human decision |
-| Necessary archive suitable | Depth, scope, budget and standards approved; usability and continuity requirements met |
-| Independent verification complete | Self-check then independent review under approved scope/depth/assignments/budget; no accepting own work |
-| Unresolved issues retained | Material issues block affected completion; other issues have impact, bounds, owner and deadline for human acceptance |
-| Submission explicitly authorized | Covers changed exact version and action; preparation/finalization does not substitute for authority |
-| Resources and duration controlled | Total/subbudgets and stops apply; maintenance expires and renews only with approval, retaining cumulative usage |
-| Optional follow-up does not block closure | Summary/full handoff provided; human closes against approved criterion; follow-up selected and authorized separately |
+Items below their lowest tier are marked `not_applicable`, with a reason based on approved scope.
 
-## Final handoff
+### G1 material ready
 
-Present completion, acceptance status, open issues and decision items first. Attach exact versions, requirement-output mapping, archive index, authorization records, actual submission/publication and recipient receipts where applicable, reviews, usage and resumption instructions. Record states separately; the human confirms completed portions, accepted limitations and closure or subsequent arrangements. Use the [Step 6 plan](../templates/step-6-plan.yaml) and [handoff package](../templates/step-6-handoff.md).
+Also includes the cross-stage checklist item "decision material usable" (lite); see [Gates, tiers and runtime conditions](gates.md) section 7.
 
-Publishing this policy creates no scheduled maintenance and authorizes no project submission or publication. The reusable six-stage core is calibrated; project budgets, thresholds and authorizations remain project-specific.
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Required delivery explicit | Outputs, format, method, deadline and acceptance requirements made explicit from the nature of the project and the recipient's requirements; only missing information clarified | lite |
+| Unresolved issues retained | Substantive issues block completion of the related part; other issues list impact, bounds, owner and time for the approver to accept | lite |
+| Optional follow-up does not block closure | Summary and full handoff package submitted; closure confirmed by the approver under the approved criteria; follow-up chosen and authorized separately | standard |
 
-## Shared controls (v0.8)
+### G2 independently verified
 
-Follow [shared controls](shared-controls.md): reuse matching explicit authorization; request approval only for uncovered changes. Apply gate applicability, check IDs, pre-dispatch budget reservations and artifact-level role independence. A reused check never overrides a pause or authorizes new work.
+v0.8's "independent verification complete" gate is G2 itself. In this stage G2 verifies the following checklist items:
 
-Applicability clarification: when approved closure is materials_ready and no submission is planned, submission authority is not_applicable to current closure, with the reason recorded. This does not authorize later submission. Maintenance gates apply only to selected maintenance. Required delivery and archive failures cannot be waived by marking them not_applicable.
+| Checklist item | Condition | Lowest tier |
+| --- | --- | --- |
+| Mismatches handled by impact | Non-substantive adjustments completed and recorded within preapproved scope; new analysis or substantive change paused for the approver to decide | standard |
+| Necessary archive suitable | Depth, scope, budget and criteria approved; usability and continuation requirements met | standard |
+| Valid outputs reused | Valid outputs and records reused; new checks target mismatches, invalidated or affected parts, without redoing valid checks | strict |
+
+Verification covers: whether the required deliverables are met, archive completeness and continuity, correspondence between exact versions and submission/release authorization, and the scope, budget, duration and start boundaries of approved maintenance. The scope, depth, division and budget of verification are approved first.
+
+### G3 human authorization
+
+| Authorization point | What is approved | Applies |
+| --- | --- | --- |
+| Plan and completion criterion approved | Scope, budget, outputs, verification and stop rules, and a closure criterion such as materials ready / submission succeeded / receipt confirmed | All tiers |
+| Submission explicitly authorized | The exact revised version, specific action, recipient channel and scope | All tiers |
+
+When the approved closure criterion is `materials_ready` and no submission is planned, "Submission explicitly authorized" is recorded as `not_applicable` for this closure with its basis; that does not authorize a later actual submission. Maintenance-related checklist items apply only to the maintenance chosen. Failure of required deliverables or the archive may not be re-recorded as not applicable.
+
+### Runtime condition: resources and duration controlled
+
+Judged separately for preparation, archiving and approved maintenance: overall and sub-budgets valid, stop rules valid, maintenance stops at expiry, renewal approved first and cumulative usage never reset. Rules are in [Shared controls](shared-controls.md) section 7.
+
+### Work units
+
+Material preparation, archive organization, verification and the submission action may be split into parallel units. **The submission action must be its own work unit**, its `g3_authorization_id` pointing to "Submission explicitly authorized"; without that authorization it may not start. Parts of the handoff package, the archive index and submission evidence are owned separately.
+
+## Outputs
+
+Decision brief (opening with the four items): completion, acceptance status, open questions and items awaiting decision. Attach the exact versions, the requirements-to-outputs map, the archive index, authorization records, actual submission/release results and receipt evidence (if any), review records, resource usage and continuation notes. You confirm the completed parts, the accepted limitations, and closure or follow-up arrangements.
+
+Templates: [Step 6 plan](../templates/step-6-plan.yaml), [handoff package](../templates/step-6-handoff.md).
