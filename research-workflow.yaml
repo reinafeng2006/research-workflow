@@ -117,7 +117,7 @@ project_specialists:
   fixed_functions: [coordinator, researcher, verifier, challenger]
   derived_from: [研究问题的组成（对象、结果测量、对比、边界、要支持的决定）, 评估矩阵的敏感性]
   axes: 一个专长 = 学科视角 × 研究职能（docs/agents.md 第 2 节）。
-  discipline_axis: 采用 OECD《弗拉斯卡蒂手册》2015 第 3 章 FORD 分类（6 大类、42 子领域；摘要级，大类名称待核对原文）；本学科 1 个，近邻／远邻 1–2 个，后者用于发散借框架。
+  discipline_axis: 采用 OECD《弗拉斯卡蒂手册》2015 第 3 章 FORD 分类（6 大类、42 子领域、按内容划分，已核对于联合国分类登记页；除"工程与技术"外的大类与全部子领域名称未核对）；本学科 1 个，近邻／远邻 1–2 个，后者用于发散借框架。
   function_axis: 按研究类型分组（所有研究、量化实证、质性、理论与形式、史料与文本、构建与工程）；工作清单，不声称完整。
   library_check: 两条轴分别逐条对照，写明需要／不需要及理由。
   expert_claims: AI 以某学科视角所说不是证据，仍按 Step 1 证据规则给出直接来源。
