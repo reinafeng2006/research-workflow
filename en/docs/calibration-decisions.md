@@ -294,3 +294,16 @@ The first verification layer (static check) found six issues, decided by the use
 | S17-05 | The direction log gains a "roundtable record": approved rounds and budget, specialists at the table and their operators, per-round speaking order, new directions, how many were substantively different, the challenger's convergence conclusion, operator switches, actual usage and reason for stopping. |
 | S17-06 | In a single-person project with only one conversation, G2 could only ever be an exception. An "independent instance" is defined: a separate call or agent that receives only the artifact and underlying evidence and cannot see how it was produced; the same conversation switching roles does not count. Written into the README runtime table, agents.md, gates.md and the configuration, and listed as a capability the website must provide; where unavailable, G2 is still recorded as an exception. |
 
+
+## Repositioning — 2026-11-04
+
+After the competitor check, the user asked to stop and rethink the direction. These are positioning decisions; they change no gate, checklist item or authorization point.
+
+| ID | Agreed decision |
+| --- | --- |
+| S18-01 | The project's purpose is "a product people actually use"; the first users are undergraduate and master's students who must choose a research topic and lack domain expertise. |
+| S18-02 | Positioning: "upstream of the hypothesis, plus a human decision layer". Step 1 is the core, and downstream execution is left to existing pipelines such as NeuriCo. The basis and competitor comparison are in [positioning.md](positioning.md); the differentiators listed there are all untested hypotheses. |
+| S18-03 | **Steps 2–6 are frozen, not deleted.** Their documents, templates and configuration stay, and the current rules still hold for projects already using them. While frozen: no further expansion or calibration; not in the website's first version; problems found are recorded but not fixed unless they conflict with Step 1; gate counts are unchanged. Unfreezing is the user's decision. |
+| S18-04 | The competitor-check conclusions are written into positioning.md with evidence levels. Checking narrowed two earlier claims made in conversation: IdeaSynth's "does not trust AI to judge novelty" comes from one of seven deployment participants, who were PhD students and postdocs; SciMON "not rating feasibility" rests only on a full-text search with no match, which makes it an inference. |
+| S18-05 | Before building the website, run a concierge comparison test; the materials are in [pilot/](../../pilot/README.md). Designed as the user asked: recruit students under real topic-selection pressure; alternate the order of Step 1 and plain AI, using different ideas of similar difficulty where possible, with the limitations written out; blind review by someone who knows the field; a one-week follow-up; willingness to pay asked about only, never charged; a short consent note. This does not authorize running real user tests; recruiting and facilitating are done by the user. |
+| S18-06 | The pilot is designed as product feedback. If the results might later be used for research or publication, confirm with the IRB before the first session. |

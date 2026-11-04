@@ -6,13 +6,13 @@
   "source_commit": "0f26b485fc0603d525ca8add65a7ac6ecef112eb",
   "synchronized_on": "2026-11-04",
   "status": "synchronized",
-  "note": "Hashes detect drift, not semantic equivalence. Synchronized with the Chinese v0.9.7 in the same commit that fixed the six static-check issues (calibration record S17). Both language policies reviewed together.",
+  "note": "Hashes detect drift, not semantic equivalence. Synchronized with the Chinese v0.9.7 plus the 2026-11-04 repositioning (calibration record S18: positioning.md, Steps 2-6 frozen). pilot/ materials are project materials in Chinese only and are not paired.",
   "files": [
     {
       "zh": "README.md",
       "en": "en/README.md",
-      "zh_sha256": "89b50beeee23d576e35e4776af991f7c2509d99ea3d1d00bb1f35696658af150",
-      "en_sha256": "b36e52d0db7a0517dc29c91998ac9d597f77f6b353ca7e4075e28a43b08524dd"
+      "zh_sha256": "b324f23f4ffb5fc3423a442619481b7c1792f12d3fd89aee194496d941d47830",
+      "en_sha256": "1d3388b790bbd4941316a4cf4a817c150f1ed1e56a5addd0e731087acd5f9c35"
     },
     {
       "zh": "AGENTS.md",
@@ -29,8 +29,8 @@
     {
       "zh": "docs/calibration-decisions.md",
       "en": "en/docs/calibration-decisions.md",
-      "zh_sha256": "29f6d717875d4db6787815daaa04c79444ca6f0cf2efa5ec04916a6cc769a5fd",
-      "en_sha256": "7845814ea342b5e44e9be2ab8f17abef3a9866c5097d446c08ec346b7ac14c56"
+      "zh_sha256": "232e6d6777fa3c6927041d4df957c7f259a41c6004bdd3e14691c68282227b30",
+      "en_sha256": "ab63fb8b1bf15bdab8877686a23cf100943f4818d066d240ae7bb72a02394de9"
     },
     {
       "zh": "docs/control-walkthrough.md",
@@ -265,6 +265,12 @@
       "en": "en/templates/work-assignment.yaml",
       "zh_sha256": "5414ca7535438fdaa8c775206f042e920a850a0bd817de6208074ebda0d7f226",
       "en_sha256": "caa90362a18f9763e7a63f7ab5287ab99717fb6ba6932149ff571f90bdd26a1c"
+    },
+    {
+      "zh": "docs/positioning.md",
+      "en": "en/docs/positioning.md",
+      "zh_sha256": "a01b406937c2821c9730e4e6e84596a0d159a856b0e6cc46bfc5919fd50cedc3",
+      "en_sha256": "841cd711d1614156e5fca3860f06d45e7e3062c2d33896bc488cbec4ce3aa40e"
     }
   ]
 }

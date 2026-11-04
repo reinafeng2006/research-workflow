@@ -10,6 +10,8 @@ A reusable workflow for research and study projects: six stages, three gates per
 
 This repository provides specifications and record templates; it is not an executable orchestration service or a real-time resource monitor.
 
+**Current positioning** (2026-11-04): Step 1 is the core, aimed at undergraduate and master's students who must choose a topic and lack domain expertise; Steps 2–6 are frozen, not deleted. See [positioning and competitors](docs/positioning.md) and the [comparison test materials](../pilot/README.md) (Chinese only).
+
 ## How to start
 
 1. On GitHub, select **Use this template** to create a new project repository, and open it in an agent environment that can read project files. Keep project outputs in the new repository, separate from the template.
@@ -62,6 +64,8 @@ When a capability is missing, the agent says so first, then proposes alternative
 
 ## Six stages
 
+Steps 2–6 are currently frozen: their rules still hold, but they are not being expanded or calibrated (calibration record S18-03).
+
 1. [Define and select a research question](docs/step-1.md) — ends with your approval of a specific question.
 2. [Method comparison and protocol](docs/step-2.md) — approving the protocol does not authorize implementation.
 3. [Implementation readiness and small-scale end-to-end validation](docs/step-3.md) — passing validation does not start formal execution.
@@ -79,7 +83,7 @@ When a capability is missing, the agent says so first, then proposes alternative
 - [Agent roles and project specialists](docs/agents.md) — fixed functions, specialists derived per project, specialty library.
 - [Team research](docs/teamwork.md) — person roles, authorization matrix, work units, handover.
 - [Shared controls](docs/shared-controls.md) — authorization reuse, check records, pre-launch budget, role independence, runtime controls.
-- `AGENTS.md` (agent operating instructions), `research-workflow.yaml` (structured index), [language policy and terms](docs/language-policy.md), [calibration record](docs/calibration-decisions.md).
+- `AGENTS.md` (agent operating instructions), `research-workflow.yaml` (structured index), [language policy and terms](docs/language-policy.md), [calibration record](docs/calibration-decisions.md), [positioning and competitors](docs/positioning.md).
 
 **Templates** (`templates/`)
 

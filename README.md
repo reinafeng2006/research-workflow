@@ -8,6 +8,8 @@
 
 本仓库提供规范和记录模板，不是可执行的编排服务或实时资源监控器。
 
+**当前定位**（2026-11-04）：Step 1 是核心，面向要选题、缺专长的本科生和硕士生；Step 2–6 冻结、不删除。见[产品定位与竞品对照](docs/positioning.md)和[对照测试材料](pilot/README.md)。
+
 ## 怎么开始
 
 1. 在 GitHub 点 **Use this template** 建新项目仓库，在能读取项目文件的 agent 环境中打开它。成果留在新仓库，不混进模板。
@@ -55,6 +57,8 @@ agent 只有在获得访问权限并收到明确指令时才会读取文件；�
 
 ## 六个阶段
 
+Step 2–6 目前冻结：规则仍有效，但暂不扩写或校准（校准记录 S18-03）。
+
 1. [定义并选择研究问题](docs/step-1.md) — 以你批准具体问题结束。
 2. [方法比较与协议定稿](docs/step-2.md) — 协议批准不是实施授权。
 3. [实施准备与小规模端到端验证](docs/step-3.md) — 验证通过不自动开始正式执行。
@@ -72,7 +76,7 @@ agent 只有在获得访问权限并收到明确指令时才会读取文件；�
 - [智能体角色与项目专长](docs/agents.md) — 固定职能、按项目推导的专长、专长库。
 - [团队研究](docs/teamwork.md) — 人员角色、授权矩阵、任务单元、交接。
 - [共享控制](docs/shared-controls.md) — 授权复用、检查记录、启动前预算、角色独立性。
-- `AGENTS.md`（agent 操作指令）、`research-workflow.yaml`（结构化索引）、[语言政策与术语](docs/language-policy.md)、[校准记录](docs/calibration-decisions.md)。
+- `AGENTS.md`（agent 操作指令）、`research-workflow.yaml`（结构化索引）、[语言政策与术语](docs/language-policy.md)、[校准记录](docs/calibration-decisions.md)、[产品定位与竞品对照](docs/positioning.md)。
 
 **模板**（`templates/`）
 
