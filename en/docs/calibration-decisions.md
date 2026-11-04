@@ -267,3 +267,17 @@ The user proposed that agents be distinguished by what they are good at, but not
 | --- | --- |
 | S15-01 | `en/` is synchronized with the Chinese v0.9.5: 8 new and 19 updated files, translated against the final Chinese text; the calibration record appends only the v0.9 and later sections, leaving earlier history as it was. Supersedes the "en/ is stale" state of S9-16. |
 | S15-02 | Three outdated Chinese passages found during synchronization were corrected at the source: the division of labor still called the direction log "to be built"; the language policy's "current synchronization scope" still described v0.7; the README still said the English version was v0.8. |
+
+## v0.9.6 — 2026-11-04: all files aligned to one version
+
+Before checking whether the workflow can run, the user asked for all files to be on the same version. An inventory found 18 files untouched since the v0.8 synchronization, several of them inconsistent with the v0.9 rules.
+
+| ID | Agreed decision |
+| --- | --- |
+| S16-01 | The current version number is unified as v0.9.6: the README, configuration and translation manifest said v0.9 while the content had reached v0.9.5. Historical mentions such as "v0.8's 38 gates" are unchanged. |
+| S16-02 | Critical gap: the cross-stage G1 checklist item "decision material usable" requires the four items at every decision point, but only the two Step 1 templates had a place for them, so Steps 2–6 could not record them and therefore could not pass. The four items now open the method comparison, pilot check, research protocol, Step 3 validation record, Step 4 results package, Step 5 delivery package, Step 6 handoff package and upstream review. |
+| S16-03 | The Step 3–6 plan templates gain the tier, a record block for the stage's checklist items and authorization points, runtime conditions, and project-specialist and work-assignment references; the Step 3 and 4 plans note that runtime rules are in shared controls section 7; the Step 6 plan references the submission action's own work unit. |
+| S16-04 | Each check in the check registry gains `checklist_item`, `gate` and `tier`; the verification report table gains "gate" and "lowest tier" columns and notes that the verifier did not take part in production; the task launch record gains the four-field update and the work unit; the decision log gains a "type" column, with lite-tier self-approval overlaps recorded as exceptions. |
+| S16-05 | The duplicated `assessed_by` and `assessed_at` keys in the check registry are removed, the same kind of defect as the earlier duplicate keys in the authorization record template. |
+| S16-06 | The v0.8 walkthrough is marked "historical record, superseded, to be redone" without rewriting its content; a walkthrough of the current rules belongs to the later verification step, which is not yet approved. |
+

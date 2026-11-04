@@ -3,6 +3,9 @@ checks:
   - id: null
     artifact_version_and_portion: null
     criterion_id: null
+    checklist_item: null            # the corresponding checklist item, see docs/gates.md
+    gate: null                      # G1 / G2 / runtime
+    tier: null                      # lite / standard / strict
     method: null
     applicability: undetermined
     applicability_basis_and_approval: null
@@ -18,8 +21,6 @@ checks:
     supersedes_check_ids: []
 reuse_assessments:
   - check_id: null
-    assessed_by: null
-    assessed_at: null
     assessed_by: null
     assessed_at: null
     target_version_and_use: null

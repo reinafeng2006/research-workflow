@@ -6,7 +6,7 @@ A reusable workflow for research and study projects: six stages, three gates per
 
 **Before starting you need to read only two documents: this one and the [Division of labor](docs/division-of-labor.md).** The latter sets out what the person and the AI are each responsible for, and prevails over any other document it conflicts with. Read the rest as needed.
 
-**Version v0.9**; Steps 1–6 are calibrated, and each project's budgets, standards and authorizations still need approval per project. The repository root holds the authoritative Chinese version.
+**Version v0.9.6**; Steps 1–6 are calibrated, and each project's budgets, standards and authorizations still need approval per project. The repository root holds the authoritative Chinese version.
 
 This repository provides specifications and record templates; it is not an executable orchestration service or a real-time resource monitor.
 

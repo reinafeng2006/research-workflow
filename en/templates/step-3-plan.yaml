@@ -1,4 +1,5 @@
 status: proposed_not_authorized
+# Rules for batches, rates, pauses, retries, saving and recovery are in docs/shared-controls.md section 7.
 protocol_version: null
 scope: []
 expected_outcomes: []
@@ -71,9 +72,27 @@ human_approval:
   combined_with_step_2: false
 # Step 3 approval is not formal-execution authorization.
 
+# v0.9: tier and this stage's gate records. Checklist items and authorization points are in the matching docs/step-N.md; definitions in docs/gates.md.
+profile: null                     # inherited from the project's stage contract: lite / standard / strict
+gates:
+  checklist_items:
+    - item: null                  # checklist item name, including cross-stage "decision material usable"
+      gate: null                  # G1 / G2
+      tier: null                  # lowest tier at which the item applies
+      applicability: undetermined
+      applicability_basis_and_approval: null
+      verification_verdict: pending
+      check_ids: []
+  authorization_points:
+    - point: null                 # this stage's G3 authorization point
+      authorization_id: null
+  runtime_conditions: []          # Steps 3/4: batch may continue; Step 6: resources and duration controlled
+project_specialists: []           # this stage's approved project specialists, see docs/agents.md
+
 shared_control_records:
   authorization_ids: []
   check_registry_reference: null
   role_assignments_reference: null
   task_launch_records: []
   recipient_requirements_reference: null
+  work_assignment_reference: null   # templates/work-assignment.yaml

@@ -1,7 +1,8 @@
 # Workflow specification, not executable agent software.
 # Steps 1 through 6 are calibrated; numeric defaults remain proposals and project limits/authority require approval.
 # v0.9: gates unified into three kinds with checklist items trimmed by tier (docs/gates.md); people and work-assignment layer added (docs/teamwork.md).
-version: "0.9"
+# v0.9.1–v0.9.5: division of labor, divergence and appraisal, slimmed stage documents, project specialists, roundtable; v0.9.6: all templates and files aligned to one version. Version history in docs/calibration-decisions.md.
+version: "0.9.6"
 status: steps_1_2_3_4_5_6_calibrated
 purpose: Produce rigorous, traceable research through gated stages and bounded revision.
 

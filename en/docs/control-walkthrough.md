@@ -1,4 +1,6 @@
-# v0.8 control walkthrough
+# v0.8 control walkthrough (historical record)
+
+> **Status: superseded, to be redone.** This walkthrough covers the v0.8 rules and none of the v0.9-and-later rules: the three gates, tiers, people and work assignment, the division of labor, divergence and appraisal, project specialists and the roundtable. It is kept as a historical record; no walkthrough of the current rules has been done, and this document is no evidence that the current rules can run.
 
 Method: manual tabletop review against shared-controls.md and stage diagrams/templates, using 14 fictional scenarios. No real research, API submission, worker launch or independent-agent verification was performed. Outcomes below are policy-path findings, not tests of a running controller. Budget values are examples, not defaults.
 

@@ -65,6 +65,7 @@ submission_authorization:
   approved_scope_and_conditions: null
   preparation_or_finalization_is_not_submission_authority: true
   failed_or_unknown_result_requires_report_not_automatic_resubmission: true
+  submission_work_unit_id: null   # 提交动作必须是单独的任务单元，其 g3_authorization_id 指向本授权
 recipient_confirmation_tracking:
   needed_for_approved_completion_criterion: null
   approved_scope_duration_budget: null
@@ -108,9 +109,27 @@ maintenance:
   no_automatic_rerun_retraction_or_republication: true
 plan_human_approval_record: null
 
+# v0.9：档位与本阶段的门槛记录。清单项与授权点见对应的 docs/step-N.md，定义见 docs/gates.md。
+profile: null                     # 继承本项目阶段契约的档位：lite / standard / strict
+gates:
+  checklist_items:
+    - item: null                  # 清单项名称，含跨阶段「决策材料可用」
+      gate: null                  # G1 / G2
+      tier: null                  # 该项最低适用档位
+      applicability: undetermined
+      applicability_basis_and_approval: null
+      verification_verdict: pending
+      check_ids: []
+  authorization_points:
+    - point: null                 # 本阶段 G3 授权点
+      authorization_id: null
+  runtime_conditions: []          # Step 3／4：批次可继续；Step 6：资源与期限受控
+project_specialists: []           # 本阶段获批的项目专长，见 docs/agents.md
+
 shared_control_records:
   authorization_ids: []
   check_registry_reference: null
   role_assignments_reference: null
   task_launch_records: []
   recipient_requirements_reference: null
+  work_assignment_reference: null   # templates/work-assignment.yaml

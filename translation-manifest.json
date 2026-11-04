@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "policy_version": "0.9",
+  "policy_version": "0.9.6",
   "authoritative_language": "zh-CN",
   "reference_language": "en",
-  "source_commit": "b48a9c3d98ad817449d81d94c40dea22dab6be0a",
+  "source_commit": "3e500f9355ed9f50348d4456985a89e611199c7d",
   "synchronized_on": "2026-11-04",
   "status": "synchronized",
-  "note": "Hashes detect drift, not semantic equivalence. Synchronized with the Chinese v0.9.5; source_commit is the Chinese state the translation was made from, and the synchronizing commit also contains three Chinese corrections found during translation (calibration record S15-02). Both language policies reviewed together.",
+  "note": "Hashes detect drift, not semantic equivalence. Synchronized with the Chinese v0.9.6 in the same commit that aligned all files to one version (calibration record S16). Both language policies reviewed together.",
   "files": [
     {
       "zh": "README.md",
       "en": "en/README.md",
-      "zh_sha256": "9962760a90121ac721bb560a8f7904ea5ade4ff54f8ca56167e00130bf1aa57a",
-      "en_sha256": "8a6fd947b36c844552836ffa1aa7a7607fff2ce390e77c20ee3bc4ea7ca382ff"
+      "zh_sha256": "19896cd9293ea42b912896c2d1b20842823ab8c0c691748554d6e554d79c4723",
+      "en_sha256": "1c56c31bde31344a9402885a57c7e79adbf4f2ec07d54057942028689e3ad331"
     },
     {
       "zh": "AGENTS.md",
@@ -23,26 +23,26 @@
     {
       "zh": "research-workflow.yaml",
       "en": "en/research-workflow.yaml",
-      "zh_sha256": "586ae9ec0695e41d88453394420ab110bfbc2998dfc6cee0c60dee07f78d68be",
-      "en_sha256": "35236fef2ea2293b42e17cbff97105cc88c16988690236ef74d5b758f3683180"
+      "zh_sha256": "8c081fc983eff9aba8439ac90ca994e7a74dd56718ad44dbd819d26da809c5b5",
+      "en_sha256": "22bbf1439c6a66856a88e46bda3d3a5c265fb49bc6178230de8f8faf637ef9ee"
     },
     {
       "zh": "docs/calibration-decisions.md",
       "en": "en/docs/calibration-decisions.md",
-      "zh_sha256": "b4c7a13db0e7a147d5ca79df4a8341c93d5e85451a835d72d6b68ddadbe4f3dc",
-      "en_sha256": "25174ce06fa984d8b4eea28da78b50682f9bba82efe416e2a5b1adadb3cfe0df"
+      "zh_sha256": "9f884c040e3a00a346c380b88620dd2941e3620f334a7326fcc1f86fec940732",
+      "en_sha256": "10dde41869f6ce42cf541156b1f3ddfcac26a4a8b94a8ad352efaca9adc5bc5d"
     },
     {
       "zh": "docs/control-walkthrough.md",
       "en": "en/docs/control-walkthrough.md",
-      "zh_sha256": "0971fd87adbd3a3cd7d474c3b70d473bd3dce6d6a4f16a3b69faca97c8779282",
-      "en_sha256": "6d48e2b182a73e01c66a41f9c73ff78c618bd6a86d6a2bb74245474771608824"
+      "zh_sha256": "2f1cfeb060508a33ca17ce01364183d837b66479ec30f518655129906a82e650",
+      "en_sha256": "8129f0c01c6bc98be0c827db59c3e80e030dad0b0d81d4297f24244cfd65e16b"
     },
     {
       "zh": "docs/language-policy.md",
       "en": "en/docs/language-policy.md",
-      "zh_sha256": "1b6e2397ab735e82f5780e14d32c2639c6d643781e084ba16f27ced386387a22",
-      "en_sha256": "2f9fb3a40b0f812738afb8f68f8c5dc4c49be81b1e96ef0659964f9748996640"
+      "zh_sha256": "999505114208f58e5619762a2e6f1a21aaf6ced6d47f5cdf217fc8b92c193fb7",
+      "en_sha256": "cc878f388f99661d9b8f68377267c9d0814747fd4b38613a99d7a9e04d0a2edf"
     },
     {
       "zh": "docs/shared-controls.md",
@@ -95,8 +95,8 @@
     {
       "zh": "templates/check-registry.yaml",
       "en": "en/templates/check-registry.yaml",
-      "zh_sha256": "6ee1494ede6469759b38fcbc76478b1b9641577ae1bc415e48cd9267ee84985a",
-      "en_sha256": "5aed5133a250040f9afbe78a22a046ea534a51c82e53c0f41a9357b3dbd78196"
+      "zh_sha256": "6b88b80a66110a30670724fdd81420e6af63af715afc3b8cc0c6cb552f9d80a5",
+      "en_sha256": "7e255c9d7c939069e78b037cf5c8f27254c1d9b427ff68ca0528dbda6cb43f20"
     },
     {
       "zh": "templates/decision-brief.md",
@@ -107,8 +107,8 @@
     {
       "zh": "templates/decision-log.md",
       "en": "en/templates/decision-log.md",
-      "zh_sha256": "bbe226b48a9940bd8b6ea5222ffaae0ba7c0d2bc68f340af0962fe411e583b00",
-      "en_sha256": "a0cc18b4843f63c13d388ec5c74080b3e7e26f7f71d04b03a302ae4405ebd845"
+      "zh_sha256": "bb0bfc9e24ffef0e51e95ff6c1959e79ce74b0b77574c9b6ddcd05ef629385e9",
+      "en_sha256": "c522a9e0354e9b0f76626911674024841858438331306af295437783757cf55c"
     },
     {
       "zh": "templates/evidence-ledger.csv",
@@ -119,14 +119,14 @@
     {
       "zh": "templates/method-comparison.md",
       "en": "en/templates/method-comparison.md",
-      "zh_sha256": "91bb95991c0afc6aec23d742b0e784583029c451e14b21a920603d824857c7e8",
-      "en_sha256": "2dcc2f301e4e37204f68fd55262a14f7e45b9a2226fbaf2b1fee8b036421998a"
+      "zh_sha256": "1f1304f14e5f39935123b4a3880033ce795842c175774c5e9df0e3b668aa6b63",
+      "en_sha256": "fef950908438a58fd3d447bd12f869dbaf0b9c7b0cfe72d50a540146fccec39e"
     },
     {
       "zh": "templates/pilot-check.md",
       "en": "en/templates/pilot-check.md",
-      "zh_sha256": "d99a07368b7cfdb67631ca1c303cfe18957f1080613759a3a1e8cd6450fa829a",
-      "en_sha256": "2ed829938093dbe7b712218186a33a981a75a6f48081f9416f49bbaa520e7569"
+      "zh_sha256": "0e94f8f4c381f306b4ee334105f0fa0f80c4657f8c4fae8581fc5db65db24a8c",
+      "en_sha256": "e5e62b83f2fef3c036d5d5118d1be63a6e96a2e4a1a8d0029563c00f99fd05d2"
     },
     {
       "zh": "templates/project-brief.md",
@@ -137,8 +137,8 @@
     {
       "zh": "templates/research-protocol.md",
       "en": "en/templates/research-protocol.md",
-      "zh_sha256": "1befb58b384ce31a4928133f2edf6fd80f939f208e87001193e2bd27d3ffe72d",
-      "en_sha256": "3111fecba102c3afe7f893da3c407a65207bc70309bc5e55912be1ac68f72745"
+      "zh_sha256": "a11a579ce4a7612c0c40e37fa882a73e459fe32a1130a6e5bef4d9345f395123",
+      "en_sha256": "319718961e2c42ac6254623f9f5c774fc3ef17e8253ec0d7307fa075d7db323d"
     },
     {
       "zh": "templates/role-assignments.yaml",
@@ -155,68 +155,68 @@
     {
       "zh": "templates/step-3-plan.yaml",
       "en": "en/templates/step-3-plan.yaml",
-      "zh_sha256": "4c660dd39dc7bb9b866f3a3929a24d024edabca0964090f4407fd21af3206cfd",
-      "en_sha256": "2e3be7d59606ea07256a97e9374309f2c6fd47f4d9edd830b3fd4a4c4a31d089"
+      "zh_sha256": "5c8cce53b8e6065b210c073120e224e0a8f68287875e3f3fb78c59a439499680",
+      "en_sha256": "3ecd0f36774d6cbf6e74024c42f4f33bac86be27fd2fe50598768200e5f2a007"
     },
     {
       "zh": "templates/step-3-report.md",
       "en": "en/templates/step-3-report.md",
-      "zh_sha256": "b059221a526c042c7ee4bb41f8b3a82e6b7a577a69148305f1d6fe4c1a88d8d9",
-      "en_sha256": "b7756d883bd9b928c483336b9eef54ca33b5b548e44148c6d1b607a6b4a74435"
+      "zh_sha256": "527428df1a6c9108d124b55a4261409a34d20f09049ee55327404041aecb1c68",
+      "en_sha256": "ff57977f879411a074d81c14da056589456e11567e4dadc2529988e9d33f9f7d"
     },
     {
       "zh": "templates/step-4-plan.yaml",
       "en": "en/templates/step-4-plan.yaml",
-      "zh_sha256": "c0bb7b75312c4eaac64179b2c2f5ffa5694c891f6cae140cebc0f92688bf8a4f",
-      "en_sha256": "21e053dbcb86455b258a824f9da1619bb89c82288762d3d329641603f60426bc"
+      "zh_sha256": "f381e476f22b5bf6f294326ac665378de4b15587190e18d03c75ec5b12fba629",
+      "en_sha256": "f38e8d52dd191e57e7f261843d5f74114ce88c73119d3d1b367324f1ae7e23f0"
     },
     {
       "zh": "templates/step-4-results.md",
       "en": "en/templates/step-4-results.md",
-      "zh_sha256": "c5f6c692da86103c3128dab18a33439ffb0990af8ed0ec61f4bbc5bc91c76936",
-      "en_sha256": "adc947c754de5f9f4274cd8dfcdbbadc39169e46ff67faef8504fee84c7d5be9"
+      "zh_sha256": "16309797d850587e7f877989e0425629b0ecf370297e2593df22240f39a7f2f5",
+      "en_sha256": "9ad25870ce5770cfc3ad6749b3b371dc0bfe89c9d0cb215be76d3238a315a2f0"
     },
     {
       "zh": "templates/step-5-delivery.md",
       "en": "en/templates/step-5-delivery.md",
-      "zh_sha256": "3a718384fcce7ad38abb79ec71b396ebe2e70b76b5b585a4271325ec4e270933",
-      "en_sha256": "dc2905da29d3a0b70321563468df935d690d3290b70dea19a18f88a10228d819"
+      "zh_sha256": "655eaf5729ce16a783a1696bdd98f2dbe4fc250f1d17f67181a7192e4e7fd1f4",
+      "en_sha256": "c1be6356bb41fc778d42551e215697d520a108b324b9548b779de6be16fe8282"
     },
     {
       "zh": "templates/step-5-plan.yaml",
       "en": "en/templates/step-5-plan.yaml",
-      "zh_sha256": "2077c27983c3454b9b0ef976b98f0394c31637fc93d1b5710ea04043297cf154",
-      "en_sha256": "b457d76ad02f075bac0a7a59c9c9e21bd3cfcaff277cd3ed61d4f0deec4822b2"
+      "zh_sha256": "d33777e275257ac000bb97992ceabb9fba4d6f2a1d0314e77da042fed13e869d",
+      "en_sha256": "c5ca40638cb78bf72f9e856b0f060d923598c8ca136f5b7ca8fd23e5e273c1ea"
     },
     {
       "zh": "templates/step-6-handoff.md",
       "en": "en/templates/step-6-handoff.md",
-      "zh_sha256": "19a4de8c86bb3d5420c65c11ab3b9b1daa3afff2f76ce550fb90e5af38fe6738",
-      "en_sha256": "b34022dddb644e49738762eb400e9a9296b400b992e89dea4a948896ff0c8c98"
+      "zh_sha256": "5a38cfec09a5586d08669e807ac918042869cf37575a09b6e2e4d196067aced6",
+      "en_sha256": "be2f717bbe7928d0d981d01146096f2ab0f3c6aebbb04b3ca7328627b9380218"
     },
     {
       "zh": "templates/step-6-plan.yaml",
       "en": "en/templates/step-6-plan.yaml",
-      "zh_sha256": "54fcd4db0cbd25b7784a780375c675cc61f107535b79248fbc68aab12ab90178",
-      "en_sha256": "9758be5f3b4afd48df4be94ac920f6d51768a6ef184840175628d45337be8e49"
+      "zh_sha256": "f83a4f19b0603f9769780b1ad9a42fec90dba697d648dc5f57249caac264ea7e",
+      "en_sha256": "135c00d3f2e5f45b3f45a5caf894c6bce202e81b003bb7b4de2bb6f8b5583743"
     },
     {
       "zh": "templates/task-launch.yaml",
       "en": "en/templates/task-launch.yaml",
-      "zh_sha256": "ad0af63a78b6d9c72f16e408541b82184416af7759f8be9b82f16001836e41a9",
-      "en_sha256": "cdd39130ab8e7c2e93756fb7d4af151c5dc087673bcce9083568cfa0e7d40122"
+      "zh_sha256": "69a39a5314976d7dd5ddf23f32449a42982063b57dfcc3faa30de3d2e456ccb7",
+      "en_sha256": "63cb763a61402b015698d8659e271bf6385e002268038861fa97e2723df34683"
     },
     {
       "zh": "templates/upstream-review.md",
       "en": "en/templates/upstream-review.md",
-      "zh_sha256": "15df43206abff4f528ccac44ebf258a2b4727899da4c23a29cea72c815b92dde",
-      "en_sha256": "626eeba2827c41cb4bc0818e499236324de4c9fd8571bda3f226040d6232798e"
+      "zh_sha256": "f1aa512d58e739d271708bb92878d50d3bc004c5ab96e7c74c2e5defc5090611",
+      "en_sha256": "bac4bf83f70cfe47155aca4b5164fc974e87696e892d3ca493589959d7671aab"
     },
     {
       "zh": "templates/verification-report.md",
       "en": "en/templates/verification-report.md",
-      "zh_sha256": "0d042579f931fd372efbaf669dc1a21528c2967b98a9e0a2eb74f0f714e53c8c",
-      "en_sha256": "2ff3d836f976f8ebacc16e66e8e22088f86a699d72da3d8990cedfef76a80dfe"
+      "zh_sha256": "a8b0fd16cd19c8e1e3bbc52de9e5d0e83fb76d57bc2c7ade98e86754c2401156",
+      "en_sha256": "91bae295333a1459190c8171403cf0858ed7197cc3fd865791139bcb218ea866"
     },
     {
       "zh": "docs/agents.md",

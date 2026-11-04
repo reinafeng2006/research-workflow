@@ -3,13 +3,14 @@
 Stage and contract version:
 Artifact paths and exact versions:
 Producer:
-Verifier:
+Verifier (person or agent; did not take part in producing the artifact):
+Project tier:
 Independence and review limitations:
 Cycle number:
 
-| Criterion | Check performed | Evidence or reproduction command | Verdict: pass / fail / not_verifiable | Defect severity | Observable repair condition |
-| --- | --- | --- | --- | --- | --- |
-| | | | | | |
+| Checklist item | Gate (G1 / G2) | Lowest tier | Check performed | Evidence or reproduction command | Verdict: pass / fail / not_verifiable | Defect severity | Observable repair condition |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | |
 
 Severity: critical invalidates the central result; major materially affects a mandatory requirement or conclusion; minor does not block mandatory criteria. Define task-specific examples in the contract.
 

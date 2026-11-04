@@ -65,6 +65,7 @@ submission_authorization:
   approved_scope_and_conditions: null
   preparation_or_finalization_is_not_submission_authority: true
   failed_or_unknown_result_requires_report_not_automatic_resubmission: true
+  submission_work_unit_id: null   # the submission action must be its own work unit, its g3_authorization_id pointing to this authorization
 recipient_confirmation_tracking:
   needed_for_approved_completion_criterion: null
   approved_scope_duration_budget: null
@@ -108,9 +109,27 @@ maintenance:
   no_automatic_rerun_retraction_or_republication: true
 plan_human_approval_record: null
 
+# v0.9: tier and this stage's gate records. Checklist items and authorization points are in the matching docs/step-N.md; definitions in docs/gates.md.
+profile: null                     # inherited from the project's stage contract: lite / standard / strict
+gates:
+  checklist_items:
+    - item: null                  # checklist item name, including cross-stage "decision material usable"
+      gate: null                  # G1 / G2
+      tier: null                  # lowest tier at which the item applies
+      applicability: undetermined
+      applicability_basis_and_approval: null
+      verification_verdict: pending
+      check_ids: []
+  authorization_points:
+    - point: null                 # this stage's G3 authorization point
+      authorization_id: null
+  runtime_conditions: []          # Steps 3/4: batch may continue; Step 6: resources and duration controlled
+project_specialists: []           # this stage's approved project specialists, see docs/agents.md
+
 shared_control_records:
   authorization_ids: []
   check_registry_reference: null
   role_assignments_reference: null
   task_launch_records: []
   recipient_requirements_reference: null
+  work_assignment_reference: null   # templates/work-assignment.yaml

@@ -3,6 +3,15 @@ task_id: null
 status: proposed
 deduplication_key: null
 objective_and_expected_output: null
+work_unit_id: null                 # templates/work-assignment.yaml
+# 四格播报：派发前向用户说明，见 docs/division-of-labor.md。任何一格中途变化须重播并记入 rebroadcasts。
+four_field_update:
+  doing: null
+  will_produce: null
+  next_step: null
+  project_position: null          # 阶段序号、阶段内位置、预算用量（估算须标明）
+  stated_before_dispatch: false
+rebroadcasts: []
 input_versions: []
 authorization_ids: []
 reused_check_ids: []

@@ -1,5 +1,18 @@
 # Step 2 研究协议
 
+## 给决策者的四件套（必填，缺一不算交付）
+
+参见 docs/division-of-labor.md 与 docs/gates.md 第 7 节「决策材料可用」。
+
+一句话结论与建议:
+这个决定取决于什么（最多三条，按影响排序）:
+1.
+2.
+3.
+如果 AI 判断错了，你会损失什么:
+你需要知道的最少信息，以及自查位置（文件、页码、链接）:
+说不清楚、需要上报的点（如有）:
+
 状态: draft / blocked_material_choices / ready_for_human_review / approved_protocol_ready
 协议版本:
 问题及已接受目标／版本:

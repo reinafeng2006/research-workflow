@@ -3,6 +3,15 @@ task_id: null
 status: proposed
 deduplication_key: null
 objective_and_expected_output: null
+work_unit_id: null                 # templates/work-assignment.yaml
+# Four-field update: stated to the user before dispatch, see docs/division-of-labor.md. Any field that changes mid-work is re-stated and logged in rebroadcasts.
+four_field_update:
+  doing: null
+  will_produce: null
+  next_step: null
+  project_position: null          # stage number, position within the stage, budget usage (estimates marked)
+  stated_before_dispatch: false
+rebroadcasts: []
 input_versions: []
 authorization_ids: []
 reused_check_ids: []

@@ -1,5 +1,18 @@
 # Step 3 — decision summary and complete validation record
 
+## Four items for the decider (required; missing any one means not delivered)
+
+See docs/division-of-labor.md and the "decision material usable" item in docs/gates.md section 7.
+
+One-sentence conclusion and recommendation:
+What the decision turns on (at most three, ordered by impact):
+1.
+2.
+3.
+What you lose if the AI's judgment is wrong:
+Least information you need, and where to check it yourself (file, page, link):
+Points that cannot be explained and need escalating (if any):
+
 Protocol / implementation / approved-plan versions:
 Recommendation on formal execution:
 Passed / failed / unresolved items and remaining risks:

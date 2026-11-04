@@ -1,7 +1,8 @@
 # 工作流规范，不是可执行的智能体软件。
 # Steps 1–6 已校准；数值默认值仍为提案，具体项目限额和授权须批准。
 # v0.9：门槛统一为三类并按档位裁剪清单项（docs/gates.md）；新增人员与任务分配层（docs/teamwork.md）。
-version: "0.9"
+# v0.9.1–v0.9.5：人机分工、发散与评估、阶段文档精简、项目专长、圆桌；v0.9.6：全部模板与文件对齐到同一版本。版本历史见 docs/calibration-decisions.md。
+version: "0.9.6"
 status: steps_1_2_3_4_5_6_calibrated
 purpose: 通过阶段门槛与有限修订，形成严谨、可追溯的研究。
 

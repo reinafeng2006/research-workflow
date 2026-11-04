@@ -1,10 +1,10 @@
 # Decision log
 
-| Date | Stage / version | Decision | Evidence and rationale | Alternatives | Approved by | Affected artifacts | Required revalidation |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| | | | | | | | |
+| Date | Stage / version | Type (G3 authorization point / tier / specialist list / exception / other) | Decision | Evidence and rationale | Alternatives | Approved by | Affected artifacts | Required revalidation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | |
 
-Record unresolved objections and user-authorized exceptions explicitly. Preserve earlier decisions when superseding them.
+Record unresolved objections and user-authorized exceptions explicitly. Preserve earlier decisions when superseding them. A lite-tier principal's G3 self-approval overlap is recorded as an "exception", not a pass.
 
 ## Shared record references
 
