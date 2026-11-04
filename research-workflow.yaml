@@ -320,6 +320,15 @@ step_1:
     substantive_difference: 对象、结果测量、对比条件、能回答的决定，至少一项不同。
     provenance: 每个方向标明提出者；淘汰的方向保留理由，不删除。
     status: 算子与扩展类是工作清单，不声称穷尽方向空间。
+    roundtable:
+      specification: docs/divergence-and-appraisal.md 第 8 节
+      status: 未经验证的默认设计；先只用于 Step 1 发散
+      sequence: [独立阶段（横向，各专长隔离调用、按分配的算子发散）, 你的方向（可选）, 圆桌阶段（纵向，互相接话、合并重复、沿扩展类往下长）, 你选方向（G3）]
+      verifier_at_table: false
+      human_may_interject_or_veto: true
+      disclose_same_model: true
+      agreement_is_not_evidence: true
+      budget: 轮数与预算并入 Step 1 发散预算一并批准，达到即停。
   selection: 可行性调查前由用户选一个或多个方向。
   feasibility: 先分别评估；可提出组合，不自动扩展范围。
   appraisal:
