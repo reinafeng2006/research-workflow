@@ -323,7 +323,8 @@ step_1:
     roundtable:
       specification: docs/divergence-and-appraisal.md 第 8 节
       status: 未经验证的默认设计；先只用于 Step 1 发散
-      sequence: [独立阶段（横向，各专长隔离调用、按分配的算子发散）, 你的方向（可选）, 圆桌阶段（纵向，互相接话、合并重复、沿扩展类往下长）, 你选方向（G3）]
+      form: 全程圆桌（用户选定）；专长从一开始在同一场讨论里互相接话
+      convergence_countermeasures: [发言顺序每轮轮换, 每位 mate 每轮至少按分配的算子提一个方向, 质疑者每轮按实质差异四项检查并报告趋同]
       verifier_at_table: false
       human_may_interject_or_veto: true
       disclose_same_model: true
