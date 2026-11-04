@@ -221,8 +221,9 @@
   ],
   "stale": {
     "as_of": "2026-11-04",
-    "reason": "v0.9 through v0.9.3 (stage documents slimmed). Chinese authoritative version complete; English mirror not yet synchronized.",
+    "reason": "v0.9 through v0.9.4 (agent roles and project specialists). Chinese authoritative version complete; English mirror not yet synchronized.",
     "zh_new_pending_translation": [
+      "docs/agents.md",
       "docs/divergence-and-appraisal.md",
       "docs/division-of-labor.md",
       "docs/gates.md",

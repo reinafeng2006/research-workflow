@@ -10,6 +10,7 @@ assignments:
     coordinator: null
     producer_and_material_contributors: []
     methods_specialist: null
+    project_specialists: []        # 参与本产物的项目专长；参与产出者不得独立验收
     verifier: null
     challenger: null
     uninvolved_walkthrough_reviewer: null

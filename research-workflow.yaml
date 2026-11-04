@@ -81,6 +81,7 @@ roles:
       - 除清单通过外，检查阶段是否解决了正确的问题。
       - 为重大异议提出能区分解释的测试。
       - 问题定义或方法有缺陷时建议上游审查。
+      - 找没被任何项目专长覆盖的角度（docs/agents.md）。
     beliefs:
       - 执行良好的方法仍可能回答错误的问题。
       - 批评应可操作且与后果相称。
@@ -94,7 +95,8 @@ roles:
     why_present: 识别清单核验可能遗漏的概念缺陷。
 
   methods_specialist:
-    activation: 需要领域、数学、统计、实验或编程专长时启用。
+    # v0.9.4 起为项目专长的一种，由下方 project_specialists 配置；键名保留以兼容已有项目。
+    activation: 需要领域、数学、统计、实验或编程专长时启用；具体专长按 docs/agents.md 推导并由用户批准。
     responsibilities:
       - 设计或评估方法、假设与验证程序。
       - 定义适当的稳健性和可复现性检查。
@@ -108,6 +110,19 @@ roles:
     limits:
       - 参与产出后不能独立验收同一工作。
     why_present: 按需提供技术深度，不要求每个任务常驻专家。
+
+project_specialists:
+  specification: docs/agents.md
+  status: 未经验证的默认设计
+  fixed_functions: [coordinator, researcher, verifier, challenger]
+  derived_from: [研究问题的组成（对象、结果测量、对比、边界、要支持的决定）, 评估矩阵的敏感性]
+  library_check: 逐条对照 docs/agents.md 第 4 节专长库，写明需要／不需要及理由；库不声称完整。
+  approval: 并入 Step 1「档位与可行性检查契约」授权点；各阶段调整在该阶段启动授权中批准；不新增授权点。
+  per_stage_count_proposal: "2-4"
+  each_specialist_defines: [看什么, 能读什么, 交出什么, 不能做什么]
+  independence: 参与产出的专长不能独立验收同一产物。
+  challenger_extra_duty: 找没被任何专长覆盖的角度。
+  persona: 可选表现层；不改变专长的四件事；界面须说明是否为同一模型；对多样性与参与度的作用未经验证。
 
 stage_contract:
   required_fields:

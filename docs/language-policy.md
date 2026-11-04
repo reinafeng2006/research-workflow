@@ -24,7 +24,9 @@
 | 研究者／产出者 | researcher / producer |
 | 独立核验者 | verifier |
 | 质疑者 | challenger |
-| 方法专家 | methods_specialist |
+| 方法专家 | methods_specialist：v0.9.4 起为项目专长的一种 |
+| 项目专长 | project specialist：按项目、按阶段配置，由 AI 推导、用户批准 |
+| 固定职能 | fixed function：协调者、产出者、独立核验者、质疑者，所有项目相同 |
 | 阶段契约 | stage contract |
 | 协议定稿就绪 | protocol ready for implementation |
 | 决策材料就绪 | decision readiness |

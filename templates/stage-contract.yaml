@@ -49,6 +49,15 @@ assigned_roles:
   verifier: null
   challenger: null
   methods_specialist: null
+# 项目专长，见 docs/agents.md。名单随 Step 1「档位与可行性检查契约」一并批准。
+project_specialists:
+  - name: null
+    derived_from: null          # 研究问题的哪一部分，或评估矩阵的哪个敏感点
+    looks_at: null
+    may_read: []
+    delivers: null
+    must_not: []
+specialist_library_check: []   # 专长库逐条：需要／不需要及理由
 people:
   principal: null
   approvers: []            # 门槛类别 × 范围；委派须有授权记录

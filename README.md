@@ -69,6 +69,7 @@ agent 只有在获得访问权限并收到明确指令时才会读取文件；�
 - [人机分工](docs/division-of-labor.md) — 先读这份。
 - [门槛、档位与运行期条件](docs/gates.md) — 三类门槛、`lite` / `standard` / `strict` 三档、清单项映射。
 - [发散与评估](docs/divergence-and-appraisal.md) — Step 1 怎么找方向、怎么比较候选。
+- [智能体角色与项目专长](docs/agents.md) — 固定职能、按项目推导的专长、专长库。
 - [团队研究](docs/teamwork.md) — 人员角色、授权矩阵、任务单元、交接。
 - [共享控制](docs/shared-controls.md) — 授权复用、检查记录、启动前预算、角色独立性。
 - `AGENTS.md`（agent 操作指令）、`research-workflow.yaml`（结构化索引）、[语言政策与术语](docs/language-policy.md)、[校准记录](docs/calibration-decisions.md)。
