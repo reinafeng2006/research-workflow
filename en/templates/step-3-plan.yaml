@@ -56,6 +56,7 @@ persistence:
   result_config_version_usage_records: []
 recovery:
   human_approval_required_for: [resource, rate, progress, repeated_failure]
+  # Each rule must be a closed match: same command/call, same tool, parameters, interpreter, dependency, and path unchanged, retried only for network timeout/rate limiting/momentary service unavailability. Switching tool, interpreter, command, or approach is an implementation deviation, not covered here — pause and report first. Operations with an unknown outcome that could repeat a real-world side effect (writes/charges/sends) are not retryable by default — verify the original outcome or confirm idempotence first.
   preapproved_single_transient_fault_rules: []
   retry_limit: null
   original_budget_and_cumulative_counters_preserved: true

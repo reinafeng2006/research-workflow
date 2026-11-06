@@ -56,6 +56,7 @@ persistence:
   result_config_version_usage_records: []
 recovery:
   human_approval_required_for: [resource, rate, progress, repeated_failure]
+  # 每条规则须是闭合匹配：同一命令／调用，工具、参数、解释器、依赖、路径均不变，仅因网络超时/速率限制/服务瞬时不可用重试；更换工具、解释器、命令或方法属于实现偏差，不属于此处规则，须先暂停报告。结果不明且可能重复产生外部影响（写入/扣费/发送等）的操作不默认可重试，须先核实原调用结果或确认幂等。
   preapproved_single_transient_fault_rules: []
   retry_limit: null
   original_budget_and_cumulative_counters_preserved: true

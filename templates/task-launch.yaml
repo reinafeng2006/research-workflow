@@ -20,6 +20,11 @@ budget_admission:
     shutdown_save_report_reserve: null
     projected_total: null
     measurement_or_approved_estimation_basis: null
+    # 以下四项为 docs/shared-controls.md 第5节第7条要求：缺任一项不得声称本指标受控
+    measurement_status: null  # actual | estimated | unavailable
+    covered_scope: null  # task | batch | stage | total
+    check_frequency: null
+    action_on_breach: null  # alert | checkpoint_pause | hard_stop
     single_call_cap_and_interruption_limits: null
     elapsed_deadline_check: null
     admitted: false

@@ -20,6 +20,11 @@ budget_admission:
     shutdown_save_report_reserve: null
     projected_total: null
     measurement_or_approved_estimation_basis: null
+    # The next four fields implement docs/shared-controls.md section 5 item 7: missing any one means this metric cannot be claimed as controlled
+    measurement_status: null  # actual | estimated | unavailable
+    covered_scope: null  # task | batch | stage | total
+    check_frequency: null
+    action_on_breach: null  # alert | checkpoint_pause | hard_stop
     single_call_cap_and_interruption_limits: null
     elapsed_deadline_check: null
     admitted: false
